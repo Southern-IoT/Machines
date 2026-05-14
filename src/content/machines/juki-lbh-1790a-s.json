@@ -3,30 +3,81 @@
   "subtitle": "Computer-Controlled High-Speed Lockstitch Buttonholing Machine",
   "brand": "JUKI",
   "category": "Sewing Machine",
-  "machineImage": "",
+  "machineImage": "/uploads/LBH1790-1.webp",
   "reportDownloadUrl": "",
   "publishedDate": "2026-05-14T00:00:00.000Z",
   "overviewDescription": "The JUKI LBH-1790A-S is a computerized lockstitch buttonholing machine. It forms buttonholes by combining mechanical stitch formation with electronic control of feed, needle rocking, tension, knife cutting, trimming, and presser movement.",
   "classificationTable": [
-    { "field": "Machine Type", "value": "Computer-controlled lockstitch buttonholing machine" },
-    { "field": "Brand", "value": "JUKI" },
-    { "field": "Model", "value": "LBH-1790A-S" },
-    { "field": "Application", "value": "Straight buttonhole sewing for shirts, blouses, uniforms, ladies' wear, and similar garments" },
-    { "field": "Report Purpose", "value": "Working principle, parts, reference resources, problem analysis, replacement focus, solution hypothesis, and sequence flow" },
-    { "field": "Source Basis", "value": "JUKI catalogue, JUKI instruction manual, JUKI parts list, and JUKI engineer manual" }
+    {
+      "field": "Machine Type",
+      "value": "Computer-controlled lockstitch buttonholing machine"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "LBH-1790A-S"
+    },
+    {
+      "field": "Application",
+      "value": "Straight buttonhole sewing for shirts, blouses, uniforms, ladies' wear, and similar garments"
+    },
+    {
+      "field": "Report Purpose",
+      "value": "Working principle, parts, reference resources, problem analysis, replacement focus, solution hypothesis, and sequence flow"
+    },
+    {
+      "field": "Source Basis",
+      "value": "JUKI catalogue, JUKI instruction manual, JUKI parts list, and JUKI engineer manual"
+    }
   ],
   "technicalSpecs": [
-    { "parameter": "Machine Type", "value": "Computer-controlled high-speed lockstitch buttonholing machine" },
-    { "parameter": "Standard Sewing Speed", "value": "3,600 stitches/minute" },
-    { "parameter": "Maximum Sewing Speed", "value": "Up to 4,200 stitches/minute" },
-    { "parameter": "Needle", "value": "DP×5, commonly #11J to #14J" },
-    { "parameter": "Hook", "value": "DP type full-rotary hook" },
-    { "parameter": "Knife Size Range", "value": "6.4 mm to 31.8 mm" },
-    { "parameter": "Standard Sewing Length", "value": "Up to 41 mm" },
-    { "parameter": "Standard Sewing Shapes", "value": "31 shapes" },
-    { "parameter": "Pattern Memory", "value": "99 patterns" },
-    { "parameter": "Control Box Family", "value": "MC602 control box family" },
-    { "parameter": "Power Consumption", "value": "Approximately 370 VA" }
+    {
+      "parameter": "Machine Type",
+      "value": "Computer-controlled high-speed lockstitch buttonholing machine"
+    },
+    {
+      "parameter": "Standard Sewing Speed",
+      "value": "3,600 stitches/minute"
+    },
+    {
+      "parameter": "Maximum Sewing Speed",
+      "value": "Up to 4,200 stitches/minute"
+    },
+    {
+      "parameter": "Needle",
+      "value": "DP×5, commonly #11J to #14J"
+    },
+    {
+      "parameter": "Hook",
+      "value": "DP type full-rotary hook"
+    },
+    {
+      "parameter": "Knife Size Range",
+      "value": "6.4 mm to 31.8 mm"
+    },
+    {
+      "parameter": "Standard Sewing Length",
+      "value": "Up to 41 mm"
+    },
+    {
+      "parameter": "Standard Sewing Shapes",
+      "value": "31 shapes"
+    },
+    {
+      "parameter": "Pattern Memory",
+      "value": "99 patterns"
+    },
+    {
+      "parameter": "Control Box Family",
+      "value": "MC602 control box family"
+    },
+    {
+      "parameter": "Power Consumption",
+      "value": "Approximately 370 VA"
+    }
   ],
   "workingPrinciples": [
     {
@@ -51,64 +102,262 @@
     }
   ],
   "sequenceFlow": [
-    { "stepTitle": "Power ON", "stepDescription": "Operation panel starts" },
-    { "stepTitle": "Pattern Selection", "stepDescription": "Operator selects pattern and settings" },
-    { "stepTitle": "Garment Placement", "stepDescription": "Garment placed under presser / work clamp" },
-    { "stepTitle": "Pedal Pressed", "stepDescription": "Presser lowers and holds fabric" },
-    { "stepTitle": "Safety Check", "stepDescription": "Control system checks sensors and safety" },
-    { "stepTitle": "Sewing Starts", "stepDescription": "Main motor starts sewing" },
-    { "stepTitle": "Buttonhole Formed", "stepDescription": "Feed and needle rocking motors form buttonhole shape; active tension controls thread tension" },
-    { "stepTitle": "Knife Cuts Slit", "stepDescription": "Cloth cutting motor drives knife; upper and lower trimmers cut threads" },
-    { "stepTitle": "Machine Stops", "stepDescription": "Machine stops and presser lifts" },
-    { "stepTitle": "Quality Check", "stepDescription": "Good piece goes to next operation; defective piece goes for rework or mechanic check" }
+    {
+      "stepTitle": "Power ON",
+      "stepDescription": "Operation panel starts"
+    },
+    {
+      "stepTitle": "Pattern Selection",
+      "stepDescription": "Operator selects pattern and settings"
+    },
+    {
+      "stepTitle": "Garment Placement",
+      "stepDescription": "Garment placed under presser / work clamp"
+    },
+    {
+      "stepTitle": "Pedal Pressed",
+      "stepDescription": "Presser lowers and holds fabric"
+    },
+    {
+      "stepTitle": "Safety Check",
+      "stepDescription": "Control system checks sensors and safety"
+    },
+    {
+      "stepTitle": "Sewing Starts",
+      "stepDescription": "Main motor starts sewing"
+    },
+    {
+      "stepTitle": "Buttonhole Formed",
+      "stepDescription": "Feed and needle rocking motors form buttonhole shape; active tension controls thread tension"
+    },
+    {
+      "stepTitle": "Knife Cuts Slit",
+      "stepDescription": "Cloth cutting motor drives knife; upper and lower trimmers cut threads"
+    },
+    {
+      "stepTitle": "Machine Stops",
+      "stepDescription": "Machine stops and presser lifts"
+    },
+    {
+      "stepTitle": "Quality Check",
+      "stepDescription": "Good piece goes to next operation; defective piece goes for rework or mechanic check"
+    }
   ],
   "partsList": [
-    { "partName": "Machine Head", "partId": "", "section": "mechanical", "function": "Holds the sewing, feed, needle rocking, hook, knife, and trimming mechanisms." },
-    { "partName": "Needle Bar and Needle Clamp", "partId": "", "section": "mechanical", "function": "Hold and move the needle vertically during stitching." },
-    { "partName": "Needle", "partId": "", "section": "mechanical", "function": "Carries the upper thread through the fabric." },
-    { "partName": "Full-Rotary Hook", "partId": "", "section": "mechanical", "function": "Catches the upper-thread loop and forms lockstitch with bobbin thread." },
-    { "partName": "Bobbin and Bobbin Case", "partId": "", "section": "mechanical", "function": "Supply and control the lower thread." },
-    { "partName": "Thread Tension Mechanism", "partId": "", "section": "mechanical", "function": "Controls upper-thread tightness." },
-    { "partName": "Active Tension Mechanism", "partId": "", "section": "mechanical", "function": "Electronically adjusts thread tension according to sewing section." },
-    { "partName": "Feed Mechanism", "partId": "", "section": "mechanical", "function": "Moves fabric according to the selected buttonhole pattern." },
-    { "partName": "Needle Rocking Mechanism", "partId": "", "section": "mechanical", "function": "Moves the needle sideways to form buttonhole width and shape." },
-    { "partName": "Presser / Work Clamp", "partId": "", "section": "mechanical", "function": "Holds the garment during sewing and cutting." },
-    { "partName": "Cloth Cutting Knife", "partId": "", "section": "mechanical", "function": "Cuts the buttonhole slit." },
-    { "partName": "Upper and Lower Thread Trimmers", "partId": "", "section": "mechanical", "function": "Cut needle thread and bobbin thread after sewing." },
-    { "partName": "Main Board (MAIN PCB ASSY)", "partId": "", "section": "electronic", "function": "Main control board for logic, pattern data, sensor processing, communication, and machine control." },
-    { "partName": "Power Board (SDC PCB / FLT PCB)", "partId": "", "section": "electronic", "function": "Handles motor drive control, power filtering, and power-related control." },
-    { "partName": "IND Board (Operation Panel ASSY)", "partId": "", "section": "electronic", "function": "Display and input panel for pattern selection, settings, error display, and operator control." },
-    { "partName": "Interface Board (INT PCB ASSY)", "partId": "", "section": "electronic", "function": "Handles machine-head side signals and sensor connections." },
-    { "partName": "Main Motor (IPM Motor)", "partId": "", "section": "electronic", "function": "Drives the main sewing mechanism." },
-    { "partName": "Feed Motor", "partId": "", "section": "electronic", "function": "Controls fabric feed movement." },
-    { "partName": "Needle Swing Motor", "partId": "", "section": "electronic", "function": "Controls needle side movement." },
-    { "partName": "Clamp Motor", "partId": "", "section": "electronic", "function": "Controls presser/work clamp movement." },
-    { "partName": "Cloth Cut Motor", "partId": "", "section": "electronic", "function": "Drives the knife cutting mechanism." },
-    { "partName": "Thread Trim Motors", "partId": "", "section": "electronic", "function": "Operate upper and lower thread trimming mechanisms." },
-    { "partName": "Sensors", "partId": "", "section": "electronic", "function": "Origin, cover, thread-break, trim sensors — detect machine position, safety condition, thread breakage, and trimming status." }
+    {
+      "partName": "Machine Head",
+      "partId": "",
+      "function": "Holds the sewing, feed, needle rocking, hook, knife, and trimming mechanisms."
+    },
+    {
+      "partName": "Needle Bar and Needle Clamp",
+      "partId": "",
+      "function": "Hold and move the needle vertically during stitching."
+    },
+    {
+      "partName": "Needle",
+      "partId": "",
+      "function": "Carries the upper thread through the fabric."
+    },
+    {
+      "partName": "Full-Rotary Hook",
+      "partId": "",
+      "function": "Catches the upper-thread loop and forms lockstitch with bobbin thread."
+    },
+    {
+      "partName": "Bobbin and Bobbin Case",
+      "partId": "",
+      "function": "Supply and control the lower thread."
+    },
+    {
+      "partName": "Thread Tension Mechanism",
+      "partId": "",
+      "function": "Controls upper-thread tightness."
+    },
+    {
+      "partName": "Active Tension Mechanism",
+      "partId": "",
+      "function": "Electronically adjusts thread tension according to sewing section."
+    },
+    {
+      "partName": "Feed Mechanism",
+      "partId": "",
+      "function": "Moves fabric according to the selected buttonhole pattern."
+    },
+    {
+      "partName": "Needle Rocking Mechanism",
+      "partId": "",
+      "function": "Moves the needle sideways to form buttonhole width and shape."
+    },
+    {
+      "partName": "Presser / Work Clamp",
+      "partId": "",
+      "function": "Holds the garment during sewing and cutting."
+    },
+    {
+      "partName": "Cloth Cutting Knife",
+      "partId": "",
+      "function": "Cuts the buttonhole slit."
+    },
+    {
+      "partName": "Upper and Lower Thread Trimmers",
+      "partId": "",
+      "function": "Cut needle thread and bobbin thread after sewing."
+    },
+    {
+      "partName": "Main Board (MAIN PCB ASSY)",
+      "partId": "",
+      "function": "Main control board for logic, pattern data, sensor processing, communication, and machine control."
+    },
+    {
+      "partName": "Power Board (SDC PCB / FLT PCB)",
+      "partId": "",
+      "function": "Handles motor drive control, power filtering, and power-related control."
+    },
+    {
+      "partName": "IND Board (Operation Panel ASSY)",
+      "partId": "",
+      "function": "Display and input panel for pattern selection, settings, error display, and operator control."
+    },
+    {
+      "partName": "Interface Board (INT PCB ASSY)",
+      "partId": "",
+      "function": "Handles machine-head side signals and sensor connections."
+    },
+    {
+      "partName": "Main Motor (IPM Motor)",
+      "partId": "",
+      "function": "Drives the main sewing mechanism."
+    },
+    {
+      "partName": "Feed Motor",
+      "partId": "",
+      "function": "Controls fabric feed movement."
+    },
+    {
+      "partName": "Needle Swing Motor",
+      "partId": "",
+      "function": "Controls needle side movement."
+    },
+    {
+      "partName": "Clamp Motor",
+      "partId": "",
+      "function": "Controls presser/work clamp movement."
+    },
+    {
+      "partName": "Cloth Cut Motor",
+      "partId": "",
+      "function": "Drives the knife cutting mechanism."
+    },
+    {
+      "partName": "Thread Trim Motors",
+      "partId": "",
+      "function": "Operate upper and lower thread trimming mechanisms."
+    },
+    {
+      "partName": "Sensors",
+      "partId": "",
+      "function": "Origin, cover, thread-break, trim sensors — detect machine position, safety condition, thread breakage, and trimming status."
+    }
   ],
   "maintenance": [
-    { "code": "Needle", "definition": "Bending, dull point, thread breakage, skipped stitch", "action": "Replace immediately when damaged or unstable stitching appears." },
-    { "code": "Cloth Cutting Knife", "definition": "Dull or chipped cutting edge", "action": "Sharpen or replace when slit is not clean." },
-    { "code": "Upper/Lower Trimmer Blades", "definition": "Wear, lint, cutting failure", "action": "Clean daily; replace when trimming becomes unstable." },
-    { "code": "Bobbin and Bobbin Case", "definition": "Unstable lower-thread tension or damage", "action": "Replace if tension cannot be controlled." },
-    { "code": "Rotary Hook", "definition": "Burr, scratch, needle strike, poor lubrication", "action": "Polish minor burrs; replace if damaged." },
-    { "code": "Thread Tension Parts", "definition": "Dirt, wear, weak spring pressure", "action": "Clean, adjust, or replace." },
-    { "code": "Origin Sensors", "definition": "Dust, misalignment, weak signal", "action": "Clean/adjust first; replace if signal remains unstable." },
-    { "code": "Fan Motor", "definition": "Weak cooling or no rotation", "action": "Replace to protect control boards." },
-    { "code": "Fuses", "definition": "Overcurrent or short circuit", "action": "Replace only after finding the cause." },
-    { "code": "MAIN / SDC / FLT / INT PCB", "definition": "Heat, voltage issue, moisture, component failure", "action": "Replace only after checking voltage, grounding, fan, motor, connector, and sensor condition." },
-    { "code": "Operation Panel", "definition": "Display/key/communication failure", "action": "Replace only after cable and connector check." }
+    {
+      "code": "Needle",
+      "definition": "Bending, dull point, thread breakage, skipped stitch",
+      "action": "Replace immediately when damaged or unstable stitching appears."
+    },
+    {
+      "code": "Cloth Cutting Knife",
+      "definition": "Dull or chipped cutting edge",
+      "action": "Sharpen or replace when slit is not clean."
+    },
+    {
+      "code": "Upper/Lower Trimmer Blades",
+      "definition": "Wear, lint, cutting failure",
+      "action": "Clean daily; replace when trimming becomes unstable."
+    },
+    {
+      "code": "Bobbin and Bobbin Case",
+      "definition": "Unstable lower-thread tension or damage",
+      "action": "Replace if tension cannot be controlled."
+    },
+    {
+      "code": "Rotary Hook",
+      "definition": "Burr, scratch, needle strike, poor lubrication",
+      "action": "Polish minor burrs; replace if damaged."
+    },
+    {
+      "code": "Thread Tension Parts",
+      "definition": "Dirt, wear, weak spring pressure",
+      "action": "Clean, adjust, or replace."
+    },
+    {
+      "code": "Origin Sensors",
+      "definition": "Dust, misalignment, weak signal",
+      "action": "Clean/adjust first; replace if signal remains unstable."
+    },
+    {
+      "code": "Fan Motor",
+      "definition": "Weak cooling or no rotation",
+      "action": "Replace to protect control boards."
+    },
+    {
+      "code": "Fuses",
+      "definition": "Overcurrent or short circuit",
+      "action": "Replace only after finding the cause."
+    },
+    {
+      "code": "MAIN / SDC / FLT / INT PCB",
+      "definition": "Heat, voltage issue, moisture, component failure",
+      "action": "Replace only after checking voltage, grounding, fan, motor, connector, and sensor condition."
+    },
+    {
+      "code": "Operation Panel",
+      "definition": "Display/key/communication failure",
+      "action": "Replace only after cable and connector check."
+    }
   ],
   "resources": [
-    { "resourceName": "JUKI LBH-1790A Catalogue", "description": "PDF — Official product catalogue", "url": "https://www.juki.co.jp/industrial_e/download_e/catalog_e/lbh1790a.pdf" },
-    { "resourceName": "JUKI LBH-1790A Instruction Manual", "description": "PDF — Full instruction manual", "url": "https://www.szwalnicze.com/cat_ju_ins/juki-lbh1790a.pdf" },
-    { "resourceName": "JUKI LBH-1790A Parts List", "description": "PDF — Complete parts list", "url": "https://www.rigo.si/spare%20parts/Juki/LBH-1790A.pdf" },
-    { "resourceName": "JUKI LBH-1790 Instruction Manual", "description": "PDF — Instruction manual for LBH-1790 series", "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/lbh1790/menu/pdf/instruction_eg.pdf" },
-    { "resourceName": "JUKI LBH-1790S Instruction Manual", "description": "PDF — Instruction manual for LBH-1790S", "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/lbh1790s/menu/pdf/instruction_eg.pdf" },
-    { "resourceName": "JUKI LBH-1790 Series Engineer Manual", "description": "PDF — Engineer/service manual for the series", "url": "https://semsi.com.mx/Manuales/JUKI/LBH-1790%20SeriesEM00_e.pdf" },
-    { "resourceName": "JUKI Web Parts List", "description": "Web — Official JUKI online parts list", "url": "https://www.juki.co.jp/partslist/?language=en" },
-    { "resourceName": "ManualsLib LBH-1790A Page", "description": "Web — ManualsLib page for LBH-1790A series", "url": "https://www.manualslib.com/manual/608213/Juki-Lbh-1790a-Series.html" }
+    {
+      "resourceName": "JUKI LBH-1790A Catalogue",
+      "description": "PDF — Official product catalogue",
+      "url": "https://www.juki.co.jp/industrial_e/download_e/catalog_e/lbh1790a.pdf"
+    },
+    {
+      "resourceName": "JUKI LBH-1790A Instruction Manual",
+      "description": "PDF — Full instruction manual",
+      "url": "https://www.szwalnicze.com/cat_ju_ins/juki-lbh1790a.pdf"
+    },
+    {
+      "resourceName": "JUKI LBH-1790A Parts List",
+      "description": "PDF — Complete parts list",
+      "url": "https://www.rigo.si/spare%20parts/Juki/LBH-1790A.pdf"
+    },
+    {
+      "resourceName": "JUKI LBH-1790 Instruction Manual",
+      "description": "PDF — Instruction manual for LBH-1790 series",
+      "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/lbh1790/menu/pdf/instruction_eg.pdf"
+    },
+    {
+      "resourceName": "JUKI LBH-1790S Instruction Manual",
+      "description": "PDF — Instruction manual for LBH-1790S",
+      "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/lbh1790s/menu/pdf/instruction_eg.pdf"
+    },
+    {
+      "resourceName": "JUKI LBH-1790 Series Engineer Manual",
+      "description": "PDF — Engineer/service manual for the series",
+      "url": "https://semsi.com.mx/Manuales/JUKI/LBH-1790%20SeriesEM00_e.pdf"
+    },
+    {
+      "resourceName": "JUKI Web Parts List",
+      "description": "Web — Official JUKI online parts list",
+      "url": "https://www.juki.co.jp/partslist/?language=en"
+    },
+    {
+      "resourceName": "ManualsLib LBH-1790A Page",
+      "description": "Web — ManualsLib page for LBH-1790A series",
+      "url": "https://www.manualslib.com/manual/608213/Juki-Lbh-1790a-Series.html"
+    }
   ],
   "finalNotes": "• Needle: Replace immediately when damaged or unstable stitching appears. Use DP×5, #11J to #14J.\n• Hook Timing: Check and adjust hook timing if skipped stitches or thread breakage occurs.\n• Knife: Sharpen or replace when buttonhole slit is not clean.\n• Boards: Replace MAIN/SDC/FLT/INT PCB only after checking voltage, grounding, fan, motor, connector, and sensor condition.\n• Sensors: Clean and adjust origin sensors before replacing.\n• Fuses: Always find the root cause before replacing fuses.\n• Fan Motor: Replace weak or non-rotating fan motor to protect control boards from heat damage."
 }
