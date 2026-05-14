@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,7 +33,10 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npm run build
+        run: npx tinacms build && npm run build
+        env:
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
