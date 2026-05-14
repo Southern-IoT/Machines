@@ -12,6 +12,9 @@ interface Props {
 
 const { title, subtitle, brand, category, image, slug, specs = [], searchData = "" } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+// Fix image path for base URL (e.g. /uploads/x.jpg → /Machines/uploads/x.jpg)
+const imageSrc = image && image.startsWith("/") ? `${base}${image}` : image;
 ---
 
 <a
@@ -26,9 +29,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 >
   <!-- Image area -->
   <div style="height:150px; background:#f7f8f8; border-bottom:1px solid #e3e6e6; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:12px;">
-    {image ? (
+    {imageSrc ? (
       <img
-        src={image}
+        src={imageSrc}
         alt={title}
         loading="lazy"
         style="width:100%; height:100%; object-fit:contain; mix-blend-mode:multiply;"
