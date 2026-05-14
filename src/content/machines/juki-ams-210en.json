@@ -3,30 +3,81 @@
   "subtitle": "Computer-Controlled Cycle Machine for Heavy-Weight Materials",
   "brand": "JUKI",
   "category": "Sewing Machine",
-  "machineImage": "",
+  "machineImage": "/uploads/ams-210en-1306.7450.jpg",
   "reportDownloadUrl": "",
   "publishedDate": "2026-05-10T00:00:00.000Z",
   "overviewDescription": "The JUKI AMS-210EN HL 1306 SZZ is a high-speed, computer-controlled cycle sewing system manufactured by JUKI Corporation. The \"EN\" series signifies \"Energy-saving\" and \"Next-generation\" architecture, featuring a main-shaft direct-drive system and advanced electronic control. This specific configuration is optimized for medium-to-heavy weight materials and features a pneumatic material clamping system.",
   "classificationTable": [
-    { "field": "Machine Name", "value": "Computer-controlled Cycle Machine with Input Function" },
-    { "field": "Brand / Manufacturer", "value": "JUKI Corporation (Japan)" },
-    { "field": "Model Series", "value": "AMS-210EN (EN Series)" },
-    { "field": "Application Class", "value": "Medium- to Heavy-weight (\"H\" specification)" },
-    { "field": "Feeding Frame", "value": "Pneumatic separately-driven type (\"L\" specification)" },
-    { "field": "Sewing Area", "value": "130mm (X) × 60mm (Y)" },
-    { "field": "Drive System", "value": "550W AC Servomotor (Direct-Drive)" },
-    { "field": "Control Panel", "value": "IP-420 Color LCD Touch Panel (Standard)" }
+    {
+      "field": "Machine Name",
+      "value": "Computer-controlled Cycle Machine with Input Function"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "JUKI Corporation (Japan)"
+    },
+    {
+      "field": "Model Series",
+      "value": "AMS-210EN (EN Series)"
+    },
+    {
+      "field": "Application Class",
+      "value": "Medium- to Heavy-weight (\"H\" specification)"
+    },
+    {
+      "field": "Feeding Frame",
+      "value": "Pneumatic separately-driven type (\"L\" specification)"
+    },
+    {
+      "field": "Sewing Area",
+      "value": "130mm (X) × 60mm (Y)"
+    },
+    {
+      "field": "Drive System",
+      "value": "550W AC Servomotor (Direct-Drive)"
+    },
+    {
+      "field": "Control Panel",
+      "value": "IP-420 Color LCD Touch Panel (Standard)"
+    }
   ],
   "technicalSpecs": [
-    { "parameter": "Max. Sewing Speed", "value": "2,800 sti/min" },
-    { "parameter": "Stitch Length", "value": "0.1 to 12.7mm (0.05mm steps)" },
-    { "parameter": "Needle Bar Stroke", "value": "41.2mm (H-spec for heavy material)" },
-    { "parameter": "Intermediate Presser Lift", "value": "20mm" },
-    { "parameter": "Intermediate Presser Stroke", "value": "Standard 4mm (Adjustable 0 to 10mm)" },
-    { "parameter": "Needle Specification", "value": "DP×17 (#18 to #25)" },
-    { "parameter": "Thread Compatibility", "value": "#50 to #2 (Standard); #2 to #8 (7300 Subclass)" },
-    { "parameter": "Air Pressure Requirement", "value": "0.35 to 0.4 MPa (Max 0.55 MPa)" },
-    { "parameter": "Power Consumption", "value": "450VA (30% reduction vs AMS-210E)" }
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "2,800 sti/min"
+    },
+    {
+      "parameter": "Stitch Length",
+      "value": "0.1 to 12.7mm (0.05mm steps)"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "41.2mm (H-spec for heavy material)"
+    },
+    {
+      "parameter": "Intermediate Presser Lift",
+      "value": "20mm"
+    },
+    {
+      "parameter": "Intermediate Presser Stroke",
+      "value": "Standard 4mm (Adjustable 0 to 10mm)"
+    },
+    {
+      "parameter": "Needle Specification",
+      "value": "DP×17 (#18 to #25)"
+    },
+    {
+      "parameter": "Thread Compatibility",
+      "value": "#50 to #2 (Standard); #2 to #8 (7300 Subclass)"
+    },
+    {
+      "parameter": "Air Pressure Requirement",
+      "value": "0.35 to 0.4 MPa (Max 0.55 MPa)"
+    },
+    {
+      "parameter": "Power Consumption",
+      "value": "450VA (30% reduction vs AMS-210E)"
+    }
   ],
   "workingPrinciples": [
     {
@@ -47,39 +98,138 @@
     }
   ],
   "sequenceFlow": [
-    { "stepTitle": "Power ON", "stepDescription": "Air supply check" },
-    { "stepTitle": "Select Pattern", "stepDescription": "Main/USB source" },
-    { "stepTitle": "Set Parameters", "stepDescription": "Active tension & speed" },
-    { "stepTitle": "Load Material", "stepDescription": "L-Frame placement" },
-    { "stepTitle": "Engage Clamp", "stepDescription": "Pneumatic pedal" },
-    { "stepTitle": "Press START", "stepDescription": "READY key" },
-    { "stepTitle": "Auto Sewing", "stepDescription": "Automatic sewing cycle" },
-    { "stepTitle": "Thread Trim", "stepDescription": "Auto trimming/wiping" },
-    { "stepTitle": "Release Part", "stepDescription": "Collect finished piece" }
+    {
+      "stepTitle": "Power ON",
+      "stepDescription": "Air supply check"
+    },
+    {
+      "stepTitle": "Select Pattern",
+      "stepDescription": "Main/USB source"
+    },
+    {
+      "stepTitle": "Set Parameters",
+      "stepDescription": "Active tension & speed"
+    },
+    {
+      "stepTitle": "Load Material",
+      "stepDescription": "L-Frame placement"
+    },
+    {
+      "stepTitle": "Engage Clamp",
+      "stepDescription": "Pneumatic pedal"
+    },
+    {
+      "stepTitle": "Press START",
+      "stepDescription": "READY key"
+    },
+    {
+      "stepTitle": "Auto Sewing",
+      "stepDescription": "Automatic sewing cycle"
+    },
+    {
+      "stepTitle": "Thread Trim",
+      "stepDescription": "Auto trimming/wiping"
+    },
+    {
+      "stepTitle": "Release Part",
+      "stepDescription": "Collect finished piece"
+    }
   ],
   "partsList": [
-    { "partName": "Main Shaft Motor", "partId": "400-52937", "function": "550W AC Servomotor (Direct-drive)" },
-    { "partName": "IP-420 Panel", "partId": "400-86485", "function": "Color LCD touch screen for data input" },
-    { "partName": "Needle Bar (H)", "partId": "400-26882", "function": "41.2mm stroke for heavy penetration" },
-    { "partName": "Shuttle Hook", "partId": "B1818-210-D0A", "function": "Double-capacity shuttle for thick threads" },
-    { "partName": "Intermediate Presser", "partId": "14433601", "function": "Programmable height foot for material clamping" },
-    { "partName": "X-Motor", "partId": "Stepping Motor", "function": "Moves the feed frame along the lateral axis" },
-    { "partName": "Pneumatic Pedal", "partId": "GPK-470010AB", "function": "3-Pedal assembly for L-frame operation" },
-    { "partName": "Active Tension Unit", "partId": "AT Unit", "function": "Electronic disk-less tension mechanism" },
-    { "partName": "Thread Trimmer", "partId": "10502300", "function": "Stepping-motor controlled trimming knife" }
+    {
+      "partName": "Main Shaft Motor",
+      "partId": "400-52937",
+      "function": "550W AC Servomotor (Direct-drive)"
+    },
+    {
+      "partName": "IP-420 Panel",
+      "partId": "400-86485",
+      "function": "Color LCD touch screen for data input"
+    },
+    {
+      "partName": "Needle Bar (H)",
+      "partId": "400-26882",
+      "function": "41.2mm stroke for heavy penetration"
+    },
+    {
+      "partName": "Shuttle Hook",
+      "partId": "B1818-210-D0A",
+      "function": "Double-capacity shuttle for thick threads"
+    },
+    {
+      "partName": "Intermediate Presser",
+      "partId": "14433601",
+      "function": "Programmable height foot for material clamping"
+    },
+    {
+      "partName": "X-Motor",
+      "partId": "Stepping Motor",
+      "function": "Moves the feed frame along the lateral axis"
+    },
+    {
+      "partName": "Pneumatic Pedal",
+      "partId": "GPK-470010AB",
+      "function": "3-Pedal assembly for L-frame operation"
+    },
+    {
+      "partName": "Active Tension Unit",
+      "partId": "AT Unit",
+      "function": "Electronic disk-less tension mechanism"
+    },
+    {
+      "partName": "Thread Trimmer",
+      "partId": "10502300",
+      "function": "Stepping-motor controlled trimming knife"
+    }
   ],
   "maintenance": [
-    { "code": "E007", "definition": "Machine Lock / Shaft Error", "action": "Check for thread jams in shuttle or obstruction" },
-    { "code": "E031", "definition": "Low Air Pressure", "action": "Check compressor and air hose for Type L frames" },
-    { "code": "E220", "definition": "Grease Run-out", "action": "Replenish Grease A/B and reset Memory Switch 245" },
-    { "code": "E730", "definition": "Encoder Abnormality", "action": "Inspect encoder cable and main motor connection" },
-    { "code": "E811", "definition": "High Voltage", "action": "Inspect power grid stability and control box fuses" },
-    { "code": "E907", "definition": "X-Motor Origin Error", "action": "Clear path for X-table and check home sensors" }
+    {
+      "code": "E007",
+      "definition": "Machine Lock / Shaft Error",
+      "action": "Check for thread jams in shuttle or obstruction"
+    },
+    {
+      "code": "E031",
+      "definition": "Low Air Pressure",
+      "action": "Check compressor and air hose for Type L frames"
+    },
+    {
+      "code": "E220",
+      "definition": "Grease Run-out",
+      "action": "Replenish Grease A/B and reset Memory Switch 245"
+    },
+    {
+      "code": "E730",
+      "definition": "Encoder Abnormality",
+      "action": "Inspect encoder cable and main motor connection"
+    },
+    {
+      "code": "E811",
+      "definition": "High Voltage",
+      "action": "Inspect power grid stability and control box fuses"
+    },
+    {
+      "code": "E907",
+      "definition": "X-Motor Origin Error",
+      "action": "Clear path for X-table and check home sensors"
+    }
   ],
   "resources": [
-    { "resourceName": "JUKI Official Portal", "description": "Primary series specifications and global support", "url": "https://km-autocutter.jp/en/" },
-    { "resourceName": "JUKI European Portal", "description": "Model breakdown for HL subclasses (7300)", "url": "https://jukieurope.com/en/ism/product/ams-210en-hl1306-7300-x-130-x-y-60-mm" },
-    { "resourceName": "Kanstec Technical Mirror", "description": "Alternative Technical PDF Mirror for EN Series", "url": "https://www.kanstec.com.pl/images/pdf-km/KM-KS-AU-V.pdf" }
+    {
+      "resourceName": "JUKI Official Portal",
+      "description": "Primary series specifications and global support",
+      "url": "https://km-autocutter.jp/en/"
+    },
+    {
+      "resourceName": "JUKI European Portal",
+      "description": "Model breakdown for HL subclasses (7300)",
+      "url": "https://jukieurope.com/en/ism/product/ams-210en-hl1306-7300-x-130-x-y-60-mm"
+    },
+    {
+      "resourceName": "Kanstec Technical Mirror",
+      "description": "Alternative Technical PDF Mirror for EN Series",
+      "url": "https://www.kanstec.com.pl/images/pdf-km/KM-KS-AU-V.pdf"
+    }
   ],
   "finalNotes": "• Lubrication: Use only JUKI New Defrix Oil No.2 (ISO VG32 equivalent) for the hook and JUKI Grease A/B for the frame.\n• Safety: Switching on the machine is only possible when the hand is clear of moving sections; ensure the \"sensor handle\" is functioning on compliant versions.\n• Speed Handling: For thick threads (#2 to #8), the 7300 subclass with slide-type thread take-up is required to maintain stitch stability at high speeds."
 }
