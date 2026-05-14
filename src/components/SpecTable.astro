@@ -2,75 +2,45 @@
 interface Props {
   specs: { parameter: string; value: string }[];
 }
-
 const { specs } = Astro.props;
-
-// Display specs in a 2-column grid layout
 const pairs: { left: { parameter: string; value: string }; right?: { parameter: string; value: string } }[] = [];
 for (let i = 0; i < specs.length; i += 2) {
   pairs.push({ left: specs[i], right: specs[i + 1] });
 }
 ---
 
-<div class="bg-surface-container-lowest border border-outline-variant rounded overflow-hidden">
-  <table class="w-full text-left border-collapse">
-    <thead style="background-color: var(--color-surface-container);">
-      <tr>
-        <th
-          class="p-4 border-b border-r border-outline-variant text-label-caps"
-          style="color: var(--color-on-surface-variant);"
-        >
-          Parameter
-        </th>
-        <th
-          class="p-4 border-b border-r border-outline-variant text-label-caps"
-          style="color: var(--color-on-surface-variant);"
-        >
-          Value
-        </th>
-        <th
-          class="p-4 border-b border-r border-outline-variant text-label-caps hidden md:table-cell"
-          style="color: var(--color-on-surface-variant);"
-        >
-          Parameter
-        </th>
-        <th
-          class="p-4 border-b border-outline-variant text-label-caps hidden md:table-cell"
-          style="color: var(--color-on-surface-variant);"
-        >
-          Value
-        </th>
+<table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
+  <thead>
+    <tr style="background:#f7f8f8;">
+      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6; width:25%;">Parameter</th>
+      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6; width:25%;">Value</th>
+      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6; width:25%;" class="hidden-mobile">Parameter</th>
+      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6; width:25%;" class="hidden-mobile">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {pairs.map((pair, i) => (
+      <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
+        <td style="padding:7px 12px; font-weight:600; color:#0f1111; border-bottom:1px solid #f0f0f0;">{pair.left.parameter}</td>
+        <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0; font-weight:500;">{pair.left.value}</td>
+        {pair.right ? (
+          <>
+            <td style="padding:7px 12px; font-weight:600; color:#0f1111; border-bottom:1px solid #f0f0f0;" class="hidden-mobile">{pair.right.parameter}</td>
+            <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0; font-weight:500;" class="hidden-mobile">{pair.right.value}</td>
+          </>
+        ) : (
+          <>
+            <td style="border-bottom:1px solid #f0f0f0;" class="hidden-mobile"></td>
+            <td style="border-bottom:1px solid #f0f0f0;" class="hidden-mobile"></td>
+          </>
+        )}
       </tr>
-    </thead>
-    <tbody class="text-body-md" style="color: var(--color-on-surface);">
-      {
-        pairs.map((pair) => (
-          <tr class="border-b border-outline-variant">
-            <td
-              class="p-4 font-semibold border-r border-outline-variant"
-              style="background-color: var(--color-surface-container-low); color: var(--color-secondary);"
-            >
-              {pair.left.parameter}
-            </td>
-            <td class="p-4 border-r border-outline-variant font-bold">
-              {pair.left.value}
-            </td>
-            {pair.right && (
-              <>
-                <td
-                  class="p-4 font-semibold border-r border-outline-variant hidden md:table-cell"
-                  style="background-color: var(--color-surface-container-low); color: var(--color-secondary);"
-                >
-                  {pair.right.parameter}
-                </td>
-                <td class="p-4 font-bold hidden md:table-cell">
-                  {pair.right.value}
-                </td>
-              </>
-            )}
-          </tr>
-        ))
-      }
-    </tbody>
-  </table>
-</div>
+    ))}
+  </tbody>
+</table>
+
+<style>
+  @media (max-width: 640px) {
+    .hidden-mobile { display: none; }
+  }
+</style>
