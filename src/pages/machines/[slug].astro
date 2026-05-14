@@ -25,91 +25,159 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 const machineImageSrc = machine.machineImage?.startsWith("/") ? `${base}${machine.machineImage}` : machine.machineImage;
 
 const sections = [
-  { id: "overview", label: "Overview", show: true },
-  { id: "technical-data", label: "Technical Data", show: !!machine.technicalSpecs?.length },
-  { id: "working-principle", label: "Working Principle", show: !!machine.workingPrinciples?.length },
-  { id: "sequence-flow", label: "Sequence Flow", show: !!machine.sequenceFlow?.length },
-  { id: "parts-list", label: "Parts List", show: !!machine.partsList?.length },
-  { id: "maintenance", label: "Maintenance", show: !!machine.maintenance?.length },
-  { id: "resources", label: "Resources", show: !!machine.resources?.length },
-  { id: "final-notes", label: "Final Notes", show: !!machine.finalNotes },
+  { id: "purpose", label: "Purpose & Application", icon: "target", show: !!machine.purposeAndApplication },
+  { id: "overview", label: "Machine Overview", icon: "info", show: true },
+  { id: "technical-data", label: "Technical Data", icon: "settings", show: !!machine.technicalSpecs?.length },
+  { id: "working-principle", label: "Working Principle", icon: "psychology", show: !!machine.workingPrinciples?.length },
+  { id: "sequence-flow", label: "Operational Sequence", icon: "account_tree", show: !!machine.sequenceFlow?.length },
+  { id: "parts-list", label: "Parts List", icon: "build", show: !!machine.partsList?.length },
+  { id: "maintenance", label: "Maintenance", icon: "handyman", show: !!machine.maintenance?.length },
+  { id: "resources", label: "Resources", icon: "link", show: !!machine.resources?.length },
+  { id: "final-notes", label: "Important Notes", icon: "warning", show: !!machine.finalNotes },
 ].filter(s => s.show);
 ---
 
 <BaseLayout title={machine.title} description={machine.subtitle || machine.overviewDescription?.slice(0, 160)}>
   <Navbar currentPage="specs" />
 
-  <div style="background:#f7f8f8; min-height:calc(100vh - 56px);">
-    <div style="max-width:1280px; margin:0 auto; padding:16px 24px 48px; display:flex; gap:24px; align-items:flex-start;">
+  <div style="background:#f0f1f1; min-height:calc(100vh - 56px);">
+    <div style="max-width:1280px; margin:0 auto; padding:12px 12px 48px; display:flex; gap:16px; align-items:flex-start;">
 
       <!-- Sticky Sidebar -->
-      <aside style="width:200px; flex-shrink:0; position:sticky; top:72px; display:none;" class="md:block" id="detail-sidebar">
-        <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; padding:16px; margin-bottom:12px;">
-          <div style="font-size:10px; font-weight:700; color:#999; font-family:'Inter',sans-serif; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid #f0f0f0;">
+      <aside id="detail-sidebar" style="width:180px; flex-shrink:0; position:sticky; top:68px; display:flex; flex-direction:column; gap:10px;">
+        <!-- Nav -->
+        <div style="background:#0f1111; border-radius:8px; padding:14px 0; overflow:hidden;">
+          <div style="font-size:9px; font-weight:700; color:#666; font-family:'Inter',sans-serif; letter-spacing:0.1em; text-transform:uppercase; padding:0 14px 10px; border-bottom:1px solid #2a2a2a; margin-bottom:6px;">
             CONTENTS
           </div>
           {sections.map(s => (
-            <a href={`#${s.id}`} data-section={s.id}
-              style="display:block; font-size:12px; color:#565959; font-family:'Inter',sans-serif; padding:5px 0; text-decoration:none; border-left:2px solid transparent; padding-left:8px; transition:all 0.15s;"
-              class="sidebar-link"
-              onmouseover="this.style.color='#ff9900'"
-              onmouseout="if(!this.classList.contains('active')) this.style.color='#565959'"
-            >
+            <a href={`#${s.id}`} data-section={s.id} class="sidebar-link"
+              style="display:flex; align-items:center; gap:7px; font-size:11px; color:#888; font-family:'Inter',sans-serif; padding:6px 14px; text-decoration:none; border-left:2px solid transparent; transition:all 0.15s; line-height:1.3;">
+              <span class="material-symbols-outlined" style="font-size:13px; flex-shrink:0;">{s.icon}</span>
               {s.label}
             </a>
           ))}
         </div>
+        <!-- Download -->
         {machine.reportDownloadUrl && (
           <a href={machine.reportDownloadUrl} target="_blank" rel="noopener noreferrer"
-            style="display:flex; align-items:center; justify-content:center; gap:6px; background:#ff9900; color:#fff; font-size:12px; font-weight:700; font-family:'Inter',sans-serif; padding:10px; border-radius:6px; text-decoration:none; transition:opacity 0.15s;"
-            onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
-            <span class="material-symbols-outlined" style="font-size:16px;">download</span>
+            style="display:flex; align-items:center; justify-content:center; gap:6px; background:#ff9900; color:#0f1111; font-size:11px; font-weight:700; font-family:'Inter',sans-serif; padding:10px; border-radius:8px; text-decoration:none;">
+            <span class="material-symbols-outlined" style="font-size:15px;">download</span>
             Download Report
           </a>
         )}
       </aside>
 
       <!-- Main Content -->
-      <main style="flex:1; min-width:0; display:flex; flex-direction:column; gap:0;">
+      <main style="flex:1; min-width:0; display:flex; flex-direction:column; gap:10px;">
 
-        <!-- Page Header — compact -->
-        <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; padding:16px 20px; margin-bottom:16px; display:flex; gap:20px; align-items:flex-start;">
+        <!-- Back to Directory -->
+        <a href="/Machines/" style="display:inline-flex; align-items:center; gap:4px; font-size:11px; color:#565959; font-family:'Inter',sans-serif; text-decoration:none; margin-bottom:2px; width:fit-content;"
+          onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#565959'">
+          <span class="material-symbols-outlined" style="font-size:13px;">arrow_back</span>
+          Back to Directory
+        </a>
+
+        <!-- Page Header -->
+        <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; padding:16px 20px; display:flex; gap:20px; align-items:flex-start;">
           {machineImageSrc && (
-            <div style="width:200px; height:150px; flex-shrink:0; background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
-              <img src={machineImageSrc} alt={machine.title} style="width:100%; height:100%; object-fit:contain; mix-blend-mode:multiply; padding:6px;" />
+            <div style="width:400px; height:300px; flex-shrink:0; background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+              <img src={machineImageSrc} alt={machine.title} style="width:100%; height:100%; object-fit:contain; mix-blend-mode:multiply; padding:8px;" />
             </div>
           )}
-          <div style="flex:1; min-width:0;">
-            <a href="/Machines/" style="display:inline-flex; align-items:center; gap:4px; font-size:11px; color:#ff9900; font-family:'Inter',sans-serif; text-decoration:none; margin-bottom:6px;">
-              <span class="material-symbols-outlined" style="font-size:14px;">arrow_back</span>
-              Back to Directory
-            </a>
-            <h1 style="margin:0 0 4px; font-size:20px; font-weight:800; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.2;">{machine.title}</h1>
-            {machine.subtitle && <p style="margin:0 0 8px; font-size:13px; color:#565959; font-family:'Inter',sans-serif; line-height:1.4;">{machine.subtitle}</p>}
-            <div style="display:flex; gap:6px; flex-wrap:wrap;">
-              {machine.brand && <span style="background:#0f1111; color:#ff9900; font-size:10px; font-weight:700; font-family:'Inter',sans-serif; padding:2px 8px; border-radius:4px;">{machine.brand}</span>}
-              {machine.category && <span style="background:#f0f2f2; color:#565959; font-size:10px; font-family:'Inter',sans-serif; padding:2px 8px; border-radius:4px; border:1px solid #e3e6e6;">{machine.category}</span>}
+          <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:10px;">
+            <div>
+              <h1 style="margin:0 0 4px; font-size:20px; font-weight:800; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.2;">{machine.title}</h1>
+              {machine.subtitle && <p style="margin:0 0 8px; font-size:12px; color:#565959; font-family:'Inter',sans-serif; line-height:1.4;">{machine.subtitle}</p>}
+              <div style="display:flex; gap:6px; flex-wrap:wrap;">
+                {machine.brand && <span style="background:#0f1111; color:#ff9900; font-size:10px; font-weight:700; font-family:'Inter',sans-serif; padding:3px 10px; border-radius:4px;">{machine.brand}</span>}
+                {machine.category && <span style="background:#f0f2f2; color:#565959; font-size:10px; font-family:'Inter',sans-serif; padding:3px 10px; border-radius:4px; border:1px solid #e3e6e6;">{machine.category}</span>}
+              </div>
             </div>
+
+            {/* Quick specs grid */}
+            {machine.technicalSpecs?.length > 0 && (
+              <div style="border-top:1px solid #f0f0f0; padding-top:10px;">
+                <div style="font-size:9px; font-weight:700; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Key Specifications</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+                  {machine.technicalSpecs.slice(0, 6).map((spec: any) => (
+                    <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:5px; padding:7px 10px;">
+                      <div style="font-size:9px; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">{spec.parameter}</div>
+                      <div style="font-size:11px; font-weight:600; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.3;">{spec.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Classification highlights */}
+            {!machine.technicalSpecs?.length && machine.classificationTable?.length > 0 && (
+              <div style="border-top:1px solid #f0f0f0; padding-top:10px;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+                  {machine.classificationTable.slice(0, 6).map((row: any) => (
+                    <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:5px; padding:7px 10px;">
+                      <div style="font-size:9px; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">{row.field}</div>
+                      <div style="font-size:11px; font-weight:600; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.3;">{row.value}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
-        <!-- Overview -->
-        <section id="overview" style="scroll-margin-top:72px; margin-bottom:12px;">
-          <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-            <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-              <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">info</span>
-              <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Machine Overview</h2>
+        <!-- Purpose & Application -->
+        {machine.purposeAndApplication && (
+          <section id="purpose" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">target</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Purpose & Application</h2>
+              </div>
+              <div style="padding:16px 18px; display:flex; flex-direction:column; gap:14px;">
+                <div>
+                  <div style="font-size:10px; font-weight:700; color:#ff9900; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:5px;">What is it for?</div>
+                  <p style="margin:0; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.6;">{machine.purposeAndApplication.purpose}</p>
+                </div>
+                <div>
+                  <div style="font-size:10px; font-weight:700; color:#ff9900; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:7px;">Key Applications</div>
+                  <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:4px;">
+                    {machine.purposeAndApplication.applications.map((app: string) => (
+                      <li style="display:flex; align-items:flex-start; gap:7px; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.5;">
+                        <span style="color:#ff9900; font-weight:700; flex-shrink:0;">•</span>{app}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; padding:9px 13px; display:flex; align-items:flex-start; gap:7px;">
+                  <span class="material-symbols-outlined" style="font-size:14px; color:#ff9900; flex-shrink:0; margin-top:1px;">factory</span>
+                  <div>
+                    <span style="font-size:9px; font-weight:700; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:2px;">Industry</span>
+                    <span style="font-size:12px; color:#333; font-family:'Inter',sans-serif;">{machine.purposeAndApplication.industry}</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div style="padding:16px 20px;">
+          </section>
+        )}
+
+        <!-- Overview -->
+        <section id="overview" style="scroll-margin-top:72px;">
+          <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+            <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+              <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">info</span>
+              <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Machine Overview</h2>
+            </div>
+            <div style="padding:16px 18px;">
               {machine.overviewDescription && (
-                <p style="margin:0 0 14px; font-size:13px; color:#333; font-family:'Inter',sans-serif; line-height:1.6;">{machine.overviewDescription}</p>
+                <p style="margin:0 0 14px; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.6;">{machine.overviewDescription}</p>
               )}
               {machine.classificationTable?.length > 0 && (
                 <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
                   <thead>
-                    <tr style="background:#f7f8f8;">
-                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6; width:35%;">Field</th>
-                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6;">Information</th>
+                    <tr style="background:#0f1111;">
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ff9900; border-bottom:1px solid #2a2a2a; width:35%; font-size:11px;">Field</th>
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Information</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -128,13 +196,13 @@ const sections = [
 
         <!-- Technical Data -->
         {machine.technicalSpecs?.length > 0 && (
-          <section id="technical-data" style="scroll-margin-top:72px; margin-bottom:12px;">
-            <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-              <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">settings</span>
-                <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Technical Data</h2>
+          <section id="technical-data" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">settings</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Technical Data</h2>
               </div>
-              <div style="padding:16px 20px;">
+              <div style="padding:16px 18px;">
                 <SpecTable specs={machine.technicalSpecs} />
               </div>
             </div>
@@ -143,15 +211,15 @@ const sections = [
 
         <!-- Working Principle -->
         {machine.workingPrinciples?.length > 0 && (
-          <section id="working-principle" style="scroll-margin-top:72px; margin-bottom:12px;">
-            <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-              <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">psychology</span>
-                <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Working Principle</h2>
+          <section id="working-principle" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">psychology</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Working Principle</h2>
               </div>
-              <div style="padding:16px 20px; display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:10px;">
+              <div style="padding:16px 18px; display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:10px;">
                 {machine.workingPrinciples.map((p: any) => (
-                  <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; padding:12px 14px;">
+                  <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; padding:12px 14px; border-left:3px solid #ff9900;">
                     <div style="font-size:12px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; margin-bottom:5px;">{p.heading}</div>
                     <div style="font-size:12px; color:#565959; font-family:'Inter',sans-serif; line-height:1.5;">{p.description}</div>
                   </div>
@@ -163,13 +231,13 @@ const sections = [
 
         <!-- Sequence Flow -->
         {machine.sequenceFlow?.length > 0 && (
-          <section id="sequence-flow" style="scroll-margin-top:72px; margin-bottom:12px;">
-            <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-              <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">account_tree</span>
-                <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Operational Sequence</h2>
+          <section id="sequence-flow" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">account_tree</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Operational Sequence</h2>
               </div>
-              <div style="padding:16px 20px;">
+              <div style="padding:16px 18px;">
                 <SequenceFlow steps={machine.sequenceFlow} />
               </div>
             </div>
@@ -178,13 +246,13 @@ const sections = [
 
         <!-- Parts List -->
         {machine.partsList?.length > 0 && (
-          <section id="parts-list" style="scroll-margin-top:72px; margin-bottom:12px;">
-            <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-              <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">build</span>
-                <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Parts List</h2>
+          <section id="parts-list" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">build</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Parts List</h2>
               </div>
-              <div style="padding:16px 20px;">
+              <div style="padding:16px 18px;">
                 <PartsTable parts={machine.partsList} />
               </div>
             </div>
@@ -193,13 +261,13 @@ const sections = [
 
         <!-- Maintenance -->
         {machine.maintenance?.length > 0 && (
-          <section id="maintenance" style="scroll-margin-top:72px; margin-bottom:12px;">
-            <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-              <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">handyman</span>
-                <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Maintenance & Troubleshooting</h2>
+          <section id="maintenance" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">handyman</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Maintenance & Troubleshooting</h2>
               </div>
-              <div style="padding:16px 20px;">
+              <div style="padding:16px 18px;">
                 <MaintenanceTable items={machine.maintenance} />
               </div>
             </div>
@@ -208,53 +276,51 @@ const sections = [
 
         <!-- Resources -->
         {machine.resources?.length > 0 && (
-          <section id="resources" style="scroll-margin-top:72px; margin-bottom:12px;">
-            <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-              <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">link</span>
-                <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Additional Resources</h2>
+          <section id="resources" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">link</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Additional Resources</h2>
               </div>
-              <div style="padding:0;">
-                <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
-                  <thead>
-                    <tr style="background:#f7f8f8;">
-                      <th style="padding:8px 16px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6;">Resource</th>
-                      <th style="padding:8px 16px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6;">Description</th>
-                      <th style="padding:8px 16px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6; width:80px;">Link</th>
+              <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
+                <thead>
+                  <tr style="background:#f7f8f8;">
+                    <th style="padding:8px 16px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6;">Resource</th>
+                    <th style="padding:8px 16px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6;">Description</th>
+                    <th style="padding:8px 16px; text-align:left; font-weight:600; color:#565959; border-bottom:1px solid #e3e6e6; width:70px;">Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {machine.resources.map((r: any, i: number) => (
+                    <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
+                      <td style="padding:7px 16px; font-weight:600; color:#0f1111; border-bottom:1px solid #f0f0f0;">{r.resourceName}</td>
+                      <td style="padding:7px 16px; color:#565959; border-bottom:1px solid #f0f0f0;">{r.description}</td>
+                      <td style="padding:7px 16px; border-bottom:1px solid #f0f0f0;">
+                        {r.url ? (
+                          <a href={r.url} target="_blank" rel="noopener noreferrer"
+                            style="color:#ff9900; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"
+                            onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                            Open <span class="material-symbols-outlined" style="font-size:12px;">open_in_new</span>
+                          </a>
+                        ) : "—"}
+                      </td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    {machine.resources.map((r: any, i: number) => (
-                      <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
-                        <td style="padding:8px 16px; font-weight:600; color:#0f1111; border-bottom:1px solid #f0f0f0;">{r.resourceName}</td>
-                        <td style="padding:8px 16px; color:#565959; border-bottom:1px solid #f0f0f0;">{r.description}</td>
-                        <td style="padding:8px 16px; border-bottom:1px solid #f0f0f0;">
-                          {r.url ? (
-                            <a href={r.url} target="_blank" rel="noopener noreferrer"
-                              style="color:#ff9900; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"
-                              onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
-                              Open <span class="material-symbols-outlined" style="font-size:13px;">open_in_new</span>
-                            </a>
-                          ) : "—"}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </section>
         )}
 
         <!-- Final Notes -->
         {machine.finalNotes && (
-          <section id="final-notes" style="scroll-margin-top:72px; margin-bottom:12px;">
-            <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; overflow:hidden;">
-              <div style="padding:12px 20px; border-bottom:1px solid #f0f0f0; display:flex; align-items:center; gap:8px;">
-                <span class="material-symbols-outlined" style="font-size:16px; color:#ff9900;">warning</span>
-                <h2 style="margin:0; font-size:13px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.04em;">Important Notes</h2>
+          <section id="final-notes" style="scroll-margin-top:72px;">
+            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">warning</span>
+                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Important Notes</h2>
               </div>
-              <div style="padding:14px 20px; border-left:3px solid #ff9900; margin:12px 20px; background:#fffbf2; border-radius:0 4px 4px 0;">
+              <div style="margin:14px 18px; padding:12px 16px; border-left:3px solid #ff9900; background:#fffbf2; border-radius:0 4px 4px 0;">
                 <p style="margin:0; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.7; white-space:pre-line;">{machine.finalNotes}</p>
               </div>
             </div>
@@ -269,25 +335,49 @@ const sections = [
 </BaseLayout>
 
 <script>
-  // Active sidebar highlight on scroll
-  const links = document.querySelectorAll(".sidebar-link");
-  const sectionEls = document.querySelectorAll("section[id]");
+  const links = document.querySelectorAll<HTMLAnchorElement>(".sidebar-link");
+  const sectionEls = Array.from(document.querySelectorAll("section[id]")) as HTMLElement[];
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(link => {
-          const el = link as HTMLAnchorElement;
-          const isActive = el.dataset.section === entry.target.id;
-          el.style.color = isActive ? "#ff9900" : "#565959";
-          el.style.borderLeftColor = isActive ? "#ff9900" : "transparent";
-          el.style.fontWeight = isActive ? "600" : "400";
-          if (isActive) el.classList.add("active");
-          else el.classList.remove("active");
-        });
+  function setActive(id: string) {
+    links.forEach(link => {
+      const isActive = link.dataset.section === id;
+      link.style.color = isActive ? "#ff9900" : "#888";
+      link.style.borderLeftColor = isActive ? "#ff9900" : "transparent";
+      link.style.fontWeight = isActive ? "600" : "400";
+      link.style.backgroundColor = isActive ? "rgba(255,153,0,0.08)" : "";
+    });
+  }
+
+  function getActiveSection(): string {
+    const scrollY = window.scrollY + 80; // offset for sticky navbar
+    let current = sectionEls[0]?.id || "";
+    for (const section of sectionEls) {
+      if (section.offsetTop <= scrollY) {
+        current = section.id;
+      }
+    }
+    return current;
+  }
+
+  // Update on scroll
+  window.addEventListener("scroll", () => {
+    setActive(getActiveSection());
+  }, { passive: true });
+
+  // Set initial active
+  setActive(getActiveSection());
+
+  // Click: smooth scroll + immediate highlight
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const id = link.dataset.section!;
+      const target = document.getElementById(id);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - 72;
+        window.scrollTo({ top, behavior: "smooth" });
+        setActive(id);
       }
     });
-  }, { rootMargin: "-10% 0px -70% 0px" });
-
-  sectionEls.forEach(s => observer.observe(s));
+  });
 </script>

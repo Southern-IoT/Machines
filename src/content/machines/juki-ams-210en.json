@@ -3,6 +3,17 @@
   "subtitle": "Computer-Controlled Cycle Machine for Heavy-Weight Materials",
   "brand": "JUKI",
   "category": "Sewing Machine",
+  "purposeAndApplication": {
+    "purpose": "The JUKI AMS-210EN HL 1306 SZZ is a computer-controlled cycle sewing machine designed to automatically sew pre-programmed stitch patterns on garments and textile products. It replaces manual pattern sewing with precise, repeatable automated cycles, dramatically increasing production speed and consistency.",
+    "applications": [
+      "Sewing pocket openings, flap attachments, and welt pockets on trousers, jackets, and uniforms",
+      "Attaching labels, patches, and emblems to garments",
+      "Sewing belt loops, waistbands, and reinforcement stitching on heavy-weight denim and workwear",
+      "Tacking and securing straps on bags, backpacks, and military gear",
+      "Any application requiring a fixed, repeatable stitch pattern on medium-to-heavy fabrics"
+    ],
+    "industry": "Garment manufacturing, workwear production, military and uniform manufacturing, bag and accessory production"
+  },
   "machineImage": "/uploads/ams-210en-1306.7450.jpg",
   "reportDownloadUrl": "",
   "publishedDate": "2026-05-10T00:00:00.000Z",
@@ -136,51 +147,15 @@
     }
   ],
   "partsList": [
-    {
-      "partName": "Main Shaft Motor",
-      "partId": "400-52937",
-      "function": "550W AC Servomotor (Direct-drive)"
-    },
-    {
-      "partName": "IP-420 Panel",
-      "partId": "400-86485",
-      "function": "Color LCD touch screen for data input"
-    },
-    {
-      "partName": "Needle Bar (H)",
-      "partId": "400-26882",
-      "function": "41.2mm stroke for heavy penetration"
-    },
-    {
-      "partName": "Shuttle Hook",
-      "partId": "B1818-210-D0A",
-      "function": "Double-capacity shuttle for thick threads"
-    },
-    {
-      "partName": "Intermediate Presser",
-      "partId": "14433601",
-      "function": "Programmable height foot for material clamping"
-    },
-    {
-      "partName": "X-Motor",
-      "partId": "Stepping Motor",
-      "function": "Moves the feed frame along the lateral axis"
-    },
-    {
-      "partName": "Pneumatic Pedal",
-      "partId": "GPK-470010AB",
-      "function": "3-Pedal assembly for L-frame operation"
-    },
-    {
-      "partName": "Active Tension Unit",
-      "partId": "AT Unit",
-      "function": "Electronic disk-less tension mechanism"
-    },
-    {
-      "partName": "Thread Trimmer",
-      "partId": "10502300",
-      "function": "Stepping-motor controlled trimming knife"
-    }
+    { "partName": "Needle Bar (H)", "partId": "400-26882", "section": "mechanical", "function": "41.2mm stroke for heavy penetration." },
+    { "partName": "Shuttle Hook", "partId": "B1818-210-D0A", "section": "mechanical", "function": "Double-capacity shuttle for thick threads." },
+    { "partName": "Intermediate Presser", "partId": "14433601", "section": "mechanical", "function": "Programmable height foot for material clamping." },
+    { "partName": "Pneumatic Pedal", "partId": "GPK-470010AB", "section": "mechanical", "function": "3-Pedal assembly for L-frame operation." },
+    { "partName": "Thread Trimmer", "partId": "10502300", "section": "mechanical", "function": "Stepping-motor controlled trimming knife." },
+    { "partName": "Main Shaft Motor", "partId": "400-52937", "section": "electronic", "function": "550W AC Servomotor (Direct-drive)." },
+    { "partName": "IP-420 Panel", "partId": "400-86485", "section": "electronic", "function": "Color LCD touch screen for data input." },
+    { "partName": "X-Motor", "partId": "Stepping Motor", "section": "electronic", "function": "Moves the feed frame along the lateral axis." },
+    { "partName": "Active Tension Unit", "partId": "AT Unit", "section": "electronic", "function": "Electronic disk-less tension mechanism." }
   ],
   "maintenance": [
     {

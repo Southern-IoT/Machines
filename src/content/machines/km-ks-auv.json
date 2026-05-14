@@ -3,6 +3,17 @@
   "subtitle": "Reciprocating Blade Cutting System with Automatic Sharpening",
   "brand": "KM",
   "category": "Cutting Machine",
+  "purposeAndApplication": {
+    "purpose": "The KM KS-AUV is a handheld vertical straight knife cutting machine used to cut through multiple layers of fabric spread on a cutting table. The operator guides the machine along marked cutting lines while the reciprocating blade cuts cleanly through the entire fabric stack in a single pass, enabling high-volume pattern cutting.",
+    "applications": [
+      "Cutting fabric spreads (multiple layers) into garment pattern pieces in apparel factories",
+      "Cutting knit fabrics, synthetic fibers, denim, vinyl, and leather",
+      "Straight-line and curved cutting of fabric stacks up to 290mm height",
+      "Cutting interlinings, linings, and fusible materials",
+      "Used in the cutting room as the primary bulk-cutting tool before sewing operations begin"
+    ],
+    "industry": "Apparel and garment manufacturing, textile cutting rooms, leather goods production, upholstery and soft furnishings manufacturing"
+  },
   "machineImage": "/uploads/KS-AUV.jpg",
   "reportDownloadUrl": "https://www.amazon.science",
   "publishedDate": "2026-05-10T00:00:00.000Z",
@@ -124,66 +135,18 @@
     }
   ],
   "partsList": [
-    {
-      "partName": "Capacitor-Stator",
-      "partId": "M-001",
-      "function": "Provides magnetic field; includes start switch."
-    },
-    {
-      "partName": "Rotor with Shaft",
-      "partId": "M-004",
-      "function": "Main rotating assembly for 1P/3P power."
-    },
-    {
-      "partName": "Crank (32/36mm)",
-      "partId": "M-027",
-      "function": "Converts rotary to reciprocating motion."
-    },
-    {
-      "partName": "Connecting Rod",
-      "partId": "M-036",
-      "function": "Linkage between crank and crosshead."
-    },
-    {
-      "partName": "Cross Head",
-      "partId": "M-050",
-      "function": "Reciprocating carrier for the knife blade."
-    },
-    {
-      "partName": "Guide Metal (L/R)",
-      "partId": "M-048/49",
-      "function": "Precision tracks for vertical movement."
-    },
-    {
-      "partName": "Knife Lock Bolt",
-      "partId": "M-051",
-      "function": "Secures the cutting blade to the crosshead."
-    },
-    {
-      "partName": "Oil Tank",
-      "partId": "M-034",
-      "function": "Reservoir for automatic gravity lubrication."
-    },
-    {
-      "partName": "Abrasive Belts",
-      "partId": "M-189",
-      "function": "Consumable emery bands for blade honing."
-    },
-    {
-      "partName": "Neoprene Band",
-      "partId": "U-178",
-      "function": "Drive band for the sharpening pulleys."
-    },
-    {
-      "partName": "Base Plate",
-      "partId": "M-078",
-      "function": "Low-profile support with rollers for travel."
-    },
-    {
-      "partName": "Auto Cut-Out Switch",
-      "partId": "M-201",
-      "function": "Disconnects starting capacitor once RPM is reached."
-    }
+    { "partName": "Crank (32/36mm)", "partId": "M-027", "section": "mechanical", "function": "Converts rotary to reciprocating motion." },
+    { "partName": "Connecting Rod", "partId": "M-036", "section": "mechanical", "function": "Linkage between crank and crosshead." },
+    { "partName": "Cross Head", "partId": "M-050", "section": "mechanical", "function": "Reciprocating carrier for the knife blade." },
+    { "partName": "Guide Metal (L/R)", "partId": "M-048/49", "section": "mechanical", "function": "Precision tracks for vertical movement." },
+    { "partName": "Knife Lock Bolt", "partId": "M-051", "section": "mechanical", "function": "Secures the cutting blade to the crosshead." },
+    { "partName": "Oil Tank", "partId": "M-034", "section": "mechanical", "function": "Reservoir for automatic gravity lubrication." },
+    { "partName": "Abrasive Belts", "partId": "M-189", "section": "mechanical", "function": "Consumable emery bands for blade honing." },
+    { "partName": "Neoprene Band", "partId": "U-178", "section": "mechanical", "function": "Drive band for the sharpening pulleys." },
+    { "partName": "Base Plate", "partId": "M-078", "section": "mechanical", "function": "Low-profile support with rollers for travel." },
+    { "partName": "Capacitor-Stator", "partId": "M-001", "section": "electronic", "function": "Provides magnetic field; includes start switch." },
+    { "partName": "Rotor with Shaft", "partId": "M-004", "section": "electronic", "function": "Main rotating assembly for 1P/3P power." },
+    { "partName": "Auto Cut-Out Switch", "partId": "M-201", "section": "electronic", "function": "Disconnects starting capacitor once RPM is reached." }
   ],
   "maintenance": [
     {

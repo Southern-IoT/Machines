@@ -2,73 +2,137 @@
 interface Props {
   steps: { stepTitle: string; stepDescription: string }[];
 }
-
 const { steps } = Astro.props;
+
+const isDecision = (step: { stepTitle: string }) =>
+  /check|quality|inspect/i.test(step.stepTitle);
+
+const lastStep = steps[steps.length - 1];
+const hasDecision = isDecision(lastStep);
+const mainSteps = hasDecision ? steps.slice(0, -1) : steps;
+const decisionStep = hasDecision ? lastStep : null;
 ---
 
-<div class="bg-surface-container-lowest p-8 rounded border border-outline-variant overflow-x-auto">
-  <!-- Desktop: Horizontal Flow -->
-  <div class="hidden md:block">
-    <div class="min-w-[600px] flex items-start justify-between relative">
-      <!-- Connecting Line -->
-      <div
-        class="absolute top-6 left-6 right-6 h-0.5 z-0"
-        style="background-color: var(--color-outline-variant);"
-      >
+<div style="display:flex; flex-direction:column; align-items:center; gap:0; padding:8px 0; font-family:'Inter',sans-serif;">
+
+  {mainSteps.map((step, i) => (
+    <>
+      <!-- Step box -->
+      <div style="
+        background:#fff;
+        border:1.5px solid #bfc7d1;
+        border-radius:8px;
+        padding:10px 24px;
+        min-width:320px;
+        max-width:480px;
+        width:100%;
+        text-align:center;
+        box-shadow:0 1px 3px rgba(0,0,0,0.06);
+        position:relative;
+      ">
+        <div style="font-size:10px; font-weight:700; color:#ff9900; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:2px;">
+          Step {i + 1}
+        </div>
+        <div style="font-size:13px; font-weight:600; color:#0f1111; line-height:1.3;">
+          {step.stepTitle}
+        </div>
+        {step.stepDescription && (
+          <div style="font-size:11px; color:#888; margin-top:2px; line-height:1.4;">
+            {step.stepDescription}
+          </div>
+        )}
       </div>
 
-      {
-        steps.map((step, index) => (
-          <div class="relative z-10 flex flex-col items-center gap-3 bg-surface-container-lowest px-3 max-w-[140px]">
-            <div
-              class="w-12 h-12 rounded-full flex items-center justify-center text-headline-md font-bold shadow-sm"
-              style="background-color: var(--color-primary); color: var(--color-on-primary);"
-            >
-              {index + 1}
-            </div>
-            <div class="text-center">
-              <h4 class="font-bold text-body-sm" style="color: var(--color-on-surface);">
-                {step.stepTitle}
-              </h4>
-              <span class="text-[12px]" style="color: var(--color-on-surface-variant);">
-                {step.stepDescription}
-              </span>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-  </div>
+      <!-- Arrow down -->
+      <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+        <div style="width:2px; height:16px; background:#bfc7d1;"></div>
+        <div style="width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid #bfc7d1;"></div>
+      </div>
+    </>
+  ))}
 
-  <!-- Mobile: Vertical Flow -->
-  <div class="md:hidden flex flex-col gap-0">
-    {
-      steps.map((step, index) => (
-        <div class="flex items-start gap-4">
-          <div class="flex flex-col items-center">
-            <div
-              class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-body-sm shrink-0"
-              style="background-color: var(--color-primary); color: var(--color-on-primary);"
-            >
-              {index + 1}
-            </div>
-            {index < steps.length - 1 && (
-              <div
-                class="w-0.5 h-12"
-                style="background-color: var(--color-outline-variant);"
-              />
-            )}
-          </div>
-          <div class="pt-2 pb-4">
-            <h4 class="font-bold text-body-md" style="color: var(--color-on-surface);">
-              {step.stepTitle}
-            </h4>
-            <span class="text-body-sm" style="color: var(--color-on-surface-variant);">
-              {step.stepDescription}
-            </span>
+  {decisionStep ? (
+    <>
+      <!-- Diamond decision node -->
+      <div style="position:relative; width:140px; height:80px; margin:4px 0;">
+        <div style="
+          position:absolute; top:50%; left:50%;
+          width:100px; height:100px;
+          background:#fff3cd;
+          border:2px solid #ff9900;
+          transform:translate(-50%,-50%) rotate(45deg);
+          border-radius:6px;
+        "></div>
+        <div style="
+          position:absolute; top:50%; left:50%;
+          transform:translate(-50%,-50%);
+          text-align:center; z-index:1; width:110px;
+        ">
+          <div style="font-size:12px; font-weight:700; color:#0f1111; line-height:1.3;">
+            {decisionStep.stepTitle}
           </div>
         </div>
-      ))
-    }
-  </div>
+      </div>
+
+      <!-- Yes / No branches -->
+      <div style="display:flex; align-items:flex-start; gap:80px; margin-top:4px; position:relative;">
+
+        <!-- Horizontal connector line -->
+        <div style="
+          position:absolute;
+          top:0; left:50%;
+          transform:translateX(-50%);
+          width:calc(100% - 40px);
+          height:2px;
+          background:#bfc7d1;
+        "></div>
+
+        <!-- YES branch -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div style="width:2px; height:20px; background:#22c55e;"></div>
+          <div style="width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid #22c55e;"></div>
+          <div style="font-size:10px; font-weight:700; color:#16a34a; margin:3px 0;">Yes</div>
+          <div style="
+            background:#f0fdf4;
+            border:1.5px solid #22c55e;
+            border-radius:8px;
+            padding:8px 16px;
+            text-align:center;
+            min-width:120px;
+          ">
+            <div style="font-size:12px; font-weight:600; color:#16a34a;">Send to next operation</div>
+          </div>
+        </div>
+
+        <!-- NO branch -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
+          <div style="width:2px; height:20px; background:#ef4444;"></div>
+          <div style="width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid #ef4444;"></div>
+          <div style="font-size:10px; font-weight:700; color:#dc2626; margin:3px 0;">No</div>
+          <div style="
+            background:#fef2f2;
+            border:1.5px solid #ef4444;
+            border-radius:8px;
+            padding:8px 16px;
+            text-align:center;
+            min-width:120px;
+          ">
+            <div style="font-size:12px; font-weight:600; color:#dc2626;">Rework / mechanic check</div>
+          </div>
+        </div>
+
+      </div>
+    </>
+  ) : (
+    <!-- End node if no decision -->
+    <div style="
+      background:#0f1111;
+      border-radius:20px;
+      padding:6px 20px;
+      text-align:center;
+    ">
+      <div style="font-size:11px; font-weight:600; color:#ff9900;">End</div>
+    </div>
+  )}
+
 </div>

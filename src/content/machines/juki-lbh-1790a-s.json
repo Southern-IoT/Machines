@@ -3,6 +3,17 @@
   "subtitle": "Computer-Controlled High-Speed Lockstitch Buttonholing Machine",
   "brand": "JUKI",
   "category": "Sewing Machine",
+  "purposeAndApplication": {
+    "purpose": "The JUKI LBH-1790A-S is a computer-controlled buttonholing machine that automatically sews complete buttonholes in a single cycle. It controls needle rocking, feed movement, knife cutting, and thread trimming electronically, producing consistent, high-quality buttonholes at high speed without manual adjustment between pieces.",
+    "applications": [
+      "Sewing straight buttonholes on shirt fronts, blouse plackets, and collar bands",
+      "Buttonholing on uniforms, formal wear, and ladies' garments",
+      "Sewing buttonholes on cuffs, waistbands, and pocket flaps",
+      "Producing buttonholes in 31 different shapes for varied garment styles",
+      "High-volume buttonhole production on light to medium-weight woven fabrics"
+    ],
+    "industry": "Shirt and blouse manufacturing, uniform and workwear production, ladies' wear and formal garment manufacturing, any apparel factory requiring high-speed buttonhole operations"
+  },
   "machineImage": "/uploads/LBH1790-1.webp",
   "reportDownloadUrl": "",
   "publishedDate": "2026-05-14T00:00:00.000Z",

@@ -3,6 +3,18 @@
   "subtitle": "Computer-Controlled High-Speed Bartacking Machine",
   "brand": "JUKI",
   "category": "Sewing Machine",
+  "purposeAndApplication": {
+    "purpose": "The JUKI LK-1900BN is a computer-controlled bartacking machine used to sew short, dense reinforcement stitches at stress points on garments and textile products. It automatically moves the fabric in X and Y directions to form a tight bartack pattern, preventing seams and openings from tearing under tension.",
+    "applications": [
+      "Reinforcing pocket corners on trousers, shirts, and jackets to prevent tearing",
+      "Securing belt loops at the top and bottom attachment points on trousers and jeans",
+      "Attaching and reinforcing straps on bags, backpacks, and safety harnesses",
+      "Tacking labels, care tags, and brand patches onto garments",
+      "Reinforcing fly openings, zipper ends, and buttonhole ends on all garment types",
+      "Securing knit and stretch fabric seam ends without distortion (M-type variant)"
+    ],
+    "industry": "Garment manufacturing, denim production, workwear and uniform manufacturing, bag and luggage production, safety equipment manufacturing"
+  },
   "machineImage": "/uploads/JukiLK1900b_1.jpg",
   "reportDownloadUrl": "",
   "publishedDate": "2026-05-10T00:00:00.000Z",

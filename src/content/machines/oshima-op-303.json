@@ -1,0 +1,107 @@
+{
+  "title": "Oshima OP-303 Pocket Creaser",
+  "subtitle": "Dual-Station Pocket Creasing / Hot-Pressing Machine",
+  "brand": "Oshima",
+  "category": "Pressing Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-15T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Oshima OP-303 is a pocket creasing machine manufactured by Oshima Taiwan. It is used to fold, crease, and hot-press pocket edges before the pocket is attached to garments. The machine helps produce a more consistent pocket shape compared with manual folding and ironing.",
+    "applications": [
+      "Folding and creasing pocket edges before pocket attaching operation",
+      "Forming shirt pockets, jeans pockets, and similar pocket shapes",
+      "Replacing manual folding and ironing with a repeatable, consistent process",
+      "Dual-station operation for higher production output (300–450 pieces/hour)",
+      "Preparing pocket fabric for the sewing process with fixed, uniform edge shape"
+    ],
+    "industry": "Garment manufacturing, shirt and trouser production, denim manufacturing, any apparel factory requiring consistent pocket preparation"
+  },
+  "overviewDescription": "The Oshima OP-303 is a fixed pocket creasing and hot-pressing machine manufactured by Oshima Taiwan. It uses a shaped pocket mold, folding mechanism, heat, and pressure to fold and crease pocket edges before the pocket is attached to garments. The dual-station design allows two pocket-forming stations for higher production output.",
+  "classificationTable": [
+    { "field": "Machine Name", "value": "Pocket Creaser" },
+    { "field": "Brand", "value": "Oshima Taiwan" },
+    { "field": "Model", "value": "OP-303" },
+    { "field": "Series", "value": "OP-302/303 Pocket Creaser Series" },
+    { "field": "Machine Type", "value": "Fixed pocket creasing / pocket hot-pressing machine" },
+    { "field": "Station Type", "value": "Double station / dual station" },
+    { "field": "Main Application", "value": "Folding and creasing pocket edges before pocket attaching operation" },
+    { "field": "Common Garment Use", "value": "Shirt pockets, jeans pockets, and similar pocket-forming work" },
+    { "field": "Control Note", "value": "Official public information confirms electronic thermostat control. PLC is not mentioned in official public OP-303 information." },
+    { "field": "Parts Book Status", "value": "No authentic public OP-303 parts-list PDF was found online. Official parts book should be requested from Oshima or an authorized dealer." }
+  ],
+  "technicalSpecs": [
+    { "parameter": "Power Supply", "value": "1-phase 220V, 50/60Hz" },
+    { "parameter": "Heater Capacity", "value": "4 kW (verify from actual machine nameplate before electrical maintenance)" },
+    { "parameter": "Mold Quantity", "value": "2 pieces" },
+    { "parameter": "Mold Replacement Time", "value": "Approximately 3 minutes" },
+    { "parameter": "Pressing Width", "value": "68–205 mm" },
+    { "parameter": "Pressing Length", "value": "80–260 mm" },
+    { "parameter": "Machine Size", "value": "1025 × 735 × 1270 mm" },
+    { "parameter": "Net / Gross Weight", "value": "244 / 304 kg" },
+    { "parameter": "Production Output", "value": "300–450 pieces/hour" },
+    { "parameter": "Temperature Control", "value": "Electronic thermostat, approximately ±3°C" }
+  ],
+  "workingPrinciples": [
+    {
+      "heading": "1. Mold-Based Shaping",
+      "description": "The operator installs the correct pocket mold for the required pocket size and shape. The mold gives the pocket its fixed and repeatable form. Mold replacement takes approximately 3 minutes."
+    },
+    {
+      "heading": "2. Folding Mechanism",
+      "description": "The folding plate and edge folder turn the pocket fabric edge around the mold into the required shape. This replaces manual folding and ensures consistent edge alignment across all pieces."
+    },
+    {
+      "heading": "3. Heat and Pressure Creasing",
+      "description": "The heated pressing plate applies heat (controlled by electronic thermostat to ±3°C accuracy) and pressure to fix the crease permanently. The heat sets the fold so the pocket retains its shape during the sewing operation."
+    },
+    {
+      "heading": "4. Dual-Station Operation",
+      "description": "The machine has two working stations (left and right). While one pocket is being pressed, the operator can prepare the next pocket on the other station, increasing production output to 300–450 pieces per hour."
+    }
+  ],
+  "sequenceFlow": [
+    { "stepTitle": "Inspect Machine", "stepDescription": "Check machine condition before starting" },
+    { "stepTitle": "Install Pocket Mold", "stepDescription": "Fit correct mold for pocket size" },
+    { "stepTitle": "Set Temperature", "stepDescription": "Set required pressing temperature" },
+    { "stepTitle": "Wait for Temperature", "stepDescription": "Machine reaches working temperature" },
+    { "stepTitle": "Place Pocket Fabric", "stepDescription": "Position fabric on the mold" },
+    { "stepTitle": "Fold and Press", "stepDescription": "Folding and heat-pressing cycle runs" },
+    { "stepTitle": "Remove Pocket", "stepDescription": "Take out the formed pocket" },
+    { "stepTitle": "Inspect Shape", "stepDescription": "Check pocket edge quality" },
+    { "stepTitle": "Send to Sewing", "stepDescription": "Pass formed pocket to sewing operation" }
+  ],
+  "partsList": [
+    { "partName": "Machine Frame", "partId": "", "section": "mechanical", "function": "Holds and supports the full machine structure." },
+    { "partName": "Left Working Station", "partId": "", "section": "mechanical", "function": "One of two pocket-forming stations for higher production." },
+    { "partName": "Right Working Station", "partId": "", "section": "mechanical", "function": "Second pocket-forming station allowing parallel operation." },
+    { "partName": "Pocket Mold", "partId": "", "section": "mechanical", "function": "Gives the pocket its required shape and size." },
+    { "partName": "Mold Holder / Base", "partId": "", "section": "mechanical", "function": "Holds the mold in correct position during operation." },
+    { "partName": "Folding Plate / Edge Folder", "partId": "", "section": "mechanical", "function": "Folds the pocket edge around the mold." },
+    { "partName": "Heating Plate", "partId": "", "section": "mechanical", "function": "Applies heat to fix the pocket crease." },
+    { "partName": "Safety Guard / Emergency Stop", "partId": "", "section": "mechanical", "function": "Protects the operator and stops the machine during unsafe condition." },
+    { "partName": "Heater Element", "partId": "", "section": "electronic", "function": "Produces heat for the pressing process." },
+    { "partName": "Temperature Sensor", "partId": "", "section": "electronic", "function": "Measures the working temperature." },
+    { "partName": "Electronic Thermostat", "partId": "", "section": "electronic", "function": "Controls the heater temperature to approximately ±3°C accuracy." },
+    { "partName": "Switches and Indicator Lights", "partId": "", "section": "electronic", "function": "Used for power, operation, and status indication." },
+    { "partName": "Relay / Contactor / SSR", "partId": "", "section": "electronic", "function": "Controls electrical switching for heater and machine circuit." },
+    { "partName": "Electrical Cabinet", "partId": "", "section": "electronic", "function": "Contains electrical control and protection components." },
+    { "partName": "Wiring and Terminals", "partId": "", "section": "electronic", "function": "Carry power and control signals throughout the machine." }
+  ],
+  "maintenance": [
+    { "code": "Uneven Pocket Crease", "definition": "Mold loose, wrong fabric placement, folding plate misaligned", "action": "Check mold fixing, clean mold base, adjust folding plate." },
+    { "code": "Weak Crease", "definition": "Low temperature, weak pressure, short pressing time", "action": "Check heater, temperature, pressure, and cycle setting." },
+    { "code": "Burning or Shine Mark", "definition": "Excess temperature, dirty hot plate, long pressing time", "action": "Reduce temperature, clean pressing surface, check heat setting." },
+    { "code": "Machine Not Heating", "definition": "Heater, thermostat, relay/SSR, contactor, or wiring fault", "action": "Check heater resistance, thermostat output, SSR/relay, and wiring." },
+    { "code": "Temperature Unstable", "definition": "Sensor loose, thermostat fault, electrical switching issue", "action": "Check sensor, thermostat, SSR/relay, and terminal tightness." },
+    { "code": "One Station Different Result", "definition": "Mold, heater, pressure, or folding condition different between stations", "action": "Compare both stations and adjust equally." },
+    { "code": "Electrical Smell or Overheating", "definition": "Loose terminal, overload, faulty contactor/SSR", "action": "Stop machine immediately and inspect electrical cabinet." }
+  ],
+  "resources": [
+    { "resourceName": "Oshima Official OP-302/303 Page", "description": "Main official source for machine identity, specifications, output, temperature control, mold quantity, and dimensions", "url": "https://www.oshima.com.tw/en/product/ironing-shaping/pocket-creaser-op-302-303" },
+    { "resourceName": "AE Sewing Machines OP-302/303 Page", "description": "Dealer source mentioning spares/accessories and downloads, but no complete public parts-list PDF visible", "url": "https://www.ae-sewingmachines.co.uk/products/oshima-op-302-303" },
+    { "resourceName": "Oshima Official YouTube Demo", "description": "Visual reference for understanding pocket creasing operation", "url": "https://www.youtube.com/watch?v=YyOjZmtpLqM" },
+    { "resourceName": "Oshima Contact Page", "description": "For requesting operation manual, parts book, wiring diagram, and official support", "url": "https://www.oshima.com.tw/contact-oshima" }
+  ],
+  "finalNotes": "• PLC: Technicians mentioned that the machine may use a PLC, but this is not yet confirmed from official resources.\n• Usage: The machine only runs when needed and remains idle most of the time. During inspection, the machine was observed in an idle condition.\n• Heater Capacity: 4 kW according to Oshima English official page and catalog. Always verify from actual machine nameplate before electrical maintenance.\n• Parts Book: No authentic public OP-303 parts-list PDF was found online. Request the official parts book directly from Oshima or an authorized dealer."
+}
