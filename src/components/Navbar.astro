@@ -13,7 +13,7 @@ const machinesJson = JSON.stringify(machines);
   <div class="flex items-center w-full px-8 py-0 gap-0" style="height:56px;">
 
     <!-- Logo -->
-    <a href="/" style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#ff9900; font-weight:700; font-size:16px; font-family:'Inter',sans-serif; white-space:nowrap; padding-right:24px; border-right:1px solid #2a2a2a; margin-right:20px; height:100%;">
+    <a href="/Machines/" style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#ff9900; font-weight:700; font-size:16px; font-family:'Inter',sans-serif; white-space:nowrap; padding-right:24px; border-right:1px solid #2a2a2a; margin-right:20px; height:100%;">
       <span class="material-symbols-outlined" style="font-size:20px; color:#ff9900;">precision_manufacturing</span>
       Southern Machines
     </a>
@@ -59,7 +59,7 @@ const machinesJson = JSON.stringify(machines);
 <!-- Mobile Navbar -->
 <nav style="background-color:#0f1111; border-bottom:1px solid #2a2a2a; position:sticky; top:0; z-index:50;" class="md:hidden">
   <div style="display:flex; align-items:center; gap:10px; padding:10px 16px;">
-    <a href="/" style="display:flex; align-items:center; gap:6px; text-decoration:none; color:#ff9900; font-weight:700; font-size:14px; white-space:nowrap;">
+    <a href="/Machines/" style="display:flex; align-items:center; gap:6px; text-decoration:none; color:#ff9900; font-weight:700; font-size:14px; white-space:nowrap;">
       <span class="material-symbols-outlined" style="font-size:18px;">precision_manufacturing</span>
       Southern Machines
     </a>
@@ -126,7 +126,7 @@ const machinesJson = JSON.stringify(machines);
     } else {
       dropdown.innerHTML = matches.slice(0, 8).map((m, i) => `
         <li style="${i > 0 ? 'border-top:1px solid #f0f0f0;' : ''}">
-          <a href="/machines/${m.slug}/" style="display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background 0.1s;"
+          <a href="/Machines/machines/${m.slug}/" style="display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background 0.1s;"
             onmouseover="this.style.background='#f7f7f7'" onmouseout="this.style.background=''">
             <div style="width:34px;height:34px;border-radius:6px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <span class="material-symbols-outlined" style="font-size:18px;color:#ff9900;">precision_manufacturing</span>

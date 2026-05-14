@@ -11,10 +11,11 @@ interface Props {
 }
 
 const { title, subtitle, brand, category, image, slug, specs = [], searchData = "" } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
 <a
-  href={`/machines/${slug}/`}
+  href={`${base}/machines/${slug}/`}
   id={`machine-card-${slug}`}
   data-brand={brand.toLowerCase()}
   data-category={category.toLowerCase()}
