@@ -143,66 +143,79 @@
     {
       "partName": "Machine Head",
       "partId": "—",
+      "section": "mechanical",
       "function": "Holds needle bar, hook/shuttle, feed mechanism, clamp mechanism, thread tension, trimmer, and other sewing mechanisms."
     },
     {
       "partName": "Needle Bar",
       "partId": "—",
+      "section": "mechanical",
       "function": "Moves the needle up and down during sewing."
     },
     {
       "partName": "Semi-rotary Hook / Shuttle",
       "partId": "—",
+      "section": "mechanical",
       "function": "Catches the upper-thread loop and forms lockstitch with bobbin thread."
     },
     {
       "partName": "Active Tension Mechanism",
       "partId": "—",
+      "section": "mechanical",
       "function": "Electronically controls thread tension according to sewing condition."
     },
     {
       "partName": "Work Clamp Foot",
       "partId": "—",
+      "section": "mechanical",
       "function": "Holds the fabric during bartack sewing."
     },
     {
       "partName": "X-Y Feed Mechanism",
       "partId": "—",
+      "section": "mechanical",
       "function": "Moves the work clamp in X and Y directions according to pattern data."
     },
     {
       "partName": "Moving Knife",
       "partId": "—",
+      "section": "mechanical",
       "function": "Moves during thread trimming and cuts thread together with the counter knife."
     },
     {
       "partName": "MAIN PCB",
       "partId": "—",
+      "section": "electronic",
       "function": "Main control board: handles logic, pattern data, communication, sensor processing."
     },
     {
       "partName": "SDC Board",
       "partId": "—",
+      "section": "electronic",
       "function": "Controls motor drive and power output for stepping motors."
     },
     {
       "partName": "Operation Panel",
       "partId": "—",
+      "section": "electronic",
       "function": "Used for pattern selection, setting changes, error display, and operator input."
     },
     {
       "partName": "Main Motor",
       "partId": "—",
+      "section": "electronic",
       "function": "Direct-drive AC servo motor drives the main sewing shaft."
     },
     {
       "partName": "X Feed Motor",
       "partId": "—",
+      "section": "electronic",
       "function": "X-axis stepping motor for lateral clamp movement."
     },
     {
       "partName": "Y Feed Motor",
       "partId": "—",
+      "section": "electronic",
       "function": "Y-axis stepping motor for longitudinal clamp movement."
     }
   ],
