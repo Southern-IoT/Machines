@@ -4,52 +4,130 @@ interface Props {
 }
 
 const { parts } = Astro.props;
+
+// Split into mechanical (no partId or first group) and electronic
+// Mechanical parts end at "Upper and Lower Thread Trimmers" — detect by index
+// We use partId as empty string for both groups in LBH data, so split by known boundary name
+const mechanicalNames = [
+  "Machine Head",
+  "Needle Bar and Needle Clamp",
+  "Needle",
+  "Full-Rotary Hook",
+  "Bobbin and Bobbin Case",
+  "Thread Tension Mechanism",
+  "Active Tension Mechanism",
+  "Feed Mechanism",
+  "Needle Rocking Mechanism",
+  "Presser / Work Clamp",
+  "Cloth Cutting Knife",
+  "Upper and Lower Thread Trimmers",
+];
+
+// Find split index: first part whose name is NOT in mechanicalNames
+let splitIndex = parts.findIndex(p => !mechanicalNames.includes(p.partName));
+if (splitIndex === -1) splitIndex = parts.length; // all mechanical
+
+const mechanicalParts = parts.slice(0, splitIndex);
+const electronicParts = parts.slice(splitIndex);
 ---
 
-<div class="bg-surface-container-lowest border border-outline-variant rounded overflow-hidden">
-  <table class="w-full text-left border-collapse">
-    <thead style="background-color: var(--color-surface-container);">
-      <tr>
-        <th
-          class="p-4 border-b border-outline-variant w-48 text-label-caps"
-          style="color: var(--color-on-surface-variant);"
-        >
-          Part Name
-        </th>
-        <th
-          class="p-4 border-b border-outline-variant w-36 text-label-caps"
-          style="color: var(--color-on-surface-variant);"
-        >
-          Component ID
-        </th>
-        <th
-          class="p-4 border-b border-outline-variant text-label-caps"
-          style="color: var(--color-on-surface-variant);"
-        >
-          Function
-        </th>
-      </tr>
-    </thead>
-    <tbody class="text-body-md" style="color: var(--color-on-surface);">
-      {
-        parts.map((part, i) => (
-          <tr
-            class="border-b border-outline-variant hover:bg-surface-container-low transition-colors"
-            style={i % 2 === 0 ? "background-color: var(--color-surface-container-lowest);" : "background-color: var(--color-surface-container);"}
-          >
-            <td class="p-4 font-semibold">{part.partName}</td>
-            <td
-              class="p-4"
-              style="font-family: var(--font-label); color: var(--color-secondary);"
-            >
-              {part.partId || "—"}
-            </td>
-            <td class="p-4" style="color: var(--color-on-surface-variant);">
-              {part.function}
-            </td>
+<div class="flex flex-col gap-6">
+
+  <!-- Main Mechanical Parts -->
+  {mechanicalParts.length > 0 && (
+    <div>
+      <h3
+        class="text-body-lg font-semibold mb-3 px-1"
+        style="color: var(--color-secondary);"
+      >
+        Main Mechanical Parts
+      </h3>
+      <div class="bg-surface-container-lowest border border-outline-variant rounded overflow-hidden">
+        <table class="w-full text-left border-collapse">
+          <thead style="background-color: var(--color-surface-container);">
+            <tr>
+              <th class="p-4 border-b border-outline-variant w-48 text-label-caps" style="color: var(--color-on-surface-variant);">Part Name</th>
+              <th class="p-4 border-b border-outline-variant w-36 text-label-caps" style="color: var(--color-on-surface-variant);">Component ID</th>
+              <th class="p-4 border-b border-outline-variant text-label-caps" style="color: var(--color-on-surface-variant);">Function</th>
+            </tr>
+          </thead>
+          <tbody class="text-body-md" style="color: var(--color-on-surface);">
+            {mechanicalParts.map((part, i) => (
+              <tr
+                class="border-b border-outline-variant hover:bg-surface-container-low transition-colors"
+                style={i % 2 === 0 ? "background-color: var(--color-surface-container-lowest);" : "background-color: var(--color-surface-container);"}
+              >
+                <td class="p-4 font-semibold">{part.partName}</td>
+                <td class="p-4" style="font-family: var(--font-label); color: var(--color-secondary);">{part.partId || "—"}</td>
+                <td class="p-4" style="color: var(--color-on-surface-variant);">{part.function}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )}
+
+  <!-- Electronic Boards and Control Parts -->
+  {electronicParts.length > 0 && (
+    <div>
+      <h3
+        class="text-body-lg font-semibold mb-3 px-1"
+        style="color: var(--color-secondary);"
+      >
+        Electronic Boards and Control Parts
+      </h3>
+      <div class="bg-surface-container-lowest border border-outline-variant rounded overflow-hidden">
+        <table class="w-full text-left border-collapse">
+          <thead style="background-color: var(--color-surface-container);">
+            <tr>
+              <th class="p-4 border-b border-outline-variant w-48 text-label-caps" style="color: var(--color-on-surface-variant);">Factory Name</th>
+              <th class="p-4 border-b border-outline-variant w-36 text-label-caps" style="color: var(--color-on-surface-variant);">Official / Technical Name</th>
+              <th class="p-4 border-b border-outline-variant text-label-caps" style="color: var(--color-on-surface-variant);">Function</th>
+            </tr>
+          </thead>
+          <tbody class="text-body-md" style="color: var(--color-on-surface);">
+            {electronicParts.map((part, i) => (
+              <tr
+                class="border-b border-outline-variant hover:bg-surface-container-low transition-colors"
+                style={i % 2 === 0 ? "background-color: var(--color-surface-container-lowest);" : "background-color: var(--color-surface-container);"}
+              >
+                <td class="p-4 font-semibold">{part.partName}</td>
+                <td class="p-4" style="font-family: var(--font-label); color: var(--color-secondary);">{part.partId || "—"}</td>
+                <td class="p-4" style="color: var(--color-on-surface-variant);">{part.function}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )}
+
+  <!-- Fallback: single table if no split detected -->
+  {mechanicalParts.length === 0 && electronicParts.length === 0 && (
+    <div class="bg-surface-container-lowest border border-outline-variant rounded overflow-hidden">
+      <table class="w-full text-left border-collapse">
+        <thead style="background-color: var(--color-surface-container);">
+          <tr>
+            <th class="p-4 border-b border-outline-variant w-48 text-label-caps" style="color: var(--color-on-surface-variant);">Part Name</th>
+            <th class="p-4 border-b border-outline-variant w-36 text-label-caps" style="color: var(--color-on-surface-variant);">Component ID</th>
+            <th class="p-4 border-b border-outline-variant text-label-caps" style="color: var(--color-on-surface-variant);">Function</th>
           </tr>
-        ))
-      }
-    </tbody>
-  </table>
+        </thead>
+        <tbody class="text-body-md" style="color: var(--color-on-surface);">
+          {parts.map((part, i) => (
+            <tr
+              class="border-b border-outline-variant hover:bg-surface-container-low transition-colors"
+              style={i % 2 === 0 ? "background-color: var(--color-surface-container-lowest);" : "background-color: var(--color-surface-container);"}
+            >
+              <td class="p-4 font-semibold">{part.partName}</td>
+              <td class="p-4" style="font-family: var(--font-label); color: var(--color-secondary);">{part.partId || "—"}</td>
+              <td class="p-4" style="color: var(--color-on-surface-variant);">{part.function}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+
 </div>
