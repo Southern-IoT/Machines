@@ -1,0 +1,74 @@
+---
+interface Props {
+  steps: { stepTitle: string; stepDescription: string }[];
+}
+
+const { steps } = Astro.props;
+---
+
+<div class="bg-surface-container-lowest p-8 rounded border border-outline-variant overflow-x-auto">
+  <!-- Desktop: Horizontal Flow -->
+  <div class="hidden md:block">
+    <div class="min-w-[600px] flex items-start justify-between relative">
+      <!-- Connecting Line -->
+      <div
+        class="absolute top-6 left-6 right-6 h-0.5 z-0"
+        style="background-color: var(--color-outline-variant);"
+      >
+      </div>
+
+      {
+        steps.map((step, index) => (
+          <div class="relative z-10 flex flex-col items-center gap-3 bg-surface-container-lowest px-3 max-w-[140px]">
+            <div
+              class="w-12 h-12 rounded-full flex items-center justify-center text-headline-md font-bold shadow-sm"
+              style="background-color: var(--color-primary); color: var(--color-on-primary);"
+            >
+              {index + 1}
+            </div>
+            <div class="text-center">
+              <h4 class="font-bold text-body-sm" style="color: var(--color-on-surface);">
+                {step.stepTitle}
+              </h4>
+              <span class="text-[12px]" style="color: var(--color-on-surface-variant);">
+                {step.stepDescription}
+              </span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Mobile: Vertical Flow -->
+  <div class="md:hidden flex flex-col gap-0">
+    {
+      steps.map((step, index) => (
+        <div class="flex items-start gap-4">
+          <div class="flex flex-col items-center">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-body-sm shrink-0"
+              style="background-color: var(--color-primary); color: var(--color-on-primary);"
+            >
+              {index + 1}
+            </div>
+            {index < steps.length - 1 && (
+              <div
+                class="w-0.5 h-12"
+                style="background-color: var(--color-outline-variant);"
+              />
+            )}
+          </div>
+          <div class="pt-2 pb-4">
+            <h4 class="font-bold text-body-md" style="color: var(--color-on-surface);">
+              {step.stepTitle}
+            </h4>
+            <span class="text-body-sm" style="color: var(--color-on-surface-variant);">
+              {step.stepDescription}
+            </span>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

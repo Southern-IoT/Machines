@@ -1,0 +1,187 @@
+---
+interface Props {
+  currentPage?: string;
+  machines?: { title: string; subtitle: string; brand: string; category: string; slug: string }[];
+}
+
+const { currentPage = "home", machines = [] } = Astro.props;
+const machinesJson = JSON.stringify(machines);
+---
+
+<!-- Desktop Navbar -->
+<nav style="background-color:#0f1111; border-bottom:1px solid #2a2a2a; position:sticky; top:0; z-index:50;" class="hidden md:block">
+  <div class="flex items-center w-full px-8 py-0 gap-0" style="height:56px;">
+
+    <!-- Logo -->
+    <a href="/" style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#ff9900; font-weight:700; font-size:16px; font-family:'Inter',sans-serif; white-space:nowrap; padding-right:24px; border-right:1px solid #2a2a2a; margin-right:20px; height:100%;">
+      <span class="material-symbols-outlined" style="font-size:20px; color:#ff9900;">precision_manufacturing</span>
+      Southern Machines
+    </a>
+
+    <!-- Search bar -->
+    <div style="flex:1; max-width:600px; position:relative;" id="nav-search-wrapper">
+      <span class="material-symbols-outlined" style="position:absolute; left:12px; top:50%; transform:translateY(-50%); font-size:18px; color:#888; pointer-events:none;">search</span>
+      <input
+        id="search-input"
+        type="text"
+        autocomplete="off"
+        placeholder="Search machines, brands, keywords..."
+        style="width:100%; padding:8px 14px 8px 38px; background:#fff; border:2px solid #e0e0e0; border-radius:6px; font-size:14px; color:#111; font-family:'Inter',sans-serif; outline:none; transition:border-color 0.15s;"
+        onfocus="this.style.borderColor='#ff9900'"
+        onblur="this.style.borderColor='#e0e0e0'"
+      />
+    </div>
+
+    <!-- Filters -->
+    <div style="display:flex; align-items:center; gap:10px; margin-left:16px;">
+      <select id="brand-filter"
+        style="padding:7px 10px; background:#1e2a35; color:#e0e0e0; border:1px solid #2e3d4a; border-radius:6px; font-size:13px; font-family:'Inter',sans-serif; outline:none; cursor:pointer; min-width:120px;">
+        <option value="">All Brands</option>
+      </select>
+      <select id="category-filter"
+        style="padding:7px 10px; background:#1e2a35; color:#e0e0e0; border:1px solid #2e3d4a; border-radius:6px; font-size:13px; font-family:'Inter',sans-serif; outline:none; cursor:pointer; min-width:140px;">
+        <option value="">All Categories</option>
+      </select>
+    </div>
+
+    <!-- Spacer + icons -->
+    <div style="margin-left:auto; display:flex; align-items:center; gap:4px; padding-left:16px; border-left:1px solid #2a2a2a;">
+      <button style="background:none; border:none; cursor:pointer; padding:6px; border-radius:50%; color:#ccc;" onmouseover="this.style.background='#2a2a2a'" onmouseout="this.style.background='none'">
+        <span class="material-symbols-outlined" style="font-size:22px;">settings</span>
+      </button>
+      <button style="background:none; border:none; cursor:pointer; padding:6px; border-radius:50%; color:#ccc;" onmouseover="this.style.background='#2a2a2a'" onmouseout="this.style.background='none'">
+        <span class="material-symbols-outlined" style="font-size:22px;">account_circle</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Navbar -->
+<nav style="background-color:#0f1111; border-bottom:1px solid #2a2a2a; position:sticky; top:0; z-index:50;" class="md:hidden">
+  <div style="display:flex; align-items:center; gap:10px; padding:10px 16px;">
+    <a href="/" style="display:flex; align-items:center; gap:6px; text-decoration:none; color:#ff9900; font-weight:700; font-size:14px; white-space:nowrap;">
+      <span class="material-symbols-outlined" style="font-size:18px;">precision_manufacturing</span>
+      Southern Machines
+    </a>
+    <div style="flex:1; position:relative;">
+      <span class="material-symbols-outlined" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); font-size:16px; color:#888; pointer-events:none;">search</span>
+      <input id="search-input-mobile" type="text" autocomplete="off" placeholder="Search..."
+        style="width:100%; padding:7px 10px 7px 32px; background:#fff; border:1.5px solid #e0e0e0; border-radius:6px; font-size:13px; color:#111; outline:none;" />
+    </div>
+  </div>
+</nav>
+
+<!-- Autocomplete dropdown -->
+<ul id="search-dropdown" style="display:none; position:fixed; z-index:9999; background:#fff; border:1px solid #e0e0e0; border-radius:8px; box-shadow:0 8px 32px rgba(0,0,0,0.14); overflow-y:auto; max-height:420px; list-style:none; margin:0; padding:4px 0; min-width:320px;"></ul>
+
+<script define:vars={{ machinesJson }}>
+  const allMachines = JSON.parse(machinesJson);
+  const desktopInput = document.getElementById("search-input");
+  const mobileInput = document.getElementById("search-input-mobile");
+  const dropdown = document.getElementById("search-dropdown");
+  const brandFilter = document.getElementById("brand-filter");
+  const categoryFilter = document.getElementById("category-filter");
+
+  // Populate filters
+  [...new Set(allMachines.map(m => m.brand).filter(Boolean))].forEach(b => {
+    [brandFilter].forEach(sel => {
+      if (!sel) return;
+      const o = document.createElement("option");
+      o.value = b; o.textContent = b;
+      sel.appendChild(o);
+    });
+  });
+  [...new Set(allMachines.map(m => m.category).filter(Boolean))].forEach(c => {
+    [categoryFilter].forEach(sel => {
+      if (!sel) return;
+      const o = document.createElement("option");
+      o.value = c; o.textContent = c;
+      sel.appendChild(o);
+    });
+  });
+
+  function positionDropdown() {
+    const anchor = desktopInput?.offsetParent ? desktopInput : mobileInput;
+    if (!anchor) return;
+    const r = anchor.getBoundingClientRect();
+    dropdown.style.top = (r.bottom + 4) + "px";
+    dropdown.style.left = r.left + "px";
+    dropdown.style.width = Math.max(r.width, 340) + "px";
+  }
+
+  function hl(text, q) {
+    if (!q || !text) return text || "";
+    const i = text.toLowerCase().indexOf(q.toLowerCase());
+    if (i === -1) return text;
+    return text.slice(0, i) + `<mark style="background:#fff3cd;color:#111;border-radius:2px;padding:0 1px;">${text.slice(i, i + q.length)}</mark>` + text.slice(i + q.length);
+  }
+
+  function showDropdown(query) {
+    if (!query) { dropdown.style.display = "none"; return; }
+    const q = query.toLowerCase();
+    const matches = allMachines.filter(m => [m.title, m.subtitle, m.brand, m.category].join(" ").toLowerCase().includes(q));
+
+    if (!matches.length) {
+      dropdown.innerHTML = `<li style="padding:12px 16px;font-size:13px;color:#888;font-family:'Inter',sans-serif;">No results for "<strong>${query}</strong>"</li>`;
+    } else {
+      dropdown.innerHTML = matches.slice(0, 8).map((m, i) => `
+        <li style="${i > 0 ? 'border-top:1px solid #f0f0f0;' : ''}">
+          <a href="/machines/${m.slug}/" style="display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background 0.1s;"
+            onmouseover="this.style.background='#f7f7f7'" onmouseout="this.style.background=''">
+            <div style="width:34px;height:34px;border-radius:6px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <span class="material-symbols-outlined" style="font-size:18px;color:#ff9900;">precision_manufacturing</span>
+            </div>
+            <div style="min-width:0;flex:1;">
+              <div style="font-size:13px;font-weight:600;color:#111;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'Inter',sans-serif;">${hl(m.title, query)}</div>
+              <div style="font-size:11px;color:#888;margin-top:1px;font-family:'Inter',sans-serif;">${m.brand}${m.category ? ' · ' + m.category : ''}</div>
+            </div>
+            <span class="material-symbols-outlined" style="font-size:15px;color:#ccc;flex-shrink:0;">arrow_forward_ios</span>
+          </a>
+        </li>`).join("");
+    }
+    positionDropdown();
+    dropdown.style.display = "block";
+  }
+
+  [desktopInput, mobileInput].forEach(inp => {
+    if (!inp) return;
+    inp.addEventListener("input", e => showDropdown(e.target.value.trim()));
+    inp.addEventListener("focus", e => { if (e.target.value.trim()) showDropdown(e.target.value.trim()); });
+    inp.addEventListener("keydown", e => { if (e.key === "Escape") dropdown.style.display = "none"; });
+  });
+
+  window.addEventListener("scroll", () => { if (dropdown.style.display !== "none") positionDropdown(); });
+  window.addEventListener("resize", () => { if (dropdown.style.display !== "none") positionDropdown(); });
+  document.addEventListener("click", e => {
+    if (!desktopInput?.contains(e.target) && !mobileInput?.contains(e.target) && !dropdown?.contains(e.target))
+      dropdown.style.display = "none";
+  });
+
+  // Grid filter
+  function applyFilters() {
+    const query = (desktopInput?.value || mobileInput?.value || "").toLowerCase().trim();
+    const brand = (brandFilter?.value || "").toLowerCase();
+    const category = (categoryFilter?.value || "").toLowerCase();
+    const grid = document.getElementById("machine-grid");
+    const noResults = document.getElementById("no-results");
+    const count = document.getElementById("results-count");
+    if (!grid) return;
+    const cards = Array.from(grid.children);
+    let visible = 0;
+    cards.forEach(c => {
+      const show = (!query || (c.dataset.search||"").includes(query))
+        && (!brand || (c.dataset.brand||"") === brand)
+        && (!category || (c.dataset.category||"") === category);
+      c.style.display = show ? "flex" : "none";
+      if (show) visible++;
+    });
+    if (count) count.textContent = (query||brand||category) ? `${visible} of ${cards.length} Records` : `${cards.length} Records`;
+    if (noResults) noResults.style.display = visible === 0 ? "flex" : "none";
+    // Always keep grid visible as grid — never hide it
+    grid.style.display = "grid";
+  }
+
+  [desktopInput, mobileInput].forEach(inp => inp?.addEventListener("input", applyFilters));
+  brandFilter?.addEventListener("change", applyFilters);
+  categoryFilter?.addEventListener("change", applyFilters);
+</script>

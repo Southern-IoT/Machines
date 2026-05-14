@@ -1,0 +1,76 @@
+---
+interface Props {
+  specs: { parameter: string; value: string }[];
+}
+
+const { specs } = Astro.props;
+
+// Display specs in a 2-column grid layout
+const pairs: { left: { parameter: string; value: string }; right?: { parameter: string; value: string } }[] = [];
+for (let i = 0; i < specs.length; i += 2) {
+  pairs.push({ left: specs[i], right: specs[i + 1] });
+}
+---
+
+<div class="bg-surface-container-lowest border border-outline-variant rounded overflow-hidden">
+  <table class="w-full text-left border-collapse">
+    <thead style="background-color: var(--color-surface-container);">
+      <tr>
+        <th
+          class="p-4 border-b border-r border-outline-variant text-label-caps"
+          style="color: var(--color-on-surface-variant);"
+        >
+          Parameter
+        </th>
+        <th
+          class="p-4 border-b border-r border-outline-variant text-label-caps"
+          style="color: var(--color-on-surface-variant);"
+        >
+          Value
+        </th>
+        <th
+          class="p-4 border-b border-r border-outline-variant text-label-caps hidden md:table-cell"
+          style="color: var(--color-on-surface-variant);"
+        >
+          Parameter
+        </th>
+        <th
+          class="p-4 border-b border-outline-variant text-label-caps hidden md:table-cell"
+          style="color: var(--color-on-surface-variant);"
+        >
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody class="text-body-md" style="color: var(--color-on-surface);">
+      {
+        pairs.map((pair) => (
+          <tr class="border-b border-outline-variant">
+            <td
+              class="p-4 font-semibold border-r border-outline-variant"
+              style="background-color: var(--color-surface-container-low); color: var(--color-secondary);"
+            >
+              {pair.left.parameter}
+            </td>
+            <td class="p-4 border-r border-outline-variant font-bold">
+              {pair.left.value}
+            </td>
+            {pair.right && (
+              <>
+                <td
+                  class="p-4 font-semibold border-r border-outline-variant hidden md:table-cell"
+                  style="background-color: var(--color-surface-container-low); color: var(--color-secondary);"
+                >
+                  {pair.right.parameter}
+                </td>
+                <td class="p-4 font-bold hidden md:table-cell">
+                  {pair.right.value}
+                </td>
+              </>
+            )}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

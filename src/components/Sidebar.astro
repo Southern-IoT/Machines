@@ -1,0 +1,78 @@
+---
+interface Props {
+  sections: { id: string; label: string }[];
+  downloadUrl?: string;
+}
+
+const { sections, downloadUrl } = Astro.props;
+---
+
+<aside class="w-full md:w-64 shrink-0 sticky top-[80px] hidden md:flex flex-col gap-6 self-start">
+  <div
+    class="bg-surface-container-lowest border border-outline-variant rounded p-6 flex flex-col gap-3"
+  >
+    <h3
+      class="text-label-caps font-bold uppercase tracking-wider border-b border-outline-variant pb-2 mb-2"
+      style="color: var(--color-secondary);"
+    >
+      Contents
+    </h3>
+    {
+      sections.map((section) => (
+        <a
+          class="text-body-md py-1 transition-colors hover:text-primary sidebar-link"
+          style="color: var(--color-on-surface);"
+          href={`#${section.id}`}
+          data-section={section.id}
+        >
+          {section.label}
+        </a>
+      ))
+    }
+  </div>
+  {
+    downloadUrl && (
+      <a
+        class="w-full text-body-md font-bold px-6 py-4 rounded flex items-center justify-center gap-2 transition-all hover:opacity-90 shadow-sm"
+        style="background-color: var(--color-primary); color: var(--color-on-primary);"
+        href={downloadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        id="download-report-btn"
+      >
+        <span class="material-symbols-outlined text-xl">download</span>
+        Download Report
+      </a>
+    )
+  }
+</aside>
+
+<script>
+  // Highlight active sidebar link on scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".sidebar-link");
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            links.forEach((link) => {
+              const el = link as HTMLElement;
+              if (el.dataset.section === entry.target.id) {
+                el.style.color = "var(--color-primary)";
+                el.style.fontWeight = "600";
+              } else {
+                el.style.color = "var(--color-on-surface)";
+                el.style.fontWeight = "400";
+              }
+            });
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -60% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>

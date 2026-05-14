@@ -1,0 +1,36 @@
+---
+interface Props {
+  icon: string;
+  name: string;
+  count: number;
+  href?: string;
+}
+
+const { icon, name, count, href = "#" } = Astro.props;
+---
+
+<a
+  class="bg-surface-container-lowest border border-outline-variant p-6 rounded hover:border-primary hover:shadow-md transition-all duration-200 group flex items-center gap-4"
+  href="#machine-grid"
+  data-category-filter={name}
+>
+  <div
+    class="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+    style="background-color: var(--color-surface-container);"
+  >
+    <span
+      class="material-symbols-outlined group-hover:text-primary transition-colors"
+      style="color: var(--color-on-surface-variant);"
+    >
+      {icon}
+    </span>
+  </div>
+  <div>
+    <span class="block text-body-md font-bold" style="color: var(--color-on-surface);">
+      {name}
+    </span>
+    <span class="block text-body-sm" style="color: var(--color-outline);">
+      {count} {count === 1 ? "Machine" : "Machines"}
+    </span>
+  </div>
+</a>

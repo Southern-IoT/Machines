@@ -1,0 +1,92 @@
+{
+  "title": "JUKI LK-1900BN",
+  "subtitle": "Computer-Controlled High-Speed Bartacking Machine",
+  "brand": "JUKI",
+  "category": "Sewing Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-10T00:00:00.000Z",
+  "overviewDescription": "The JUKI LK-1900BN is a computerized bartacking machine. It makes a short and strong reinforcement stitch by combining normal lockstitch formation with electronic X-Y movement of the work clamp. The needle goes up and down, the hook catches the thread loop, and the fabric is moved automatically by the machine according to the selected bartack pattern.",
+  "classificationTable": [
+    { "field": "Machine Type", "value": "Computer-controlled high-speed bartacking machine" },
+    { "field": "Brand", "value": "JUKI" },
+    { "field": "Model", "value": "LK-1900BN Series" },
+    { "field": "Main Application", "value": "Reinforcement bartack sewing on pocket corners, belt-loop areas, straps, labels, knit garments, heavy garments" },
+    { "field": "Main Motor", "value": "Direct-drive compact AC servo motor" },
+    { "field": "Control Box", "value": "MC672 series control box family" },
+    { "field": "Standard Patterns", "value": "51 patterns (LK-1900BN); 50 patterns (LK-1900BNB)" },
+    { "field": "User Patterns", "value": "1–200" }
+  ],
+  "technicalSpecs": [
+    { "parameter": "Maximum Sewing Speed", "value": "3,200 stitches/minute" },
+    { "parameter": "Sewing Area", "value": "X: 40mm, Y: 30mm" },
+    { "parameter": "Stitch Length", "value": "0.1mm to 10.0mm (0.1mm steps)" },
+    { "parameter": "Feed Motion", "value": "Intermittent feed by 2-shaft stepping motor" },
+    { "parameter": "Needle Bar Stroke", "value": "41.2mm" },
+    { "parameter": "Needle System", "value": "DP×5 and DP×17" },
+    { "parameter": "Work Clamp Lift", "value": "13–14mm standard; max 17mm" },
+    { "parameter": "Hook / Shuttle", "value": "Standard semi-rotary hook; W type uses large hook" },
+    { "parameter": "Power Consumption", "value": "Approximately 250 VA" },
+    { "parameter": "Machine Head Weight", "value": "Approximately 42 kg" }
+  ],
+  "workingPrinciples": [
+    {
+      "heading": "1. Lockstitch Formation",
+      "description": "The needle carries the upper thread through the fabric. The semi-rotary hook catches the upper-thread loop and joins it with the bobbin thread. The work clamp moves the fabric in X and Y directions controlled electronically to create different bartack shapes."
+    },
+    {
+      "heading": "2. Direct-Drive Servo Motor",
+      "description": "A compact AC servo motor drives the main sewing shaft directly, providing precise speed control and instant start/stop capability for high-speed bartacking operations."
+    },
+    {
+      "heading": "3. Electronic X-Y Feed",
+      "description": "Two stepping motors control the X and Y axes of the work clamp, moving the fabric according to digitally stored pattern data. This eliminates the need for manual fabric movement during sewing."
+    },
+    {
+      "heading": "4. Active Tension Control",
+      "description": "The active tension system electronically controls thread tension according to sewing conditions, ensuring consistent stitch quality across varying material thicknesses and pattern shapes."
+    }
+  ],
+  "sequenceFlow": [
+    { "stepTitle": "Power ON", "stepDescription": "Operation panel starts" },
+    { "stepTitle": "Select Pattern", "stepDescription": "Pattern & speed settings" },
+    { "stepTitle": "Place Fabric", "stepDescription": "Under work clamp foot" },
+    { "stepTitle": "Press Pedal", "stepDescription": "Switch/pedal activation" },
+    { "stepTitle": "Clamp Down", "stepDescription": "Fabric held firmly" },
+    { "stepTitle": "Safety Check", "stepDescription": "Sensors verified" },
+    { "stepTitle": "Sewing Cycle", "stepDescription": "Lockstitch bartack formed" },
+    { "stepTitle": "Thread Trim", "stepDescription": "Auto cut & wiper" },
+    { "stepTitle": "Clamp Release", "stepDescription": "Remove & quality check" }
+  ],
+  "partsList": [
+    { "partName": "Machine Head", "partId": "—", "function": "Holds needle bar, hook/shuttle, feed mechanism, clamp mechanism, thread tension, trimmer, and other sewing mechanisms." },
+    { "partName": "Needle Bar", "partId": "—", "function": "Moves the needle up and down during sewing." },
+    { "partName": "Semi-rotary Hook / Shuttle", "partId": "—", "function": "Catches the upper-thread loop and forms lockstitch with bobbin thread." },
+    { "partName": "Active Tension Mechanism", "partId": "—", "function": "Electronically controls thread tension according to sewing condition." },
+    { "partName": "Work Clamp Foot", "partId": "—", "function": "Holds the fabric during bartack sewing." },
+    { "partName": "X-Y Feed Mechanism", "partId": "—", "function": "Moves the work clamp in X and Y directions according to pattern data." },
+    { "partName": "Moving Knife", "partId": "—", "function": "Moves during thread trimming and cuts thread together with the counter knife." },
+    { "partName": "MAIN PCB", "partId": "—", "function": "Main control board: handles logic, pattern data, communication, sensor processing." },
+    { "partName": "SDC Board", "partId": "—", "function": "Controls motor drive and power output for stepping motors." },
+    { "partName": "Operation Panel", "partId": "—", "function": "Used for pattern selection, setting changes, error display, and operator input." },
+    { "partName": "Main Motor", "partId": "—", "function": "Direct-drive AC servo motor drives the main sewing shaft." },
+    { "partName": "X Feed Motor", "partId": "—", "function": "X-axis stepping motor for lateral clamp movement." },
+    { "partName": "Y Feed Motor", "partId": "—", "function": "Y-axis stepping motor for longitudinal clamp movement." }
+  ],
+  "maintenance": [
+    { "code": "Thread Break", "definition": "Incorrect tension, worn needle, dirty hook area", "action": "Check thread path, replace needle, clean hook/shuttle area" },
+    { "code": "Needle Break", "definition": "Wrong needle size, incorrect timing, fabric obstruction", "action": "Replace needle, check hook timing, verify clamp position" },
+    { "code": "Trimming Failure", "definition": "Worn trimming knives, debris accumulation", "action": "Clean trimming area, sharpen or replace moving/counter knife" },
+    { "code": "Pattern Error", "definition": "Corrupted pattern data, origin sensor failure", "action": "Reload pattern, inspect X/Y/clamp origin sensors" },
+    { "code": "Motor Error", "definition": "Encoder abnormality, overheating, power issue", "action": "Check encoder cable, ensure proper ventilation, verify power supply" },
+    { "code": "Stitch Quality Issues", "definition": "Incorrect tension, dirty bobbin case, hook timing off", "action": "Adjust tension, clean bobbin case, re-time hook/needle" }
+  ],
+  "resources": [
+    { "resourceName": "JUKI LK-1900BN Catalogue", "description": "Official specifications PDF", "url": "https://www.juki.co.jp/industrial_e/download_e/catalog_e/lk1900bn.pdf" },
+    { "resourceName": "JUKI LK-1900BN Instruction Manual", "description": "Official instruction manual", "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/lk1900bn/menu/lk1900bn/pdf/instruction_eg.pdf" },
+    { "resourceName": "JUKI WebPartsList", "description": "Official web-based parts list", "url": "https://www.juki.co.jp/partslist/?language=en" },
+    { "resourceName": "JUKI LK-1900BN Safety Manual", "description": "Official safety manual", "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/jtr_lk1900bncla/menu/pdf/saf_eg.pdf" },
+    { "resourceName": "ManualsLib Manual", "description": "Secondary web copy of manual", "url": "https://www.manualslib.com/manual/2452646/Juki-Lk-1900bn-Series.html" }
+  ],
+  "finalNotes": "• The LK-1900BN is not only a fast sewing machine. Its real production performance depends on machine speed, operator handling time, clamp position, thread condition, needle condition, hook/shuttle cleanliness, thread trimming condition, and correct pattern setting.\n• If one garment needs 6 bartacks and total observed time is 20–23 seconds, then the practical average is about 3.3–3.8 seconds per bartack including operator handling.\n• Model Subclasses: S = Standard, H = Heavy-weight, F = Foundation, M = Knits, W = Heavy with large hook, B/BNB = Bird's nest preventing."
+}

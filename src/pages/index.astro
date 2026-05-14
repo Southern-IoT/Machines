@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import MachineCard from "../components/MachineCard.astro";
+import fs from "node:fs";
+import path from "node:path";
+
+const machinesDir = path.join(process.cwd(), "src/content/machines");
+let machines: any[] = [];
+
+if (fs.existsSync(machinesDir)) {
+  const files = fs.readdirSync(machinesDir).filter((f: string) => f.endsWith(".json"));
+  machines = files.map((file: string) => {
+    const raw = fs.readFileSync(path.join(machinesDir, file), "utf-8");
+    const data = JSON.parse(raw);
+    return { ...data, slug: file.replace(".json", "") };
+  });
+}
+
+function getCardSpecs(machine: any) {
+  if (!machine.technicalSpecs?.length) return [];
+  return machine.technicalSpecs.slice(0, 2).map((s: any) => ({
+    label: s.parameter,
+    value: s.value,
+  }));
+}
+
+const navMachines = machines.map((m: any) => ({
+  title: m.title,
+  subtitle: m.subtitle || "",
+  brand: m.brand || "",
+  category: m.category || "",
+  slug: m.slug,
+}));
+---
+
+<BaseLayout title="Machinery Directory">
+  <Navbar currentPage="home" machines={navMachines} />
+
+  <main style="background:#f7f8f8; min-height:calc(100vh - 56px);">
+    <div style="max-width:1280px; margin:0 auto; padding:20px 24px 40px;">
+
+      <!-- Page header -->
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; padding-bottom:12px; border-bottom:1px solid #e3e6e6;">
+        <div>
+          <h1 style="margin:0; font-size:17px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif;">Machine Inventory</h1>
+          <p style="margin:3px 0 0; font-size:12px; color:#565959; font-family:'Inter',sans-serif;">Factory machine database — technical specifications & documentation</p>
+        </div>
+        <span
+          id="results-count"
+          style="font-size:12px; color:#565959; font-family:'Inter',sans-serif; background:#fff; padding:4px 12px; border-radius:20px; border:1px solid #e3e6e6;"
+        >
+          {machines.length} Records
+        </span>
+      </div>
+
+      {machines.length > 0 ? (
+        <>
+          <div
+            id="machine-grid"
+            style="display:grid; grid-template-columns:repeat(auto-fill, minmax(210px, 1fr)); gap:14px;"
+          >
+            {machines.map((machine: any) => (
+              <MachineCard
+                title={machine.title}
+                subtitle={machine.subtitle || ""}
+                brand={machine.brand || "Unknown"}
+                category={machine.category || "Other"}
+                image={machine.machineImage || ""}
+                slug={machine.slug}
+                specs={getCardSpecs(machine)}
+                searchData={[machine.title, machine.subtitle, machine.brand, machine.category].join(" ").toLowerCase()}
+              />
+            ))}
+          </div>
+
+          <div
+            id="no-results"
+            style="display:none; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px 24px; background:#fff; border:1.5px dashed #e3e6e6; border-radius:8px; margin-top:8px;"
+          >
+            <span class="material-symbols-outlined" style="font-size:40px; color:#ccc; margin-bottom:12px;">search_off</span>
+            <p style="margin:0 0 4px; font-size:15px; font-weight:600; color:#0f1111; font-family:'Inter',sans-serif;">No Matches Found</p>
+            <p style="margin:0; font-size:13px; color:#565959; font-family:'Inter',sans-serif;">Try adjusting your search or filters.</p>
+          </div>
+        </>
+      ) : (
+        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:60px 24px; background:#fff; border:1.5px dashed #e3e6e6; border-radius:8px;">
+          <span class="material-symbols-outlined" style="font-size:40px; color:#ccc; margin-bottom:12px;">inbox</span>
+          <p style="margin:0 0 4px; font-size:15px; font-weight:600; color:#0f1111; font-family:'Inter',sans-serif;">No Machines Yet</p>
+          <p style="margin:0; font-size:13px; color:#565959; font-family:'Inter',sans-serif;">Add machines through the CMS to see them here.</p>
+        </div>
+      )}
+
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,55 @@
+---
+interface Props {
+  parts: { partName: string; partId: string; function: string }[];
+}
+
+const { parts } = Astro.props;
+---
+
+<div class="bg-surface-container-lowest border border-outline-variant rounded overflow-hidden">
+  <table class="w-full text-left border-collapse">
+    <thead style="background-color: var(--color-surface-container);">
+      <tr>
+        <th
+          class="p-4 border-b border-outline-variant w-48 text-label-caps"
+          style="color: var(--color-on-surface-variant);"
+        >
+          Part Name
+        </th>
+        <th
+          class="p-4 border-b border-outline-variant w-36 text-label-caps"
+          style="color: var(--color-on-surface-variant);"
+        >
+          Component ID
+        </th>
+        <th
+          class="p-4 border-b border-outline-variant text-label-caps"
+          style="color: var(--color-on-surface-variant);"
+        >
+          Function
+        </th>
+      </tr>
+    </thead>
+    <tbody class="text-body-md" style="color: var(--color-on-surface);">
+      {
+        parts.map((part, i) => (
+          <tr
+            class="border-b border-outline-variant hover:bg-surface-container-low transition-colors"
+            style={i % 2 === 0 ? "background-color: var(--color-surface-container-lowest);" : "background-color: var(--color-surface-container);"}
+          >
+            <td class="p-4 font-semibold">{part.partName}</td>
+            <td
+              class="p-4"
+              style="font-family: var(--font-label); color: var(--color-secondary);"
+            >
+              {part.partId || "—"}
+            </td>
+            <td class="p-4" style="color: var(--color-on-surface-variant);">
+              {part.function}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

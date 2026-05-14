@@ -1,0 +1,248 @@
+{
+  "title": "KM KS-AUV Vertical Straight Knife Cutter",
+  "subtitle": "Reciprocating Blade Cutting System with Automatic Sharpening",
+  "brand": "KM",
+  "category": "Cutting Machine",
+  "machineImage": "/uploads/KS-AUV.jpg",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-10T00:00:00.000Z",
+  "overviewDescription": "The KM KS-AUV is a Japan-made vertical reciprocating straight knife fabric cutting machine manufactured by KM Cloth Cutting Machine Co., Ltd. It is the industry standard for high-volume textile cutting, featuring a high-torque motor, automatic abrasive belt sharpening, and a centralized lubrication system.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Straight Knife Cutting Machine (MACK)"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "KM Cloth Cutting Machine Co., Ltd. (Japan)"
+    },
+    {
+      "field": "Model Series",
+      "value": "KS-AUV / KS-AUH (Heavy Duty)"
+    },
+    {
+      "field": "Blade Type",
+      "value": "Vertical Reciprocating Straight Blade"
+    },
+    {
+      "field": "Applications",
+      "value": "Knit, Synthetic Fiber, Denim, Vinyl, Leather"
+    },
+    {
+      "field": "Sharpening System",
+      "value": "Automatic Abrasive Belt (Opposing Directions)"
+    },
+    {
+      "field": "Lubrication",
+      "value": "Automatic Gravity-Fed Oil Reservoir"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Rated Output",
+      "value": "500W (Standard) / 800W (AUH Heavy Duty)"
+    },
+    {
+      "parameter": "Voltage Options",
+      "value": "1Ph 100V-120V, 220V-240V, 3Ph 380V"
+    },
+    {
+      "parameter": "Blade Sizes",
+      "value": "6\", 7\", 8\", 10\", 13\""
+    },
+    {
+      "parameter": "Cutting Capacity",
+      "value": "110mm, 135mm, 160mm, 210mm, 290mm"
+    },
+    {
+      "parameter": "Weight",
+      "value": "Approx. 14.5 kg - 15.5 kg"
+    },
+    {
+      "parameter": "Blade Material",
+      "value": "High Speed Steel (Straight or Wave types)"
+    },
+    {
+      "parameter": "Abrasive Belt Grits",
+      "value": "#80 (Coarse), #100 (Medium), #120 (Fine)"
+    },
+    {
+      "parameter": "Motor Performance",
+      "value": "Specially developed low-heat, high-torque motor"
+    }
+  ],
+  "workingPrinciples": [
+    {
+      "heading": "1. Mechanical Drive",
+      "description": "The motor drives a rotor shaft (M-004) which is connected to a crank (M-027). A connecting rod (M-036) links the crank to a crosshead (M-050), which holds the blade lock bolt."
+    },
+    {
+      "heading": "2. Reciprocating Physics",
+      "description": "The machine operates by converting high-speed rotational energy from the motor into linear reciprocating motion of the blade through a slider-crank mechanism. The larger blade stroke in the KS-AUV ensures the blade exits the bottom of the stack to clear lint and ensure clean shears."
+    },
+    {
+      "heading": "3. Automated Sharpening",
+      "description": "Dual abrasive belts (M-189) move in opposing directions to maintain a constant edge angle on both sides of the blade simultaneously."
+    }
+  ],
+  "sequenceFlow": [
+    {
+      "stepTitle": "Fill Oil Tank",
+      "stepDescription": "Red line level (Tank A)"
+    },
+    {
+      "stepTitle": "Manual Turn",
+      "stepDescription": "Test rotation (Knob T)"
+    },
+    {
+      "stepTitle": "Select Speed",
+      "stepDescription": "HI to LO adjustment"
+    },
+    {
+      "stepTitle": "Commence Cutting",
+      "stepDescription": "Begin fabric cutting"
+    },
+    {
+      "stepTitle": "Engage Sharpener",
+      "stepDescription": "Lever E activation"
+    },
+    {
+      "stepTitle": "Periodic Lubrication",
+      "stepDescription": "Every 2 hours"
+    },
+    {
+      "stepTitle": "Lint Removal",
+      "stepDescription": "Air blower cleaning"
+    },
+    {
+      "stepTitle": "Slide Cleaning",
+      "stepDescription": "Slot tool maintenance"
+    },
+    {
+      "stepTitle": "Monthly Greasing",
+      "stepDescription": "Plug S application"
+    }
+  ],
+  "partsList": [
+    {
+      "partName": "Capacitor-Stator",
+      "partId": "M-001",
+      "function": "Provides magnetic field; includes start switch."
+    },
+    {
+      "partName": "Rotor with Shaft",
+      "partId": "M-004",
+      "function": "Main rotating assembly for 1P/3P power."
+    },
+    {
+      "partName": "Crank (32/36mm)",
+      "partId": "M-027",
+      "function": "Converts rotary to reciprocating motion."
+    },
+    {
+      "partName": "Connecting Rod",
+      "partId": "M-036",
+      "function": "Linkage between crank and crosshead."
+    },
+    {
+      "partName": "Cross Head",
+      "partId": "M-050",
+      "function": "Reciprocating carrier for the knife blade."
+    },
+    {
+      "partName": "Guide Metal (L/R)",
+      "partId": "M-048/49",
+      "function": "Precision tracks for vertical movement."
+    },
+    {
+      "partName": "Knife Lock Bolt",
+      "partId": "M-051",
+      "function": "Secures the cutting blade to the crosshead."
+    },
+    {
+      "partName": "Oil Tank",
+      "partId": "M-034",
+      "function": "Reservoir for automatic gravity lubrication."
+    },
+    {
+      "partName": "Abrasive Belts",
+      "partId": "M-189",
+      "function": "Consumable emery bands for blade honing."
+    },
+    {
+      "partName": "Neoprene Band",
+      "partId": "U-178",
+      "function": "Drive band for the sharpening pulleys."
+    },
+    {
+      "partName": "Base Plate",
+      "partId": "M-078",
+      "function": "Low-profile support with rollers for travel."
+    },
+    {
+      "partName": "Auto Cut-Out Switch",
+      "partId": "M-201",
+      "function": "Disconnects starting capacitor once RPM is reached."
+    }
+  ],
+  "maintenance": [
+    {
+      "code": "Excessive Heat",
+      "definition": "Blocked motor vents; running on LO speed too long (>30 min)",
+      "action": "Blow lint with air gun; restrict LO speed duration."
+    },
+    {
+      "code": "Sharpener Jammed",
+      "definition": "Lever E pressed too fast; motor shut off mid-cycle",
+      "action": "Lift Lever J to unlock; restart sharpening."
+    },
+    {
+      "code": "Ragged Cut Edges",
+      "definition": "Worn abrasive belts; incorrect grit for material",
+      "action": "Replace belts (M-189); match grit to substrate."
+    },
+    {
+      "code": "Blade Vibration",
+      "definition": "Loose Connecting Rod Screw (M-038)",
+      "action": "Tighten crank/guide assembly fasteners."
+    },
+    {
+      "code": "Machine Won't Start",
+      "definition": "Faulty Cut-out Switch or blown capacitor",
+      "action": "Inspect M-201 switch and M-206 capacitor."
+    },
+    {
+      "code": "Rollers Sticking",
+      "definition": "Accumulation of lint/oil on base plate rollers",
+      "action": "Clean with solvent; DO NOT oil rollers."
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Technical Manual & Parts",
+      "description": "Main source for machine operation, maintenance, and parts",
+      "url": "https://www.kanstec.com.pl/images/pdf-km/KM-KS-AU-V.pdf"
+    },
+    {
+      "resourceName": "Primary Technical Manual",
+      "description": "Main source for machine operation and parts identification",
+      "url": "https://www.supsew.com/download/Cutting%20Machines/KM%20KS-AU%205.pdf"
+    },
+    {
+      "resourceName": "Official Brand Website",
+      "description": "Manufacturer information and product verification",
+      "url": "https://km-autocutter.jp/en/"
+    },
+    {
+      "resourceName": "Alternative Technical Manual",
+      "description": "Additional technical manual for KS-AU series",
+      "url": "https://www.sewnproducts.com/uploads/7/7/1/5/77156939/ks-au__2_.pdf"
+    },
+    {
+      "resourceName": "Spare Parts Catalog",
+      "description": "Spare parts catalog and cutting machine reference",
+      "url": "https://www.college-sewing.co.uk/machinery/km-cutting-machines.html"
+    }
+  ],
+  "finalNotes": "• Lubrication: Use only No. 30 motor oil or genuine KM oil. Never use thin sewing machine oil.\n• Safety: Always ensure the blade guard is adjusted to the height of the fabric spread. For 3-phase units, check the arrow (C) for proper rotation direction.\n• Speed Control: For dual-speed models, always start at HI speed before switching to LO to ensure sufficient initial torque."
+}
