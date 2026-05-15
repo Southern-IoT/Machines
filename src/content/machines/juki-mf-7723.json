@@ -1,0 +1,116 @@
+{
+  "title": "JUKI MF-7723",
+  "subtitle": "High-Speed Coverstitch / Flatlock Machine — 3-Needle 4-Thread",
+  "brand": "JUKI",
+  "category": "Sewing Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-15T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI MF-7723 is a 3-needle, 4-thread flat-bed coverstitch and flatlock machine engineered for high-volume apparel manufacturing. It produces high-elasticity seams (ISO Stitch Class 406/602) using the interlooping chainstitch principle. As a flatlock machine, it is used to join fabric panels with a flat, smooth seam that lies completely flat on both sides — essential for sportswear, knitwear, and undergarments where seam bulk and comfort are critical.",
+    "applications": [
+      "Hemming sleeves and bottom edges of knitwear, T-shirts, and sportswear",
+      "Flatlock seaming of sportswear panels where seam bulk must be eliminated for comfort",
+      "Hemming and seaming of foundations, underwear, and intimate apparel",
+      "Decorative coverstitch topstitching on knitwear and activewear",
+      "Joining knitted fabric panels with a flat, elastic seam that stretches with the fabric"
+    ],
+    "industry": "Knitwear manufacturing, sportswear and activewear production, underwear and foundations manufacturing, any apparel factory requiring high-elasticity flatlock or coverstitch seams"
+  },
+  "overviewDescription": "The JUKI MF-7723 is a 3-needle, 4-thread flat-bed coverstitch and flatlock machine from the MF-7700 series, manufactured by JUKI Corporation (Japan). It operates on the interlooping chainstitch principle and produces ISO Stitch Class 406/602 seams with high elasticity. As a flatlock machine, it creates seams that lie completely flat on both sides of the fabric — critical for sportswear, knitwear, and undergarments. The machine runs at up to 6,500 RPM with fully automatic lubrication and an AC servo motor drive system.",
+  "classificationTable": [
+    { "field": "Machine Type", "value": "Flatlock machine / Coverstitch machine / 3-needle bottom coverstitch" },
+    { "field": "Flatlock Note", "value": "This is a FLATLOCK machine. The seam lies completely flat on both sides of the fabric, eliminating seam bulk — essential for sportswear, knitwear, and undergarments." },
+    { "field": "Brand / Manufacturer", "value": "JUKI Corporation (Japan)" },
+    { "field": "Model Series", "value": "MF-7700 Series / MF-7723-U10-B56" },
+    { "field": "Stitch Type", "value": "3-needle Bottom Coverstitch / Flatlock (ISO Class 406/602)" },
+    { "field": "Needle System", "value": "UY128GAS (#9S – #14S, Standard #10S)" },
+    { "field": "Needle Spacing (Gauge)", "value": "5.6mm (Standard); 4.8mm and 6.4mm available" },
+    { "field": "Lubrication", "value": "Fully Automatic (JUKI Machine Oil No. 18 / ISO VG18)" },
+    { "field": "Applications", "value": "Knitwear, Foundations, Sportswear, Hemming, Flatlock seaming" }
+  ],
+  "technicalSpecs": [
+    { "parameter": "Max Sewing Speed", "value": "6,500 RPM" },
+    { "parameter": "Stitch Length Range", "value": "1.2mm to 3.6mm (Adjustable up to 4.4mm)" },
+    { "parameter": "Differential Feed Ratio", "value": "1:0.9 to 1:1.8 (Adjustable via dial)" },
+    { "parameter": "Needle Bar Stroke", "value": "31mm (Standard) / 33mm (Heavy-duty conversion)" },
+    { "parameter": "Presser Foot Lift", "value": "5mm (with top cover) / 8mm (bottom only)" },
+    { "parameter": "Lubricating Oil", "value": "ISO VG18 equivalent (JUKI Oil No. 18)" },
+    { "parameter": "Machine Head Weight", "value": "Approx. 46 kg" },
+    { "parameter": "Motor System", "value": "High-Torque AC Servo Motor (750W Output — M51N)" },
+    { "parameter": "Control Box", "value": "SC-921 Digital Control Box" },
+    { "parameter": "Operation Panel", "value": "CP-18 User Interface Panel" }
+  ],
+  "workingPrinciples": [
+    {
+      "heading": "1. Flatlock / Coverstitch Principle",
+      "description": "The MF-7723 is a flatlock machine. It produces a seam where the looper thread spreads across the underside of the fabric, creating a flat seam with no bulk on either side. This is achieved by the interlooping chainstitch mechanism using 3 needles and 1 looper. The result is a highly elastic seam that stretches with the fabric — essential for sportswear and knitwear."
+    },
+    {
+      "heading": "2. Needle Penetration and Loop Formation",
+      "description": "As the 3 needles descend through the fabric and reach bottom dead center (BDC), they carry the top threads. On the upward stroke, friction between the thread and fabric creates a dwelling needle loop (flagging) at the needle scarf. This loop must be correctly formed for the looper to catch it."
+    },
+    {
+      "heading": "3. Looper Catch and Avoid Motion",
+      "description": "The looper moves in a synchronized elliptical path. As the needles rise, the looper point passes through the needle scarves, capturing the thread loops. To avoid striking the needles on their next descent, the looper engages in longitudinal motion (avoid motion), clearing the needles by approximately 0.05mm. This clearance is critical — incorrect clearance causes burr formation and thread looping."
+    },
+    {
+      "heading": "4. Thread Triangle and Stitch Setting",
+      "description": "After the looper catches the needle loops, a thread triangle is formed between the looper thread and the needle threads. The next needle descent enters this triangle, and the take-up cam pulls the thread to set the stitch. The differential feed dogs then advance the fabric for the next stitch cycle."
+    },
+    {
+      "heading": "5. Failure Mode — Looper Timing",
+      "description": "Repeated looper (13329404) and looper holder (133-28802) replacement indicates systemic failure. Causes: (1) Mechanical burr formation from incorrect looper-needle clearance (standard: 0.05–0.1mm); (2) Looper shaft scoring from holder screw slippage at 6,500 RPM. Solutions: Re-adjust looper rocker (133-28604) for one-third height contact; verify threading with presser foot raised; adjust needle bar stroke to 33mm for heavy fabrics."
+    }
+  ],
+  "sequenceFlow": [
+    { "stepTitle": "Needle Descent", "stepDescription": "0° – 180° crank rotation; needles carry top threads through fabric" },
+    { "stepTitle": "Needle Rise & Loop Expansion", "stepDescription": "Needle rises ~1.6mm; needle loop (flagging) forms at needle scarf" },
+    { "stepTitle": "Looper Arrives at Rightmost Needle", "stepDescription": "Looper moves to rightmost needle position in elliptical path" },
+    { "stepTitle": "Looper Point Enters Needle Scarf", "stepDescription": "Looper point captures thread loop from needle scarf" },
+    { "stepTitle": "Looper Longitudinal (Avoid) Motion", "stepDescription": "Looper clears needles by ~0.05mm to avoid collision on next descent" },
+    { "stepTitle": "Thread Triangle Formation", "stepDescription": "Looper thread and needle threads form the stitch triangle" },
+    { "stepTitle": "Needle Entry Into Looper Triangle", "stepDescription": "Needles descend into the thread triangle for next stitch" },
+    { "stepTitle": "Stitch Setting", "stepDescription": "Take-up lever and cam pull thread to set and lock the stitch" },
+    { "stepTitle": "Fabric Advancement", "stepDescription": "Main and differential feed dogs advance fabric for next cycle" }
+  ],
+  "partsList": [
+    { "partName": "Face Cover", "partId": "700-01411", "section": "mechanical", "function": "Shields needle bar mechanism from contaminants." },
+    { "partName": "Gasket H", "partId": "133-01007", "section": "mechanical", "function": "Prevents internal oil leakage at the head interface." },
+    { "partName": "Needle Bar Guard", "partId": "13301304", "section": "mechanical", "function": "Operator protection against vertical needle bar reciprocation." },
+    { "partName": "Oil Sight Window", "partId": "229-24706", "section": "mechanical", "function": "Allows visual verification of oil pump performance." },
+    { "partName": "Timing Belt", "partId": "134-06905", "section": "mechanical", "function": "Synchronizes top arm shaft and bottom looper shaft." },
+    { "partName": "Lower Pulley", "partId": "134-06707", "section": "mechanical", "function": "Transmits rotation to the lower looper drive." },
+    { "partName": "Balance Weight", "partId": "134-08406", "section": "mechanical", "function": "Counter-balances inertia to reduce vibration at 6,500 RPM." },
+    { "partName": "Flywheel", "partId": "700-03316", "section": "mechanical", "function": "Facilitates manual timing and rotational stability." },
+    { "partName": "Chain Looper", "partId": "13329404", "section": "mechanical", "function": "Oscillating element that catches needle loops to form the flatlock/coverstitch seam." },
+    { "partName": "Looper Holder", "partId": "133-28802", "section": "mechanical", "function": "Clamps and aligns looper onto the drive shaft." },
+    { "partName": "Looper Rocker", "partId": "133-28604", "section": "mechanical", "function": "Drives the longitudinal avoid motion of the looper. Must have one-third height contact on looper back surface." },
+    { "partName": "Needle Guard", "partId": "400-50449", "section": "mechanical", "function": "Stabilizes needles during looper point entry." },
+    { "partName": "Looper Thread Cam", "partId": "133-33604", "section": "mechanical", "function": "Regulates thread slack for triangle formation." },
+    { "partName": "Needle Bar", "partId": "400-33463", "section": "mechanical", "function": "Carries needle clamp through fabric penetration. Stroke: 31mm standard / 33mm heavy-duty." },
+    { "partName": "Main Feed Dog", "partId": "40086230", "section": "mechanical", "function": "Primary driver for textile advancement." },
+    { "partName": "Differential Feed Dog", "partId": "40086227", "section": "mechanical", "function": "Adjusts feed ratio (1:0.9–1:1.8) to prevent fabric puckering or stretching." },
+    { "partName": "Feed Dial", "partId": "700-01642", "section": "mechanical", "function": "Operator control for adjusting stitch length." },
+    { "partName": "AC Servo Motor", "partId": "M51N", "section": "electronic", "function": "750W high-torque brushless drive system for main shaft." },
+    { "partName": "Control Box", "partId": "SC-921", "section": "electronic", "function": "Digital management of energy and motor responsiveness." },
+    { "partName": "Operation Panel", "partId": "CP-18", "section": "electronic", "function": "User interface for speed and production settings." }
+  ],
+  "maintenance": [
+    { "code": "Thread Looping / Looper Failure (Systemic)", "definition": "Repeated looper (13329404) and looper holder (133-28802) replacement — indicates systemic failure, not simple wear", "action": "Check looper-needle clearance (standard 0.05–0.1mm). Inspect looper shaft (133-28406) for scoring. Re-adjust looper rocker (133-28604) for one-third height contact on looper back surface." },
+    { "code": "Mechanical Burr on Looper Point", "definition": "Looper striking needle due to incorrect clearance — microscopic burrs form and snag thread", "action": "Verify looper-needle clearance. Polish or replace looper. Re-time looper avoid motion." },
+    { "code": "Looper Holder Losing Seating", "definition": "Looper shaft scored or polished from previous holder screw slippage at 6,500 RPM", "action": "Inspect looper shaft (133-28406) for scoring. Replace shaft if scored. Tighten holder screw (SM6041200SP) to correct torque." },
+    { "code": "Looping on Heavy Fabrics", "definition": "Insufficient needle bar stroke for heavy-weight material penetration", "action": "Adjust eccentric pin to change needle bar stroke from 31mm to 33mm for heavy-weight materials." },
+    { "code": "Thread Tension Failure / Poor Stitch", "definition": "Operator threading machine with presser foot down — threads not seated between tension discs", "action": "Conduct Pull Test training. Always raise presser foot before threading. Pull thread to confirm seating between tension discs." },
+    { "code": "Skipped Stitch", "definition": "Looper avoid motion timing incorrect — looper longitudinal momentum too small", "action": "Re-adjust looper rocker (133-28604). Ensure one-third height contact on back surface of looper. Verify needle-looper timing." },
+    { "code": "Vibration at High Speed", "definition": "Balance weight issue or timing belt wear at 6,500 RPM", "action": "Check balance weight (134-08406) condition. Inspect timing belt (134-06905) for wear or slack. Verify flywheel (700-03316) stability." },
+    { "code": "Oil Pump Failure", "definition": "No oil circulation visible through oil sight window", "action": "Check oil level and oil sight window (229-24706). Inspect oil pump and oil lines. Use only JUKI Oil No. 18 (ISO VG18)." }
+  ],
+  "resources": [
+    { "resourceName": "JUKI Engineer's Manual — MF-7700 Series", "description": "Primary source for timing, adjustment values, and mechanical synchronization", "url": "https://s3.amazonaws.com/a.teamworksales.com/JUKI+ENGINEERS/MF-7700+SeriesEM00_e.pdf" },
+    { "resourceName": "JUKI Parts Catalog — MF-7723", "description": "Comprehensive listing of part IDs and assembly diagrams", "url": "https://www.supsew.com/?wpfb_dl=63365" },
+    { "resourceName": "Servo Motor Guide — M51N / SC-921 / CP-18", "description": "Technical specifications for M51N motor and SC-921 control box systems", "url": "https://www.juki.co.jp/industrial_e/admin/pdata/filedata/570/sc921_922_m51n_cp18cp180.pdf" },
+    { "resourceName": "JUKI E-Learning — Coverstitch / Flatlock Formation", "description": "Principles of coverstitch and flatlock seam formation and diagnostic procedures", "url": "https://www.juki.co.jp/industrial_e/service_e/elearning/detail05.php" }
+  ],
+  "finalNotes": "• Flatlock Machine: The MF-7723 is a FLATLOCK machine. The looper thread spreads across the underside of the fabric creating a completely flat seam with no bulk on either side. This is the defining characteristic that makes it suitable for sportswear, knitwear, and undergarments.\n• Looper Clearance: Standard looper-to-needle clearance is 0.05–0.1mm. Any deviation causes burr formation, thread looping, or skipped stitches.\n• Looper Rocker Adjustment: Must have one-third height contact on the back surface of the looper for correct avoid motion.\n• Threading: Always raise presser foot before threading. Conduct Pull Test to confirm thread is seated between tension discs.\n• Heavy Fabrics: Adjust needle bar stroke from 31mm to 33mm using eccentric pin for heavy-weight materials.\n• Oil: Use only JUKI Machine Oil No. 18 (ISO VG18 equivalent). Check oil sight window (229-24706) regularly.\n• Systemic Looper Failure: Repeated looper/holder replacement indicates timing or shaft scoring issue — not simple wear. Inspect looper shaft (133-28406) for scoring before fitting new holder."
+}
