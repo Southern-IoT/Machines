@@ -1,11 +1,4 @@
 {
-  "title": "Ngai Shing NS-2410 Rotary Pressing Machine",
-  "subtitle": "Sleeve Placket Folding and Rotary Pressing Machine",
-  "brand": "Ngai Shing",
-  "category": "Pressing Machine",
-  "machineImage": "",
-  "reportDownloadUrl": "",
-  "publishedDate": "2026-05-15T00:00:00.000Z",
   "purposeAndApplication": {
     "purpose": "The Ngai Shing NS-2410 is an industrial garment finishing machine designed for folding and rotary pressing triangular sleeve plackets used in shirt and garment manufacturing. It uses a conveyor-based rotary pressing system combined with interchangeable folder attachments to create different sleeve placket styles with consistent quality.",
     "applications": [
@@ -17,34 +10,113 @@
     ],
     "industry": "Shirt and garment manufacturing, sleeve finishing operations, any apparel factory requiring consistent sleeve placket preparation"
   },
+  "title": "Ngai Shing NS-2410 Rotary Pressing Machine",
+  "subtitle": "Sleeve Placket Folding and Rotary Pressing Machine",
+  "brand": "Ngai Shing",
+  "category": "Pressing Machine",
+  "machineImage": "/uploads/ns2410.jpg",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-15T00:00:00.000Z",
   "overviewDescription": "The Ngai Shing NS-2410 is an industrial sleeve placket folding and rotary pressing machine manufactured by Ngai Shing Development Limited. It combines conveyor movement, interchangeable folder attachments, heat pressing, and pressure stabilization to produce consistent sleeve placket shapes. The machine supports multiple folder systems for different placket styles and an optional automatic collecting system.",
   "classificationTable": [
-    { "field": "Machine Name", "value": "Rotary Pressing Machine" },
-    { "field": "Brand", "value": "Ngai Shing" },
-    { "field": "Model", "value": "NS-2410" },
-    { "field": "Manufacturer", "value": "Ngai Shing Development Limited" },
-    { "field": "Machine Type", "value": "Sleeve placket folding and rotary pressing machine" },
-    { "field": "Main Application", "value": "Folding and pressing triangular sleeve plackets" },
-    { "field": "Production Use", "value": "Shirt and garment sleeve finishing process" },
-    { "field": "Working Method", "value": "Conveyor-assisted heat pressing and folding" },
-    { "field": "Folder System", "value": "Interchangeable folder attachment system" },
-    { "field": "Temperature Control", "value": "Infrared thermostat sensor control" },
-    { "field": "Optional System", "value": "Automatic collecting system available" },
-    { "field": "Official Document Source", "value": "NS-2410 V1.60 official catalog PDF" },
-    { "field": "Folder Attachments", "value": "F537 (Plait), F538 (Triangular), F539 (Rectangular), F540 (Triangular), F541 (Triangular), F543 (Plait), O-C-08-01 (Auto Collector)" }
+    {
+      "field": "Machine Name",
+      "value": "Rotary Pressing Machine"
+    },
+    {
+      "field": "Brand",
+      "value": "Ngai Shing"
+    },
+    {
+      "field": "Model",
+      "value": "NS-2410"
+    },
+    {
+      "field": "Manufacturer",
+      "value": "Ngai Shing Development Limited"
+    },
+    {
+      "field": "Machine Type",
+      "value": "Sleeve placket folding and rotary pressing machine"
+    },
+    {
+      "field": "Main Application",
+      "value": "Folding and pressing triangular sleeve plackets"
+    },
+    {
+      "field": "Production Use",
+      "value": "Shirt and garment sleeve finishing process"
+    },
+    {
+      "field": "Working Method",
+      "value": "Conveyor-assisted heat pressing and folding"
+    },
+    {
+      "field": "Folder System",
+      "value": "Interchangeable folder attachment system"
+    },
+    {
+      "field": "Temperature Control",
+      "value": "Infrared thermostat sensor control"
+    },
+    {
+      "field": "Optional System",
+      "value": "Automatic collecting system available"
+    },
+    {
+      "field": "Official Document Source",
+      "value": "NS-2410 V1.60 official catalog PDF"
+    },
+    {
+      "field": "Folder Attachments",
+      "value": "F537 (Plait), F538 (Triangular), F539 (Rectangular), F540 (Triangular), F541 (Triangular), F543 (Plait), O-C-08-01 (Auto Collector)"
+    }
   ],
   "technicalSpecs": [
-    { "parameter": "Power Supply", "value": "1PH / 220V / 50Hz" },
-    { "parameter": "Total Power", "value": "2.7 kW" },
-    { "parameter": "Heater Power", "value": "2.5 kW" },
-    { "parameter": "Working Width", "value": "400 mm" },
-    { "parameter": "Maximum Design Temperature", "value": "200°C" },
-    { "parameter": "Machine Size", "value": "850 × 710 × 610 mm" },
-    { "parameter": "Heating System", "value": "Infrared thermostat controlled heating system" },
-    { "parameter": "Pressing System", "value": "Rotary pressing mechanism" },
-    { "parameter": "Conveyor Type", "value": "Roller conveyor belt system" },
-    { "parameter": "Pressure Adjustment", "value": "Adjustable pressing force" },
-    { "parameter": "Folder Support", "value": "Multiple interchangeable folders supported" }
+    {
+      "parameter": "Power Supply",
+      "value": "1PH / 220V / 50Hz"
+    },
+    {
+      "parameter": "Total Power",
+      "value": "2.7 kW"
+    },
+    {
+      "parameter": "Heater Power",
+      "value": "2.5 kW"
+    },
+    {
+      "parameter": "Working Width",
+      "value": "400 mm"
+    },
+    {
+      "parameter": "Maximum Design Temperature",
+      "value": "200°C"
+    },
+    {
+      "parameter": "Machine Size",
+      "value": "850 × 710 × 610 mm"
+    },
+    {
+      "parameter": "Heating System",
+      "value": "Infrared thermostat controlled heating system"
+    },
+    {
+      "parameter": "Pressing System",
+      "value": "Rotary pressing mechanism"
+    },
+    {
+      "parameter": "Conveyor Type",
+      "value": "Roller conveyor belt system"
+    },
+    {
+      "parameter": "Pressure Adjustment",
+      "value": "Adjustable pressing force"
+    },
+    {
+      "parameter": "Folder Support",
+      "value": "Multiple interchangeable folders supported"
+    }
   ],
   "workingPrinciples": [
     {
@@ -65,55 +137,218 @@
     }
   ],
   "sequenceFlow": [
-    { "stepTitle": "Inspect Machine", "stepDescription": "Check machine condition before starting" },
-    { "stepTitle": "Install Folder", "stepDescription": "Fit required folder attachment" },
-    { "stepTitle": "Set Temperature", "stepDescription": "Set required pressing temperature" },
-    { "stepTitle": "Wait for Temperature", "stepDescription": "Machine reaches operating temperature" },
-    { "stepTitle": "Load Sleeve Placket", "stepDescription": "Place fabric into folder section" },
-    { "stepTitle": "Folder Shapes Fabric", "stepDescription": "Folder forms sleeve placket shape" },
-    { "stepTitle": "Conveyor Transfers", "stepDescription": "Material moves to pressing section" },
-    { "stepTitle": "Rotary Heat Pressing", "stepDescription": "Heat and pressure fix the fold" },
-    { "stepTitle": "Collect Finished Piece", "stepDescription": "Manual or auto collection of output" }
+    {
+      "stepTitle": "Inspect Machine",
+      "stepDescription": "Check machine condition before starting"
+    },
+    {
+      "stepTitle": "Install Folder",
+      "stepDescription": "Fit required folder attachment"
+    },
+    {
+      "stepTitle": "Set Temperature",
+      "stepDescription": "Set required pressing temperature"
+    },
+    {
+      "stepTitle": "Wait for Temperature",
+      "stepDescription": "Machine reaches operating temperature"
+    },
+    {
+      "stepTitle": "Load Sleeve Placket",
+      "stepDescription": "Place fabric into folder section"
+    },
+    {
+      "stepTitle": "Folder Shapes Fabric",
+      "stepDescription": "Folder forms sleeve placket shape"
+    },
+    {
+      "stepTitle": "Conveyor Transfers",
+      "stepDescription": "Material moves to pressing section"
+    },
+    {
+      "stepTitle": "Rotary Heat Pressing",
+      "stepDescription": "Heat and pressure fix the fold"
+    },
+    {
+      "stepTitle": "Collect Finished Piece",
+      "stepDescription": "Manual or auto collection of output"
+    }
   ],
   "partsList": [
-    { "partName": "Machine Frame", "partId": "", "section": "mechanical", "function": "Supports and holds the complete machine structure." },
-    { "partName": "Feeding Section", "partId": "", "section": "mechanical", "function": "Receives sleeve placket material at the entry point." },
-    { "partName": "Folder Attachment", "partId": "", "section": "mechanical", "function": "Forms the sleeve placket shape. Interchangeable for different styles." },
-    { "partName": "Folder Holder", "partId": "", "section": "mechanical", "function": "Holds folder assembly in correct position during operation." },
-    { "partName": "Roller Conveyor System", "partId": "", "section": "mechanical", "function": "Transfers fabric continuously through the machine." },
-    { "partName": "Conveyor Belt", "partId": "", "section": "mechanical", "function": "Moves material from feeding section to pressing section." },
-    { "partName": "Rotary Pressing Section", "partId": "", "section": "mechanical", "function": "Applies pressure and heat to fix the sleeve placket fold." },
-    { "partName": "Heating Plate", "partId": "", "section": "mechanical", "function": "Transfers thermal energy to the fabric during pressing." },
-    { "partName": "Pressure Adjustment Mechanism", "partId": "", "section": "mechanical", "function": "Adjusts pressing force for different fabric types." },
-    { "partName": "Main Drive Motor", "partId": "", "section": "mechanical", "function": "Drives conveyor movement through the machine." },
-    { "partName": "Drive Pulley and Shaft", "partId": "", "section": "mechanical", "function": "Transfers motor power to the conveyor system." },
-    { "partName": "Bearings", "partId": "", "section": "mechanical", "function": "Supports rotating components in the drive system." },
-    { "partName": "Pneumatic Cylinder", "partId": "", "section": "mechanical", "function": "Controls pressure movement if pneumatic system is installed." },
-    { "partName": "Automatic Collecting System", "partId": "O-C-08-01", "section": "mechanical", "function": "Optional finished-piece collection system at machine output." },
-    { "partName": "Heater Element", "partId": "", "section": "electronic", "function": "Produces heating energy for the pressing process." },
-    { "partName": "Infrared Thermostat Sensor", "partId": "", "section": "electronic", "function": "Measures and controls temperature during operation." },
-    { "partName": "Temperature Controller", "partId": "", "section": "electronic", "function": "Maintains stable heating condition throughout the pressing cycle." },
-    { "partName": "Solenoid Valve", "partId": "", "section": "electronic", "function": "Controls pneumatic airflow if pneumatic system is installed." },
-    { "partName": "Electrical Control Panel", "partId": "", "section": "electronic", "function": "Contains machine control components and protection devices." },
-    { "partName": "Switches and Indicators", "partId": "", "section": "electronic", "function": "Machine operation and status indication." },
-    { "partName": "Emergency Stop Switch", "partId": "", "section": "electronic", "function": "Immediate machine shutdown during unsafe condition." }
+    {
+      "partName": "Machine Frame",
+      "partId": "",
+      "function": "Supports and holds the complete machine structure."
+    },
+    {
+      "partName": "Feeding Section",
+      "partId": "",
+      "function": "Receives sleeve placket material at the entry point."
+    },
+    {
+      "partName": "Folder Attachment",
+      "partId": "",
+      "function": "Forms the sleeve placket shape. Interchangeable for different styles."
+    },
+    {
+      "partName": "Folder Holder",
+      "partId": "",
+      "function": "Holds folder assembly in correct position during operation."
+    },
+    {
+      "partName": "Roller Conveyor System",
+      "partId": "",
+      "function": "Transfers fabric continuously through the machine."
+    },
+    {
+      "partName": "Conveyor Belt",
+      "partId": "",
+      "function": "Moves material from feeding section to pressing section."
+    },
+    {
+      "partName": "Rotary Pressing Section",
+      "partId": "",
+      "function": "Applies pressure and heat to fix the sleeve placket fold."
+    },
+    {
+      "partName": "Heating Plate",
+      "partId": "",
+      "function": "Transfers thermal energy to the fabric during pressing."
+    },
+    {
+      "partName": "Pressure Adjustment Mechanism",
+      "partId": "",
+      "function": "Adjusts pressing force for different fabric types."
+    },
+    {
+      "partName": "Main Drive Motor",
+      "partId": "",
+      "function": "Drives conveyor movement through the machine."
+    },
+    {
+      "partName": "Drive Pulley and Shaft",
+      "partId": "",
+      "function": "Transfers motor power to the conveyor system."
+    },
+    {
+      "partName": "Bearings",
+      "partId": "",
+      "function": "Supports rotating components in the drive system."
+    },
+    {
+      "partName": "Pneumatic Cylinder",
+      "partId": "",
+      "function": "Controls pressure movement if pneumatic system is installed."
+    },
+    {
+      "partName": "Automatic Collecting System",
+      "partId": "O-C-08-01",
+      "function": "Optional finished-piece collection system at machine output."
+    },
+    {
+      "partName": "Heater Element",
+      "partId": "",
+      "function": "Produces heating energy for the pressing process."
+    },
+    {
+      "partName": "Infrared Thermostat Sensor",
+      "partId": "",
+      "function": "Measures and controls temperature during operation."
+    },
+    {
+      "partName": "Temperature Controller",
+      "partId": "",
+      "function": "Maintains stable heating condition throughout the pressing cycle."
+    },
+    {
+      "partName": "Solenoid Valve",
+      "partId": "",
+      "function": "Controls pneumatic airflow if pneumatic system is installed."
+    },
+    {
+      "partName": "Electrical Control Panel",
+      "partId": "",
+      "function": "Contains machine control components and protection devices."
+    },
+    {
+      "partName": "Switches and Indicators",
+      "partId": "",
+      "function": "Machine operation and status indication."
+    },
+    {
+      "partName": "Emergency Stop Switch",
+      "partId": "",
+      "function": "Immediate machine shutdown during unsafe condition."
+    }
   ],
   "maintenance": [
-    { "code": "Uneven Sleeve Placket Shape", "definition": "Folder misalignment or incorrect fabric loading", "action": "Adjust folder and guide alignment." },
-    { "code": "Weak Pressing Result", "definition": "Low temperature or insufficient pressure", "action": "Check heater and pressure adjustment." },
-    { "code": "Fabric Burning", "definition": "Excess temperature or long pressing time", "action": "Reduce temperature and cycle duration." },
-    { "code": "Conveyor Slipping", "definition": "Belt wear or tension problem", "action": "Inspect conveyor belt and tensioner." },
-    { "code": "Machine Not Heating", "definition": "Heater, controller, or wiring fault", "action": "Check heater resistance and electrical circuit." },
-    { "code": "Temperature Instability", "definition": "Sensor or thermostat issue", "action": "Inspect sensor and temperature controller." },
-    { "code": "Abnormal Conveyor Movement", "definition": "Bearing or drive issue", "action": "Inspect rollers, bearings, and motor drive." },
-    { "code": "Air Leakage", "definition": "Pneumatic tubing or valve leak", "action": "Check tubing and pneumatic fittings." },
-    { "code": "Electrical Overheating", "definition": "Loose terminal or overload condition", "action": "Stop machine immediately and inspect electrical cabinet." }
+    {
+      "code": "Uneven Sleeve Placket Shape",
+      "definition": "Folder misalignment or incorrect fabric loading",
+      "action": "Adjust folder and guide alignment."
+    },
+    {
+      "code": "Weak Pressing Result",
+      "definition": "Low temperature or insufficient pressure",
+      "action": "Check heater and pressure adjustment."
+    },
+    {
+      "code": "Fabric Burning",
+      "definition": "Excess temperature or long pressing time",
+      "action": "Reduce temperature and cycle duration."
+    },
+    {
+      "code": "Conveyor Slipping",
+      "definition": "Belt wear or tension problem",
+      "action": "Inspect conveyor belt and tensioner."
+    },
+    {
+      "code": "Machine Not Heating",
+      "definition": "Heater, controller, or wiring fault",
+      "action": "Check heater resistance and electrical circuit."
+    },
+    {
+      "code": "Temperature Instability",
+      "definition": "Sensor or thermostat issue",
+      "action": "Inspect sensor and temperature controller."
+    },
+    {
+      "code": "Abnormal Conveyor Movement",
+      "definition": "Bearing or drive issue",
+      "action": "Inspect rollers, bearings, and motor drive."
+    },
+    {
+      "code": "Air Leakage",
+      "definition": "Pneumatic tubing or valve leak",
+      "action": "Check tubing and pneumatic fittings."
+    },
+    {
+      "code": "Electrical Overheating",
+      "definition": "Loose terminal or overload condition",
+      "action": "Stop machine immediately and inspect electrical cabinet."
+    }
   ],
   "resources": [
-    { "resourceName": "Ngai Shing Official Catalog PDF", "description": "Main source for specifications and folder options (NS-2410 V1.60)", "url": "https://id.ngaishinghk.com/download/24/" },
-    { "resourceName": "Ngai Shing Official Website", "description": "Manufacturer and product verification", "url": "https://www.ngaishinghk.com" },
-    { "resourceName": "Ngai Shing Global Website", "description": "Product category and company information", "url": "https://global.ngaishinghk.com" },
-    { "resourceName": "Ngai Shing Download Portal", "description": "Official machine document repository", "url": "https://id.ngaishinghk.com/download/24/" }
+    {
+      "resourceName": "Ngai Shing Official Catalog PDF",
+      "description": "Main source for specifications and folder options (NS-2410 V1.60)",
+      "url": "https://id.ngaishinghk.com/download/24/"
+    },
+    {
+      "resourceName": "Ngai Shing Official Website",
+      "description": "Manufacturer and product verification",
+      "url": "https://www.ngaishinghk.com"
+    },
+    {
+      "resourceName": "Ngai Shing Global Website",
+      "description": "Product category and company information",
+      "url": "https://global.ngaishinghk.com"
+    },
+    {
+      "resourceName": "Ngai Shing Download Portal",
+      "description": "Official machine document repository",
+      "url": "https://id.ngaishinghk.com/download/24/"
+    }
   ],
   "finalNotes": "• Specifications: Based on the official NS-2410 V1.60 manufacturer catalog.\n• Parts Manual: Publicly available exploded spare-parts manuals for the NS-2410 were not found during research.\n• Folder Attachments: F537 (Plait folder), F538 (Triangular sleeve placket folder), F539 (Rectangular sleeve placket folder), F540 (Triangular sleeve placket folder), F541 (Triangular sleeve placket folder), F543 (Plait folder), O-C-08-01 (Automatic collecting system).\n• Electrical Verification: Always verify actual electrical configuration and internal wiring directly from the machine nameplate and electrical cabinet before any maintenance work."
 }
