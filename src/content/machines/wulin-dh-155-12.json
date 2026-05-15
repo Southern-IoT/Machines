@@ -1,11 +1,4 @@
 {
-  "title": "Dark Horse DH-155-12",
-  "subtitle": "High-Speed Sweater / Knitwear Fast Linking Machine",
-  "brand": "Dark Horse",
-  "category": "Sewing Machine",
-  "machineImage": "",
-  "reportDownloadUrl": "",
-  "publishedDate": "2026-05-15T00:00:00.000Z",
   "purposeAndApplication": {
     "purpose": "The DH-155-12 is a sweater and knitwear fast linking machine. Its main purpose is to join knitted garment parts such as front panels, back panels, sleeves, collars, cuffs, and side seams by connecting the loops or edges of two knitted panels. The machine works by guiding knitted panels through a linking zone where the needle and looper form a flexible joining seam suitable for knitwear.",
     "applications": [
@@ -17,29 +10,93 @@
     ],
     "industry": "Sweater and knitwear manufacturing, knitted garment assembly, cardigan and pullover production, any factory producing knitted garments requiring panel linking"
   },
+  "title": "Dark Horse DH-155-12",
+  "subtitle": "High-Speed Sweater / Knitwear Fast Linking Machine",
+  "brand": "Dark Horse",
+  "category": "Sewing Machine",
+  "machineImage": "/uploads/kansai.jpg",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-15T00:00:00.000Z",
   "overviewDescription": "The Dark Horse DH-155-12 is a sweater and knitwear fast linking machine manufactured by WULIN JIXIE CO. LTD (China). 'Dark Horse' is the brand/trade name, 'DH' stands for Dark Horse, '155' is the model number, and '12' indicates 12 gauge (12GG) specification. The machine joins knitted garment panels by connecting loops or edges using a needle and looper mechanism that forms a flexible chain-style linking seam. The gauge specification must be confirmed from the actual machine nameplate, installed needle/dial parts, and supplier documentation.",
   "classificationTable": [
-    { "field": "Brand / Trade Name", "value": "Dark Horse (DH = Dark Horse)" },
-    { "field": "Manufacturing Company", "value": "WULIN JIXIE CO. LTD (China)" },
-    { "field": "Model", "value": "DH-155-12" },
-    { "field": "Model Code Meaning", "value": "DH = Dark Horse (brand), 155 = model number, 12 = 12 gauge / 12GG specification" },
-    { "field": "Gauge Meaning", "value": "The '12' most likely indicates 12 gauge / 12GG linking specification. Must be confirmed from machine nameplate, needle plate/dial, and needle specification." },
-    { "field": "Main Application", "value": "Linking knitted garment parts: sweater front/back body, sleeve, shoulder, collar, cuff, waistband, and side seam panels" },
-    { "field": "Stitch Character", "value": "Linking seam / chain-stitch style joining seam, depending on needle and looper mechanism" },
-    { "field": "Operation Type", "value": "Operator-guided machine. Operator aligns knitted panels and guides them through the linking zone." },
-    { "field": "Confirmed Public Match", "value": "Public sources strongly match DH-155 with a Dark Horse fast linking / sweater linking machine." },
-    { "field": "Important Verification", "value": "Exact speed, needle system, motor power, voltage, gauge, and spare-part numbers must be verified from the actual machine nameplate, manual, controller, and installed parts." },
-    { "field": "Practical Factory Listing", "value": "Should be listed as: Sweater Fast Linking Machine / Knitwear Linking Machine — DH-155-12" }
+    {
+      "field": "Brand / Trade Name",
+      "value": "Dark Horse (DH = Dark Horse)"
+    },
+    {
+      "field": "Manufacturing Company",
+      "value": "WULIN JIXIE CO. LTD (China)"
+    },
+    {
+      "field": "Model",
+      "value": "DH-155-12"
+    },
+    {
+      "field": "Model Code Meaning",
+      "value": "DH = Dark Horse (brand), 155 = model number, 12 = 12 gauge / 12GG specification"
+    },
+    {
+      "field": "Gauge Meaning",
+      "value": "The '12' most likely indicates 12 gauge / 12GG linking specification. Must be confirmed from machine nameplate, needle plate/dial, and needle specification."
+    },
+    {
+      "field": "Main Application",
+      "value": "Linking knitted garment parts: sweater front/back body, sleeve, shoulder, collar, cuff, waistband, and side seam panels"
+    },
+    {
+      "field": "Stitch Character",
+      "value": "Linking seam / chain-stitch style joining seam, depending on needle and looper mechanism"
+    },
+    {
+      "field": "Operation Type",
+      "value": "Operator-guided machine. Operator aligns knitted panels and guides them through the linking zone."
+    },
+    {
+      "field": "Confirmed Public Match",
+      "value": "Public sources strongly match DH-155 with a Dark Horse fast linking / sweater linking machine."
+    },
+    {
+      "field": "Important Verification",
+      "value": "Exact speed, needle system, motor power, voltage, gauge, and spare-part numbers must be verified from the actual machine nameplate, manual, controller, and installed parts."
+    },
+    {
+      "field": "Practical Factory Listing",
+      "value": "Should be listed as: Sweater Fast Linking Machine / Knitwear Linking Machine — DH-155-12"
+    }
   ],
   "technicalSpecs": [
-    { "parameter": "Machine Category", "value": "Sweater linking machine / fast linking machine / cup seamer / side linking machine" },
-    { "parameter": "Model", "value": "DH-155-12" },
-    { "parameter": "Publicly Matched Model Family", "value": "DH-155 Dark Horse fast linking machine" },
-    { "parameter": "Probable Gauge", "value": "12GG / 12 gauge (based on model suffix and public DH-155 gauge listings)" },
-    { "parameter": "Main Work", "value": "Joining knitted panels loop-to-loop or edge-to-edge" },
-    { "parameter": "Typical Garments", "value": "Sweaters, cardigans, knit pullovers, knitted collars, cuffs, rib bands, sleeves, shoulders, side seams" },
-    { "parameter": "Operation Type", "value": "Operator-guided; operator aligns panels and guides through linking zone" },
-    { "parameter": "DH-155 Public Features", "value": "Fast linking of front/back panels and sleeves; stable operation; reduced skipped stitches; electronic control and precision mechanical structure" }
+    {
+      "parameter": "Machine Category",
+      "value": "Sweater linking machine / fast linking machine / cup seamer / side linking machine"
+    },
+    {
+      "parameter": "Model",
+      "value": "DH-155-12"
+    },
+    {
+      "parameter": "Publicly Matched Model Family",
+      "value": "DH-155 Dark Horse fast linking machine"
+    },
+    {
+      "parameter": "Probable Gauge",
+      "value": "12GG / 12 gauge (based on model suffix and public DH-155 gauge listings)"
+    },
+    {
+      "parameter": "Main Work",
+      "value": "Joining knitted panels loop-to-loop or edge-to-edge"
+    },
+    {
+      "parameter": "Typical Garments",
+      "value": "Sweaters, cardigans, knit pullovers, knitted collars, cuffs, rib bands, sleeves, shoulders, side seams"
+    },
+    {
+      "parameter": "Operation Type",
+      "value": "Operator-guided; operator aligns panels and guides through linking zone"
+    },
+    {
+      "parameter": "DH-155 Public Features",
+      "value": "Fast linking of front/back panels and sleeves; stable operation; reduced skipped stitches; electronic control and precision mechanical structure"
+    }
   ],
   "workingPrinciples": [
     {
@@ -64,50 +121,193 @@
     }
   ],
   "sequenceFlow": [
-    { "stepTitle": "Power ON & Inspect", "stepDescription": "Check needle, looper, thread path, guide, lubrication, and cleanliness" },
-    { "stepTitle": "Confirm Gauge", "stepDescription": "Confirm machine setup matches 12GG fabric requirement" },
-    { "stepTitle": "Install Needle & Thread", "stepDescription": "Correct needle system, thread through guides and tension discs" },
-    { "stepTitle": "Set Tension & Speed", "stepDescription": "Set thread tension, speed, guide, and presser pressure" },
-    { "stepTitle": "Prepare Knitted Panels", "stepDescription": "Remove loose draw thread, check edges are clean" },
-    { "stepTitle": "Align Panels", "stepDescription": "Align loops or seam edges at correct seam position" },
-    { "stepTitle": "Start Linking", "stepDescription": "Press pedal slowly; increase speed after seam line is stable" },
-    { "stepTitle": "Guide Panels", "stepDescription": "Guide knitted panels smoothly; do not pull or stretch" },
-    { "stepTitle": "Inspect Seam", "stepDescription": "Check for skipped stitch, loose/tight seam, thread breakage, appearance" }
+    {
+      "stepTitle": "Power ON & Inspect",
+      "stepDescription": "Check needle, looper, thread path, guide, lubrication, and cleanliness"
+    },
+    {
+      "stepTitle": "Confirm Gauge",
+      "stepDescription": "Confirm machine setup matches 12GG fabric requirement"
+    },
+    {
+      "stepTitle": "Install Needle & Thread",
+      "stepDescription": "Correct needle system, thread through guides and tension discs"
+    },
+    {
+      "stepTitle": "Set Tension & Speed",
+      "stepDescription": "Set thread tension, speed, guide, and presser pressure"
+    },
+    {
+      "stepTitle": "Prepare Knitted Panels",
+      "stepDescription": "Remove loose draw thread, check edges are clean"
+    },
+    {
+      "stepTitle": "Align Panels",
+      "stepDescription": "Align loops or seam edges at correct seam position"
+    },
+    {
+      "stepTitle": "Start Linking",
+      "stepDescription": "Press pedal slowly; increase speed after seam line is stable"
+    },
+    {
+      "stepTitle": "Guide Panels",
+      "stepDescription": "Guide knitted panels smoothly; do not pull or stretch"
+    },
+    {
+      "stepTitle": "Inspect Seam",
+      "stepDescription": "Check for skipped stitch, loose/tight seam, thread breakage, appearance"
+    }
   ],
   "partsList": [
-    { "partName": "Machine Frame and Base", "partId": "A", "section": "mechanical", "function": "Main body, bed, arm, support casting, covers, mounting points, and table connection. Provides the mechanical structure of the machine." },
-    { "partName": "Needle Bar Assembly", "partId": "C", "section": "mechanical", "function": "Needle bar, needle clamp, needle screw, needle guide, and needle movement linkage. Moves the needle up and down during stitch formation." },
-    { "partName": "Needle", "partId": "D", "section": "mechanical", "function": "The main stitch-forming part. Carries the thread through the knitted material. Correct needle size and system are critical." },
-    { "partName": "Looper / Hook Assembly", "partId": "E", "section": "mechanical", "function": "Looper, looper holder, looper shaft, looper driving linkage, and timing adjustment parts. Catches the thread loop and forms the linking stitch." },
-    { "partName": "Feed Mechanism", "partId": "F", "section": "mechanical", "function": "Feed dog, feed wheel, feed presser, guide rail, and feeding linkage. Moves the material through the linking zone." },
-    { "partName": "Fabric Guide and Panel Control Parts", "partId": "G", "section": "mechanical", "function": "Edge guide, loop guide, fabric plate, pressure guide, seam guide, and adjustable guide screws. Helps align knitted panels accurately." },
-    { "partName": "Thread Tension Assembly", "partId": "H", "section": "mechanical", "function": "Tension discs, tension spring, thread guide, take-up spring, and tension-adjusting nut. Controls thread tightness." },
-    { "partName": "Thread Take-up Mechanism", "partId": "I", "section": "mechanical", "function": "Take-up lever, take-up cam, thread controller, and related linkage. Pulls thread at the correct time to form a balanced seam." },
-    { "partName": "Presser / Holding Assembly", "partId": "J", "section": "mechanical", "function": "Presser foot, presser bar, presser spring, lifting lever, and pressure adjustment parts. Holds fabric steady during sewing." },
-    { "partName": "Lubrication System", "partId": "K", "section": "mechanical", "function": "Oil ports, oil wick, oil pipe, oil reservoir, and lubrication points. Reduces wear and heat in moving parts." },
-    { "partName": "Thread Stand and Accessories", "partId": "M", "section": "mechanical", "function": "Thread cone stand, thread guide rod, spool holder, bobbin/thread accessories, tools, and spare needles. Supplies thread smoothly to the machine." },
-    { "partName": "Motor and Drive System", "partId": "B", "section": "electronic", "function": "Motor, belt or direct drive arrangement, pulley, handwheel, main shaft, bearings, and power transmission parts. Supplies motion to the working mechanisms." },
-    { "partName": "Electrical and Control Parts", "partId": "L", "section": "electronic", "function": "Power switch, controller, speed control, motor wiring, sensors, foot pedal, and cable connectors. Exact parts depend on the installed version." }
+    {
+      "partName": "Machine Frame and Base",
+      "partId": "A",
+      "function": "Main body, bed, arm, support casting, covers, mounting points, and table connection. Provides the mechanical structure of the machine."
+    },
+    {
+      "partName": "Needle Bar Assembly",
+      "partId": "C",
+      "function": "Needle bar, needle clamp, needle screw, needle guide, and needle movement linkage. Moves the needle up and down during stitch formation."
+    },
+    {
+      "partName": "Needle",
+      "partId": "D",
+      "function": "The main stitch-forming part. Carries the thread through the knitted material. Correct needle size and system are critical."
+    },
+    {
+      "partName": "Looper / Hook Assembly",
+      "partId": "E",
+      "function": "Looper, looper holder, looper shaft, looper driving linkage, and timing adjustment parts. Catches the thread loop and forms the linking stitch."
+    },
+    {
+      "partName": "Feed Mechanism",
+      "partId": "F",
+      "function": "Feed dog, feed wheel, feed presser, guide rail, and feeding linkage. Moves the material through the linking zone."
+    },
+    {
+      "partName": "Fabric Guide and Panel Control Parts",
+      "partId": "G",
+      "function": "Edge guide, loop guide, fabric plate, pressure guide, seam guide, and adjustable guide screws. Helps align knitted panels accurately."
+    },
+    {
+      "partName": "Thread Tension Assembly",
+      "partId": "H",
+      "function": "Tension discs, tension spring, thread guide, take-up spring, and tension-adjusting nut. Controls thread tightness."
+    },
+    {
+      "partName": "Thread Take-up Mechanism",
+      "partId": "I",
+      "function": "Take-up lever, take-up cam, thread controller, and related linkage. Pulls thread at the correct time to form a balanced seam."
+    },
+    {
+      "partName": "Presser / Holding Assembly",
+      "partId": "J",
+      "function": "Presser foot, presser bar, presser spring, lifting lever, and pressure adjustment parts. Holds fabric steady during sewing."
+    },
+    {
+      "partName": "Lubrication System",
+      "partId": "K",
+      "function": "Oil ports, oil wick, oil pipe, oil reservoir, and lubrication points. Reduces wear and heat in moving parts."
+    },
+    {
+      "partName": "Thread Stand and Accessories",
+      "partId": "M",
+      "function": "Thread cone stand, thread guide rod, spool holder, bobbin/thread accessories, tools, and spare needles. Supplies thread smoothly to the machine."
+    },
+    {
+      "partName": "Motor and Drive System",
+      "partId": "B",
+      "function": "Motor, belt or direct drive arrangement, pulley, handwheel, main shaft, bearings, and power transmission parts. Supplies motion to the working mechanisms."
+    },
+    {
+      "partName": "Electrical and Control Parts",
+      "partId": "L",
+      "function": "Power switch, controller, speed control, motor wiring, sensors, foot pedal, and cable connectors. Exact parts depend on the installed version."
+    }
   ],
   "maintenance": [
-    { "code": "Skipped Stitch", "definition": "Needle bent, wrong needle, looper timing wrong, thread tension wrong, poor panel alignment", "action": "Replace needle, check needle direction, adjust looper timing, correct tension, retrain operator." },
-    { "code": "Thread Breakage", "definition": "Sharp thread guide, high tension, wrong needle size, rough looper point, poor quality thread", "action": "Smooth thread path, reduce tension, replace needle, polish or replace damaged parts." },
-    { "code": "Loose Seam", "definition": "Low thread tension, wrong threading, looper not forming loop correctly", "action": "Re-thread machine, increase tension carefully, inspect looper." },
-    { "code": "Tight Seam", "definition": "Excessive tension, wrong feed pressure, operator pulling fabric, wrong gauge selection", "action": "Reduce tension, adjust pressure, avoid pulling, confirm gauge." },
-    { "code": "Wavy Seam", "definition": "Fabric stretched during operation, excessive presser pressure, wrong feed setting", "action": "Reduce pressure, guide fabric naturally, check feed." },
-    { "code": "Uneven Panel Matching", "definition": "Operator misalignment, fabric edge not prepared, wrong guide setting", "action": "Improve edge preparation, adjust guide, train operator." },
-    { "code": "Needle Breakage", "definition": "Needle hitting looper/plate, wrong needle, incorrect timing, pulling fabric", "action": "Stop machine, check timing and clearance, replace needle, avoid pulling." },
-    { "code": "Motor Noise or Vibration", "definition": "Loose mounting, worn bearing, belt issue, dry mechanism", "action": "Tighten mounting, inspect drive system, lubricate, call mechanic if needed." }
+    {
+      "code": "Skipped Stitch",
+      "definition": "Needle bent, wrong needle, looper timing wrong, thread tension wrong, poor panel alignment",
+      "action": "Replace needle, check needle direction, adjust looper timing, correct tension, retrain operator."
+    },
+    {
+      "code": "Thread Breakage",
+      "definition": "Sharp thread guide, high tension, wrong needle size, rough looper point, poor quality thread",
+      "action": "Smooth thread path, reduce tension, replace needle, polish or replace damaged parts."
+    },
+    {
+      "code": "Loose Seam",
+      "definition": "Low thread tension, wrong threading, looper not forming loop correctly",
+      "action": "Re-thread machine, increase tension carefully, inspect looper."
+    },
+    {
+      "code": "Tight Seam",
+      "definition": "Excessive tension, wrong feed pressure, operator pulling fabric, wrong gauge selection",
+      "action": "Reduce tension, adjust pressure, avoid pulling, confirm gauge."
+    },
+    {
+      "code": "Wavy Seam",
+      "definition": "Fabric stretched during operation, excessive presser pressure, wrong feed setting",
+      "action": "Reduce pressure, guide fabric naturally, check feed."
+    },
+    {
+      "code": "Uneven Panel Matching",
+      "definition": "Operator misalignment, fabric edge not prepared, wrong guide setting",
+      "action": "Improve edge preparation, adjust guide, train operator."
+    },
+    {
+      "code": "Needle Breakage",
+      "definition": "Needle hitting looper/plate, wrong needle, incorrect timing, pulling fabric",
+      "action": "Stop machine, check timing and clearance, replace needle, avoid pulling."
+    },
+    {
+      "code": "Motor Noise or Vibration",
+      "definition": "Loose mounting, worn bearing, belt issue, dry mechanism",
+      "action": "Tighten mounting, inspect drive system, lubricate, call mechanic if needed."
+    }
   ],
   "resources": [
-    { "resourceName": "Suzhou Fanzhou DH-155 Product Page", "description": "Public product reference for DH-155 Dark Horse fast linking machine — mentions fast linking of front/back panels and sleeves, stability, and reduced skipped stitches", "url": "https://www.fanzhoultd.com/products/dh-155.html" },
-    { "resourceName": "Fanzhou Dark Horse Fast Linking Category", "description": "Public category page showing DH-155 under Dark Horse fast linking machines for sweaters", "url": "https://www.fanzhoultd.com/products/fast-linking-machine/" },
-    { "resourceName": "Alibaba DH-155 Linking Machine Listing", "description": "Marketplace reference showing DH-155 model and gauge options including 12GG and multi-gauge variants", "url": "https://www.alibaba.com/product-detail/dark-horse-linking-sewing-machine_1600171078949.html" },
-    { "resourceName": "Alibaba DH-155 Sweater Linking Cup Seamer", "description": "Marketplace reference for DH-155 as sweater linking / cup seamer machine", "url": "https://www.alibaba.com/product-detail/Dark-Horse-sweater-linking-Cup-seamer_62482721032.html" },
-    { "resourceName": "FabricLink Linking Explanation", "description": "General explanation of sweater linking as a method of attaching knitted garment pieces after flat-bed knitting", "url": "https://www.fabriclink.com/University/knit/linking.cfm" },
-    { "resourceName": "Maruyasu Knit Magazine — Linking in Flat Knit Fabrics", "description": "Explanation of linking gauge, loop formation, flat linking, dial linking, and linking thread", "url": "https://www.maruyasu-fil.com/knit-magazine/2001" },
-    { "resourceName": "Google Patents US4143609A — Linking Machines", "description": "Technical reference explaining linking machine operation using dial points, needles, loops, and chain-stitch style joining", "url": "https://patents.google.com/patent/US4143609A/en" },
-    { "resourceName": "YouTube DH-155-A Side Fast Linking Machine Video", "description": "Visual reference for DH-155-A style sweater side fast linking machine operation", "url": "https://www.youtube.com/watch?v=bDcjQs87HxQ" }
+    {
+      "resourceName": "Suzhou Fanzhou DH-155 Product Page",
+      "description": "Public product reference for DH-155 Dark Horse fast linking machine — mentions fast linking of front/back panels and sleeves, stability, and reduced skipped stitches",
+      "url": "https://www.fanzhoultd.com/products/dh-155.html"
+    },
+    {
+      "resourceName": "Fanzhou Dark Horse Fast Linking Category",
+      "description": "Public category page showing DH-155 under Dark Horse fast linking machines for sweaters",
+      "url": "https://www.fanzhoultd.com/products/fast-linking-machine/"
+    },
+    {
+      "resourceName": "Alibaba DH-155 Linking Machine Listing",
+      "description": "Marketplace reference showing DH-155 model and gauge options including 12GG and multi-gauge variants",
+      "url": "https://www.alibaba.com/product-detail/dark-horse-linking-sewing-machine_1600171078949.html"
+    },
+    {
+      "resourceName": "Alibaba DH-155 Sweater Linking Cup Seamer",
+      "description": "Marketplace reference for DH-155 as sweater linking / cup seamer machine",
+      "url": "https://www.alibaba.com/product-detail/Dark-Horse-sweater-linking-Cup-seamer_62482721032.html"
+    },
+    {
+      "resourceName": "FabricLink Linking Explanation",
+      "description": "General explanation of sweater linking as a method of attaching knitted garment pieces after flat-bed knitting",
+      "url": "https://www.fabriclink.com/University/knit/linking.cfm"
+    },
+    {
+      "resourceName": "Maruyasu Knit Magazine — Linking in Flat Knit Fabrics",
+      "description": "Explanation of linking gauge, loop formation, flat linking, dial linking, and linking thread",
+      "url": "https://www.maruyasu-fil.com/knit-magazine/2001"
+    },
+    {
+      "resourceName": "Google Patents US4143609A — Linking Machines",
+      "description": "Technical reference explaining linking machine operation using dial points, needles, loops, and chain-stitch style joining",
+      "url": "https://patents.google.com/patent/US4143609A/en"
+    },
+    {
+      "resourceName": "YouTube DH-155-A Side Fast Linking Machine Video",
+      "description": "Visual reference for DH-155-A style sweater side fast linking machine operation",
+      "url": "https://www.youtube.com/watch?v=bDcjQs87HxQ"
+    }
   ],
   "finalNotes": "• Commercial Identity: Brand/trade name is 'Dark Horse'. DH = Dark Horse, 155 = model number, 12 = 12 gauge/12GG. Manufacturing company is WULIN JIXIE CO. LTD (China).\n• Gauge Verification: The suffix '12' indicates 12GG. Always confirm from machine nameplate, installed needle/dial parts, and supplier documentation before production.\n• Spare Parts: Do not rely only on the model name for ordering. Always confirm by physical part comparison, supplier part number, machine nameplate, and actual installed assembly — DH-155 machines may have different market versions and gauge configurations.\n• Needle-Looper Timing: The most critical adjustment. Check timing when skipped stitches occur repeatedly even after needle replacement.\n• Fabric Handling: Never pull sweater panels during linking — knitted fabric stretches easily and pulling will distort measurements and seam quality.\n• Thread Path: Keep thread path clean and free from lint. Any burr on guides can cut thread repeatedly.\n• Quality Check Points: Check gauge matching, needle condition, threading, tension balance, fabric guiding, thread path cleanliness, needle-looper timing, and feed parts regularly."
 }
