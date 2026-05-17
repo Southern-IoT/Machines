@@ -1,11 +1,4 @@
 {
-  "title": "ZOJE ZJ8000E",
-  "subtitle": "Automatic High-Speed Single-Needle Lockstitch / Plain Sewing Machine",
-  "brand": "ZOJE",
-  "category": "Sewing Machine",
-  "machineImage": "",
-  "reportDownloadUrl": "",
-  "publishedDate": "2026-05-16T00:00:00.000Z",
   "purposeAndApplication": {
     "purpose": "The ZOJE ZJ8000E is an industrial plain sewing machine — also called a single-needle machine or lockstitch machine in garment factories. Its main task is to make a straight stitch by locking the upper thread with the lower bobbin thread. It is a high-speed, direct-drive machine with automatic functions including backtack, thread trimming, foot lift, and needle positioning depending on the sub-model.",
     "applications": [
@@ -17,25 +10,77 @@
     ],
     "industry": "Garment manufacturing, shirt and trouser production, home textile manufacturing, any apparel factory requiring high-speed plain sewing"
   },
+  "title": "ZOJE ZJ8000E",
+  "subtitle": "Automatic High-Speed Single-Needle Lockstitch / Plain Sewing Machine",
+  "brand": "ZOJE",
+  "category": "Sewing Machine",
+  "machineImage": "/uploads/zojee8000e.png",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-16T00:00:00.000Z",
   "overviewDescription": "The ZOJE ZJ8000E is an industrial plain sewing machine based on the single-needle lockstitch principle. It is part of the ZJ8000E series which has several sub-variants including D4J, TP, HG, S7, and other market-specific versions. The exact speed, stitch length, hook size, needle plate, feed dog, and automation package must be verified from the machine nameplate and the installed control panel. The machine uses a direct-drive servo-style motor system with fully automatic lubrication.",
   "classificationTable": [
-    { "field": "Machine Type", "value": "Industrial plain sewing machine / single-needle lockstitch machine" },
-    { "field": "Brand", "value": "ZOJE Sewing Machine" },
-    { "field": "Model", "value": "ZJ8000E Series" },
-    { "field": "Main Application", "value": "Straight lockstitch sewing on light to medium and medium-weight garments: T-shirts, shirts, pants, pillow cases, bed sheets, and general production sewing" },
-    { "field": "Sub-Variants", "value": "D4J, TP, HG, S7, and other market-specific versions — verify exact specs from machine nameplate" },
-    { "field": "Source Basis", "value": "ZOJE ZJ7000E/ZJ8000E operation manual, ZJ8000E parts book, product/manual download pages, and machine-parts catalogue references" }
+    {
+      "field": "Machine Type",
+      "value": "Industrial plain sewing machine / single-needle lockstitch machine"
+    },
+    {
+      "field": "Brand",
+      "value": "ZOJE Sewing Machine"
+    },
+    {
+      "field": "Model",
+      "value": "ZJ8000E Series"
+    },
+    {
+      "field": "Main Application",
+      "value": "Straight lockstitch sewing on light to medium and medium-weight garments: T-shirts, shirts, pants, pillow cases, bed sheets, and general production sewing"
+    },
+    {
+      "field": "Sub-Variants",
+      "value": "D4J, TP, HG, S7, and other market-specific versions — verify exact specs from machine nameplate"
+    },
+    {
+      "field": "Source Basis",
+      "value": "ZOJE ZJ7000E/ZJ8000E operation manual, ZJ8000E parts book, product/manual download pages, and machine-parts catalogue references"
+    }
   ],
   "technicalSpecs": [
-    { "parameter": "Stitch Type", "value": "Single-needle lockstitch / straight stitch" },
-    { "parameter": "Maximum Sewing Speed", "value": "Up to 5,000 stitches/min (family manual); some sub-variants 4,500 s.p.m. — confirm from nameplate" },
-    { "parameter": "Maximum Stitch Length", "value": "5–7 mm (family manual); some sub-variants limited to 5 mm" },
-    { "parameter": "Needle System", "value": "DBx1 / DPx5, size 9# – 18# depending on thread and fabric thickness" },
-    { "parameter": "Presser Foot Lift", "value": "Hand lifter approx. 5.5 mm; knee lifter up to approx. 13–15 mm (variant dependent)" },
-    { "parameter": "Lubrication System", "value": "Automatic lubrication system using 10# white sewing-machine oil" },
-    { "parameter": "Motor / Power", "value": "Direct-drive servo style system; 220V / 550W" },
-    { "parameter": "Automatic Functions", "value": "Automatic backtack, automatic thread trimming, automatic foot lift, needle positioning, LED sewing light (sub-model dependent)" },
-    { "parameter": "Application", "value": "Mainly medium-weight sewing materials; suitable for general garment sewing" }
+    {
+      "parameter": "Stitch Type",
+      "value": "Single-needle lockstitch / straight stitch"
+    },
+    {
+      "parameter": "Maximum Sewing Speed",
+      "value": "Up to 5,000 stitches/min (family manual); some sub-variants 4,500 s.p.m. — confirm from nameplate"
+    },
+    {
+      "parameter": "Maximum Stitch Length",
+      "value": "5–7 mm (family manual); some sub-variants limited to 5 mm"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "DBx1 / DPx5, size 9# – 18# depending on thread and fabric thickness"
+    },
+    {
+      "parameter": "Presser Foot Lift",
+      "value": "Hand lifter approx. 5.5 mm; knee lifter up to approx. 13–15 mm (variant dependent)"
+    },
+    {
+      "parameter": "Lubrication System",
+      "value": "Automatic lubrication system using 10# white sewing-machine oil"
+    },
+    {
+      "parameter": "Motor / Power",
+      "value": "Direct-drive servo style system; 220V / 550W"
+    },
+    {
+      "parameter": "Automatic Functions",
+      "value": "Automatic backtack, automatic thread trimming, automatic foot lift, needle positioning, LED sewing light (sub-model dependent)"
+    },
+    {
+      "parameter": "Application",
+      "value": "Mainly medium-weight sewing materials; suitable for general garment sewing"
+    }
   ],
   "workingPrinciples": [
     {
@@ -60,59 +105,237 @@
     }
   ],
   "sequenceFlow": [
-    { "stepTitle": "Power ON & Inspect", "stepDescription": "Check oil level, machine cleanliness, needle, bobbin, thread path, and power cable" },
-    { "stepTitle": "Thread Setup", "stepDescription": "Thread upper thread through guides and tension; insert bobbin in correct direction" },
-    { "stepTitle": "Set Parameters", "stepDescription": "Set stitch length, speed limit, backtack, trimming, and needle stop position" },
-    { "stepTitle": "Position Fabric", "stepDescription": "Lift presser foot, place fabric, align seam line, lower presser foot" },
-    { "stepTitle": "Start Sewing", "stepDescription": "Light pedal = low speed; deeper pedal = higher speed" },
-    { "stepTitle": "Stitch Formation", "stepDescription": "Needle, hook, bobbin thread, and take-up lever form continuous lockstitch" },
-    { "stepTitle": "Fabric Feeding", "stepDescription": "Feed dog advances fabric by selected stitch length per cycle" },
-    { "stepTitle": "Reinforcement", "stepDescription": "Use reverse/backtack at seam start and end" },
-    { "stepTitle": "Stop & Trim", "stepDescription": "Release pedal; auto-trim cuts threads; presser foot lifts" },
-    { "stepTitle": "Quality Check", "stepDescription": "Inspect stitch balance, length, tension, skipped stitches, and puckering" }
+    {
+      "stepTitle": "Power ON & Inspect",
+      "stepDescription": "Check oil level, machine cleanliness, needle, bobbin, thread path, and power cable"
+    },
+    {
+      "stepTitle": "Thread Setup",
+      "stepDescription": "Thread upper thread through guides and tension; insert bobbin in correct direction"
+    },
+    {
+      "stepTitle": "Set Parameters",
+      "stepDescription": "Set stitch length, speed limit, backtack, trimming, and needle stop position"
+    },
+    {
+      "stepTitle": "Position Fabric",
+      "stepDescription": "Lift presser foot, place fabric, align seam line, lower presser foot"
+    },
+    {
+      "stepTitle": "Start Sewing",
+      "stepDescription": "Light pedal = low speed; deeper pedal = higher speed"
+    },
+    {
+      "stepTitle": "Stitch Formation",
+      "stepDescription": "Needle, hook, bobbin thread, and take-up lever form continuous lockstitch"
+    },
+    {
+      "stepTitle": "Fabric Feeding",
+      "stepDescription": "Feed dog advances fabric by selected stitch length per cycle"
+    },
+    {
+      "stepTitle": "Reinforcement",
+      "stepDescription": "Use reverse/backtack at seam start and end"
+    },
+    {
+      "stepTitle": "Stop & Trim",
+      "stepDescription": "Release pedal; auto-trim cuts threads; presser foot lifts"
+    },
+    {
+      "stepTitle": "Quality Check",
+      "stepDescription": "Inspect stitch balance, length, tension, skipped stitches, and puckering"
+    }
   ],
   "partsList": [
-    { "partName": "Machine Frame & Cover Components (Group A)", "partId": "A", "section": "mechanical", "function": "Machine bed, arm, face plate, side plate, rubber plugs, covers, needle plate area, thread guides, bobbin winder assembly, and external protection parts." },
-    { "partName": "Main Shaft & Thread Take-up (Group B)", "partId": "B", "section": "mechanical", "function": "Main shaft, handwheel-side drive parts, thread take-up lever mechanism, crank linkage, bearings, and covers. Transfers motor rotation into needle and take-up motion." },
-    { "partName": "Hand Lifter & Tension Release (Group C)", "partId": "C", "section": "mechanical", "function": "Presser-foot lifting lever, tension release mechanism, lifter linkage, springs, and related small levers. Raises the presser foot and releases thread tension during material handling." },
-    { "partName": "Hook Driving Shaft (Group D)", "partId": "D", "section": "mechanical", "function": "Rotary hook drive shaft, hook gear/drive parts, hook base, bobbin case area, and related bushings. Forms the lockstitch with the needle thread and bobbin thread." },
-    { "partName": "Feed Mechanism (Group E)", "partId": "E", "section": "mechanical", "function": "Feed dog, feed bar, feed rock shaft, feed lifting parts, eccentric cams, and connecting links. Moves the fabric one stitch at a time." },
-    { "partName": "Feed Regulating (Group F)", "partId": "F", "section": "mechanical", "function": "Stitch-length regulating dial, reverse-feed lever, feed-adjusting linkages, springs, and feed-regulating shaft. Controls stitch length and reverse feeding." },
-    { "partName": "Thread Trimmer (Group G)", "partId": "G", "section": "mechanical", "function": "Movable knife, fixed knife, thread clamp, trimmer linkage, solenoid/actuator linkage, and cutter-related springs. Used in automatic thread-trimming variants." },
-    { "partName": "Lubrication System (Group I)", "partId": "I", "section": "mechanical", "function": "Oil pan, oil pump, oil tubes, oil windows, seals, and oil-control parts. Supplies oil to the hook and moving mechanisms using 10# white sewing-machine oil." },
-    { "partName": "Oil Pan, Knee Lift & Presser Foot (Group J)", "partId": "J", "section": "mechanical", "function": "Oil plate, knee lifter linkage, presser-foot lifting rod, presser bar parts, and table-side lifting mechanism." },
-    { "partName": "Thread Stand (Group K)", "partId": "K", "section": "mechanical", "function": "Thread stand, cone holder, thread guide arms, nuts, and mounting hardware. Supplies the upper thread smoothly from the thread cone." },
-    { "partName": "Needle", "partId": "DBx1/DPx5", "section": "mechanical", "function": "Carries the upper thread through the fabric and forms a loop for the hook. Correct needle system, correct size, straight needle, no burr, correct direction, proper needle height." },
-    { "partName": "Rotary Hook", "partId": "", "section": "mechanical", "function": "Catches the upper-thread loop and forms the lockstitch around the bobbin thread. Inspect: hook point sharpness, hook-to-needle clearance, oil supply, timing." },
-    { "partName": "Bobbin and Bobbin Case", "partId": "", "section": "mechanical", "function": "Bobbin holds the lower thread; bobbin case controls lower-thread tension. Inspect: even winding, correct direction, tension spring, latch condition, lint buildup." },
-    { "partName": "Feed Dog", "partId": "", "section": "mechanical", "function": "Moves fabric forward after each stitch. Inspect: tooth wear, height, timing, cleanliness, correct type for fabric." },
-    { "partName": "Presser Foot", "partId": "", "section": "mechanical", "function": "Holds fabric against the feed dog during sewing. Inspect: foot pressure, height, flat contact with fabric, no rough bottom surface." },
-    { "partName": "Needle Plate / Throat Plate", "partId": "", "section": "mechanical", "function": "Supports fabric around the needle hole. Inspect: smooth needle hole, no broken edge, correct plate for fabric and needle size." },
-    { "partName": "Thread Tension Assembly", "partId": "", "section": "mechanical", "function": "Controls upper-thread tension via spring-loaded tension discs. Inspect: clean discs, correct spring action, balanced stitch tension." },
-    { "partName": "Thread Take-up Lever", "partId": "", "section": "mechanical", "function": "Pulls the upper thread tight after loop formation. Inspect: smooth movement, no rough thread path, correct threading." },
-    { "partName": "Drive-by-Wire / Electrical (Group H)", "partId": "H", "section": "electronic", "function": "Control panel, electrical connectors, motor/control-related wiring, sensors, switches, and electronic-control parts. Exact components depend on sub-model." },
-    { "partName": "Direct-Drive Motor", "partId": "", "section": "electronic", "function": "Provides controlled rotation to the sewing mechanism. Inspect: noise, vibration, speed setting, cable connection, controller errors." },
-    { "partName": "Control Panel", "partId": "", "section": "electronic", "function": "Controls sewing speed, backtack, trimming, needle position, and other functions depending on variant. Inspect: parameter settings, button response, display error codes, wiring condition." },
-    { "partName": "LED Work Light", "partId": "", "section": "electronic", "function": "Illuminates the sewing area. Inspect: brightness control, cable connection, stable operation." }
+    {
+      "partName": "Machine Frame & Cover Components (Group A)",
+      "partId": "A",
+      "function": "Machine bed, arm, face plate, side plate, rubber plugs, covers, needle plate area, thread guides, bobbin winder assembly, and external protection parts."
+    },
+    {
+      "partName": "Main Shaft & Thread Take-up (Group B)",
+      "partId": "B",
+      "function": "Main shaft, handwheel-side drive parts, thread take-up lever mechanism, crank linkage, bearings, and covers. Transfers motor rotation into needle and take-up motion."
+    },
+    {
+      "partName": "Hand Lifter & Tension Release (Group C)",
+      "partId": "C",
+      "function": "Presser-foot lifting lever, tension release mechanism, lifter linkage, springs, and related small levers. Raises the presser foot and releases thread tension during material handling."
+    },
+    {
+      "partName": "Hook Driving Shaft (Group D)",
+      "partId": "D",
+      "function": "Rotary hook drive shaft, hook gear/drive parts, hook base, bobbin case area, and related bushings. Forms the lockstitch with the needle thread and bobbin thread."
+    },
+    {
+      "partName": "Feed Mechanism (Group E)",
+      "partId": "E",
+      "function": "Feed dog, feed bar, feed rock shaft, feed lifting parts, eccentric cams, and connecting links. Moves the fabric one stitch at a time."
+    },
+    {
+      "partName": "Feed Regulating (Group F)",
+      "partId": "F",
+      "function": "Stitch-length regulating dial, reverse-feed lever, feed-adjusting linkages, springs, and feed-regulating shaft. Controls stitch length and reverse feeding."
+    },
+    {
+      "partName": "Thread Trimmer (Group G)",
+      "partId": "G",
+      "function": "Movable knife, fixed knife, thread clamp, trimmer linkage, solenoid/actuator linkage, and cutter-related springs. Used in automatic thread-trimming variants."
+    },
+    {
+      "partName": "Lubrication System (Group I)",
+      "partId": "I",
+      "function": "Oil pan, oil pump, oil tubes, oil windows, seals, and oil-control parts. Supplies oil to the hook and moving mechanisms using 10# white sewing-machine oil."
+    },
+    {
+      "partName": "Oil Pan, Knee Lift & Presser Foot (Group J)",
+      "partId": "J",
+      "function": "Oil plate, knee lifter linkage, presser-foot lifting rod, presser bar parts, and table-side lifting mechanism."
+    },
+    {
+      "partName": "Thread Stand (Group K)",
+      "partId": "K",
+      "function": "Thread stand, cone holder, thread guide arms, nuts, and mounting hardware. Supplies the upper thread smoothly from the thread cone."
+    },
+    {
+      "partName": "Needle",
+      "partId": "DBx1/DPx5",
+      "function": "Carries the upper thread through the fabric and forms a loop for the hook. Correct needle system, correct size, straight needle, no burr, correct direction, proper needle height."
+    },
+    {
+      "partName": "Rotary Hook",
+      "partId": "",
+      "function": "Catches the upper-thread loop and forms the lockstitch around the bobbin thread. Inspect: hook point sharpness, hook-to-needle clearance, oil supply, timing."
+    },
+    {
+      "partName": "Bobbin and Bobbin Case",
+      "partId": "",
+      "function": "Bobbin holds the lower thread; bobbin case controls lower-thread tension. Inspect: even winding, correct direction, tension spring, latch condition, lint buildup."
+    },
+    {
+      "partName": "Feed Dog",
+      "partId": "",
+      "function": "Moves fabric forward after each stitch. Inspect: tooth wear, height, timing, cleanliness, correct type for fabric."
+    },
+    {
+      "partName": "Presser Foot",
+      "partId": "",
+      "function": "Holds fabric against the feed dog during sewing. Inspect: foot pressure, height, flat contact with fabric, no rough bottom surface."
+    },
+    {
+      "partName": "Needle Plate / Throat Plate",
+      "partId": "",
+      "function": "Supports fabric around the needle hole. Inspect: smooth needle hole, no broken edge, correct plate for fabric and needle size."
+    },
+    {
+      "partName": "Thread Tension Assembly",
+      "partId": "",
+      "function": "Controls upper-thread tension via spring-loaded tension discs. Inspect: clean discs, correct spring action, balanced stitch tension."
+    },
+    {
+      "partName": "Thread Take-up Lever",
+      "partId": "",
+      "function": "Pulls the upper thread tight after loop formation. Inspect: smooth movement, no rough thread path, correct threading."
+    },
+    {
+      "partName": "Drive-by-Wire / Electrical (Group H)",
+      "partId": "H",
+      "function": "Control panel, electrical connectors, motor/control-related wiring, sensors, switches, and electronic-control parts. Exact components depend on sub-model."
+    },
+    {
+      "partName": "Direct-Drive Motor",
+      "partId": "",
+      "function": "Provides controlled rotation to the sewing mechanism. Inspect: noise, vibration, speed setting, cable connection, controller errors."
+    },
+    {
+      "partName": "Control Panel",
+      "partId": "",
+      "function": "Controls sewing speed, backtack, trimming, needle position, and other functions depending on variant. Inspect: parameter settings, button response, display error codes, wiring condition."
+    },
+    {
+      "partName": "LED Work Light",
+      "partId": "",
+      "function": "Illuminates the sewing area. Inspect: brightness control, cable connection, stable operation."
+    }
   ],
   "maintenance": [
-    { "code": "Skipped Stitches", "definition": "Hook-to-needle timing off, needle bent or wrong size, incorrect threading, hook point worn", "action": "Re-time needle-hook synchronization; replace needle (DBx1/DPx5, correct size); rethread machine completely; inspect hook point for wear." },
-    { "code": "Thread Breakage (Upper)", "definition": "Thread tension too high, needle eye burred, rough thread guide, wrong threading sequence, poor thread quality", "action": "Reduce upper thread tension; replace needle; inspect all thread guides for burrs; rethread following the correct path." },
-    { "code": "Thread Breakage (Lower)", "definition": "Bobbin case tension too tight, bobbin wound unevenly, lint in bobbin case, bobbin case damaged", "action": "Adjust bobbin case tension spring; rewind bobbin evenly; clean bobbin case; replace bobbin case if damaged." },
-    { "code": "Uneven Stitch Length", "definition": "Feed dog height incorrect, presser foot pressure wrong, stitch length dial not locked, feed timing off", "action": "Adjust feed dog height; set correct presser foot pressure; lock stitch length dial; verify feed timing." },
-    { "code": "Fabric Puckering", "definition": "Thread tension too high, presser foot pressure too heavy, feed dog too aggressive for fabric weight", "action": "Reduce thread tension; reduce presser foot pressure; use correct feed dog and needle plate for fabric weight." },
-    { "code": "Needle Breakage", "definition": "Needle hits hook (timing shifted), operator pulling fabric, wrong needle size, needle incorrectly installed, foreign object in fabric", "action": "Power OFF immediately; find all needle fragments; re-time needle-hook synchronization; install correct needle fully seated with flat side facing back; avoid pulling fabric during sewing." },
-    { "code": "Thread Trimming Failure", "definition": "Movable or fixed knife worn or misaligned, trimmer timing off, thread not entering knife area correctly", "action": "Inspect knife sharpness and overlap; re-time trimmer mechanism; check thread path into trimmer area." },
-    { "code": "Machine Not Oiling / Dry Hook", "definition": "Oil level low, oil pipe blocked, oil pump failure", "action": "Refill oil to correct level using 10# white sewing-machine oil; check oil pipes for blockage; inspect oil pump operation through oil sight window." },
-    { "code": "Control Panel Error", "definition": "Parameter setting error, sensor fault, wiring issue, motor overload", "action": "Check error code on control panel display; verify parameter settings; inspect sensor connections; check motor cable; reset controller if needed." }
+    {
+      "code": "Skipped Stitches",
+      "definition": "Hook-to-needle timing off, needle bent or wrong size, incorrect threading, hook point worn",
+      "action": "Re-time needle-hook synchronization; replace needle (DBx1/DPx5, correct size); rethread machine completely; inspect hook point for wear."
+    },
+    {
+      "code": "Thread Breakage (Upper)",
+      "definition": "Thread tension too high, needle eye burred, rough thread guide, wrong threading sequence, poor thread quality",
+      "action": "Reduce upper thread tension; replace needle; inspect all thread guides for burrs; rethread following the correct path."
+    },
+    {
+      "code": "Thread Breakage (Lower)",
+      "definition": "Bobbin case tension too tight, bobbin wound unevenly, lint in bobbin case, bobbin case damaged",
+      "action": "Adjust bobbin case tension spring; rewind bobbin evenly; clean bobbin case; replace bobbin case if damaged."
+    },
+    {
+      "code": "Uneven Stitch Length",
+      "definition": "Feed dog height incorrect, presser foot pressure wrong, stitch length dial not locked, feed timing off",
+      "action": "Adjust feed dog height; set correct presser foot pressure; lock stitch length dial; verify feed timing."
+    },
+    {
+      "code": "Fabric Puckering",
+      "definition": "Thread tension too high, presser foot pressure too heavy, feed dog too aggressive for fabric weight",
+      "action": "Reduce thread tension; reduce presser foot pressure; use correct feed dog and needle plate for fabric weight."
+    },
+    {
+      "code": "Needle Breakage",
+      "definition": "Needle hits hook (timing shifted), operator pulling fabric, wrong needle size, needle incorrectly installed, foreign object in fabric",
+      "action": "Power OFF immediately; find all needle fragments; re-time needle-hook synchronization; install correct needle fully seated with flat side facing back; avoid pulling fabric during sewing."
+    },
+    {
+      "code": "Thread Trimming Failure",
+      "definition": "Movable or fixed knife worn or misaligned, trimmer timing off, thread not entering knife area correctly",
+      "action": "Inspect knife sharpness and overlap; re-time trimmer mechanism; check thread path into trimmer area."
+    },
+    {
+      "code": "Machine Not Oiling / Dry Hook",
+      "definition": "Oil level low, oil pipe blocked, oil pump failure",
+      "action": "Refill oil to correct level using 10# white sewing-machine oil; check oil pipes for blockage; inspect oil pump operation through oil sight window."
+    },
+    {
+      "code": "Control Panel Error",
+      "definition": "Parameter setting error, sensor fault, wiring issue, motor overload",
+      "action": "Check error code on control panel display; verify parameter settings; inspect sensor connections; check motor cable; reset controller if needed."
+    }
   ],
   "resources": [
-    { "resourceName": "ZOJE ZJ7000E/ZJ8000E Operation Manual", "description": "Main reference for safety, specifications, lubrication, threading, bobbin installation, treadle operation, stitch length adjustment, back feeding, presser foot pressure, timing, trimming, and maintenance", "url": "https://cdn.shopify.com/s/files/1/0222/3324/files/Zoje_ZJ8000E_-_Instruction_Manual.pdf?v=1654122667" },
-    { "resourceName": "ZOJE ZJ8000E Parts Manual", "description": "Main reference for assembly groups, exploded diagrams, ref. numbers, part numbers, and quantity information", "url": "https://cdn.shopify.com/s/files/1/0222/3324/files/15728501272907jx6jd.pdf?v=1661906233" },
-    { "resourceName": "ZOJE ZJ8000E Parts Catalogue Page", "description": "Quick reference page for spare-parts catalogue access", "url": "https://www.szwalnicze.com/cat_zoje_php/ZJ8000E.php" },
-    { "resourceName": "Direct Sewing ZJ8000E / A8000 Product Page", "description": "Practical product reference for automatic features, application, technical specification, and downloadable manuals", "url": "https://www.directsewing.co.nz/products/zoje-a8000" },
-    { "resourceName": "ZOJE Official Website", "description": "Manufacturer reference for ZOJE brand, product family, and official company information", "url": "https://www.zoje.com/" },
-    { "resourceName": "ManualsPlus ZJ7000E/ZJ8000E Manual Mirror", "description": "Web-readable backup copy of the operation manual — useful when PDF loading is difficult", "url": "https://manuals.plus/m/894e94c8073bbef228cf972511b01cd4ffb06af0325e8808ebe0aa9209398b4f" }
+    {
+      "resourceName": "ZOJE ZJ7000E/ZJ8000E Operation Manual",
+      "description": "Main reference for safety, specifications, lubrication, threading, bobbin installation, treadle operation, stitch length adjustment, back feeding, presser foot pressure, timing, trimming, and maintenance",
+      "url": "https://cdn.shopify.com/s/files/1/0222/3324/files/Zoje_ZJ8000E_-_Instruction_Manual.pdf?v=1654122667"
+    },
+    {
+      "resourceName": "ZOJE ZJ8000E Parts Manual",
+      "description": "Main reference for assembly groups, exploded diagrams, ref. numbers, part numbers, and quantity information",
+      "url": "https://cdn.shopify.com/s/files/1/0222/3324/files/15728501272907jx6jd.pdf?v=1661906233"
+    },
+    {
+      "resourceName": "ZOJE ZJ8000E Parts Catalogue Page",
+      "description": "Quick reference page for spare-parts catalogue access",
+      "url": "https://www.szwalnicze.com/cat_zoje_php/ZJ8000E.php"
+    },
+    {
+      "resourceName": "Direct Sewing ZJ8000E / A8000 Product Page",
+      "description": "Practical product reference for automatic features, application, technical specification, and downloadable manuals",
+      "url": "https://www.directsewing.co.nz/products/zoje-a8000"
+    },
+    {
+      "resourceName": "ZOJE Official Website",
+      "description": "Manufacturer reference for ZOJE brand, product family, and official company information",
+      "url": "https://www.zoje.com/"
+    },
+    {
+      "resourceName": "ManualsPlus ZJ7000E/ZJ8000E Manual Mirror",
+      "description": "Web-readable backup copy of the operation manual — useful when PDF loading is difficult",
+      "url": "https://manuals.plus/m/894e94c8073bbef228cf972511b01cd4ffb06af0325e8808ebe0aa9209398b4f"
+    }
   ],
   "finalNotes": "• Sub-Variants: ZJ8000E has several sub-variants (D4J, TP, HG, S7, and others). Always verify exact speed, stitch length, hook size, needle plate, feed dog, and automation package from the machine nameplate and installed control panel.\n• Needle-Hook Timing: The most critical adjustment. The hook point must pass close to the needle scarf at the correct moment. Re-verify timing after any needle breakage or machine crash.\n• Oil: Use only 10# white sewing-machine oil. Check oil level before every shift. Dry hook is the most common cause of hook wear and stitch problems.\n• Spare Parts: Use the full ZJ8000E parts book for ordering. Always confirm by model nameplate, sub-model suffix, part number, and physical comparison with the installed component.\n• Thread Trimming: In automatic trimming variants, the movable and fixed knives must be sharp and correctly overlapping. Dull knives cause thread jamming and incomplete trimming.\n• Needle: Use DBx1 or DPx5 system. Select size based on fabric weight and thread count. Replace immediately after any bend, break, or blunt point."
 }
