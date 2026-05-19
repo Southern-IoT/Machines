@@ -1,0 +1,518 @@
+{
+  "title": "Bedoly BDL-B6090-7-2TL",
+  "subtitle": "High-Speed Cylinder Bed Computer-Controlled Lock-Stitch Sewing Machine with Auto Trimmer and Top & Bottom Double Roller",
+  "brand": "Bedoly",
+  "category": "Cylinder Bed Sewing Machine",
+  "purposeAndApplication": {
+    "purpose": "The Bedoly BDL-B6090-7-2TL is a high-speed cylinder-bed, computer-controlled lock-stitch sewing machine featuring an integrated Top & Bottom Double Roller (2TL) system. Designed for tubular garment sections that cannot be accessed on flat-bed machines, it provides synchronized feeding from both fabric surfaces for consistent stitch quality on elastic, slippery, or thin materials.",
+    "applications": [
+      "Sewing trouser bottoms and hem lines on cylindrical workpieces",
+      "Attaching sleeve cuffs on tubular garment sections",
+      "Elastic waistband attachment with synchronized top/bottom roller feed",
+      "Sewing cylindrical bags and tubular canvas products",
+      "Processing super-thin, slippery, or elastic fabrics",
+      "High-speed production sewing requiring auto-trim functionality"
+    ],
+    "industry": "Garment manufacturing, trouser production, sportswear with elastic materials, bag and luggage production, canvas and tarpaulin products"
+  },
+  "machineImage": "/uploads/placeholder.jpg",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-05-19T00:00:00.000Z",
+  "overviewDescription": "The BDL-B6090-7-2TL is manufactured by Ningbo Sanhexin Automation Co., Ltd. under the Bedoly brand, with over 30 years of collective experience in industrial sewing machine research, development, and production. The defining feature is its 2TL (Top & Bottom Double Roller) configuration with both rollers built directly into the machine head, operating in absolute synchronization with the feed dog. Combined with the narrow 78 cm cylinder arm, this machine is ideal for sewing tubular garment sections.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Cylinder Bed Computer-Controlled Lock-Stitch Sewing Machine"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Bedoly (Ningbo Sanhexin Automation Co., Ltd.) — China"
+    },
+    {
+      "field": "Full Model Number",
+      "value": "BDL-B6090-7-2TL"
+    },
+    {
+      "field": "Stitch Type",
+      "value": "301 Lock Stitch"
+    },
+    {
+      "field": "Roller Configuration",
+      "value": "Top & Bottom Double Roller (Built-in, 2TL)"
+    },
+    {
+      "field": "Sharpening System",
+      "value": "N/A (Thread trimmer instead)"
+    },
+    {
+      "field": "Lubrication",
+      "value": "Reduced-oil (oil-free front zone at needle bar)"
+    },
+    {
+      "field": "Automation Level",
+      "value": "Computer-controlled: Auto-trim, auto-lift, backtack"
+    },
+    {
+      "field": "Applications",
+      "value": "Trouser bottom, sleeve cuff, elastic waistband, cylindrical bags"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Maximum Sewing Speed",
+      "value": "4,000 RPM (stitches per minute)"
+    },
+    {
+      "parameter": "Maximum Stitch Pitch",
+      "value": "4 mm"
+    },
+    {
+      "parameter": "Needle Type",
+      "value": "DBX1 (Size 14#)"
+    },
+    {
+      "parameter": "Presser Foot Lift (Manual)",
+      "value": "5 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift (Knee)",
+      "value": "13 mm"
+    },
+    {
+      "parameter": "Cylinder Length",
+      "value": "78 cm"
+    },
+    {
+      "parameter": "Cylinder Perimeter",
+      "value": "195 mm"
+    },
+    {
+      "parameter": "Roller System",
+      "value": "Upper + Lower drag rollers (2TL, integrated)"
+    },
+    {
+      "parameter": "Thread Trimmer",
+      "value": "Automatic (solenoid-actuated knife)"
+    },
+    {
+      "parameter": "Presser Foot Lift Mode",
+      "value": "Dual: Auto (solenoid) + Knee lever"
+    },
+    {
+      "parameter": "Oil Zone",
+      "value": "Oil-free front/needle area; lubricated main body"
+    },
+    {
+      "parameter": "Motor Type",
+      "value": "Brushless DC Servo Motor"
+    },
+    {
+      "parameter": "Motor Output",
+      "value": "550W–750W"
+    },
+    {
+      "parameter": "Power Supply",
+      "value": "AC 220V–240V, Single Phase, 50/60Hz"
+    },
+    {
+      "parameter": "Roller Stroke Adjustment",
+      "value": "Rotary knob, adjustable during sewing"
+    }
+  ],
+  "workingPrinciples": [
+    {
+      "heading": "1. Motor and Drive Train",
+      "description": "The servo motor drives the main upper shaft via a V-belt and handwheel. The upper shaft rotates at sewing speed (up to 4,000 RPM) and simultaneously drives: (a) the needle bar via a slider-crank mechanism, (b) the take-up lever via a crank-link, and (c) the lower shaft via a synchronous timing belt at a 1:2 ratio."
+    },
+    {
+      "heading": "2. Needle Mechanism (Slider-Crank)",
+      "description": "The needle bar crank pin on the upper shaft drives the needle bar connecting link, converting rotary shaft motion into the vertical reciprocating motion of the needle bar and needle. The blade displacement follows the slider-crank kinematics for precise needle penetration at high speed."
+    },
+    {
+      "heading": "3. Lock-Stitch Formation (301 Stitch)",
+      "description": "As the needle rises from its lowest position, it forms a thread loop. The rotary hook (running counterclockwise at 2× upper shaft speed) catches this loop with its hook point, spreads it around the bobbin case, and encircles the lower (bobbin) thread. The take-up lever then rises sharply, tightening the interlock into the fabric."
+    },
+    {
+      "heading": "4. Double Roller Feed (2TL)",
+      "description": "The upper and lower fabric-drag rollers are driven in absolute synchronization with the feed dog via an internal gear set. Together they grip the fabric from both sides, advancing it one stitch length per cycle. The roller feed stroke is adjustable via a rotary knob during live production."
+    },
+    {
+      "heading": "5. Automation Sequence",
+      "description": "The computer control unit (ECU) monitors the needle position sensor, processes the foot pedal signal, and at seam end triggers: (i) motor deceleration to needle-up position, (ii) solenoid actuation for thread trimming, and (iii) solenoid actuation for automatic presser foot lift."
+    }
+  ],
+  "sequenceFlow": [
+    {
+      "stepTitle": "Fill Oil Reservoir",
+      "stepDescription": "Check sight glass level before operation"
+    },
+    {
+      "stepTitle": "Load Bobbin & Thread Machine",
+      "stepDescription": "Insert bobbin and route upper thread"
+    },
+    {
+      "stepTitle": "Set Roller Stroke",
+      "stepDescription": "Adjust rotary knob for fabric type"
+    },
+    {
+      "stepTitle": "Power ON",
+      "stepDescription": "Activate control box and wait for initialization"
+    },
+    {
+      "stepTitle": "Slip Workpiece over Cylinder Arm",
+      "stepDescription": "Position fabric on cylinder bed"
+    },
+    {
+      "stepTitle": "Knee-Lever Lift Presser Foot",
+      "stepDescription": "Lift 13mm to load fabric"
+    },
+    {
+      "stepTitle": "Position Fabric at Seam Start",
+      "stepDescription": "Align fabric edge with needle reference"
+    },
+    {
+      "stepTitle": "Lower Presser Foot",
+      "stepDescription": "Auto or manual presser foot lowering"
+    },
+    {
+      "stepTitle": "Press Foot Pedal Forward",
+      "stepDescription": "Initiate sewing cycle"
+    },
+    {
+      "stepTitle": "Motor Accelerates; Needle Reciprocates",
+      "stepDescription": "Servo motor speeds up to selected RPM"
+    },
+    {
+      "stepTitle": "Feed Dog + Rollers Advance Fabric",
+      "stepDescription": "Synchronized fabric transportation"
+    },
+    {
+      "stepTitle": "301 Lock Stitch Formed per Cycle",
+      "stepDescription": "Continuous stitch formation"
+    },
+    {
+      "stepTitle": "Release / Heel Pedal at Seam End",
+      "stepDescription": "End sewing cycle"
+    },
+    {
+      "stepTitle": "Auto Thread Trim (Solenoid)",
+      "stepDescription": "Solenoid-actuated trimmer cuts threads"
+    },
+    {
+      "stepTitle": "Presser Foot Auto-Lifts",
+      "stepDescription": "Automatic lift after trim completion"
+    },
+    {
+      "stepTitle": "Remove Piece; Repeat Cycle",
+      "stepDescription": "Complete and reset for next workpiece"
+    }
+  ],
+  "partsList": [
+    {
+      "partName": "Machine Head (Sewing Head)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "The entire upper die-cast aluminium alloy assembly containing all internal mechanisms: needle bar, upper shaft, take-up lever, hook drive, and oil system. Provides the rigid, precision-aligned foundation for stitch formation."
+    },
+    {
+      "partName": "Cylinder Bed (Cylinder Arm)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "The long, narrow horizontal arm (78 cm length, 195 mm perimeter) extending from the machine base. Workpieces are slipped over this arm for tubular sewing. Houses the hook, bobbin, feed dog, and lower shaft internally."
+    },
+    {
+      "partName": "Needle Plate (Throat Plate)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Precision flat metal plate on top of the cylinder bed directly under the needle. Has a slot for needle passage and slots for feed dog teeth to emerge. Guides the stitching line and supports the fabric from below during needle penetration."
+    },
+    {
+      "partName": "Handwheel (Balance Wheel)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Large circular wheel fixed to the right end of the upper shaft. Used for manual rotation during threading, test stitches, and maintenance. The motor V-belt connects to this wheel. Always rotated toward the operator."
+    },
+    {
+      "partName": "Needle Bar",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Precision-machined vertical steel rod carrying the needle clamp at its lower end. Reciprocates up and down inside the needle bar bushing. Driven by the needle bar crank via the connecting link. Primary linear actuator for needle motion at up to 4,000 strokes/minute."
+    },
+    {
+      "partName": "Needle Bar Connecting Link (Pitman Rod)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Connecting rod linking the needle bar crank to the needle bar. Translates crank rotation into straight vertical movement. Must be precisely timed to place the needle lowest point in exact phase with the hook point arrival."
+    },
+    {
+      "partName": "Take-Up Lever (Thread Take-Up Arm)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "A moving arm projecting through the face plate, rising and falling with each stitch cycle. Tightens the hook-formed thread loop into the fabric, recovers excess thread after hook spreading, and pulls fresh thread off the spool for the next stitch."
+    },
+    {
+      "partName": "Feed Dog",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Toothed metal plate beneath the needle plate moving in an elliptical path (forward+up then back+down) to advance fabric stitch by stitch. Teeth grip the fabric underside. Moves fabric only when the needle is clear (on upstroke)."
+    },
+    {
+      "partName": "Feed Eccentric (Feed Cam)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Eccentric disc on the lower shaft driving the horizontal forward/back motion of the feed dog. The offset size determines how far the feed dog moves per stroke, directly controlling stitch length."
+    },
+    {
+      "partName": "Feed Regulator (Stitch Length Adjuster)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Mechanical regulator changing the effective stroke of the feed eccentric linkage. Controls stitch length from 0 to 4 mm maximum. Typically a knob or lever on the arm or cylinder bed."
+    },
+    {
+      "partName": "Upper Fabric-Drag Roller (Top Roller)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Built-in roller mounted above the fabric line, gripping the top fabric surface. Actively pulls fabric forward in synchronization with the feed dog. Smallest possible diameter to position the roller as close as possible to the needle hole."
+    },
+    {
+      "partName": "Lower Fabric-Drag Roller (Bottom Roller)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Matching roller on the cylinder bed gripping the fabric underside simultaneously with the top roller. Together they form a sandwich grip preventing elastic fabrics from stretching unevenly during feeding."
+    },
+    {
+      "partName": "Roller Stroke Adjustment Knob",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "External rotary knob on the machine head that changes the feed stroke of the drag rollers during live sewing. Allows real-time fine-tuning of roller feed rate to compensate for varying fabric elasticity without stopping the machine."
+    },
+    {
+      "partName": "Rotary Hook (Shuttle Driver)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "The core lock-stitch forming mechanism. A D-shaped hook rotating counterclockwise at exactly 2× the needle speed. Its hook point catches the upper thread loop as the needle rises, spreads the loop around the bobbin case, allowing upper and lower threads to interlock."
+    },
+    {
+      "partName": "Bobbin Case",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Small metal housing inserted inside the rotary hook basket to hold the bobbin. Does NOT rotate with the hook (held stationary by the anti-rotation spring). Lower thread feeds out through a tension slot with controlled resistance."
+    },
+    {
+      "partName": "Bobbin",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Small cylindrical spool holding the lower thread inside the bobbin case. Must be wound evenly at correct tension; uneven winding causes inconsistent lower thread tension and stitch quality variations."
+    },
+    {
+      "partName": "Upper Main Shaft (Arm Shaft)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "The primary horizontal rotating shaft running through the machine arm. Driven by the servo motor via V-belt and handwheel. Rotates at sewing speed (up to 4,000 RPM). Drives the needle bar crank, take-up lever crank, and the timing belt to the lower shaft."
+    },
+    {
+      "partName": "Lower Shaft (Hook Drive Shaft)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Second shaft running through the cylinder bed. Driven by the upper shaft via timing belt or bevel gears at 2× upper shaft speed. Drives the rotary hook and both feed dog eccentric cams."
+    },
+    {
+      "partName": "Timing Belt (Synchronous Toothed Belt)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Toothed rubber belt connecting the upper shaft pulley to the lower shaft pulley. Ensures zero-slip synchronous rotation between upper and lower shafts. Quieter and lower-vibration than gear drives."
+    },
+    {
+      "partName": "Presser Foot",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Flat metal foot holding fabric against the feed dog during sewing. Allows free fabric movement along the sewing direction while preventing sideways shift. Swappable for different foot types depending on application."
+    },
+    {
+      "partName": "Knee Lift Lever (Knee Lifter)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Lever bar at knee height extending from the machine stand, operated by the operator's knee pushing sideways. Lifts the presser foot to 13 mm (much greater than manual lift), keeping both hands free to handle the tubular workpiece."
+    },
+    {
+      "partName": "Oil Reservoir (Oil Sump)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Sealed reservoir in the machine head/arm casting holding sewing machine oil. Primary oil supply for all lubricated components. Running the machine without oil causes rapid bearing seizure."
+    },
+    {
+      "partName": "Thread Tension Assembly (Tension Discs)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Two spring-loaded metal discs gripping the thread between them. The spring compression controls friction on the thread. This is the primary upper thread tension control. Too tight causes thread breakage; too loose causes under-tension loops."
+    },
+    {
+      "partName": "Thread Trimmer Moving Knife (Blade)",
+      "partId": "—",
+      "section": "mechanical",
+      "function": "Hardened steel blade inside the cylinder bed driven by the trimmer solenoid linkage. Swings across and shears both upper and lower threads against the fixed counter knife. Must be sharp; dulling causes incomplete cuts."
+    },
+    {
+      "partName": "Servo Motor",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Brushless DC motor (550W–750W) driving the machine. Runs only when active (energy-saving). Provides precise speed control from near-zero to 4,000 RPM. Silent at standstill. Saves 50–70% energy vs. older clutch motors."
+    },
+    {
+      "partName": "Main Control Box (ECU)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Sealed electronic brain of the machine. Contains the main PCB, motor driver, and microcontroller. Manages all automation: stitching, trim, foot lift, backtack. Mounted under the table."
+    },
+    {
+      "partName": "Microcontroller (MCU / CPU)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "The embedded CPU running sewing machine firmware. Manages sequences, stitch counting, timing, and automation functions. Processes pedal and sensor inputs; outputs PWM signals to motor driver and trigger signals to solenoids."
+    },
+    {
+      "partName": "Motor Driver / 3-Phase Inverter",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Power electronics module (MOSFET or IGBT H-bridge) converting DC bus to the switching signals driving the 3-phase BLDC motor windings. Generates the rotating magnetic field. Highest-heat component on the PCB."
+    },
+    {
+      "partName": "SMPS (Switch-Mode Power Supply)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Converts AC mains (220V) to multiple internal DC voltages: high voltage DC (~330V) for motor H-bridge; low voltage (5V/12V/24V) for logic, sensors, and solenoids. Compact and efficient."
+    },
+    {
+      "partName": "Needle Position Sensor (Synchronizer)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Optical or magnetic sensor near the handwheel/upper shaft detecting a reference mark once per revolution. Tells the ECU the exact shaft angle for precise needle-stop positioning."
+    },
+    {
+      "partName": "Foot Pedal (Foot Controller)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "The operator's primary speed and start/stop control. Forward depression increases motor speed (proportional). Heel press triggers auto-trim and stop sequence. Contains a potentiometer or Hall-effect sensor outputting 0–5V speed command to the ECU."
+    },
+    {
+      "partName": "Thread Trimmer Solenoid",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Electromagnetic solenoid energized by the ECU at seam end. Pulls a mechanical linkage actuating the moving trimmer knife to cut both threads. Typical energization: 50–100 ms."
+    },
+    {
+      "partName": "Presser Foot Lift Solenoid (Auto-Lifter)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Solenoid energized by the ECU (after trim completes) to automatically raise the presser bar. Eliminates manual foot-lifting between pieces and significantly reduces cycle time."
+    },
+    {
+      "partName": "LED Sewing Lamp",
+      "partId": "—",
+      "section": "electronic",
+      "function": "LED lamp mounted on the machine arm above the needle area. Provides direct, shadow-free illumination of the stitch point. Powered from the control box 12V or 24V supply. Long service life; runs cool."
+    },
+    {
+      "partName": "Safety Fuse (Main Fuse, 10A)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Fuse at the mains input of the control box. Last line of protection against catastrophic overcurrent faults. Blows to protect all downstream electronics."
+    },
+    {
+      "partName": "Thread Break Sensor (optional)",
+      "partId": "—",
+      "section": "electronic",
+      "function": "Tension-based or optical sensor detecting upper thread absence. Stops the machine immediately when thread breaks to prevent wasted material and defective seams."
+    }
+  ],
+  "maintenance": [
+    {
+      "code": "Skipped Stitches",
+      "definition": "Hook timing off; hook point worn; needle wrongly oriented",
+      "action": "Re-time hook to needle; inspect hook point; reinsert needle with correct flat orientation"
+    },
+    {
+      "code": "Thread Breakage (Upper)",
+      "definition": "Tension too tight; needle eye burred; thread guide rough",
+      "action": "Reduce tension disc compression; replace needle; inspect all thread guides for burrs"
+    },
+    {
+      "code": "Thread Breakage (Lower)",
+      "definition": "Bobbin tension too tight; bobbin wound unevenly",
+      "action": "Adjust bobbin leaf spring screw; rewind bobbin evenly"
+    },
+    {
+      "code": "Auto-Trim Fails",
+      "definition": "Trim knife dull; solenoid not firing; linkage mis-set",
+      "action": "Replace moving/counter knife; check solenoid voltage; re-adjust trim cam linkage"
+    },
+    {
+      "code": "Fabric Feeding Inconsistently",
+      "definition": "Feed dog teeth worn; roller sync lost; stitch length at 0",
+      "action": "Replace feed dog; check roller gear set for wear; verify stitch length setting"
+    },
+    {
+      "code": "Machine Won't Start",
+      "definition": "No power; blown fuse; ECU fault",
+      "action": "Check mains connection; replace safety fuse; inspect ECU power LED; contact service"
+    },
+    {
+      "code": "Motor Runs but Needle Doesn't Move",
+      "definition": "V-belt broken or slipped off pulleys",
+      "action": "Inspect and replace motor V-belt; reset belt tension"
+    },
+    {
+      "code": "Excessive Vibration",
+      "definition": "Loose shaft bearings; timing belt tension incorrect",
+      "action": "Inspect and replace bearings; re-tension timing belt"
+    },
+    {
+      "code": "Oil Staining on Fabric",
+      "definition": "Oil seeping from needle zone; felt wicks over-saturated",
+      "action": "Check oil-free zone dry bearings; reduce oil pump delivery; replace saturated wicks"
+    },
+    {
+      "code": "Presser Foot Not Auto-Lifting",
+      "definition": "Auto-lift solenoid fault; ECU output failed",
+      "action": "Test solenoid coil resistance; check ECU solenoid driver output; replace solenoid"
+    },
+    {
+      "code": "Rollers Slipping on Elastic Fabric",
+      "definition": "Roller pressure spring weak; roller bearing worn; gear teeth worn",
+      "action": "Replace pressure spring; replace roller bearings; inspect roller gear set"
+    },
+    {
+      "code": "Needle Hits Needle Plate",
+      "definition": "Needle timing off; needle bent; needle bar worn sideways",
+      "action": "Verify needle bar timing; replace bent needle; inspect needle bar bushing for wear"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Bedoly Official Website",
+      "description": "Primary product pages for BDL-6090-7 and 2TL variant",
+      "url": "https://www.bedoly.net/BDL6090-7-2TL-Cylinder-bed-computer-controlled-sewing-machine.html"
+    },
+    {
+      "resourceName": "Bedoly Cylinder Bed Product Category",
+      "description": "Full series comparison and related model listings",
+      "url": "https://www.bedoly.net/Cylinder-bed/"
+    },
+    {
+      "resourceName": "Bedoly Machine Selection Guide",
+      "description": "Complete user guide for cylinder bed sewing machines",
+      "url": "https://www.bedoly.net/how-to-choose-the-best-cylinder-bed-sewing-machine-complete-user-guide.html"
+    },
+    {
+      "resourceName": "Bedoly Official Facebook Page",
+      "description": "Product videos and operation demonstrations",
+      "url": "https://www.facebook.com/BedolySewingMachine/"
+    },
+    {
+      "resourceName": "Bedoly Contact",
+      "description": "Manufacturer contact for spare parts and service enquiries",
+      "url": "mailto:garen.cai@bedoly.com"
+    }
+  ],
+  "finalNotes": "• Lubrication: Use only genuine Bedoly/Sanhexin recommended sewing machine oil for the main oil reservoir. Never use thick motor oil or thin lubricants that may migrate to the oil-free needle zone. Check the sight glass before every operating session.\n• Needle Care: Always use DBX1 size 14# needles. Replace needles at the first sign of dullness, burring, or bending. A dull needle at 4,000 RPM causes far greater damage than the cost of a new needle.\n• Roller Adjustment: The stroke-adjustment knob for the 2TL double rollers should be calibrated to the fabric type at the start of each production run. Elastic waistbands require a different roller stroke setting than rigid cotton cuffs.\n• Hook Timing: After any hook, needle bar, or shaft reassembly, always verify the hook timing with the timing marks on the handwheel before resuming production.\n• Safety: Always ensure the machine is powered off before changing needles, bobbins, or presser feet. Never reach under the cylinder arm while the motor is running. The auto-trim knife is sharp and actuates without warning.\n• ECU Parameters: Document all control box parameters (max speed, backtack count, trim delay) after initial setup. If the ECU is replaced or reset, these settings must be re-entered by a qualified technician."
+}
