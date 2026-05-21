@@ -328,14 +328,14 @@
     { "code": "12", "definition": "Lapper folder not feeding fabric correctly", "action": "Check lapper guide plate is fully inserted and seated correctly. Inspect lapper folder for damage or distortion; replace if warped. Verify lapper guide plate washer is in place for correct clearance. Adjust fabric fold position by sliding the guide plate. Clean lint from lapper folder channel before re-threading." }
   ],
   "resources": [
-    { "resourceName": "Parts Catalogue", "description": "Complete illustrated parts list for Brother DA-927A (Edition March 2018, I8031225Z). Contains all part numbers, assembly diagrams, and exploded views.", "url": "https://southernmachines.com/parts/brother-da-927a.pdf" },
-    { "resourceName": "Service Manual", "description": "Brother DA-927A/928A service and adjustment manual. Contains timing procedures, lubrication charts, and troubleshooting procedures.", "url": "https://southernmachines.com/service/brother-da-927a-service-manual.pdf" },
-    { "resourceName": "DA-927A Product Page", "description": "Official Brother product information page for the DA-927A series with specifications and applications.", "url": "https://www.brother-intl.com/industrial-sewing/products/chain-stitch/da-927a" },
-    { "resourceName": "Needle Reference Guide", "description": "Organ Needle TV×64NY specification chart for industrial chain stitch needles — compatible sizes and applications.", "url": "https://www.organneedles.com/tv64ny" },
-    { "resourceName": "Thread Tensioning Guide", "description": "Technical reference for setting needle and looper thread tensions on industrial chain stitch machines.", "url": "https://southernmachines.com/technical/thread-tension-guide.pdf" },
-    { "resourceName": "DA-928A Reference", "description": "Product information for the three-needle heavy-duty DA-928A variant for comparison and heavy applications.", "url": "https://www.brother-intl.com/industrial-sewing/products/chain-stitch/da-928a" },
-    { "resourceName": "Lapper Seam Techniques", "description": "Technical guide for flat-fell and lap seam construction using the optional lapper attachment on feed-off-arm machines.", "url": "https://southernmachines.com/technical/lapper-techniques.pdf" },
-    { "resourceName": "Brother Industrial Sewing Support", "description": "Brother Industrial Sewing global support portal — warranty registration, technical support requests, and genuine parts ordering.", "url": "https://www.brother-intl.com/industrial-sewing/support" }
+    { "resourceName": "Official Product Page", "description": "Features, specifications, catalog/manual download hub for Brother DA-927A", "url": "https://industrialsewingmachine.global.brother/en-ap/all-products/da-927a" },
+    { "resourceName": "Instruction Manual PDF", "description": "Installation, threading, adjustment, troubleshooting (34 pages)", "url": "https://www.brother-usa.com/-/media/files/ism/manuals/feed-off-the-arm-chain-stitch-sewing-machine/da927a-new-model/da-927a_928a-instruction-manual.pdf" },
+    { "resourceName": "Official Parts Book", "description": "Full illustrated parts list (source for this document)", "url": "https://www.brother-usa.com/-/media/files/ism/manuals/feed-off-the-arm-chain-stitch-sewing-machine/da927a-new-model/da-927a-parts.pdf" },
+    { "resourceName": "ManualsLib Online", "description": "Browse all 34 pages online, searchable, no login required", "url": "https://www.manualslib.com/manual/1473581/Brother-Da-927a.html" },
+    { "resourceName": "Brother Online Parts Navigator", "description": "Search and identify parts by diagram number", "url": "https://partsbook.brother.co.jp/public/pub/index/index/en" },
+    { "resourceName": "Catalog Download Portal", "description": "DA-927A/928A product catalog PDF", "url": "https://industrialsewingmachine.global.brother/en-ap/support/catalog?category=Double+Chain+Stitch+Sewing+Machine" },
+    { "resourceName": "Brother ISM Video Library", "description": "Repair, adjustment, and operation support videos", "url": "https://industrialsewingmachine.global.brother/en-ap/support/video" },
+    { "resourceName": "Technical Inquiry Portal", "description": "Official support for repair and maintenance questions", "url": "https://industrialsewingmachine.global.brother/en-ap/contact/tech-inquiry" }
   ],
   "finalNotes": [
     "Use only Organ TV×64NY needles. Substitute needles can compromise stitch formation and damage loopers. The long groove on the TV×64NY must face front when installed.",
