@@ -53,7 +53,7 @@ const sections = [
           {sections.map(s => (
             <a href={`#${s.id}`} data-section={s.id} class="sidebar-link"
               style="display:flex; align-items:center; gap:7px; font-size:11px; color:#888; font-family:'Inter',sans-serif; padding:6px 14px; text-decoration:none; border-left:2px solid transparent; transition:all 0.15s; line-height:1.3;">
-              <span class="material-symbols-outlined" style="font-size:13px; flex-shrink:0;">{s.icon}</span>
+              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:13px; flex-shrink:0;">{s.icon}</span>
               {s.label}
             </a>
           ))}
@@ -62,7 +62,7 @@ const sections = [
         {machine.reportDownloadUrl && (
           <a href={machine.reportDownloadUrl} target="_blank" rel="noopener noreferrer"
             style="display:flex; align-items:center; justify-content:center; gap:6px; background:#ff9900; color:#0f1111; font-size:11px; font-weight:700; font-family:'Inter',sans-serif; padding:10px; border-radius:8px; text-decoration:none;">
-            <span class="material-symbols-outlined" style="font-size:15px;">download</span>
+            <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px;">download</span>
             Download Report
           </a>
         )}
@@ -74,7 +74,7 @@ const sections = [
         <!-- Back to Directory -->
         <a href="/Machines/" style="display:inline-flex; align-items:center; gap:4px; font-size:11px; color:#565959; font-family:'Inter',sans-serif; text-decoration:none; margin-bottom:2px; width:fit-content;"
           onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#565959'">
-          <span class="material-symbols-outlined" style="font-size:13px;">arrow_back</span>
+          <span class="material-symbols-outlined notranslate" translate="no" style="font-size:13px;">arrow_back</span>
           Back to Directory
         </a>
 
@@ -90,7 +90,7 @@ const sections = [
               <h1 style="margin:0 0 4px; font-size:20px; font-weight:800; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.2;">{machine.title}</h1>
               {machine.subtitle && <p style="margin:0 0 8px; font-size:12px; color:#565959; font-family:'Inter',sans-serif; line-height:1.4;">{machine.subtitle}</p>}
               <div style="display:flex; gap:6px; flex-wrap:wrap;">
-                {machine.brand && <span style="background:#0f1111; color:#ff9900; font-size:10px; font-weight:700; font-family:'Inter',sans-serif; padding:3px 10px; border-radius:4px;">{machine.brand}</span>}
+                {machine.brand && <span style="background:#0f1111; color:#ff9900; font-size:10px; font-weight:700; font-family:'Inter',sans-serif; padding:3px 10px; border-radius:4px;"><span class="brand-text notranslate" translate="no" data-brand={machine.brand}>{machine.brand}</span></span>}
                 {machine.category && <span style="background:#f0f2f2; color:#565959; font-size:10px; font-family:'Inter',sans-serif; padding:3px 10px; border-radius:4px; border:1px solid #e3e6e6;">{machine.category}</span>}
               </div>
             </div>
@@ -131,7 +131,7 @@ const sections = [
           <section id="purpose" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">target</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">target</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Purpose & Application</h2>
               </div>
               <div style="padding:16px 18px; display:flex; flex-direction:column; gap:14px;">
@@ -150,7 +150,7 @@ const sections = [
                   </ul>
                 </div>
                 <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; padding:9px 13px; display:flex; align-items:flex-start; gap:7px;">
-                  <span class="material-symbols-outlined" style="font-size:14px; color:#ff9900; flex-shrink:0; margin-top:1px;">factory</span>
+                  <span class="material-symbols-outlined notranslate" translate="no" style="font-size:14px; color:#ff9900; flex-shrink:0; margin-top:1px;">factory</span>
                   <div>
                     <span style="font-size:9px; font-weight:700; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; display:block; margin-bottom:2px;">Industry</span>
                     <span style="font-size:12px; color:#333; font-family:'Inter',sans-serif;">{machine.purposeAndApplication.industry}</span>
@@ -165,7 +165,7 @@ const sections = [
         <section id="overview" style="scroll-margin-top:72px;">
           <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
             <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-              <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">info</span>
+              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">info</span>
               <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Machine Overview</h2>
             </div>
             <div style="padding:16px 18px;">
@@ -199,7 +199,7 @@ const sections = [
           <section id="technical-data" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">settings</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">settings</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Technical Data</h2>
               </div>
               <div style="padding:16px 18px;">
@@ -214,7 +214,7 @@ const sections = [
           <section id="working-principle" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">psychology</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">psychology</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Working Principle</h2>
               </div>
               <div style="padding:16px 18px; display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:10px;">
@@ -234,7 +234,7 @@ const sections = [
           <section id="sequence-flow" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">account_tree</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">account_tree</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Operational Sequence</h2>
               </div>
               <div style="padding:16px 18px;">
@@ -249,7 +249,7 @@ const sections = [
           <section id="parts-list" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">build</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">build</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Parts List</h2>
               </div>
               <div style="padding:16px 18px;">
@@ -264,7 +264,7 @@ const sections = [
           <section id="maintenance" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">handyman</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">handyman</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Maintenance & Troubleshooting</h2>
               </div>
               <div style="padding:16px 18px;">
@@ -279,7 +279,7 @@ const sections = [
           <section id="resources" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">link</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">link</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Additional Resources</h2>
               </div>
               <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
@@ -300,7 +300,7 @@ const sections = [
                           <a href={r.url} target="_blank" rel="noopener noreferrer"
                             style="color:#ff9900; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:3px;"
                             onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
-                            Open <span class="material-symbols-outlined" style="font-size:12px;">open_in_new</span>
+                            Open <span class="material-symbols-outlined notranslate" translate="no" style="font-size:12px;">open_in_new</span>
                           </a>
                         ) : "—"}
                       </td>
@@ -317,7 +317,7 @@ const sections = [
           <section id="final-notes" style="scroll-margin-top:72px;">
             <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
               <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined" style="font-size:15px; color:#ff9900;">warning</span>
+                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">warning</span>
                 <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Important Notes</h2>
               </div>
               <div style="margin:14px 18px; padding:12px 16px; border-left:3px solid #ff9900; background:#fffbf2; border-radius:0 4px 4px 0;">

@@ -46,7 +46,8 @@ const machinesJson = JSON.stringify(machines);
         </label>
         <div class="relative" id="search-wrapper">
           <span
-            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 z-10"
+            class="material-symbols-outlined notranslate absolute left-4 top-1/2 -translate-y-1/2 z-10"
+            translate="no"
             style="color: var(--color-outline);"
           >
             search
@@ -72,7 +73,7 @@ const machinesJson = JSON.stringify(machines);
           id="brand-filter"
         >
           <option value="">All Brands</option>
-          {brands.map((brand) => <option value={brand}>{brand}</option>)}
+          {brands.map((brand) => <option value={brand} class="notranslate brand-option" translate="no" data-brand={brand}>{brand}</option>)}
         </select>
       </div>
 
@@ -99,7 +100,7 @@ const machinesJson = JSON.stringify(machines);
         style="background-color: var(--color-primary); color: var(--color-on-primary);"
         id="filter-btn"
       >
-        <span class="material-symbols-outlined text-lg">filter_list</span>
+        <span class="material-symbols-outlined notranslate text-lg" translate="no">filter_list</span>
         Filter
       </button>
     </div>
@@ -176,10 +177,10 @@ const machinesJson = JSON.stringify(machines);
               onmouseover="this.style.backgroundColor='var(--color-surface-container)'"
               onmouseout="this.style.backgroundColor=''"
             >
-              <span class="material-symbols-outlined" style="font-size:18px;color:var(--color-outline);flex-shrink:0;">precision_manufacturing</span>
+              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:18px;color:var(--color-outline);flex-shrink:0;">precision_manufacturing</span>
               <div style="min-width:0;">
                 <div style="font-size:14px;font-weight:500;color:var(--color-on-surface);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${highlight(m.title, query)}</div>
-                <div style="font-size:11px;color:var(--color-outline);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;">${m.brand} · ${m.category}</div>
+                <div style="font-size:11px;color:var(--color-outline);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;"><span class="brand-text notranslate" translate="no" data-brand="${m.brand}">${m.brand}</span> · ${m.category}</div>
               </div>
             </a>
           </li>`
@@ -189,6 +190,9 @@ const machinesJson = JSON.stringify(machines);
 
     positionDropdown();
     dropdown.style.display = "block";
+    if (window.runBrandTranslationUpdate) {
+      window.runBrandTranslationUpdate();
+    }
   }
 
   input?.addEventListener("input", (e) => {

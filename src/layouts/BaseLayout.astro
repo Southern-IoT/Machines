@@ -10,7 +10,7 @@ const { title, description = "Comprehensive technical specifications, working pr
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" id="html-root">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,8 +32,530 @@ const { title, description = "Comprehensive technical specifications, working pr
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} | Southern Machines</title>
+
+    <style>
+      /* Hide Google Translate UI elements */
+      .skiptranslate, .goog-te-banner-frame, iframe.goog-te-banner-frame { display: none !important; }
+      body { top: 0 !important; }
+      .goog-tooltip, #goog-gt-tt { display: none !important; }
+      #google_translate_element { display: none !important; }
+
+      /* Translation Loading Overlay */
+      .translation-loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 17, 17, 0.92);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      .translation-loader.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .loader-circle {
+        width: 80px;
+        height: 80px;
+        border: 4px solid rgba(255, 153, 0, 0.2);
+        border-top-color: #ff9900;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      .loader-text {
+        margin-top: 20px;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #e0e0e0;
+        letter-spacing: 0.5px;
+      }
+      .loader-percent {
+        font-size: 28px;
+        font-weight: 700;
+        color: #ff9900;
+        margin-top: 8px;
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      /* Global styles for language toggle switches */
+      :global(.lang-toggle) {
+        display: inline-flex;
+        align-items: center;
+        background: #151d24;
+        border: 1px solid #2e3d4a;
+        border-radius: 24px;
+        padding: 3px;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        width: 150px;
+        height: 32px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        outline: none;
+      }
+      :global(.lang-toggle:hover) {
+        border-color: rgba(255, 153, 0, 0.6);
+      }
+      :global(.lang-toggle:focus-visible) {
+        outline: 2px solid #ff9900;
+        outline-offset: 2px;
+      }
+      :global(.lang-toggle .lang-slider) {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 71px; /* (150px - 6px padding - 2px borders) / 2 = 71px */
+        height: 26px;
+        background: #ff9900;
+        border-radius: 20px;
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 8px rgba(255, 153, 0, 0.35);
+        z-index: 1;
+      }
+      :global(.lang-toggle.active-bn .lang-slider) {
+        transform: translateX(73px);
+      }
+      :global(.lang-toggle .lang-label) {
+        position: relative;
+        z-index: 2;
+        width: 50%;
+        text-align: center;
+        color: #8da2b5;
+        transition: color 0.25s ease;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        line-height: 26px;
+      }
+      :global(.lang-toggle.active-en .lang-label-en) {
+        color: #0f1111;
+      }
+      :global(.lang-toggle.active-bn .lang-label-bn) {
+        color: #0f1111;
+      }
+
+      /* Mobile styles for lang toggle */
+      :global(.lang-toggle.lang-toggle-mobile) {
+        width: 100px;
+        height: 28px;
+        padding: 2px;
+      }
+      :global(.lang-toggle.lang-toggle-mobile .lang-slider) {
+        top: 2px;
+        left: 2px;
+        width: 46px; /* (100px - 4px padding - 2px borders) / 2 = 46px */
+        height: 22px;
+        border-radius: 16px;
+      }
+      :global(.lang-toggle.lang-toggle-mobile.active-bn .lang-slider) {
+        transform: translateX(48px);
+      }
+      :global(.lang-toggle.lang-toggle-mobile .lang-label) {
+        font-size: 10px;
+        line-height: 22px;
+      }
+    </style>
   </head>
+
   <body class="min-h-screen flex flex-col">
+    <!-- Translation Loading Overlay (Inside Body for HTML Validation) -->
+    <div class="translation-loader" id="transLoader">
+      <div class="loader-circle"></div>
+      <div class="loader-text">Translating...</div>
+      <div class="loader-percent" id="loaderPercent">0%</div>
+    </div>
+    <script is:inline>
+      (function() {
+        const pref = localStorage.getItem('preferredLanguage') || 'en';
+        const showLoader = sessionStorage.getItem('showTranslationLoader') === 'true';
+        if (pref === 'bn' && showLoader) {
+          const loader = document.getElementById('transLoader');
+          if (loader) loader.classList.add('active');
+        }
+      })();
+    </script>
+
     <slot />
+
+    <!-- Google Translate Element Container (hidden) -->
+    <div id="google_translate_element"></div>
+
+    <script is:inline src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script is:inline>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'bn',
+          autoDisplay: false,
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+
+      (function() {
+        const brandTranslations = {
+          'Brother': 'ব্রাদার',
+          'JUKI': 'জুকি',
+          'Kansai Special': 'কানসাই স্পেশাল',
+          'KM': 'কেএম',
+          'Ngai Shing': 'ঙাই শিং',
+          'Oshima': 'ওশিমা',
+          'Dark Horse': 'ডার্ক হর্স',
+          'ZOJE': 'জোজী',
+          'Bedoly': 'বেডোলি',
+          'Southern Machines': 'সাউদার্ন মেশিনস'
+        };
+
+        // Prepare DOM by wrapping brands and emojis in notranslate containers
+        function prepareDOMForTranslation(node) {
+          if (node.nodeType === Node.TEXT_NODE) {
+            const parent = node.parentNode;
+            if (!parent) return;
+            
+            if (parent.closest('.notranslate') || parent.closest('[translate="no"]')) {
+              return;
+            }
+            
+            const text = node.nodeValue;
+            let modified = false;
+            
+            const brands = [
+              'Southern Machines',
+              'Kansai Special',
+              'Ngai Shing',
+              'Dark Horse',
+              'Brother',
+              'Bedoly',
+              'Oshima',
+              'JUKI',
+              'ZOJE',
+              'KM'
+            ];
+            const brandPattern = new RegExp('\\b(' + brands.map(b => b.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')).join('|') + ')\\b', 'gi');
+            const emojiPattern = /\p{Extended_Pictographic}/gu;
+            
+            let html = text.replace(brandPattern, (match) => {
+              modified = true;
+              const lowerMatch = match.toLowerCase();
+              const canonicalBrand = brands.find(b => b.toLowerCase() === lowerMatch) || match;
+              return `__BRAND_START__${canonicalBrand}__BRAND_MID__${match}__BRAND_END__`;
+            });
+            
+            html = html.replace(emojiPattern, (match) => {
+              modified = true;
+              return `__EMOJI_START__${match}__EMOJI_END__`;
+            });
+            
+            if (modified) {
+              const escapeDiv = document.createElement('div');
+              escapeDiv.textContent = html;
+              let escapedHtml = escapeDiv.innerHTML;
+              
+              escapedHtml = escapedHtml
+                .replace(/__BRAND_START__(.*?)__BRAND_MID__(.*?)__BRAND_END__/g, '<span class="brand-text notranslate" translate="no" data-brand="$1">$2</span>')
+                .replace(/__EMOJI_START__(.*?)__EMOJI_END__/g, '<span class="notranslate" translate="no">$1</span>');
+              
+              const tempSpan = document.createElement('span');
+              tempSpan.innerHTML = escapedHtml;
+              while (tempSpan.firstChild) {
+                parent.insertBefore(tempSpan.firstChild, node);
+              }
+              parent.removeChild(node);
+            }
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            const tag = node.tagName.toLowerCase();
+            if (tag !== 'script' && tag !== 'style' && tag !== 'iframe' && tag !== 'select' && tag !== 'textarea') {
+              const children = Array.from(node.childNodes);
+              for (const child of children) {
+                prepareDOMForTranslation(child);
+              }
+            }
+          }
+        }
+
+        function updateToggleButtons(lang) {
+          document.querySelectorAll('.lang-toggle').forEach(function(el) {
+            if (lang === 'bn') {
+              el.classList.remove('active-en');
+              el.classList.add('active-bn');
+            } else {
+              el.classList.remove('active-bn');
+              el.classList.add('active-en');
+            }
+          });
+        }
+
+        function runBrandTranslationUpdate() {
+          const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+          
+          document.querySelectorAll('.brand-text').forEach(function(el) {
+            const brand = el.getAttribute('data-brand');
+            if (brand) {
+              if (currentLang === 'bn') {
+                el.textContent = brandTranslations[brand] || brand;
+              } else {
+                el.textContent = brand;
+              }
+            }
+          });
+          
+          document.querySelectorAll('.brand-option').forEach(function(el) {
+            const brand = el.getAttribute('data-brand');
+            if (brand) {
+              if (currentLang === 'bn') {
+                el.textContent = brandTranslations[brand] || brand;
+              } else {
+                el.textContent = brand;
+              }
+            }
+          });
+
+          document.querySelectorAll('.logo-text').forEach(function(el) {
+            const enText = el.getAttribute('data-en') || 'Southern Machines';
+            if (currentLang === 'bn') {
+              el.textContent = brandTranslations['Southern Machines'];
+            } else {
+              el.textContent = enText;
+            }
+          });
+        }
+
+        window.runBrandTranslationUpdate = runBrandTranslationUpdate;
+
+        function clearGoogleTranslateCookies() {
+          const domains = [
+            window.location.hostname,
+            '.' + window.location.hostname,
+            window.location.hostname.split('.').slice(-2).join('.')
+          ];
+          domains.forEach(domain => {
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${domain}`;
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+          });
+        }
+
+        function setGoogleTranslateCookie(lang) {
+          const cookieValue = `/en/${lang}`;
+          const domains = [
+            window.location.hostname,
+            '.' + window.location.hostname,
+            window.location.hostname.split('.').slice(-2).join('.')
+          ];
+          domains.forEach(domain => {
+            document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain}`;
+            document.cookie = `googtrans=${cookieValue}; path=/;`;
+          });
+        }
+
+        let loaderTimeout = null;
+        let loaderInterval = null;
+
+        function startTranslationUX(targetLang, onComplete) {
+          const loader = document.getElementById('transLoader');
+          const percentEl = document.getElementById('loaderPercent');
+          
+          let loaderShown = false;
+          let currentPercent = 0;
+          let finished = false;
+          
+          const alreadyActive = loader && loader.classList.contains('active');
+          
+          function startLoaderInterval() {
+            loaderShown = true;
+            if (loader) loader.classList.add('active');
+            
+            loaderInterval = setInterval(() => {
+              if (currentPercent < 90) {
+                const remaining = 90 - currentPercent;
+                currentPercent += Math.max(1, remaining * 0.15);
+                if (percentEl) percentEl.textContent = Math.floor(currentPercent) + '%';
+              }
+            }, 80);
+          }
+          
+          if (alreadyActive) {
+            startLoaderInterval();
+          } else {
+            loaderTimeout = setTimeout(startLoaderInterval, 300);
+          }
+          
+          function finish() {
+            if (finished) return;
+            finished = true;
+            clearTimeout(loaderTimeout);
+            if (loaderInterval) clearInterval(loaderInterval);
+            
+            if (loaderShown) {
+              if (percentEl) percentEl.textContent = '100%';
+              setTimeout(() => {
+                if (loader) loader.classList.remove('active');
+                setTimeout(() => {
+                  if (percentEl) percentEl.textContent = '0%';
+                  if (onComplete) onComplete();
+                }, 300);
+              }, 200);
+            } else {
+              if (onComplete) onComplete();
+            }
+          }
+          
+          return finish;
+        }
+
+        let translationFinishCallback = null;
+
+        // Global MutationObserver to watch language changes
+        const observer = new MutationObserver(() => {
+          const currentLang = document.documentElement.getAttribute('lang') || 'en';
+          const targetLang = localStorage.getItem('preferredLanguage') || 'en';
+          const targetMatch = targetLang === 'bn' ? 'bn' : 'en';
+          
+          if (currentLang.toLowerCase().startsWith(targetMatch)) {
+            runBrandTranslationUpdate();
+            if (translationFinishCallback) {
+              const cb = translationFinishCallback;
+              translationFinishCallback = null;
+              cb();
+            }
+          }
+        });
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['lang']
+        });
+
+        function applyTranslationInPlace(lang, callback) {
+          const combo = document.querySelector('.goog-te-combo');
+          if (combo) {
+            const currentLang = document.documentElement.getAttribute('lang') || 'en';
+            const targetMatch = lang === 'bn' ? 'bn' : 'en';
+            
+            if (currentLang.toLowerCase().startsWith(targetMatch)) {
+              runBrandTranslationUpdate();
+              if (callback) callback();
+              return;
+            }
+
+            translationFinishCallback = callback;
+            
+            // Safety timeout
+            setTimeout(() => {
+              if (translationFinishCallback === callback) {
+                translationFinishCallback = null;
+                if (callback) callback();
+              }
+            }, 5000);
+
+            combo.value = lang;
+            const event = document.createEvent('HTMLEvents');
+            event.initEvent('change', true, true);
+            combo.dispatchEvent(event);
+          } else {
+            if (callback) callback();
+          }
+        }
+
+        let currentFinishUX = null;
+
+        window.setLanguage = function(newLang) {
+          const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+          if (currentLang === newLang) return; // Do nothing if already selected
+          
+          localStorage.setItem('preferredLanguage', newLang);
+          updateToggleButtons(newLang);
+          
+          // Show loader immediately
+          const loader = document.getElementById('transLoader');
+          if (loader) loader.classList.add('active');
+          const percentEl = document.getElementById('loaderPercent');
+          if (percentEl) percentEl.textContent = '0%';
+          
+          sessionStorage.setItem('showTranslationLoader', 'true');
+          
+          if (newLang === 'bn') {
+            setGoogleTranslateCookie('bn');
+          } else {
+            clearGoogleTranslateCookies();
+          }
+          
+          // Reload the page to apply changes cleanly
+          setTimeout(() => {
+            window.location.reload();
+          }, 100);
+        };
+
+        window.toggleLanguage = function() {
+          const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+          const newLang = currentLang === 'bn' ? 'en' : 'bn';
+          window.setLanguage(newLang);
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+          // 1. Prepare DOM (wrap emojis and brands in translation protection spans)
+          prepareDOMForTranslation(document.body);
+          
+          // 2. Set initial state
+          const targetLang = localStorage.getItem('preferredLanguage') || 'en';
+          updateToggleButtons(targetLang);
+          runBrandTranslationUpdate();
+          
+          if (targetLang === 'bn') {
+            const showLoader = sessionStorage.getItem('showTranslationLoader') === 'true';
+            
+            if (showLoader) {
+              sessionStorage.removeItem('showTranslationLoader');
+              
+              // Check if already translated
+              const currentLang = document.documentElement.getAttribute('lang') || 'en';
+              if (currentLang.toLowerCase().startsWith('bn')) {
+                runBrandTranslationUpdate();
+                return;
+              }
+
+              const finishUX = startTranslationUX('bn');
+              let attempts = 0;
+              const checkInterval = setInterval(() => {
+                const combo = document.querySelector('.goog-te-combo');
+                if (combo) {
+                  clearInterval(checkInterval);
+                  applyTranslationInPlace('bn', finishUX);
+                } else if (attempts > 40) { // 4s max wait
+                  clearInterval(checkInterval);
+                  finishUX();
+                }
+                attempts++;
+              }, 100);
+            } else {
+              // Translate silently
+              let attempts = 0;
+              const checkInterval = setInterval(() => {
+                const combo = document.querySelector('.goog-te-combo');
+                if (combo) {
+                  clearInterval(checkInterval);
+                  applyTranslationInPlace('bn');
+                } else if (attempts > 40) { // 4s max wait
+                  clearInterval(checkInterval);
+                }
+                attempts++;
+              }, 100);
+            }
+          } else {
+            clearGoogleTranslateCookies();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

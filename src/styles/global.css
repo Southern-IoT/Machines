@@ -216,3 +216,65 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
+
+/* ───────────────── Google Translate Custom Overrides ───────────────── */
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+.skiptranslate,
+.goog-te-banner-frame,
+iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.goog-tooltip,
+.goog-tooltip:hover,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+#google_translate_element {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.goog-te-gadget {
+  font-size: 0 !important;
+  height: 0 !important;
+  line-height: 0 !important;
+}
+
+.goog-logo-link,
+.goog-logo-link:hover,
+.goog-brand {
+  display: none !important;
+}
+
+.goog-te-combo {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+

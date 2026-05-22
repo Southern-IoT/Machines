@@ -14,13 +14,13 @@ const machinesJson = JSON.stringify(machines);
 
     <!-- Logo -->
     <a href="/Machines/" style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#ff9900; font-weight:700; font-size:16px; font-family:'Inter',sans-serif; white-space:nowrap; padding-right:24px; border-right:1px solid #2a2a2a; margin-right:20px; height:100%;">
-      <span class="material-symbols-outlined" style="font-size:20px; color:#ff9900;">precision_manufacturing</span>
-      Southern Machines
+      <span class="material-symbols-outlined notranslate" translate="no" style="font-size:20px; color:#ff9900;">precision_manufacturing</span>
+      <span class="logo-text notranslate" translate="no" data-en="Southern Machines">Southern Machines</span>
     </a>
 
     <!-- Search bar -->
     <div style="flex:1; max-width:600px; position:relative;" id="nav-search-wrapper">
-      <span class="material-symbols-outlined" style="position:absolute; left:12px; top:50%; transform:translateY(-50%); font-size:18px; color:#888; pointer-events:none;">search</span>
+      <span class="material-symbols-outlined notranslate" translate="no" style="position:absolute; left:12px; top:50%; transform:translateY(-50%); font-size:18px; color:#888; pointer-events:none;">search</span>
       <input
         id="search-input"
         type="text"
@@ -44,13 +44,20 @@ const machinesJson = JSON.stringify(machines);
       </select>
     </div>
 
-    <!-- Spacer + icons -->
-    <div style="margin-left:auto; display:flex; align-items:center; gap:4px; padding-left:16px; border-left:1px solid #2a2a2a;">
+    <!-- Spacer + icons + Translate -->
+    <div style="margin-left:auto; display:flex; align-items:center; gap:8px; padding-left:16px; border-left:1px solid #2a2a2a;">
+      <!-- Toggle Language Switch -->
+      <div class="lang-toggle notranslate active-en" translate="no" onclick="window.toggleLanguage()" role="button" tabindex="0" aria-label="Toggle Language" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.toggleLanguage();}">
+        <div class="lang-slider"></div>
+        <span class="lang-label lang-label-en">English</span>
+        <span class="lang-label lang-label-bn">বাংলা</span>
+      </div>
+
       <button style="background:none; border:none; cursor:pointer; padding:6px; border-radius:50%; color:#ccc;" onmouseover="this.style.background='#2a2a2a'" onmouseout="this.style.background='none'">
-        <span class="material-symbols-outlined" style="font-size:22px;">settings</span>
+        <span class="material-symbols-outlined notranslate" translate="no" style="font-size:22px;">settings</span>
       </button>
       <button style="background:none; border:none; cursor:pointer; padding:6px; border-radius:50%; color:#ccc;" onmouseover="this.style.background='#2a2a2a'" onmouseout="this.style.background='none'">
-        <span class="material-symbols-outlined" style="font-size:22px;">account_circle</span>
+        <span class="material-symbols-outlined notranslate" translate="no" style="font-size:22px;">account_circle</span>
       </button>
     </div>
   </div>
@@ -58,14 +65,25 @@ const machinesJson = JSON.stringify(machines);
 
 <!-- Mobile Navbar -->
 <nav style="background-color:#0f1111; border-bottom:1px solid #2a2a2a; position:sticky; top:0; z-index:50;" class="md:hidden">
-  <div style="display:flex; align-items:center; gap:10px; padding:10px 16px;">
+  <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 16px;">
     <a href="/Machines/" style="display:flex; align-items:center; gap:6px; text-decoration:none; color:#ff9900; font-weight:700; font-size:14px; white-space:nowrap;">
-      <span class="material-symbols-outlined" style="font-size:18px;">precision_manufacturing</span>
-      Southern Machines
+      <span class="material-symbols-outlined notranslate" translate="no" style="font-size:18px;">precision_manufacturing</span>
+      <span class="logo-text notranslate" translate="no" data-en="Southern Machines">Southern Machines</span>
     </a>
-    <div style="flex:1; position:relative;">
-      <span class="material-symbols-outlined" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); font-size:16px; color:#888; pointer-events:none;">search</span>
-      <input id="search-input-mobile" type="text" autocomplete="off" placeholder="Search..."
+
+    <div style="display:flex; align-items:center; gap:8px; flex:1; max-width:180px; justify-content:flex-end;">
+      <!-- Toggle Language Switch (Mobile) -->
+      <div class="lang-toggle lang-toggle-mobile notranslate active-en" translate="no" onclick="window.toggleLanguage()" role="button" tabindex="0" aria-label="Toggle Language" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.toggleLanguage();}">
+        <div class="lang-slider"></div>
+        <span class="lang-label lang-label-en">EN</span>
+        <span class="lang-label lang-label-bn">বাংলা</span>
+      </div>
+    </div>
+  </div>
+  <div style="padding:0 16px 10px 16px;">
+    <div style="position:relative;">
+      <span class="material-symbols-outlined notranslate" translate="no" style="position:absolute; left:10px; top:50%; transform:translateY(-50%); font-size:16px; color:#888; pointer-events:none;">search</span>
+      <input id="search-input-mobile" type="text" autocomplete="off" placeholder="Search machines..."
         style="width:100%; padding:7px 10px 7px 32px; background:#fff; border:1.5px solid #e0e0e0; border-radius:6px; font-size:13px; color:#111; outline:none;" />
     </div>
   </div>
@@ -87,7 +105,11 @@ const machinesJson = JSON.stringify(machines);
     [brandFilter].forEach(sel => {
       if (!sel) return;
       const o = document.createElement("option");
-      o.value = b; o.textContent = b;
+      o.value = b;
+      o.textContent = b;
+      o.classList.add("notranslate", "brand-option");
+      o.setAttribute("translate", "no");
+      o.setAttribute("data-brand", b);
       sel.appendChild(o);
     });
   });
@@ -129,18 +151,21 @@ const machinesJson = JSON.stringify(machines);
           <a href="/Machines/machines/${m.slug}/" style="display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background 0.1s;"
             onmouseover="this.style.background='#f7f7f7'" onmouseout="this.style.background=''">
             <div style="width:34px;height:34px;border-radius:6px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-              <span class="material-symbols-outlined" style="font-size:18px;color:#ff9900;">precision_manufacturing</span>
+              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:18px;color:#ff9900;">precision_manufacturing</span>
             </div>
             <div style="min-width:0;flex:1;">
               <div style="font-size:13px;font-weight:600;color:#111;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'Inter',sans-serif;">${hl(m.title, query)}</div>
-              <div style="font-size:11px;color:#888;margin-top:1px;font-family:'Inter',sans-serif;">${m.brand}${m.category ? ' · ' + m.category : ''}</div>
+              <div style="font-size:11px;color:#888;margin-top:1px;font-family:'Inter',sans-serif;"><span class="brand-text notranslate" translate="no" data-brand="${m.brand}">${m.brand}</span>${m.category ? ' · ' + m.category : ''}</div>
             </div>
-            <span class="material-symbols-outlined" style="font-size:15px;color:#ccc;flex-shrink:0;">arrow_forward_ios</span>
+            <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px;color:#ccc;flex-shrink:0;">arrow_forward_ios</span>
           </a>
         </li>`).join("");
     }
     positionDropdown();
     dropdown.style.display = "block";
+    if (window.runBrandTranslationUpdate) {
+      window.runBrandTranslationUpdate();
+    }
   }
 
   [desktopInput, mobileInput].forEach(inp => {
