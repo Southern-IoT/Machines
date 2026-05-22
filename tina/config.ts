@@ -85,6 +85,30 @@ export default defineConfig({
             label: "Published Date",
             type: "datetime",
           },
+          {
+            name: "purposeAndApplication",
+            label: "Purpose & Application",
+            type: "object",
+            fields: [
+              {
+                name: "purpose",
+                label: "Purpose",
+                type: "string",
+                ui: { component: "textarea" },
+              },
+              {
+                name: "applications",
+                label: "Applications",
+                type: "string",
+                list: true,
+              },
+              {
+                name: "industry",
+                label: "Industry / Sector",
+                type: "string",
+              },
+            ],
+          },
 
           // ─── OVERVIEW ───
           {
@@ -186,6 +210,12 @@ export default defineConfig({
                 name: "partId",
                 label: "Part ID / Component ID",
                 type: "string",
+              },
+              {
+                name: "section",
+                label: "Section (mechanical / electronic)",
+                type: "string",
+                options: ["mechanical", "electronic"],
               },
               {
                 name: "function",

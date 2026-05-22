@@ -115,6 +115,10 @@
         "properties": {
           "partName": { "type": "string" },
           "partId": { "type": "string" },
+          "section": {
+            "type": "string",
+            "enum": ["mechanical", "electronic"]
+          },
           "function": { "type": "string" }
         },
         "required": ["partName", "partId", "function"]
