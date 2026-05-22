@@ -163,8 +163,7 @@
       }
     },
     "finalNotes": {
-      "type": "array",
-      "items": { "type": "string" },
+      "type": "string",
       "description": "Important notes, warnings, and tips"
     }
   }

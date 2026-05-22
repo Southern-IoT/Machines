@@ -60,6 +60,8 @@ export default defineConfig({
             type: "string",
             options: [
               "Sewing Machine",
+              "Chain Stitch Machine",
+              "Cylinder Bed Sewing Machine",
               "Cutting Machine",
               "Pressing Machine",
               "Fusing Machine",

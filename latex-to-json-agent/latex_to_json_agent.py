@@ -57,7 +57,7 @@ MACHINE_SCHEMA = {
     "partsList": [],
     "maintenance": [],
     "resources": [],
-    "finalNotes": []
+    "finalNotes": ""
 }
 
 
@@ -503,7 +503,7 @@ class SchemaMapper:
     def _map_final_notes(self):
         """Extract final notes/warnings"""
         sections = self.doc.get('sections', {})
-        
+        notes = []
         for title, section in sections.items():
             if 'note' in title.lower() or 'warning' in title.lower() or 'caution' in title.lower():
                 content = section.get('content', '')
@@ -512,7 +512,11 @@ class SchemaMapper:
                 for line in content.split('BRK'):
                     line = line.strip().replace('ITEM:', '').strip()
                     if line and len(line) > 10:
-                        self.schema['finalNotes'].append(line)
+                        if not line.startswith('•'):
+                            line = f"• {line}"
+                        notes.append(line)
+        if notes:
+            self.schema['finalNotes'] = "\n".join(notes)
 
 
 # =============================================================================
