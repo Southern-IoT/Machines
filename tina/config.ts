@@ -255,7 +255,6 @@ export default defineConfig({
             name: "finalNotes",
             label: "Final Notes / Important Information",
             type: "string",
-            list: true,
             ui: { component: "textarea" },
           },
         ],
