@@ -18,7 +18,7 @@ The Southern Machines directory is structured as a Git-backed headless CMS stati
 | **Headless CMS** | **TinaCMS 3.x** | Visual Git-backed CMS dashboard at `/admin` |
 | **Indexing Service** | **TinaCloud** | Cloud-based GraphQL indexer and authentication |
 | **CI/CD** | **GitHub Actions** | Rebuilds and deploys the site on push to `main` |
-| **Content Pipeline** | **Python (GPT-4o)** | Automated LaTeX report parsing to compliant JSON |
+
 
 ---
 
@@ -42,10 +42,6 @@ When modifying the website schema or adding new fields, follow these rules to av
   2. Re-run `npx tinacms dev` to generate the new lock-file.
   3. Save the machine JSON file with the new category.
 
-### 🚨 Rule 3: Keep the Python Extraction Agent Schema Aligned
-- **What it is**: The standalone Python parser in `latex-to-json-agent/` relies on `latex-to-json-agent/schema_reference.json` to extract machine parameters from LaTeX.
-- **Action**: When you add, rename, or modify a field in `tina/config.ts` (e.g. adding `purposeAndApplication` or `partsList.section`), you MUST immediately update `latex-to-json-agent/schema_reference.json` so the AI extraction pipeline remains accurate and forward-compatible.
-
 ---
 
 ## 3. Core Files to Know
@@ -54,7 +50,6 @@ When modifying the website schema or adding new fields, follow these rules to av
 - [tina/tina-lock.json](file:///d:/Southern_Machines/tina/tina-lock.json) — The schema signature that MUST be updated and committed for TinaCloud synchronization.
 - [src/content/machines/](file:///d:/Southern_Machines/src/content/machines) — The directory containing all machine records stored as `.json` files.
 - [src/pages/machines/[slug].astro](file:///d:/Southern_Machines/src/pages/machines/%5Bslug%5D.astro) — The detail page layout which reads machine JSON properties directly.
-- [latex-to-json-agent/schema_reference.json](file:///d:/Southern_Machines/latex-to-json-agent/schema_reference.json) — The schema used by the Python parser to extract machine metadata.
 
 ---
 
@@ -71,10 +66,10 @@ Refer to this log if similar errors emerge in the future. Add new entries at the
 
 ### Case Study 2: The Array vs. String `finalNotes` Mismatch (May 2026)
 * **Symptom**: CI/CD pipeline builds successfully but detail page crashed on render or threw compilation errors.
-* **Cause**: The `finalNotes` field in `tina/config.ts` was configured as `type: "string"` (a single multiline text block), but the Python extraction agent was outputting `finalNotes` as an array of strings in some files.
+* **Cause**: The `finalNotes` field in `tina/config.ts` was configured as `type: "string"` (a single multiline text block), but some machine JSON files contained `finalNotes` as an array of strings.
 * **Resolution**:
   1. Standardized `finalNotes` in `tina/config.ts` as a string (`type: "string", ui: { component: "textarea" }`).
-  2. Rewrote the Python agent parsing prompts in `latex-to-json-agent/latex_to_json_agent.py` and changed `latex-to-json-agent/schema_reference.json` to ensure it only generates a single newline-separated bulleted string for `finalNotes`.
+  2. Audited and rewrote all machine JSON files in `src/content/machines/` so `finalNotes` is a single newline-separated bulleted string.
 
 ### Case Study 3: Schema Drift & Lock-File Missing Build Failure (May 2026)
 * **Symptom**: Pushing a correct `tina/config.ts` fails during `npx tinacms build && npm run build` in GitHub Actions with:
