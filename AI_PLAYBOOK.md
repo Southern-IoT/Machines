@@ -28,11 +28,12 @@ When modifying the website schema or adding new fields, follow these rules to av
 
 ### 🚨 Rule 1: Always Generate and Commit `tina-lock.json`
 - **What it is**: `tina/tina-lock.json` is a lock file used by TinaCloud to map the local GraphQL schema structure with the remote cloud indexer.
-- **Why it matters**: If you update `tina/config.ts` but do not update and push `tina/tina-lock.json`, the remote build inside GitHub Actions **will fail** with a GraphQL schema mismatch exit code 1.
+- **Why it matters**: If you update `tina/config.ts` but do not update and push `tina/tina-lock.json`, the remote build inside GitHub Actions **will fail** with a GraphQL schema mismatch exit code 1. The error log will show a line like `[NON_BREAKING - TYPE_ADDED] Type 'X' was added` immediately before the failure.
 - **Action**: Every time you modify `tina/config.ts`:
-  1. Start the local dev server using `npx tinacms dev` or `npm run cms`.
-  2. Wait for it to output `✅ 🦙 TinaCMS Dev Server is active`. This regenerates `tina/tina-lock.json` locally.
-  3. Stop the server, stage `tina/tina-lock.json`, and commit it along with your changes. **Never delete this file permanently.**
+  1. Regenerate the lock file with `npx tinacms dev --no-server` (no token required — runs the codegen, writes `tina/tina-lock.json`, exits). This is the safe local-only path.
+  2. Stage `tina/tina-lock.json` and commit it in the same commit (or right after) the `tina/config.ts` change.
+  3. **Never delete this file permanently.**
+- **Recovery**: If CI fails with the schema-drift error, run `npx tinacms dev --no-server`, commit the regenerated lock, push. No need to revert the schema change.
 
 ### 🚨 Rule 2: Keep All Category Enums Synchronized
 - **What it is**: The `category` field in `tina/config.ts` restricts values to a predefined list of string options.
