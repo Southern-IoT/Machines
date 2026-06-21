@@ -2,39 +2,53 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
+import SectionCard from "../../components/SectionCard.astro";
 import SpecTable from "../../components/SpecTable.astro";
 import SequenceFlow from "../../components/SequenceFlow.astro";
 import PartsTable from "../../components/PartsTable.astro";
 import MaintenanceTable from "../../components/MaintenanceTable.astro";
+import RelatedMachines from "../../components/RelatedMachines.astro";
+import KeySpecsGrid from "../../components/KeySpecsGrid.astro";
+import { withBase, assetSrc } from "../../lib/base";
+import { loadMachineSummaries } from "../../lib/machines";
 import fs from "node:fs";
 import path from "node:path";
 
+const allMachines = loadMachineSummaries();
+
+// getStaticPaths runs in a separate module context, so the machine
+// directory path must be resolved inline rather than imported.
 export function getStaticPaths() {
-  const machinesDir = path.join(process.cwd(), "src/content/machines");
-  if (!fs.existsSync(machinesDir)) return [];
-  const files = fs.readdirSync(machinesDir).filter((f: string) => f.endsWith(".json"));
+  const dir = path.join(process.cwd(), "src/content/machines");
+  if (!fs.existsSync(dir)) return [];
+  const files = fs.readdirSync(dir).filter((f: string) => f.endsWith(".json"));
   return files.map((file: string) => {
-    const raw = fs.readFileSync(path.join(machinesDir, file), "utf-8");
-    const data = JSON.parse(raw);
-    return { params: { slug: file.replace(".json", "") }, props: { machine: data } };
+    const raw = fs.readFileSync(path.join(dir, file), "utf-8");
+    return { params: { slug: file.replace(".json", "") }, props: { machine: JSON.parse(raw) } };
   });
 }
 
 const { machine } = Astro.props;
-const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-const machineImageSrc = machine.machineImage?.startsWith("/") ? `${base}${machine.machineImage}` : machine.machineImage;
+const homeHref = withBase("/");
+const machineImageSrc = assetSrc(machine.machineImage);
+const hasGaugeParts = Array.isArray(machine.gaugePartsCrossReference) && machine.gaugePartsCrossReference.length > 0;
 
 const sections = [
-  { id: "purpose", label: "Purpose & Application", icon: "target", show: !!machine.purposeAndApplication },
-  { id: "overview", label: "Machine Overview", icon: "info", show: true },
-  { id: "technical-data", label: "Technical Data", icon: "settings", show: !!machine.technicalSpecs?.length },
-  { id: "working-principle", label: "Working Principle", icon: "psychology", show: !!machine.workingPrinciples?.length },
-  { id: "sequence-flow", label: "Operational Sequence", icon: "account_tree", show: !!machine.sequenceFlow?.length },
-  { id: "parts-list", label: "Parts List", icon: "build", show: !!machine.partsList?.length },
-  { id: "maintenance", label: "Maintenance", icon: "handyman", show: !!machine.maintenance?.length },
-  { id: "resources", label: "Resources", icon: "link", show: !!machine.resources?.length },
-  { id: "final-notes", label: "Important Notes", icon: "warning", show: !!machine.finalNotes },
+  { id: "purpose",          label: "Purpose & Application",       icon: "target",         show: !!machine.purposeAndApplication },
+  { id: "overview",         label: "Machine Overview",            icon: "info",           show: true },
+  { id: "technical-data",   label: "Technical Data",              icon: "settings",       show: !!machine.technicalSpecs?.length },
+  { id: "working-principle",label: "Working Principle",           icon: "psychology",     show: !!machine.workingPrinciples?.length },
+  { id: "sequence-flow",    label: "Operational Sequence",         icon: "account_tree",   show: !!machine.sequenceFlow?.length },
+  { id: "parts-list",       label: "Parts List",                  icon: "build",          show: !!machine.partsList?.length },
+  { id: "gauge-parts",      label: "Gauge / Parts Cross Reference", icon: "compare_arrows", show: hasGaugeParts },
+  { id: "maintenance",      label: "Maintenance",                 icon: "handyman",       show: !!machine.maintenance?.length },
+  { id: "resources",        label: "Resources",                   icon: "link",           show: !!machine.resources?.length },
+  { id: "final-notes",      label: "Important Notes",             icon: "warning",        show: !!machine.finalNotes },
 ].filter(s => s.show);
+
+const formattedDate = machine.publishedDate
+  ? new Date(machine.publishedDate).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+  : "";
 ---
 
 <BaseLayout title={machine.title} description={machine.subtitle || machine.overviewDescription?.slice(0, 160)}>
@@ -43,9 +57,7 @@ const sections = [
   <div style="background:#f0f1f1; min-height:calc(100vh - 56px);">
     <div style="max-width:1280px; margin:0 auto; padding:12px 12px 48px; display:flex; gap:16px; align-items:flex-start;">
 
-      <!-- Sticky Sidebar -->
       <aside id="detail-sidebar" style="width:180px; flex-shrink:0; position:sticky; top:68px; display:flex; flex-direction:column; gap:10px;">
-        <!-- Nav -->
         <div style="background:#0f1111; border-radius:8px; padding:14px 0; overflow:hidden;">
           <div style="font-size:9px; font-weight:700; color:#666; font-family:'Inter',sans-serif; letter-spacing:0.1em; text-transform:uppercase; padding:0 14px 10px; border-bottom:1px solid #2a2a2a; margin-bottom:6px;">
             CONTENTS
@@ -58,7 +70,6 @@ const sections = [
             </a>
           ))}
         </div>
-        <!-- Download -->
         {machine.reportDownloadUrl && (
           <a href={machine.reportDownloadUrl} target="_blank" rel="noopener noreferrer"
             style="display:flex; align-items:center; justify-content:center; gap:6px; background:#ff9900; color:#0f1111; font-size:11px; font-weight:700; font-family:'Inter',sans-serif; padding:10px; border-radius:8px; text-decoration:none;">
@@ -68,17 +79,14 @@ const sections = [
         )}
       </aside>
 
-      <!-- Main Content -->
       <main style="flex:1; min-width:0; display:flex; flex-direction:column; gap:10px;">
 
-        <!-- Back to Directory -->
-        <a href="/Machines/" style="display:inline-flex; align-items:center; gap:4px; font-size:11px; color:#565959; font-family:'Inter',sans-serif; text-decoration:none; margin-bottom:2px; width:fit-content;"
+        <a href={homeHref} style="display:inline-flex; align-items:center; gap:4px; font-size:11px; color:#565959; font-family:'Inter',sans-serif; text-decoration:none; margin-bottom:2px; width:fit-content;"
           onmouseover="this.style.color='#ff9900'" onmouseout="this.style.color='#565959'">
           <span class="material-symbols-outlined notranslate" translate="no" style="font-size:13px;">arrow_back</span>
           Back to Directory
         </a>
 
-        <!-- Page Header -->
         <div style="background:#fff; border:1px solid #e3e6e6; border-radius:8px; padding:16px 20px; display:flex; gap:20px; align-items:flex-start;">
           {machineImageSrc && (
             <div style="width:400px; height:300px; flex-shrink:0; background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
@@ -89,52 +97,24 @@ const sections = [
             <div>
               <h1 style="margin:0 0 4px; font-size:20px; font-weight:800; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.2;">{machine.title}</h1>
               {machine.subtitle && <p style="margin:0 0 8px; font-size:12px; color:#565959; font-family:'Inter',sans-serif; line-height:1.4;">{machine.subtitle}</p>}
-              <div style="display:flex; gap:6px; flex-wrap:wrap;">
+              <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
                 {machine.brand && <span style="background:#0f1111; color:#ff9900; font-size:10px; font-weight:700; font-family:'Inter',sans-serif; padding:3px 10px; border-radius:4px;"><span class="brand-text notranslate" translate="no" data-brand={machine.brand}>{machine.brand}</span></span>}
                 {machine.category && <span style="background:#f0f2f2; color:#565959; font-size:10px; font-family:'Inter',sans-serif; padding:3px 10px; border-radius:4px; border:1px solid #e3e6e6;">{machine.category}</span>}
+                {formattedDate && <span style="display:inline-flex; align-items:center; gap:3px; font-size:10px; color:#888; font-family:'Inter',sans-serif;"><span class="material-symbols-outlined notranslate" translate="no" style="font-size:12px;">calendar_today</span>{formattedDate}</span>}
               </div>
             </div>
-
-            {/* Quick specs grid */}
-            {machine.technicalSpecs?.length > 0 && (
+            {(machine.technicalSpecs?.length || machine.classificationTable?.length) && (
               <div style="border-top:1px solid #f0f0f0; padding-top:10px;">
-                <div style="font-size:9px; font-weight:700; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px;">Key Specifications</div>
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
-                  {machine.technicalSpecs.slice(0, 6).map((spec: any) => (
-                    <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:5px; padding:7px 10px;">
-                      <div style="font-size:9px; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">{spec.parameter}</div>
-                      <div style="font-size:11px; font-weight:600; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.3;">{spec.value}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Classification highlights */}
-            {!machine.technicalSpecs?.length && machine.classificationTable?.length > 0 && (
-              <div style="border-top:1px solid #f0f0f0; padding-top:10px;">
-                <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
-                  {machine.classificationTable.slice(0, 6).map((row: any) => (
-                    <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:5px; padding:7px 10px;">
-                      <div style="font-size:9px; color:#999; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:2px;">{row.field}</div>
-                      <div style="font-size:11px; font-weight:600; color:#0f1111; font-family:'Inter',sans-serif; line-height:1.3;">{row.value}</div>
-                    </div>
-                  ))}
-                </div>
+                <KeySpecsGrid machine={machine} />
               </div>
             )}
           </div>
         </div>
 
-        <!-- Purpose & Application -->
-        {machine.purposeAndApplication && (
-          <section id="purpose" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">target</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Purpose & Application</h2>
-              </div>
-              <div style="padding:16px 18px; display:flex; flex-direction:column; gap:14px;">
+        {sections.map(s => (
+          <SectionCard id={s.id} title={s.label} icon={s.icon}>
+            {s.id === "purpose" && machine.purposeAndApplication && (
+              <div style="display:flex; flex-direction:column; gap:14px;">
                 <div>
                   <div style="font-size:10px; font-weight:700; color:#ff9900; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:5px;">What is it for?</div>
                   <p style="margin:0; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.6;">{machine.purposeAndApplication.purpose}</p>
@@ -157,131 +137,100 @@ const sections = [
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        )}
+            )}
 
-        <!-- Overview -->
-        <section id="overview" style="scroll-margin-top:72px;">
-          <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-            <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">info</span>
-              <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Machine Overview</h2>
-            </div>
-            <div style="padding:16px 18px;">
-              {machine.overviewDescription && (
-                <p style="margin:0 0 14px; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.6;">{machine.overviewDescription}</p>
-              )}
-              {machine.classificationTable?.length > 0 && (
-                <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
-                  <thead>
-                    <tr style="background:#0f1111;">
-                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ff9900; border-bottom:1px solid #2a2a2a; width:35%; font-size:11px;">Field</th>
-                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Information</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {machine.classificationTable.map((row: any, i: number) => (
-                      <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
-                        <td style="padding:7px 12px; font-weight:600; color:#0f1111; border-bottom:1px solid #f0f0f0;">{row.field}</td>
-                        <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{row.value}</td>
+            {s.id === "overview" && (
+              <>
+                {machine.overviewDescription && (
+                  <p style="margin:0 0 14px; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.6;">{machine.overviewDescription}</p>
+                )}
+                {machine.classificationTable?.length > 0 && (
+                  <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
+                    <thead>
+                      <tr style="background:#0f1111;">
+                        <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ff9900; border-bottom:1px solid #2a2a2a; width:35%; font-size:11px;">Field</th>
+                        <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Information</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
-              )}
-            </div>
-          </div>
-        </section>
+                    </thead>
+                    <tbody>
+                      {machine.classificationTable.map((row: any, i: number) => (
+                        <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
+                          <td style="padding:7px 12px; font-weight:600; color:#0f1111; border-bottom:1px solid #f0f0f0;">{row.field}</td>
+                          <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{row.value}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+              </>
+            )}
 
-        <!-- Technical Data -->
-        {machine.technicalSpecs?.length > 0 && (
-          <section id="technical-data" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">settings</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Technical Data</h2>
-              </div>
-              <div style="padding:16px 18px;">
-                <SpecTable specs={machine.technicalSpecs} />
-              </div>
-            </div>
-          </section>
-        )}
+            {s.id === "technical-data" && machine.technicalSpecs?.length > 0 && (
+              <SpecTable specs={machine.technicalSpecs} />
+            )}
 
-        <!-- Working Principle -->
-        {machine.workingPrinciples?.length > 0 && (
-          <section id="working-principle" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">psychology</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Working Principle</h2>
-              </div>
-              <div style="padding:16px 18px; display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:10px;">
+            {s.id === "working-principle" && machine.workingPrinciples?.length > 0 && (
+              <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:10px;">
                 {machine.workingPrinciples.map((p: any) => (
                   <div style="background:#f7f8f8; border:1px solid #e3e6e6; border-radius:6px; padding:12px 14px; border-left:3px solid #ff9900;">
                     <div style="font-size:12px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif; margin-bottom:5px;">{p.heading}</div>
                     <div style="font-size:12px; color:#565959; font-family:'Inter',sans-serif; line-height:1.5;">{p.description}</div>
+                    {Array.isArray(p.componentIds) && p.componentIds.length > 0 && (
+                      <div style="margin-top:8px; padding-top:8px; border-top:1px dashed #e3e6e6; display:flex; flex-wrap:wrap; gap:4px; align-items:center;">
+                        <span style="font-size:9px; font-weight:700; color:#888; text-transform:uppercase; letter-spacing:0.05em; font-family:'Inter',sans-serif;">Components:</span>
+                        {p.componentIds.map((id: string) => (
+                          <span style="background:#0f1111; color:#ff9900; font-size:10px; font-weight:600; font-family:'JetBrains Mono',monospace; padding:2px 6px; border-radius:3px;">{id}</span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
-            </div>
-          </section>
-        )}
+            )}
 
-        <!-- Sequence Flow -->
-        {machine.sequenceFlow?.length > 0 && (
-          <section id="sequence-flow" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">account_tree</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Operational Sequence</h2>
-              </div>
-              <div style="padding:16px 18px;">
-                <SequenceFlow steps={machine.sequenceFlow} />
-              </div>
-            </div>
-          </section>
-        )}
+            {s.id === "sequence-flow" && machine.sequenceFlow?.length > 0 && (
+              <SequenceFlow steps={machine.sequenceFlow} />
+            )}
 
-        <!-- Parts List -->
-        {machine.partsList?.length > 0 && (
-          <section id="parts-list" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">build</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Parts List</h2>
-              </div>
-              <div style="padding:16px 18px;">
-                <PartsTable parts={machine.partsList} />
-              </div>
-            </div>
-          </section>
-        )}
+            {s.id === "parts-list" && machine.partsList?.length > 0 && (
+              <PartsTable parts={machine.partsList} brand={machine.brand} partsMeta={machine.partsMeta} />
+            )}
 
-        <!-- Maintenance -->
-        {machine.maintenance?.length > 0 && (
-          <section id="maintenance" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">handyman</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Maintenance & Troubleshooting</h2>
-              </div>
-              <div style="padding:16px 18px;">
-                <MaintenanceTable items={machine.maintenance} />
-              </div>
-            </div>
-          </section>
-        )}
+            {s.id === "gauge-parts" && hasGaugeParts && (
+              <>
+                <div style="font-size:11px; color:#888; font-family:'Inter',sans-serif; margin-bottom:10px;">Quick lookup table for gauge-specific components.</div>
+                <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
+                  <thead>
+                    <tr style="background:#0f1111;">
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ff9900; border-bottom:1px solid #2a2a2a; font-size:11px;">Gauge Code</th>
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Description</th>
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Needles</th>
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Needle Gauge</th>
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Presser Foot</th>
+                      <th style="padding:8px 12px; text-align:left; font-weight:600; color:#aaa; border-bottom:1px solid #2a2a2a; font-size:11px;">Feed Dog</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {machine.gaugePartsCrossReference.map((g: any, i: number) => (
+                      <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
+                        <td style="padding:7px 12px; font-weight:700; color:#c0392b; border-bottom:1px solid #f0f0f0; font-family:'JetBrains Mono',monospace; font-size:11px;">{g.gaugeCode}</td>
+                        <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{g.description}</td>
+                        <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{g.needles}</td>
+                        <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{g.needleGauge}</td>
+                        <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{g.presserFoot}</td>
+                        <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{g.feedDog}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
+            )}
 
-        <!-- Resources -->
-        {machine.resources?.length > 0 && (
-          <section id="resources" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">link</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Additional Resources</h2>
-              </div>
+            {s.id === "maintenance" && machine.maintenance?.length > 0 && (
+              <MaintenanceTable items={machine.maintenance} />
+            )}
+
+            {s.id === "resources" && machine.resources?.length > 0 && (
               <table style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
                 <thead>
                   <tr style="background:#f7f8f8;">
@@ -308,24 +257,22 @@ const sections = [
                   ))}
                 </tbody>
               </table>
-            </div>
-          </section>
-        )}
+            )}
 
-        <!-- Final Notes -->
-        {machine.finalNotes && (
-          <section id="final-notes" style="scroll-margin-top:72px;">
-            <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
-              <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
-                <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">warning</span>
-                <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">Important Notes</h2>
-              </div>
-              <div style="margin:14px 18px; padding:12px 16px; border-left:3px solid #ff9900; background:#fffbf2; border-radius:0 4px 4px 0;">
+            {s.id === "final-notes" && machine.finalNotes && (
+              <div style="margin:0; padding:12px 16px; border-left:3px solid #ff9900; background:#fffbf2; border-radius:0 4px 4px 0;">
                 <p style="margin:0; font-size:12px; color:#333; font-family:'Inter',sans-serif; line-height:1.7; white-space:pre-line;">{machine.finalNotes}</p>
               </div>
-            </div>
-          </section>
-        )}
+            )}
+          </SectionCard>
+        ))}
+
+        <RelatedMachines
+          currentSlug={Astro.params.slug}
+          currentBrand={machine.brand || ""}
+          currentCategory={machine.category || ""}
+          machines={allMachines}
+        />
 
       </main>
     </div>
@@ -349,7 +296,7 @@ const sections = [
   }
 
   function getActiveSection(): string {
-    const scrollY = window.scrollY + 80; // offset for sticky navbar
+    const scrollY = window.scrollY + 80;
     let current = sectionEls[0]?.id || "";
     for (const section of sectionEls) {
       if (section.offsetTop <= scrollY) {
@@ -359,19 +306,17 @@ const sections = [
     return current;
   }
 
-  // Update on scroll
   window.addEventListener("scroll", () => {
     setActive(getActiveSection());
   }, { passive: true });
 
-  // Set initial active
   setActive(getActiveSection());
 
-  // Click: smooth scroll + immediate highlight
   links.forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      const id = link.dataset.section!;
+      const id = link.dataset.section;
+      if (!id) return;
       const target = document.getElementById(id);
       if (target) {
         const top = target.getBoundingClientRect().top + window.scrollY - 72;

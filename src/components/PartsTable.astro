@@ -1,16 +1,47 @@
 ---
+import { lookupPart } from "../lib/parts-library";
+import { assetSrc } from "../lib/base";
+
 interface Part {
   partName: string;
-  partId: string;
+  partId?: string;
   section?: string;
+  category?: string;
+  qty?: string;
+  material?: string;
   function: string;
+  verified?: string;
+  source?: string;
 }
 
 interface Props {
   parts: Part[];
+  brand?: string;
+  partsMeta?: {
+    totalParts?: number;
+    catalogSource?: string;
+    catalogVersion?: string;
+    lastVerified?: string;
+  };
 }
 
-const { parts } = Astro.props;
+const { parts, brand, partsMeta } = Astro.props;
+
+// Look up image + notes for a part from the centralized parts library.
+function partImageUrl(p: Part): string {
+  const entry = lookupPart(brand, p.partId, p.partName);
+  return entry?.image ? assetSrc(entry.image) : "";
+}
+
+function partImageNotes(p: Part): string {
+  const entry = lookupPart(brand, p.partId, p.partName);
+  return entry?.notes || "";
+}
+
+// Preferred grouping: by `category` (catalog group) if any part has one.
+const hasCategory = parts.some(p => p.category && p.category.trim().length > 0);
+// Legacy grouping: split mechanical/electronic
+const hasSection = parts.some(p => p.section === "electronic");
 
 const mechanical = parts.filter(p => !p.section || p.section === "mechanical");
 const electronic = parts.filter(p => p.section === "electronic");
@@ -21,89 +52,259 @@ const thStyle = "padding:7px 12px; text-align:left; font-weight:600; color:#5659
 const tdNameStyle = "padding:7px 12px; font-weight:600; color:#0f1111; border-bottom:1px solid #f0f0f0; font-size:12px;";
 const tdIdStyle = "padding:7px 12px; color:#888; border-bottom:1px solid #f0f0f0; font-size:11px; font-family:'JetBrains Mono',monospace;";
 const tdFnStyle = "padding:7px 12px; color:#565959; border-bottom:1px solid #f0f0f0; font-size:12px; line-height:1.4;";
+const tdCenterStyle = tdFnStyle + " text-align:center;";
+const tdStyle = tdFnStyle;
+
+// Group by category (modern machines) or fall back to section
+function groupByCategory(partsList: Part[]) {
+  const map = new Map<string, Part[]>();
+  partsList.forEach(p => {
+    const key = p.category && p.category.trim().length > 0 ? p.category : "Uncategorized";
+    if (!map.has(key)) map.set(key, []);
+    map.get(key)!.push(p);
+  });
+  return [...map.entries()].sort(([a], [b]) => {
+    if (a === "Uncategorized") return 1;
+    if (b === "Uncategorized") return -1;
+    return a.localeCompare(b);
+  });
+}
+
+const groups: [string, Part[]][] = hasCategory
+  ? groupByCategory(parts)
+  : hasSection
+  ? [
+      ...(mechanical.length > 0 ? [["Main Mechanical Parts" as string, mechanical]] : []),
+      ...(electronic.length > 0 ? [["Electronic Boards and Control Parts" as string, electronic]] : []),
+    ]
+  : [["All Parts", parts]];
+
+const totalRows = parts.length;
 ---
 
 <div style="display:flex; flex-direction:column; gap:16px;">
 
-  {hasSections ? (
-    <>
-      {mechanical.length > 0 && (
-        <div>
-          <div style="font-size:11px; font-weight:700; color:#ff9900; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; padding-left:2px;">
-            Main Mechanical Parts
-          </div>
-          <div style="border:1px solid #e3e6e6; border-radius:6px; overflow:hidden;">
-            <table style={tableStyle}>
-              <thead>
-                <tr style="background:#f7f8f8;">
-                  <th style={thStyle + "width:35%;"}>Part Name</th>
-                  <th style={thStyle + "width:15%;"}>Component ID</th>
-                  <th style={thStyle}>Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                {mechanical.map((part, i) => (
-                  <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
-                    <td style={tdNameStyle}>{part.partName}</td>
-                    <td style={tdIdStyle}>{part.partId || "—"}</td>
-                    <td style={tdFnStyle}>{part.function}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      {electronic.length > 0 && (
-        <div>
-          <div style="font-size:11px; font-weight:700; color:#ff9900; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; padding-left:2px;">
-            Electronic Boards and Control Parts
-          </div>
-          <div style="border:1px solid #e3e6e6; border-radius:6px; overflow:hidden;">
-            <table style={tableStyle}>
-              <thead>
-                <tr style="background:#f7f8f8;">
-                  <th style={thStyle + "width:35%;"}>Factory Name</th>
-                  <th style={thStyle + "width:15%;"}>Official / Technical Name</th>
-                  <th style={thStyle}>Function</th>
-                </tr>
-              </thead>
-              <tbody>
-                {electronic.map((part, i) => (
-                  <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
-                    <td style={tdNameStyle}>{part.partName}</td>
-                    <td style={tdIdStyle}>{part.partId || "—"}</td>
-                    <td style={tdFnStyle}>{part.function}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-    </>
-  ) : (
-    <div style="border:1px solid #e3e6e6; border-radius:6px; overflow:hidden;">
-      <table style={tableStyle}>
-        <thead>
-          <tr style="background:#f7f8f8;">
-            <th style={thStyle + "width:35%;"}>Part Name</th>
-            <th style={thStyle + "width:15%;"}>Component ID</th>
-            <th style={thStyle}>Function</th>
-          </tr>
-        </thead>
-        <tbody>
-          {parts.map((part, i) => (
-            <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
-              <td style={tdNameStyle}>{part.partName}</td>
-              <td style={tdIdStyle}>{part.partId || "—"}</td>
-              <td style={tdFnStyle}>{part.function}</td>
+  {groups.map(([groupName, groupParts]) => (
+    <div>
+      <div style="font-size:11px; font-weight:700; color:#ff9900; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; padding-left:2px; display:flex; align-items:center; gap:8px;">
+        <span>{groupName}</span>
+        <span style="background:#f0f2f2; color:#888; font-weight:600; font-size:10px; padding:1px 6px; border-radius:10px;">{groupParts.length}</span>
+      </div>
+      <div style="border:1px solid #e3e6e6; border-radius:6px; overflow:hidden; overflow-x:auto;">
+        <table style={tableStyle}>
+          <thead>
+            <tr style="background:#f7f8f8;">
+              <th style={thStyle + "width:28%; min-width:140px;"}>Part Name</th>
+              <th style={thStyle + "width:12%; min-width:80px;"}>Component ID</th>
+              <th style={thStyle + "width:8%;  min-width:60px; text-align:center;"}>Qty</th>
+              <th style={thStyle + "width:14%; min-width:100px;"}>Material</th>
+              <th style={thStyle}>Function</th>
+              <th style={thStyle + "width:8%;  min-width:60px; text-align:center;"}>Verified</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {groupParts.map((part, i) => (
+              <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
+                <td style={tdNameStyle}>
+                  <button
+                    type="button"
+                    class="part-name-btn notranslate"
+                    translate="no"
+                    data-part-name={part.partName}
+                    data-part-id={part.partId || ""}
+                    data-part-category={part.category || ""}
+                    data-part-qty={part.qty || ""}
+                    data-part-material={part.material || ""}
+                    data-part-function={part.function || ""}
+                    data-part-image={partImageUrl(part)}
+                    data-part-notes={partImageNotes(part)}
+                    data-part-source={part.source || ""}
+                  >{part.partName}</button>
+                  {part.source && (
+                    <a href={part.source} target="_blank" rel="noopener noreferrer"
+                      style="display:inline-block; margin-left:6px; color:#ff9900; text-decoration:none; font-size:10px; vertical-align:middle;"
+                      title={"Source: " + part.source}>
+                      <span class="material-symbols-outlined notranslate" translate="no" style="font-size:11px;">open_in_new</span>
+                    </a>
+                  )}
+                </td>
+                <td style={tdIdStyle}>{part.partId && part.partId.length > 0 ? part.partId : "—"}</td>
+                <td style={tdCenterStyle}>{part.qty && part.qty.length > 0 ? part.qty : "—"}</td>
+                <td style={tdStyle}>{part.material && part.material.length > 0 ? part.material : "—"}</td>
+                <td style={tdFnStyle}>{part.function}</td>
+                <td style={tdCenterStyle}>
+                  {part.verified ? (
+                    <span style={`font-size:13px; ${part.verified === "✅" ? "color:#0a8a3a;" : part.verified === "⚠️" ? "color:#e69500;" : part.verified === "❌" ? "color:#c0392b;" : part.verified === "📋" ? "color:#2470b3;" : "color:#888;"}`}
+                      title={`${part.verified} · ${part.verified === "✅" ? "2+ official sources" : part.verified === "⚠️" ? "1 official source" : part.verified === "❌" ? "sources conflict" : part.verified === "📋" ? "manual only" : "unverified"}`}>
+                      {part.verified}
+                    </span>
+                  ) : "—"}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ))}
+
+  {partsMeta && (partsMeta.totalParts || partsMeta.catalogSource || partsMeta.lastVerified) && (
+    <div style="margin-top:4px; border-top:1px solid #e3e6e6; padding-top:10px;">
+      <div style="font-size:10px; font-weight:700; color:#ff9900; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:8px; padding-left:2px;">
+        Parts List Footer
+      </div>
+      <table style="width:100%; border-collapse:collapse; font-size:11px; font-family:'Inter',sans-serif;">
+        <tbody>
+          {partsMeta.totalParts != null && (
+            <tr>
+              <td style="padding:5px 12px; font-weight:600; color:#0f1111; width:35%; background:#f7f8f8; border-bottom:1px solid #f0f0f0;">Total Parts Documented</td>
+              <td style="padding:5px 12px; color:#333; border-bottom:1px solid #f0f0f0;">
+                {partsMeta.totalParts} {partsMeta.totalParts !== totalRows && (
+                  <span style="color:#888; font-size:10px;">(showing {totalRows} rendered)</span>
+                )}
+              </td>
+            </tr>
+          )}
+          {partsMeta.catalogSource && (
+            <tr>
+              <td style="padding:5px 12px; font-weight:600; color:#0f1111; width:35%; background:#f7f8f8; border-bottom:1px solid #f0f0f0;">Official Catalog Source</td>
+              <td style="padding:5px 12px; color:#333; border-bottom:1px solid #f0f0f0;">
+                <a href={partsMeta.catalogSource} target="_blank" rel="noopener noreferrer" style="color:#ff9900; text-decoration:none; word-break:break-all;">{partsMeta.catalogSource}</a>
+              </td>
+            </tr>
+          )}
+          {partsMeta.catalogVersion && (
+            <tr>
+              <td style="padding:5px 12px; font-weight:600; color:#0f1111; width:35%; background:#f7f8f8; border-bottom:1px solid #f0f0f0;">Catalog Version / Date</td>
+              <td style="padding:5px 12px; color:#333; border-bottom:1px solid #f0f0f0;">{partsMeta.catalogVersion}</td>
+            </tr>
+          )}
+          {partsMeta.lastVerified && (
+            <tr>
+              <td style="padding:5px 12px; font-weight:600; color:#0f1111; width:35%; background:#f7f8f8;">Last Verified</td>
+              <td style="padding:5px 12px; color:#333;">{new Date(partsMeta.lastVerified).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
   )}
 
 </div>
+
+<!-- Part detail modal: opened by clicking any .part-name-btn -->
+<div id="part-modal" class="part-modal" role="dialog" aria-modal="true" aria-labelledby="part-modal-title" aria-hidden="true">
+  <div class="part-modal-backdrop" data-part-modal-close></div>
+  <div class="part-modal-card">
+    <div class="part-modal-header">
+      <span id="part-modal-title" class="notranslate" translate="no" style="flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">Part Name</span>
+      <button type="button" class="part-modal-close notranslate" translate="no" data-part-modal-close aria-label="Close">
+        <span class="material-symbols-outlined" style="font-size:20px;">close</span>
+      </button>
+    </div>
+    <div class="part-modal-image" id="part-modal-image"></div>
+    <div class="part-modal-body">
+      <div class="part-modal-meta" id="part-modal-meta"></div>
+      <div class="part-modal-function" id="part-modal-function"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const modal = document.getElementById("part-modal");
+    if (!modal) return;
+    const imgArea = document.getElementById("part-modal-image");
+    const titleEl = document.getElementById("part-modal-title");
+    const metaEl = document.getElementById("part-modal-meta");
+    const funcEl = document.getElementById("part-modal-function");
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+    function escapeAttr(s) {
+      return String(s).replace(/"/g, "&quot;");
+    }
+
+    function openModal(btn) {
+      const name = btn.dataset.partName || "";
+      const partId = btn.dataset.partId || "";
+      const category = btn.dataset.partCategory || "";
+      const qty = btn.dataset.partQty || "";
+      const material = btn.dataset.partMaterial || "";
+      const fn = btn.dataset.partFunction || "";
+      const image = btn.dataset.partImage || "";
+      const notes = btn.dataset.partNotes || "";
+      const source = btn.dataset.partSource || "";
+
+      if (titleEl) titleEl.textContent = name;
+
+      if (imgArea) {
+        if (image && image.length > 0) {
+          imgArea.innerHTML = '<img src="' + escapeAttr(image) + '" alt="' + escapeAttr(name) + '" loading="lazy" decoding="async" />';
+        } else {
+          imgArea.innerHTML = '<div class="part-modal-placeholder">' +
+            '<span class="material-symbols-outlined" style="font-size:48px; color:#cbd1d1;">image</span>' +
+            '<div style="font-size:12px; font-weight:600; color:#565959; margin-top:8px;">No image uploaded yet</div>' +
+            '<div style="font-size:10px; color:#888; margin-top:4px; max-width:260px;">Add this part to the Parts Image Library in TinaCMS to show an image here.</div>' +
+            '</div>';
+        }
+      }
+
+      if (metaEl) {
+        const chips = [];
+        if (partId) chips.push('<span><strong>ID:</strong> ' + escapeHtml(partId) + '</span>');
+        if (category) chips.push('<span><strong>Category:</strong> ' + escapeHtml(category) + '</span>');
+        if (qty) chips.push('<span><strong>Qty:</strong> ' + escapeHtml(qty) + '</span>');
+        if (material) chips.push('<span><strong>Material:</strong> ' + escapeHtml(material) + '</span>');
+        metaEl.innerHTML = chips.join("");
+      }
+
+      if (funcEl) {
+        const fnText = fn && fn.length > 0 ? fn : "—";
+        const notesBlock = notes && notes.length > 0
+          ? '<div style="margin-top:10px; padding-top:10px; border-top:1px dashed #e3e6e6; font-size:11px; color:#888;"><strong style="color:#565959;">Note:</strong> ' + escapeHtml(notes) + '</div>'
+          : "";
+        const sourceBlock = source && source.length > 0
+          ? '<div style="margin-top:10px; font-size:11px;"><a href="' + escapeAttr(source) + '" target="_blank" rel="noopener noreferrer" style="color:#ff9900; text-decoration:none;"><span class="material-symbols-outlined notranslate" translate="no" style="font-size:13px; vertical-align:middle; margin-right:3px;">open_in_new</span>View official source</a></div>'
+          : "";
+        funcEl.innerHTML = '<div>' + escapeHtml(fnText) + '</div>' + notesBlock + sourceBlock;
+      }
+
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("click", function (e) {
+      const target = e.target;
+      if (!target || !target.closest) return;
+      const btn = target.closest(".part-name-btn");
+      if (btn) {
+        e.preventDefault();
+        openModal(btn);
+        return;
+      }
+      if (target.closest("[data-part-modal-close]")) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("active")) {
+        closeModal();
+      }
+    });
+  })();
+</script>
