@@ -1,0 +1,20 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  icon: string;
+}
+const { id, title, icon } = Astro.props;
+---
+
+<section id={id} style="scroll-margin-top:72px;">
+  <div style="background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e3e6e6;">
+    <div style="padding:10px 18px; display:flex; align-items:center; gap:8px; background:#0f1111;">
+      <span class="material-symbols-outlined notranslate" translate="no" style="font-size:15px; color:#ff9900;">{icon}</span>
+      <h2 style="margin:0; font-size:11px; font-weight:700; color:#fff; font-family:'Inter',sans-serif; text-transform:uppercase; letter-spacing:0.06em;">{title}</h2>
+    </div>
+    <div style="padding:16px 18px;">
+      <slot />
+    </div>
+  </div>
+</section>

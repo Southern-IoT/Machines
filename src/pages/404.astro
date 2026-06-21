@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { withBase } from "../lib/base";
+
+const homeHref = withBase("/");
+---
+
+<BaseLayout title="Page Not Found">
+  <Navbar currentPage="404" />
+
+  <main style="background:#f0f1f1; min-height:calc(100vh - 56px); display:flex; align-items:center; justify-content:center; padding:24px;">
+    <div style="max-width:480px; width:100%; text-align:center; background:#fff; border:1px solid #e3e6e6; border-radius:8px; padding:48px 32px;">
+      <div style="font-size:72px; font-weight:800; color:#ff9900; font-family:'Inter',sans-serif; line-height:1; margin-bottom:8px;">404</div>
+      <h1 style="margin:0 0 8px; font-size:18px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif;">Machine Not Found</h1>
+      <p style="margin:0 0 24px; font-size:13px; color:#565959; font-family:'Inter',sans-serif; line-height:1.5;">
+        The page you're looking for doesn't exist in the directory. It may have been moved, renamed, or the link is incorrect.
+      </p>
+      <a href={homeHref} style="display:inline-flex; align-items:center; gap:6px; background:#0f1111; color:#ff9900; font-size:13px; font-weight:700; font-family:'Inter',sans-serif; padding:10px 20px; border-radius:6px; text-decoration:none;">
+        <span class="material-symbols-outlined notranslate" translate="no" style="font-size:16px;">arrow_back</span>
+        Back to Directory
+      </a>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>

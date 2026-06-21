@@ -1,4 +1,6 @@
 ---
+import { withBase, assetSrc } from "../lib/base";
+
 interface Props {
   currentPage?: string;
   machines?: { title: string; subtitle: string; brand: string; category: string; slug: string }[];
@@ -6,6 +8,7 @@ interface Props {
 
 const { currentPage = "home", machines = [] } = Astro.props;
 const machinesJson = JSON.stringify(machines);
+const homeHref = withBase("/");
 ---
 
 <!-- Desktop Navbar -->
@@ -13,7 +16,7 @@ const machinesJson = JSON.stringify(machines);
   <div class="flex items-center w-full px-8 py-0 gap-0" style="height:56px;">
 
     <!-- Logo -->
-    <a href="/Machines/" style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#ff9900; font-weight:700; font-size:16px; font-family:'Inter',sans-serif; white-space:nowrap; padding-right:24px; border-right:1px solid #2a2a2a; margin-right:20px; height:100%;">
+    <a href={homeHref} style="display:flex; align-items:center; gap:8px; text-decoration:none; color:#ff9900; font-weight:700; font-size:16px; font-family:'Inter',sans-serif; white-space:nowrap; padding-right:24px; border-right:1px solid #2a2a2a; margin-right:20px; height:100%;">
       <span class="material-symbols-outlined notranslate" translate="no" style="font-size:20px; color:#ff9900;">precision_manufacturing</span>
       <span class="logo-text notranslate" translate="no" data-en="Southern Machines">Southern Machines</span>
     </a>
@@ -66,7 +69,7 @@ const machinesJson = JSON.stringify(machines);
 <!-- Mobile Navbar -->
 <nav style="background-color:#0f1111; border-bottom:1px solid #2a2a2a; position:sticky; top:0; z-index:50;" class="md:hidden">
   <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 16px;">
-    <a href="/Machines/" style="display:flex; align-items:center; gap:6px; text-decoration:none; color:#ff9900; font-weight:700; font-size:14px; white-space:nowrap;">
+    <a href={homeHref} style="display:flex; align-items:center; gap:6px; text-decoration:none; color:#ff9900; font-weight:700; font-size:14px; white-space:nowrap;">
       <span class="material-symbols-outlined notranslate" translate="no" style="font-size:18px;">precision_manufacturing</span>
       <span class="logo-text notranslate" translate="no" data-en="Southern Machines">Southern Machines</span>
     </a>
@@ -92,7 +95,7 @@ const machinesJson = JSON.stringify(machines);
 <!-- Autocomplete dropdown -->
 <ul id="search-dropdown" style="display:none; position:fixed; z-index:9999; background:#fff; border:1px solid #e0e0e0; border-radius:8px; box-shadow:0 8px 32px rgba(0,0,0,0.14); overflow-y:auto; max-height:420px; list-style:none; margin:0; padding:4px 0; min-width:320px;"></ul>
 
-<script define:vars={{ machinesJson }}>
+<script define:vars={{ machinesJson, basePrefix: withBase("/") }}>
   const allMachines = JSON.parse(machinesJson);
   const desktopInput = document.getElementById("search-input");
   const mobileInput = document.getElementById("search-input-mobile");
@@ -100,27 +103,24 @@ const machinesJson = JSON.stringify(machines);
   const brandFilter = document.getElementById("brand-filter");
   const categoryFilter = document.getElementById("category-filter");
 
-  // Populate filters
-  [...new Set(allMachines.map(m => m.brand).filter(Boolean))].forEach(b => {
-    [brandFilter].forEach(sel => {
-      if (!sel) return;
+  if (brandFilter) {
+    [...new Set(allMachines.map(m => m.brand).filter(Boolean))].forEach(b => {
       const o = document.createElement("option");
       o.value = b;
       o.textContent = b;
       o.classList.add("notranslate", "brand-option");
       o.setAttribute("translate", "no");
       o.setAttribute("data-brand", b);
-      sel.appendChild(o);
+      brandFilter.appendChild(o);
     });
-  });
-  [...new Set(allMachines.map(m => m.category).filter(Boolean))].forEach(c => {
-    [categoryFilter].forEach(sel => {
-      if (!sel) return;
+  }
+  if (categoryFilter) {
+    [...new Set(allMachines.map(m => m.category).filter(Boolean))].forEach(c => {
       const o = document.createElement("option");
       o.value = c; o.textContent = c;
-      sel.appendChild(o);
+      categoryFilter.appendChild(o);
     });
-  });
+  }
 
   function positionDropdown() {
     const anchor = desktopInput?.offsetParent ? desktopInput : mobileInput;
@@ -148,7 +148,7 @@ const machinesJson = JSON.stringify(machines);
     } else {
       dropdown.innerHTML = matches.slice(0, 8).map((m, i) => `
         <li style="${i > 0 ? 'border-top:1px solid #f0f0f0;' : ''}">
-          <a href="/Machines/machines/${m.slug}/" style="display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background 0.1s;"
+          <a href="${basePrefix}machines/${m.slug}/" style="display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background 0.1s;"
             onmouseover="this.style.background='#f7f7f7'" onmouseout="this.style.background=''">
             <div style="width:34px;height:34px;border-radius:6px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <span class="material-symbols-outlined notranslate" translate="no" style="font-size:18px;color:#ff9900;">precision_manufacturing</span>
@@ -182,7 +182,16 @@ const machinesJson = JSON.stringify(machines);
       dropdown.style.display = "none";
   });
 
-  // Grid filter
+  // Keyboard shortcut: "/" focuses the visible search input (when not typing elsewhere)
+  document.addEventListener("keydown", e => {
+    if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+    const target = e.target as HTMLElement | null;
+    if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable)) return;
+    e.preventDefault();
+    const visible = desktopInput?.offsetParent ? desktopInput : mobileInput;
+    (visible as HTMLInputElement | undefined)?.focus();
+  });
+
   function applyFilters() {
     const query = (desktopInput?.value || mobileInput?.value || "").toLowerCase().trim();
     const brand = (brandFilter?.value || "").toLowerCase();

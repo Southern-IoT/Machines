@@ -3,30 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import MachineCard from "../components/MachineCard.astro";
-import fs from "node:fs";
-import path from "node:path";
+import { loadAllMachines } from "../lib/machines";
 
-const machinesDir = path.join(process.cwd(), "src/content/machines");
-let machines: any[] = [];
+const machines = loadAllMachines();
 
-if (fs.existsSync(machinesDir)) {
-  const files = fs.readdirSync(machinesDir).filter((f: string) => f.endsWith(".json"));
-  machines = files.map((file: string) => {
-    const raw = fs.readFileSync(path.join(machinesDir, file), "utf-8");
-    const data = JSON.parse(raw);
-    return { ...data, slug: file.replace(".json", "") };
-  });
-}
-
-function getCardSpecs(machine: any) {
+function getCardSpecs(machine: typeof machines[number]) {
   if (!machine.technicalSpecs?.length) return [];
-  return machine.technicalSpecs.slice(0, 2).map((s: any) => ({
+  return machine.technicalSpecs.slice(0, 2).map((s) => ({
     label: s.parameter,
     value: s.value,
   }));
 }
 
-const navMachines = machines.map((m: any) => ({
+const navMachines = machines.map((m) => ({
   title: m.title,
   subtitle: m.subtitle || "",
   brand: m.brand || "",
@@ -61,7 +50,7 @@ const navMachines = machines.map((m: any) => ({
             id="machine-grid"
             style="display:grid; grid-template-columns:repeat(auto-fill, minmax(210px, 1fr)); gap:14px;"
           >
-            {machines.map((machine: any) => (
+            {machines.map((machine) => (
               <MachineCard
                 title={machine.title}
                 subtitle={machine.subtitle || ""}

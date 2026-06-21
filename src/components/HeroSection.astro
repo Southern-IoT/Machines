@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../lib/base";
+
 interface Props {
   totalMachines: number;
   categories: string[];
@@ -10,6 +12,7 @@ const { totalMachines, categories, brands, machines } = Astro.props;
 
 // Serialize for client-side use
 const machinesJson = JSON.stringify(machines);
+const machinePathPrefix = withBase("/machines/");
 ---
 
 <header
@@ -125,7 +128,7 @@ const machinesJson = JSON.stringify(machines);
 >
 </ul>
 
-<script define:vars={{ machinesJson }}>
+<script define:vars={{ machinesJson, machinePathPrefix }}>
   const machines = JSON.parse(machinesJson);
   const input = document.getElementById("search-input");
   const wrapper = document.getElementById("search-wrapper");
@@ -172,7 +175,7 @@ const machinesJson = JSON.stringify(machines);
           (m) => `
           <li>
             <a
-              href="/machines/${m.slug}/"
+              href="${machinePathPrefix}${m.slug}/"
               style="display:flex;align-items:center;gap:12px;padding:10px 16px;text-decoration:none;transition:background 0.15s;"
               onmouseover="this.style.backgroundColor='var(--color-surface-container)'"
               onmouseout="this.style.backgroundColor=''"

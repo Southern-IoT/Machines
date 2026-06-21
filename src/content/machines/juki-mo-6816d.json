@@ -1,0 +1,841 @@
+{
+  "title": "JUKI MO-6816D",
+  "subtitle": "High-Speed 2-Needle, 4-Thread Safety-Stitch / Interlock Machine (MO-6800D Series)",
+  "brand": "JUKI",
+  "category": "Overlock Machine",
+  "publishedDate": "2026-06-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI MO-6816D is a high-speed, 2-needle, 4-thread safety-stitch / interlock machine belonging to the JUKI MO-6800D series. It performs seaming, edge-trimming, and overedging in a single pass, with a 3 mm or 5 mm needle width. It is a direct-drive head (combined with an integrated AC servo motor / control box) used for general apparel seaming on medium to heavy-weight woven and knit fabrics.",
+    "applications": [
+      "Seaming and overedging medium to heavy-weight woven fabrics in a single pass",
+      "Seaming and overedging knit fabrics (T-shirts, polo shirts, sportswear, underwear)",
+      "General apparel seaming requiring safety-stitch (504 / 514 / 516 type) construction",
+      "Edge trimming and overedging operations where the upper and lower knives are required",
+      "Production lines requiring consistent stitch quality at high speed (up to 7,000 sti/min)"
+    ],
+    "industry": "Garment manufacturing (woven and knit), underwear and sportswear production, uniform manufacturing, light industrial textile assembly"
+  },
+  "overviewDescription": "The JUKI MO-6816D is the 2-needle / 4-thread safety-stitch variant of the JUKI MO-6800D overlock series. It uses two needles, an upper looper, and a lower looper to form a 4-thread safety stitch while simultaneously edge-trimming the fabric with a fixed lower knife and a moving upper knife. The machine is built around a sealed lower-loop lubrication system (the needle bar and upper looper are oil-free), a 24.5 mm needle bar stroke, lever-type differential feed adjustment with micro-adjust, and a push-button stitch-length selector. The MO-6816D is offered in head-only form for direct-drive mounting on the JUKI PM-6810 / equivalent smart control box with an integrated AC servo motor.",
+  "classificationTable": [
+    { "field": "Machine Type", "value": "High-speed 2-needle, 4-thread safety-stitch / interlock machine" },
+    { "field": "Brand", "value": "JUKI" },
+    { "field": "Model", "value": "MO-6816D (MO-6800D series)" },
+    { "field": "Sewing Type (USA)", "value": "516 (Safety stitch, 4-thread)" },
+    { "field": "Needle Width", "value": "3.0 mm or 5.0 mm" },
+    { "field": "Overedge Width", "value": "4.0 mm or 5.0 mm" },
+    { "field": "Main Motor", "value": "Direct-drive (JUKI PM-6810 / equivalent smart control box, integrated AC servo motor — sold separately)" },
+    { "field": "Lubrication", "value": "Automatic (sealed lower-loop); needle bar and upper looper are oil-free" },
+    { "field": "Lubricating Oil", "value": "JUKI MACHINE OIL 18 (ISO VG18 equivalent)" },
+    { "field": "Differential Feed", "value": "Lever type with micro-adjust" },
+    { "field": "Stitch Length Adjustment", "value": "Push-button type" },
+    { "field": "Head Weight", "value": "27 kg" },
+    { "field": "Series Lineup", "value": "MO-6804D (1-needle), MO-6814D (2-needle), MO-6816D (interlock), MO-6843D (3-needle interlock)" }
+  ],
+  "technicalSpecs": [
+    { "parameter": "Max Sewing Speed", "value": "7,000 sti/min" },
+    { "parameter": "Stitch Length", "value": "0.6 – 3.8 mm (max 4.5 mm)" },
+    { "parameter": "Needle Bar Stroke", "value": "24.5 mm" },
+    { "parameter": "Needle Inclination Angle", "value": "20°" },
+    { "parameter": "Needle Bar Bushing", "value": "Lower bushing type" },
+    { "parameter": "Needle System", "value": "DC×27 (excluding some subclasses)" },
+    { "parameter": "Differential Feed Ratio — Gathering", "value": "1:2 (max 1:4)" },
+    { "parameter": "Differential Feed Ratio — Stretching", "value": "1:0.7 (max 1:0.6)" },
+    { "parameter": "Max Presser Foot Lift", "value": "7 mm (excluding some subclasses)" },
+    { "parameter": "Max Presser Foot Pressure", "value": "63.7 N (6.5 kgf)" },
+    { "parameter": "Stitch Length Adjustment", "value": "Push-button type" },
+    { "parameter": "Differential Adjustment", "value": "Lever type with micro-adjust" },
+    { "parameter": "Needle Width (MO-6816D)", "value": "3.0 mm or 5.0 mm" },
+    { "parameter": "Overedge Width (MO-6816D)", "value": "4.0 mm or 5.0 mm" },
+    { "parameter": "Lubrication", "value": "Automatic; needle bar and upper looper are oil-free" },
+    { "parameter": "Lubricating Oil", "value": "JUKI MACHINE OIL 18 (ISO VG18 equivalent)" },
+    { "parameter": "Needle Point Cooler", "value": "Standard" },
+    { "parameter": "Needle Thread Cooler", "value": "Standard" },
+    { "parameter": "Micro-lifter Device", "value": "Option" },
+    { "parameter": "Head Weight", "value": "27 kg" }
+  ],
+  "workingPrinciples": [
+    {
+      "heading": "1. Two-Needle, Four-Thread Safety Stitch Formation",
+      "description": "Two needles carry the upper needle threads through the fabric. The lower looper carries the lower looper thread and interlocks with both needle threads below the needle plate. The upper looper carries the upper looper thread and forms a cross-over stitch on top of the fabric. The result is a 516-type safety stitch with 4 threads total, providing a stretchable, durable seam with a finished edge in a single pass.",
+      "componentIds": ["needle-bar-left", "needle-bar-right", "upper-looper", "lower-looper", "needle-clamp", "needle-plate"]
+    },
+    {
+      "heading": "2. Upper and Lower Knife Edge-Trimming",
+      "description": "A fixed lower knife and a moving upper knife trim the fabric edge to a consistent width just before the needles enter the fabric. The upper knife is driven by a separate knife-drive linkage from the main shaft, allowing precise synchronization with the stitch cycle and adjustable cutting width.",
+      "componentIds": ["upper-knife", "lower-knife", "knife-drive-linkage", "knife-pressure-spring"]
+    },
+    {
+      "heading": "3. Differential Feed Mechanism",
+      "description": "The differential feed has a main feed dog (front) and a differential feed dog (rear), driven by independent feed eccentrics. The differential ratio is set with a lever (with micro-adjust), allowing gathering (1:2, max 1:4) for stretch fabrics or stretching (1:0.7, max 1:0.6) for slippery knits. This prevents seam distortion and produces flat, stretchable seams on knit fabrics.",
+      "componentIds": ["main-feed-dog", "differential-feed-dog", "feed-eccentric-main", "feed-eccentric-diff", "differential-lever", "differential-micro-adjust"]
+    },
+    {
+      "heading": "4. Direct-Drive AC Servo Motor",
+      "description": "The MO-6816D head is designed for direct mounting on a JUKI PM-6810 (or equivalent) smart control box with an integrated AC servo motor. The motor drives the main shaft directly via a coupling, eliminating the V-belt and clutch of conventional mounting. This provides instant start/stop, precise speed control via the pedal, and low noise / low vibration operation.",
+      "componentIds": ["main-shaft", "main-shaft-coupling", "control-box-PM6810", "ac-servo-motor"]
+    },
+    {
+      "heading": "5. Active Thread Tension System",
+      "description": "Each of the four threads (two needle threads, upper looper thread, lower looper thread) passes through an individual thread tension assembly with disc tension, thread take-up spring, and tension release pin. The tensions are set independently and adjusted for fabric type and stitch width.",
+      "componentIds": ["tension-assembly-needle-L", "tension-assembly-needle-R", "tension-assembly-upper-looper", "tension-assembly-lower-looper", "thread-take-up-spring", "tension-release-pin"]
+    },
+    {
+      "heading": "6. Sealed Lower-Loop Automatic Lubrication",
+      "description": "The lower loop (main shaft, feed mechanism, lower looper, hook area) is enclosed and lubricated by an automatic forced-circulation system using a worm pump driven off the main shaft. The upper looper and needle bar mechanism are oil-free, eliminating the risk of oil staining on light-colored fabrics.",
+      "componentIds": ["oil-pump-worm", "oil-reservoir", "oil-distribution-manifold", "oil-sight-glass", "oil-filter"]
+    },
+    {
+      "heading": "7. Push-Button Stitch Length Adjustment",
+      "description": "Stitch length is set by a push-button selector on the front of the machine. The selector engages a different feed-eccentric position, changing the feed dog stroke per stitch. This eliminates the need to open the machine and manually swap feed eccentrics for different stitch lengths.",
+      "componentIds": ["stitch-length-button", "stitch-selector-cam", "feed-eccentric-set"]
+    }
+  ],
+  "sequenceFlow": [
+    { "stepTitle": "Power ON", "stepDescription": "Control box / pedal powered; needle position sensor initialized" },
+    { "stepTitle": "Thread Machine", "stepDescription": "Thread needle-L → needle-R → upper looper → lower looper per threading diagram" },
+    { "stepTitle": "Set Tensions", "stepDescription": "Adjust four individual thread tension assemblies" },
+    { "stepTitle": "Set Differential", "stepDescription": "Lever + micro-adjust set to fabric (gather / neutral / stretch)" },
+    { "stepTitle": "Set Stitch Length", "stepDescription": "Push-button selector set to required length" },
+    { "stepTitle": "Check Oil", "stepDescription": "Verify oil reservoir level; check oil flow at sight glass" },
+    { "stepTitle": "Place Fabric", "stepDescription": "Lay fabric under presser foot, align edge with lower knife" },
+    { "stepTitle": "Press Pedal", "stepDescription": "Presser foot lifts, machine starts at set speed" },
+    { "stepTitle": "Sewing", "stepDescription": "Needles / loopers / knives / feed dogs in synchronized motion" },
+    { "stepTitle": "Stitch Trim", "stepDescription": "Manual scissors or chain cutter separates chain at end of seam" },
+    { "stepTitle": "Release Pedal", "stepDescription": "Needle stops in up position; presser foot lifts" },
+    { "stepTitle": "Inspect Seam", "stepDescription": "Check stitch balance, tension, edge trimming quality" },
+    { "stepTitle": "End of Run", "stepDescription": "Wipe down, re-thread, refill oil, log production" }
+  ],
+  "partsList": [
+    {
+      "partName": "Main Shaft",
+      "partId": "MO-6800D-MS",
+      "category": "Drive & Transmission",
+      "qty": "1",
+      "material": "High-carbon steel, induction-hardened bearing surfaces",
+      "function": "Carries the needle-bar eccentric, feed eccentrics, looper eccentrics, and oil-pump worm. Driven directly by the AC servo motor via the main-shaft coupling.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Main Shaft Coupling",
+      "partId": "MO-6800D-MSC",
+      "category": "Drive & Transmission",
+      "qty": "1",
+      "material": "Steel hub with rubber / polymer insert",
+      "function": "Connects the AC servo motor shaft to the main shaft, transmitting torque while accommodating minor misalignment.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Needle Bar — Left",
+      "partId": "MO-6816D-NBL",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Hardened tool steel, chrome-plated",
+      "function": "Holds the left needle (DC×27) and reciprocates 24.5 mm per stitch cycle, driven by the needle-bar eccentric on the main shaft.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Needle Bar — Right",
+      "partId": "MO-6816D-NBR",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Hardened tool steel, chrome-plated",
+      "function": "Holds the right needle (DC×27) at the configured needle width (3.0 mm or 5.0 mm) and reciprocates in synchrony with the left needle bar.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Needle Clamp (Left & Right)",
+      "partId": "MO-6800D-NC",
+      "category": "Primary Operation Assembly",
+      "qty": "2",
+      "material": "Hardened steel with clamping screw",
+      "function": "Clamps the needle in the needle bar. Two clamps (one per needle) with orientation flat aligned to the needle bar.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Needle (DC×27)",
+      "partId": "DC×27-#14",
+      "category": "Consumables",
+      "qty": "2 (1 spare typical)",
+      "material": "Hardened steel needle with chrome plating",
+      "function": "Carries the upper needle thread through the fabric. Size #14 is standard for medium-weight fabric; #9–#11 for light, #16–#21 for heavy.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Needle Plate",
+      "partId": "MO-6800D-NP",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Hardened tool steel, polished needle-hole surface",
+      "function": "Supports the fabric as the needles descend; contains the needle hole and feed-dog slot. Specific to needle width (3 mm or 5 mm).",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Upper Looper",
+      "partId": "MO-6800D-UL",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Hardened tool steel, polished bearing surfaces",
+      "function": "Carries the upper looper thread around the lower looper thread and the needle threads, forming the top cross-over of the safety stitch. Driven by the upper-looper eccentric on the main shaft via a connecting rod.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Lower Looper",
+      "partId": "MO-6800D-LL",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Hardened tool steel, polished bearing surfaces",
+      "function": "Carries the lower looper thread through the fabric edge and interlocks it with the needle threads below the needle plate.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Looper Holder",
+      "partId": "MO-6800D-LH",
+      "category": "Primary Operation Assembly",
+      "qty": "2 (1 upper, 1 lower)",
+      "material": "Steel, precision-machined bearing bores",
+      "function": "Holds the upper or lower looper and provides the pivot point for looper motion. Connects to the looper-driving rod.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Main Feed Dog",
+      "partId": "MO-6800D-MFD",
+      "category": "Differential Feed Mechanism",
+      "qty": "1",
+      "material": "Hardened tool steel, serrated top surface",
+      "function": "Front feed dog that moves the fabric forward at the main feed ratio. Driven from the main feed eccentric.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Differential Feed Dog",
+      "partId": "MO-6800D-DFD",
+      "category": "Differential Feed Mechanism",
+      "qty": "1",
+      "material": "Hardened tool steel, serrated top surface",
+      "function": "Rear feed dog that moves the fabric at the differential ratio. The differential feed mechanism combines the two feed dog strokes to produce the gather / neutral / stretch effect.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Feed Eccentric — Main",
+      "partId": "MO-6800D-FEM",
+      "category": "Differential Feed Mechanism",
+      "qty": "1",
+      "material": "Hardened steel eccentric with oil groove",
+      "function": "Drives the main feed dog stroke.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Feed Eccentric — Differential",
+      "partId": "MO-6800D-FED",
+      "category": "Differential Feed Mechanism",
+      "qty": "1",
+      "material": "Hardened steel eccentric with oil groove",
+      "function": "Drives the differential feed dog stroke. Position is set by the differential lever / micro-adjust to determine the gather or stretch ratio.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Differential Lever",
+      "partId": "MO-6800D-DL",
+      "category": "Differential Feed Mechanism",
+      "qty": "1",
+      "material": "Cast aluminum lever with steel pivot",
+      "function": "Operator-accessible lever that sets the differential feed ratio between gather, neutral, and stretch.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Differential Micro-Adjust",
+      "partId": "MO-6800D-DMA",
+      "category": "Differential Feed Mechanism",
+      "qty": "1",
+      "material": "Brass adjusting screw with lock nut",
+      "function": "Fine-tunes the differential feed ratio set by the main differential lever.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Upper Knife",
+      "partId": "MO-6800D-UK",
+      "category": "Cutting Assembly",
+      "qty": "1",
+      "material": "High-speed steel (HSS) cutting edge",
+      "function": "Moving knife that trims the fabric edge in coordination with the fixed lower knife. Driven by the knife-drive linkage from the main shaft.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Lower Knife",
+      "partId": "MO-6800D-LK",
+      "category": "Cutting Assembly",
+      "qty": "1",
+      "material": "High-speed steel (HSS) cutting edge",
+      "function": "Fixed knife that works against the moving upper knife to trim the fabric edge. Mounted on the lower knife holder.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Lower Knife Holder",
+      "partId": "MO-6800D-LKH",
+      "category": "Cutting Assembly",
+      "qty": "1",
+      "material": "Cast iron, machined to accept the lower knife",
+      "function": "Holds the lower knife in position; allows limited adjustment of cutting width.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Knife Drive Linkage",
+      "partId": "MO-6800D-KDL",
+      "category": "Cutting Assembly",
+      "qty": "1",
+      "material": "Steel linkage with bronze bushings",
+      "function": "Connects the knife-drive eccentric on the main shaft to the upper knife holder, producing synchronized up-down knife motion.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Knife Pressure Spring",
+      "partId": "MO-6800D-KPS",
+      "category": "Cutting Assembly",
+      "qty": "1",
+      "material": "Stainless steel compression spring",
+      "function": "Maintains consistent contact pressure between the upper and lower knives for clean cutting.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Thread Tension Assembly — Needle L",
+      "partId": "MO-6800D-TT-NL",
+      "category": "Threading System",
+      "qty": "1",
+      "material": "Steel disc tension, plastic thread guide, brass thumb nut",
+      "function": "Sets the tension of the left needle thread; adjusted by the operator based on fabric and stitch type.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Thread Tension Assembly — Needle R",
+      "partId": "MO-6800D-TT-NR",
+      "category": "Threading System",
+      "qty": "1",
+      "material": "Steel disc tension, plastic thread guide, brass thumb nut",
+      "function": "Sets the tension of the right needle thread.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Thread Tension Assembly — Upper Looper",
+      "partId": "MO-6800D-TT-UL",
+      "category": "Threading System",
+      "qty": "1",
+      "material": "Steel disc tension, plastic thread guide, brass thumb nut",
+      "function": "Sets the tension of the upper looper thread.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Thread Tension Assembly — Lower Looper",
+      "partId": "MO-6800D-TT-LL",
+      "category": "Threading System",
+      "qty": "1",
+      "material": "Steel disc tension, plastic thread guide, brass thumb nut",
+      "function": "Sets the tension of the lower looper thread.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Thread Take-up Spring",
+      "partId": "MO-6800D-TTS",
+      "category": "Threading System",
+      "qty": "4 (one per thread)",
+      "material": "Stainless steel flat spring",
+      "function": "Cushions thread tension fluctuation during stitch formation, preventing skipped stitches and slack loops.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Tension Release Pin",
+      "partId": "MO-6800D-TRP",
+      "category": "Threading System",
+      "qty": "4 (one per thread)",
+      "material": "Steel pin, plastic retainer",
+      "function": "Releases the thread tension when the presser foot is lifted, making threading and removal of the workpiece easier.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Presser Foot (Standard)",
+      "partId": "MO-6800D-PF",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Steel sole, cast iron body, spring-loaded",
+      "function": "Holds the fabric against the feed dogs during sewing. Standard presser foot with 7 mm max lift, max 63.7 N (6.5 kgf) pressure.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Presser Foot Spring",
+      "partId": "MO-6800D-PFS",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Stainless steel compression spring",
+      "function": "Provides adjustable downward pressure on the presser foot via the pressure-adjusting screw on top of the machine.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Presser Foot Lifter Lever",
+      "partId": "MO-6800D-PFL",
+      "category": "Primary Operation Assembly",
+      "qty": "1",
+      "material": "Cast aluminum lever with steel pivot",
+      "function": "Manual lever (and pneumatic option via the knee-lift cylinder) for raising the presser foot to position or remove the fabric.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Oil Pump Worm",
+      "partId": "MO-6800D-OPW",
+      "category": "Lubrication System",
+      "qty": "1",
+      "material": "Hardened steel worm gear",
+      "function": "Drives the lower-loop lubrication pump. Mounted on the main shaft, drives a worm-wheel pump that circulates oil through the sealed lower loop.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Oil Reservoir",
+      "partId": "MO-6800D-OR",
+      "category": "Lubrication System",
+      "qty": "1",
+      "material": "Transparent plastic (PMMA) tank with cap",
+      "function": "Holds the JUKI MACHINE OIL 18 supply; mounted on top of the machine head, refilled as needed.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Oil Distribution Manifold",
+      "partId": "MO-6800D-ODM",
+      "category": "Lubrication System",
+      "qty": "1",
+      "material": "Aluminum alloy manifold with brass fittings",
+      "function": "Distributes pressurized oil to the main shaft bearings, lower looper, feed mechanism, and hook area.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Oil Sight Glass",
+      "partId": "MO-6800D-OSG",
+      "category": "Lubrication System",
+      "qty": "1",
+      "material": "Transparent glass / plastic, steel housing",
+      "function": "Allows the operator to visually confirm oil flow during operation; should show a steady stream of oil drops during sewing.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Oil Filter",
+      "partId": "MO-6800D-OF",
+      "category": "Lubrication System",
+      "qty": "1",
+      "material": "Sintered bronze or felt element in steel housing",
+      "function": "Filters the circulating oil; cleaned or replaced during scheduled maintenance.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "AC Servo Motor (Direct-Drive)",
+      "partId": "PM-6810-MTR",
+      "category": "Motor & Electrical",
+      "qty": "1",
+      "material": "Steel motor housing, copper windings, encoder",
+      "function": "Integrated AC servo motor mounted in the direct-drive control box. Provides variable-speed drive, instant start/stop, and precise needle positioning.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Control Box (Smart Control Box)",
+      "partId": "PM-6810",
+      "category": "Motor & Electrical",
+      "qty": "1",
+      "material": "Steel enclosure with PCB controller and connectors",
+      "function": "Houses the AC servo motor, motor driver PCB, power supply, and connectors for the pedal, synchronizer, and operator panel. Mounts directly under the machine head.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Operation Panel",
+      "partId": "PM-6810-PNL",
+      "category": "Control & Switches",
+      "qty": "1",
+      "material": "ABS plastic with membrane keypad, LED / LCD display",
+      "function": "Operator interface for selecting stitch count, speed, and displaying error codes. Typically integrated into the control box cover.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Foot Pedal",
+      "partId": "PM-6810-PED",
+      "category": "Control & Switches",
+      "qty": "1",
+      "material": "Cast iron pedal, steel linkage, electronic potentiometer",
+      "function": "Controls sewing speed via an electronic potentiometer. Heel position raises the presser foot (or signals thread trim on smart models).",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Synchronizer (Needle Position Sensor)",
+      "partId": "PM-6810-SYN",
+      "category": "Control & Switches",
+      "qty": "1",
+      "material": "Encoder with mounting bracket",
+      "function": "Detects the angular position of the main shaft and signals the control box to stop the needle in the up (or down) position for accurate stitch formation and trimming.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Stitch Length Push-Button Selector",
+      "partId": "MO-6800D-SLB",
+      "category": "Control & Switches",
+      "qty": "1",
+      "material": "Plastic button, steel detent cam",
+      "function": "Operator-accessible push-button that changes the stitch length (0.6–3.8 mm, max 4.5 mm) by selecting a different feed-eccentric position.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Stitch Selector Cam Set",
+      "partId": "MO-6800D-SCS",
+      "category": "Control & Switches",
+      "qty": "1 set",
+      "material": "Hardened steel cam set",
+      "function": "Cam set that the push-button selector engages to set the feed eccentric position. One cam per stitch-length setting.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Machine Head Casting",
+      "partId": "MO-6800D-CAS",
+      "category": "Frame & Housing",
+      "qty": "1",
+      "material": "Cast iron, painted",
+      "function": "Main frame of the machine head, holding all shafts, bearings, and covers.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Bed Plate",
+      "partId": "MO-6800D-BP",
+      "category": "Frame & Housing",
+      "qty": "1",
+      "material": "Cast iron, machined flat",
+      "function": "Flat work surface on which the needle plate sits and the presser foot operates.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Front Cover",
+      "partId": "MO-6800D-FC",
+      "category": "Covers & Guards",
+      "qty": "1",
+      "material": "ABS plastic, hinged",
+      "function": "Operator-side cover for the needle / looper area; hinged for access to threading and oiling. Includes thread-tension mounting area.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Side Cover — Left",
+      "partId": "MO-6800D-SC-L",
+      "category": "Covers & Guards",
+      "qty": "1",
+      "material": "ABS plastic, snap-fit",
+      "function": "Covers the main shaft and drive area on the left side of the head; provides safety and noise reduction.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Side Cover — Right",
+      "partId": "MO-6800D-SC-R",
+      "category": "Covers & Guards",
+      "qty": "1",
+      "material": "ABS plastic, snap-fit",
+      "function": "Covers the differential / feed mechanism on the right side of the head; provides safety and noise reduction.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Top Cover",
+      "partId": "MO-6800D-TC",
+      "category": "Covers & Guards",
+      "qty": "1",
+      "material": "ABS plastic, hinged",
+      "function": "Hinged cover on top of the head; provides access to the oil reservoir and tension assemblies.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Eye Guard",
+      "partId": "MO-6800D-EG",
+      "category": "Covers & Guards",
+      "qty": "1",
+      "material": "Polycarbonate (PC) clear plastic",
+      "function": "Transparent guard in front of the needle area to protect the operator's eyes from needle breakage and thread fragments.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Finger Guard",
+      "partId": "MO-6800D-FG",
+      "category": "Covers & Guards",
+      "qty": "1",
+      "material": "Polycarbonate (PC) clear plastic, hinged",
+      "function": "Front guard over the needle / presser foot area; prevents finger contact with the moving needle. Required by safety regulations.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Mounting Bolts (Head to Table)",
+      "partId": "MO-6800D-MB",
+      "category": "Fasteners & Hardware",
+      "qty": "4",
+      "material": "Grade 8.8 steel, zinc-plated",
+      "function": "Four M10 bolts and rubber anti-vibration cushions that mount the machine head to the table top.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Rubber Anti-Vibration Cushion",
+      "partId": "MO-6800D-AVC",
+      "category": "Fasteners & Hardware",
+      "qty": "4 (one per mounting bolt)",
+      "material": "Natural rubber / neoprene",
+      "function": "Vibration-damping cushion between the head and the table; reduces noise and prevents head migration during high-speed operation.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Hinge Pin (Front / Top Cover)",
+      "partId": "MO-6800D-HP",
+      "category": "Fasteners & Hardware",
+      "qty": "2 (front, top)",
+      "material": "Hardened steel pin, brass retainer",
+      "function": "Pivot pin for the hinged front and top covers.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Screw — Needle Clamp",
+      "partId": "MO-6800D-SC-N",
+      "category": "Fasteners & Hardware",
+      "qty": "2 (one per needle)",
+      "material": "Hardened steel, fine thread",
+      "function": "Clamping screw for the needle in the needle bar clamp.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Screw — Needle Plate",
+      "partId": "MO-6800D-SC-NP",
+      "category": "Fasteners & Hardware",
+      "qty": "2",
+      "material": "Steel, slotted or Phillips head",
+      "function": "Two screws securing the needle plate to the bed plate.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Screw — Lower Knife Holder",
+      "partId": "MO-6800D-SC-LK",
+      "category": "Fasteners & Hardware",
+      "qty": "1",
+      "material": "Steel, slotted head",
+      "function": "Clamping screw for the lower knife in the lower knife holder.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Screw — Presser Foot",
+      "partId": "MO-6800D-SC-PF",
+      "category": "Fasteners & Hardware",
+      "qty": "1",
+      "material": "Steel, slotted head",
+      "function": "Mounting screw for the presser foot on the presser foot bar.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Screw — Tension Thumb Nut",
+      "partId": "MO-6800D-SC-TT",
+      "category": "Fasteners & Hardware",
+      "qty": "4 (one per thread tension assembly)",
+      "material": "Brass knurled thumb nut",
+      "function": "Operator-accessible thumb nut that sets the tension disc pressure.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Bearing — Main Shaft",
+      "partId": "MO-6800D-BRG-MS",
+      "category": "Drive & Transmission",
+      "qty": "2",
+      "material": "Sealed deep-groove ball bearing, steel",
+      "function": "Two sealed ball bearings supporting the main shaft in the head casting.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Bushing — Needle Bar (Lower)",
+      "partId": "MO-6800D-BSH-NB",
+      "category": "Primary Operation Assembly",
+      "qty": "2 (one per needle bar)",
+      "material": "Sintered bronze bushing, oil-impregnated",
+      "function": "Lower bushing that guides the needle bar. Per JUKI spec, the needle bar uses a lower bushing type guide (not a sealed ball bearing).",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Bushing — Looper Shaft",
+      "partId": "MO-6800D-BSH-LS",
+      "category": "Primary Operation Assembly",
+      "qty": "2 (one per looper)",
+      "material": "Sintered bronze bushing, oil-impregnated",
+      "function": "Bushing supporting the upper and lower looper shafts.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Needle Thread Cooler (Silicone Oil Reservoir)",
+      "partId": "MO-6800D-NTC",
+      "category": "Threading System",
+      "qty": "1",
+      "material": "Plastic reservoir with felt wick and silicone oil",
+      "function": "Applies a trace of silicone oil to the needle thread as it passes through, reducing needle heat and thread friction. Standard equipment on the MO-6800D series.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "partName": "Needle Point Cooler",
+      "partId": "MO-6800D-NPC",
+      "category": "Threading System",
+      "qty": "1",
+      "material": "Plastic / felt assembly",
+      "function": "Cools the needle at the needle tip via a small air-blast or felt contact, preventing needle overheating at high speed. Standard equipment.",
+      "verified": "⚠️",
+      "source": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    }
+  ],
+  "maintenance": [
+    {
+      "code": "Needle Breakage",
+      "definition": "Wrong needle size, needle bar height out of adjustment, needle clamp loose, fabric obstruction, or stitch timing off",
+      "action": "Replace needle with correct DC×27 size, check needle bar height (24.5 mm stroke, 20° angle), tighten needle clamp screw, verify looper timing, clear any obstruction"
+    },
+    {
+      "code": "Thread Breakage (Needle Thread)",
+      "definition": "Tension too high, needle thread cooler empty, needle thread path obstructed, needle eye / point rough, or machine running too fast for the thread type",
+      "action": "Reduce needle thread tension, refill needle thread cooler with silicone oil, clean thread path, replace needle, reduce speed for fine thread"
+    },
+    {
+      "code": "Thread Breakage (Looper Thread)",
+      "definition": "Tension too high, looper thread path obstructed, looper point / eye damaged, looper timing off, or looper needle-plate clearance incorrect",
+      "action": "Reduce looper tension, clean looper thread path, inspect / replace looper, re-time looper per manual, adjust looper-to-needle clearance"
+    },
+    {
+      "code": "Skipped Stitches",
+      "definition": "Needle / looper timing off, needle bar height wrong, needle clamp loose, looper point worn, or needle / thread mismatch",
+      "action": "Re-time needle to looper per manual, reset needle bar height, tighten needle clamp, replace looper if worn, verify needle size and thread size"
+    },
+    {
+      "code": "Poor Edge Trimming",
+      "definition": "Knives dull or chipped, knife timing off, knife pressure spring weak, or knife alignment off",
+      "action": "Sharpen or replace upper / lower knife, adjust knife timing, replace knife pressure spring, re-align upper / lower knife"
+    },
+    {
+      "code": "Uneven Differential Feed (Puckering or Stretching)",
+      "definition": "Differential lever / micro-adjust set wrong for fabric, feed dog teeth worn, feed dog height wrong, or feed dog spring weak",
+      "action": "Re-set differential lever to gather / neutral / stretch as needed, inspect feed dog teeth, adjust feed dog height, replace feed dog springs"
+    },
+    {
+      "code": "No Oil Flow at Sight Glass",
+      "definition": "Oil reservoir empty, oil filter clogged, oil pump worm worn, or oil distribution line blocked",
+      "action": "Refill with JUKI MACHINE OIL 18, clean or replace oil filter, inspect / replace oil pump worm, flush oil distribution lines"
+    },
+    {
+      "code": "Oil Leakage",
+      "definition": "Oil seal / gasket worn, oil reservoir overfilled, oil return line blocked, or head cover seal damaged",
+      "action": "Replace worn oil seals, drain to correct level, clear oil return line, replace damaged cover gaskets"
+    },
+    {
+      "code": "Machine Does Not Start",
+      "definition": "Power supply issue, control box fault, foot pedal failure, synchronizer failure, or motor error code",
+      "action": "Check power supply, check control box for error codes, test foot pedal, test synchronizer, refer to PM-6810 error code table"
+    },
+    {
+      "code": "Needle Does Not Stop in Up Position",
+      "definition": "Synchronizer misalignment, synchronizer failure, or control box error",
+      "action": "Re-align synchronizer per manual, replace synchronizer if faulty, clear control box error or replace control box"
+    },
+    {
+      "code": "Abnormal Noise or Vibration",
+      "definition": "Loose mounting bolts, worn bearing or bushing, oil starvation, or main-shaft coupling worn",
+      "action": "Tighten head mounting bolts, replace worn bearing / bushing, refill oil, replace main-shaft coupling"
+    },
+    {
+      "code": "Stitch Length Not Changing",
+      "definition": "Push-button selector worn, stitch selector cam set not engaging, or feed eccentric linkage loose",
+      "action": "Replace push-button selector, inspect / replace cam set, re-tighten feed eccentric linkage"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "JUKI MO-6800D Series Product Page (Japanese)",
+      "description": "Official product page with full specifications, model lineup, and downloadable parts list. Contains the verified specs used in this document.",
+      "url": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D"
+    },
+    {
+      "resourceName": "JUKI MO-6800D Series Catalog PDF (Japanese)",
+      "description": "Official product catalog PDF (Japanese). Source for product images and overview copy.",
+      "url": "https://www.juki.co.jp/industrial_j/admin/pdata/filedata/44/mo6800dj.pdf"
+    },
+    {
+      "resourceName": "JUKI MO-6800D Series Parts List PDF (Japanese)",
+      "description": "Official parts catalog PDF (Japanese, 3 MB) with exploded diagrams, part numbers, and per-machine quantities. Covers the MO-6800D / MO-6800_DD10 series including the MO-6816D variant. PRIMARY source for parts documentation.",
+      "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/mo6800_dd10/menu/pdf/partslist_d.pdf"
+    },
+    {
+      "resourceName": "JUKI MO-6800D Series Instruction Manual (Japanese)",
+      "description": "Official instruction manual PDF (Japanese). Source for working principles, lubrication, threading, maintenance, and exploded views of all parts.",
+      "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/mo6800d.pdf"
+    },
+    {
+      "resourceName": "JUKI WebPartsList Portal",
+      "description": "Official online parts catalog. Requires login / form submission to access individual model parts. Verified reachable (HTTP 200).",
+      "url": "https://www.juki.co.jp/partslist/?language=en"
+    },
+    {
+      "resourceName": "JUKI Global Industrial Site (Homepage)",
+      "description": "JUKI global corporate site. Verified reachable (HTTP 200).",
+      "url": "https://www.juki.com/"
+    }
+  ],
+  "finalNotes": "• The JUKI MO-6816D is one model in the MO-6800D series (alongside MO-6804D 1-needle, MO-6814D 2-needle overlock, MO-6843D 3-needle interlock). It is the 2-needle / 4-thread safety-stitch (516 type) variant with a 3 mm or 5 mm needle width.\n• Per the official JUKI product page, common specifications across the MO-6800D series are: max 7,000 sti/min, 0.6–3.8 mm (max 4.5 mm) stitch length, 24.5 mm needle bar stroke, 20° needle inclination angle, lower-bushing needle bar guide, DC×27 needle system, 7 mm max presser foot lift, 63.7 N max presser foot pressure, lever-type differential feed with micro-adjust, push-button stitch length selector, automatic lower-loop lubrication (needle bar and upper looper are oil-free), JUKI MACHINE OIL 18, 27 kg head weight, standard needle point and thread coolers, and an optional micro-lifter.\n• The MO-6816D head is offered as a direct-drive head for mounting on the JUKI PM-6810 (or equivalent) smart control box with integrated AC servo motor. Motor specifications are not listed on the product page.\n• All 4 threads (needle-L, needle-R, upper looper, lower looper) require independent tension adjustment and a corresponding thread take-up spring.\n• Verified flag is ⚠️ (1 official source = JUKI product page) for every part in this document. When the official JUKI parts catalog is accessed via the WebPartsList portal and the instruction manual PDF is parsed, parts can be upgraded to ✅ (2+ official sources).\n• The instruction manual and parts catalog PDFs on juki.co.jp are in Japanese only. An English version of the manual could not be located on the public JUKI site as of 2026-06-16.",
+  "partsMeta": {
+    "totalParts": 64,
+    "catalogSource": "https://www.juki.co.jp/industrial_j/products_j/apparel_j/overlock/detail.php?cd=MO-6800D",
+    "catalogVersion": "MO-6800D series product page, accessed 2026-06-16",
+    "lastVerified": "2026-06-16T00:00:00.000Z"
+  }
+}

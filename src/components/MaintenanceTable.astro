@@ -1,6 +1,6 @@
 ---
 interface Props {
-  items: { code: string; definition: string; action: string }[];
+  items: { code: string; definition: string; action: string; flag?: string }[];
 }
 const { items } = Astro.props;
 ---
@@ -20,8 +20,9 @@ const { items } = Astro.props;
   <table id="maintenance-table" style="width:100%; border-collapse:collapse; font-size:12px; font-family:'Inter',sans-serif;">
     <thead>
       <tr style="background:#0f1111;">
-        <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ff9900; border-bottom:1px solid #2a2a2a; width:18%;">Symptom / Code</th>
-        <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ccc; border-bottom:1px solid #2a2a2a; width:40%;">Definition / Cause</th>
+        <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ff9900; border-bottom:1px solid #2a2a2a; width:14%;">Symptom / Code</th>
+        <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ccc; border-bottom:1px solid #2a2a2a; width:8%;">Flag</th>
+        <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ccc; border-bottom:1px solid #2a2a2a; width:36%;">Definition / Cause</th>
         <th style="padding:8px 12px; text-align:left; font-weight:600; color:#ccc; border-bottom:1px solid #2a2a2a;">Corrective Action</th>
       </tr>
     </thead>
@@ -29,6 +30,15 @@ const { items } = Astro.props;
       {items.map((item, i) => (
         <tr class="maintenance-row" style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
           <td style="padding:7px 12px; font-weight:700; color:#c0392b; border-bottom:1px solid #f0f0f0; vertical-align:top;">{item.code}</td>
+          <td style="padding:7px 12px; color:#888; border-bottom:1px solid #f0f0f0; vertical-align:top; font-size:11px;">
+            {item.flag ? (
+              <span style={`display:inline-block; font-size:10px; font-weight:600; padding:2px 7px; border-radius:10px; white-space:nowrap; ${item.flag.includes("Field") ? "background:#fff3cd; color:#856404; border:1px solid #ffe69c;" : "background:#f0f2f2; color:#565959; border:1px solid #e3e6e6;"}`}>
+                {item.flag}
+              </span>
+            ) : (
+              <span style="color:#bbb;">—</span>
+            )}
+          </td>
           <td style="padding:7px 12px; color:#333; border-bottom:1px solid #f0f0f0; vertical-align:top;">{item.definition}</td>
           <td style="padding:7px 12px; color:#565959; border-bottom:1px solid #f0f0f0; vertical-align:top;">{item.action}</td>
         </tr>
