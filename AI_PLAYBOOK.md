@@ -35,6 +35,12 @@ When modifying the website schema or adding new fields, follow these rules to av
   3. **Never delete this file permanently.**
 - **Recovery**: If CI fails with the schema-drift error, run `npx tinacms dev --no-server`, commit the regenerated lock, push. No need to revert the schema change.
 
+### 🚨 Rule 1b: CI Build Uses `--skip-cloud-checks`
+- **What it is**: The deploy workflow runs `npx tinacms build --skip-cloud-checks && npm run build`. The flag tells TinaCMS to use the local schema as-is without comparing to the cloud's last-indexed schema.
+- **Why it matters**: Even with a freshly-regenerated `tina-lock.json`, the cloud's `Last indexed at` timestamp lags the local lock. The next `tinacms build` reports the local-vs-cloud drift as `[NON_BREAKING - TYPE_ADDED] ...` and exits 1. This blocks every deploy after a schema change.
+- **Action**: Keep `--skip-cloud-checks` in `.github/workflows/deploy.yml`. Without this flag, every new collection / field added to `tina/config.ts` requires a separate manual reindex on TinaCloud before CI passes.
+- **Trade-off**: We lose the cloud-side schema validation. The trade is acceptable here because (a) the lock file is committed and reviewed in PRs, (b) the site itself doesn't need a live cloud connection at build time, and (c) the alternative is a brittle deploy that breaks on every non-breaking change.
+
 ### 🚨 Rule 2: Keep All Category Enums Synchronized
 - **What it is**: The `category` field in `tina/config.ts` restricts values to a predefined list of string options.
 - **Why it matters**: If you or the Python parsing agent adds a machine JSON file with a category value that is *not* in the config options list, **TinaCMS saving operations will crash** with a validation error.
