@@ -275,4 +275,33 @@ When migrating an existing machine, the following fields can be added (all are b
 - `lastVerified` (datetime)
 
 ---
+
+## Case Study 9 — Semantic Parts Inventory (June 2026)
+
+**Problem.** The parts image library (`src/content/parts-library/`) started naive — counting unique parts as `${brand}:${partId}` produced 503 unique entries. But many machines share the same physical parts (Bobbin, Needle DC×27, V-Belt) under different brand names and part IDs. Adding 503 images is unmanageable.
+
+**Solution.** A 52-concept taxonomy (`src/lib/concepts.ts`) maps each part row to one canonical concept via regex patterns against `partName` + `partId`, with two-tier scoping:
+- **Generic concepts** (`generic: true`): one image serves every brand (Needle DC×27, 608ZZ Bearing).
+- **Brand-scoped concepts** (`generic: false`): per-brand image (Bobbin — different part numbers).
+
+`appliesToCategories` filters prevent false matches (e.g. Upper Looper only matches Overlock/Chain Stitch machines, not lockstitch).
+
+**Pipeline.**
+1. `npm run scan-parts` walks `src/content/machines/*.json`, matches each row to a concept, writes `src/content/parts-inventory/<key>.json` per unique concept.
+2. `/parts-inventory` admin page (Astro) shows 73 rows with search + status + type filters; "Add image" deep-links to TinaCMS with key/brand/partName pre-filled.
+3. After upload + `npm run scan-parts`, `hasImage: true` hides the row from default view.
+
+**Numbers.**
+- 505 part rows → 73 inventory entries (86% reduction).
+- 27 generic concepts (one image → many machines) + 46 brand-scoped.
+- 235/505 rows matched to concepts; 270 stay as machine-specific orphans (Brother DA-927A's 173 sub-parts being the largest).
+
+**Key learnings.**
+- `generic` flag belongs in the concept definition, not at the library-entry level — it expresses semantic intent.
+- `scripts/scan-parts.mjs` parses `concepts.ts` source text directly (vanilla .mjs can't import .ts) — robust depth-tracking parser handles nested braces/strings correctly.
+- Brand names with spaces ("Dark Horse", "Kansai Special", "Ngai Shing") must be slugified in lookup keys — `${brand.toLowerCase()}-${concept.key}` produced filenames like `dark horse-rotary-hook.json` which break GitHub Pages.
+- Don't use `Set.prototype.length` — it's `.size`.
+- Push to GitHub via `git push` is the only step that requires interactive auth from a non-bash sandbox — commits are local; user must run push from their own terminal.
+
+---
 *(End of playbook. Future agents: Append your case studies here.)*
