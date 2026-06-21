@@ -41,6 +41,12 @@ When modifying the website schema or adding new fields, follow these rules to av
 - **Action**: Keep `--skip-cloud-checks` in `.github/workflows/deploy.yml`. Without this flag, every new collection / field added to `tina/config.ts` requires a separate manual reindex on TinaCloud before CI passes.
 - **Trade-off**: We lose the cloud-side schema validation. The trade is acceptable here because (a) the lock file is committed and reviewed in PRs, (b) the site itself doesn't need a live cloud connection at build time, and (c) the alternative is a brittle deploy that breaks on every non-breaking change.
 
+### 🚨 Rule 1c: Avoid Adding New Collections to `tina/config.ts` for Read-Only / Generated Data
+- **What it is**: The `partsInventory` collection was added in commit `a2e0a67` to expose auto-generated JSON files (from `npm run scan-parts`) as an editable collection in TinaCMS. It caused a production GraphQL schema mismatch because TinaCloud's stored schema lags behind local config changes — the cloud's response then references collection names (e.g. `partsInventory`) that the deployed admin bundle can't find at runtime, producing errors like `Expected to find collection named tsInventorypar`.
+- **Why it matters**: TinaCloud reindexing is decoupled from the build pipeline. `tinacms build --skip-cloud-checks` produces a valid dist/ but does NOT push the new schema to TinaCloud. The deployed admin and the cloud-side GraphQL schema drift apart, breaking the admin at runtime.
+- **Action**: For data that is auto-generated (scan results, build outputs, derived state), do NOT add a TinaCMS collection. Edit the JSON files directly via the filesystem, or build a separate Astro page to browse them. The TinaCMS collection should only be added for data a human will create/edit through the CMS UI.
+- **Recovery if already broken**: (1) Remove the offending collection from `tina/config.ts`, (2) regen `tina/tina-lock.json` with `npx tinacms dev --no-server`, (3) commit + push. The next deploy will produce an admin bundle that matches the cloud's stored schema.
+
 ### 🚨 Rule 2: Keep All Category Enums Synchronized
 - **What it is**: The `category` field in `tina/config.ts` restricts values to a predefined list of string options.
 - **Why it matters**: If you or the Python parsing agent adds a machine JSON file with a category value that is *not* in the config options list, **TinaCMS saving operations will crash** with a validation error.
