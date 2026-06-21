@@ -1,0 +1,16 @@
+{
+  "key": "brother-cover",
+  "type": "brand-scoped",
+  "label": "Cover (top / side / belt / face)",
+  "brand": "Brother",
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Belt Cover",
+    "Belt Cover Plate",
+    "Cover"
+  ]
+}

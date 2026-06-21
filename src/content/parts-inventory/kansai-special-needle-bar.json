@@ -1,0 +1,15 @@
+{
+  "key": "kansai-special-needle-bar",
+  "type": "brand-scoped",
+  "label": "Needle Bar (with clamp)",
+  "brand": "Kansai Special",
+  "machines": [
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Needle Bar",
+    "Needle Clamp (x4)"
+  ]
+}

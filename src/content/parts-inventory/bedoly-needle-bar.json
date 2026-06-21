@@ -1,0 +1,14 @@
+{
+  "key": "bedoly-needle-bar",
+  "type": "brand-scoped",
+  "label": "Needle Bar (with clamp)",
+  "brand": "Bedoly",
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Needle Bar"
+  ]
+}

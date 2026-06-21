@@ -1,0 +1,15 @@
+{
+  "key": "zoje-thread-takeup",
+  "type": "brand-scoped",
+  "label": "Thread Take-Up Lever",
+  "brand": "ZOJE",
+  "machines": [
+    "zoje-zj8000e"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Main Shaft & Thread Take-up (Group B)",
+    "Thread Take-up Lever"
+  ]
+}

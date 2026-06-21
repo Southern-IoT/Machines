@@ -1,0 +1,17 @@
+{
+  "key": "juki-thread-trimmer",
+  "type": "brand-scoped",
+  "label": "Thread Trimmer (auto / knife)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-ams-210en",
+    "juki-lbh-1790a-s"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Trimmer",
+    "Upper and Lower Thread Trimmers",
+    "Thread Trim Motors"
+  ]
+}

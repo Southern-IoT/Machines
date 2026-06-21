@@ -1,0 +1,15 @@
+{
+  "key": "thread-spool-pin",
+  "type": "generic",
+  "label": "Thread Spool Pin (thread stand)",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Spool Pin",
+    "Thread Spool Pin Cap"
+  ]
+}

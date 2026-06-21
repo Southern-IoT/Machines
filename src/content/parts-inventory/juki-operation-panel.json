@@ -1,0 +1,18 @@
+{
+  "key": "juki-operation-panel",
+  "type": "brand-scoped",
+  "label": "Operation Panel (display / buttons)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-lbh-1790a-s",
+    "juki-lk-1900bn",
+    "juki-mf-7723",
+    "juki-mo-6816d"
+  ],
+  "occurrences": 4,
+  "hasImage": false,
+  "sampleNames": [
+    "IND Board (Operation Panel ASSY)",
+    "Operation Panel"
+  ]
+}

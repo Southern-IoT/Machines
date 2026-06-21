@@ -1,0 +1,14 @@
+{
+  "key": "v-belt",
+  "type": "generic",
+  "label": "V-Belt (Drive Belt)",
+  "brand": null,
+  "machines": [
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "V-Belt / Drive Belt"
+  ]
+}

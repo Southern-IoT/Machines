@@ -1,0 +1,18 @@
+{
+  "key": "presser-foot",
+  "type": "generic",
+  "label": "Presser Foot (standard snap-on)",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "juki-mo-6816d",
+    "kansai-dfb-1404psf",
+    "zoje-zj8000e"
+  ],
+  "occurrences": 4,
+  "hasImage": false,
+  "sampleNames": [
+    "Presser Foot",
+    "Presser Foot (Standard)"
+  ]
+}

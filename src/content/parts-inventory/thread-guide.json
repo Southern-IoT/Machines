@@ -1,0 +1,17 @@
+{
+  "key": "thread-guide",
+  "type": "generic",
+  "label": "Thread Guide / Eyelet",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 21,
+  "hasImage": false,
+  "sampleNames": [
+    "Upper Thread Guide",
+    "Thread Guide (arm)",
+    "Thread Guide, Needle",
+    "Upper Thread Guide (J33)"
+  ]
+}

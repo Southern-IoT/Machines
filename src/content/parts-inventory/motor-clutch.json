@@ -1,0 +1,16 @@
+{
+  "key": "motor-clutch",
+  "type": "generic",
+  "label": "Electric Motor (Clutch type)",
+  "brand": null,
+  "machines": [
+    "kansai-dfb-1404psf",
+    "ngai-shing-ns-2410"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Electric Motor (Clutch or Servo)",
+    "Main Drive Motor"
+  ]
+}

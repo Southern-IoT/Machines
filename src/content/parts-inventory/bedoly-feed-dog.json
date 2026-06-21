@@ -1,0 +1,14 @@
+{
+  "key": "bedoly-feed-dog",
+  "type": "brand-scoped",
+  "label": "Feed Dog (main or differential)",
+  "brand": "Bedoly",
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Feed Dog"
+  ]
+}

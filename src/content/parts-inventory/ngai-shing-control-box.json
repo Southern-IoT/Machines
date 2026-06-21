@@ -1,0 +1,14 @@
+{
+  "key": "ngai-shing-control-box",
+  "type": "brand-scoped",
+  "label": "Control Box (smart / electronic)",
+  "brand": "Ngai Shing",
+  "machines": [
+    "ngai-shing-ns-2410"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Electrical Control Panel"
+  ]
+}

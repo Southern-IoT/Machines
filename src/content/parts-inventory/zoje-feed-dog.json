@@ -1,0 +1,14 @@
+{
+  "key": "zoje-feed-dog",
+  "type": "brand-scoped",
+  "label": "Feed Dog (main or differential)",
+  "brand": "ZOJE",
+  "machines": [
+    "zoje-zj8000e"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Feed Dog"
+  ]
+}

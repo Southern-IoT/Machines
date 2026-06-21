@@ -1,0 +1,25 @@
+{
+  "key": "thread-tension",
+  "type": "generic",
+  "label": "Thread Tension Assembly (disc stack)",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "brother-da-927a",
+    "juki-ams-210en",
+    "juki-lbh-1790a-s",
+    "juki-lk-1900bn",
+    "juki-mo-6816d",
+    "kansai-dfb-1404psf",
+    "wulin-dh-155-12",
+    "zoje-zj8000e"
+  ],
+  "occurrences": 18,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Tension Assembly (Tension Discs)",
+    "Upper Thread Tension Assy 927/2",
+    "Upper Thread Tension Assy 927/3",
+    "Tension Disc Felt"
+  ]
+}

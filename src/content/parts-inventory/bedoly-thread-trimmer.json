@@ -1,0 +1,15 @@
+{
+  "key": "bedoly-thread-trimmer",
+  "type": "brand-scoped",
+  "label": "Thread Trimmer (auto / knife)",
+  "brand": "Bedoly",
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Trimmer Moving Knife (Blade)",
+    "Thread Trimmer Solenoid"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "key": "juki-bobbin",
+  "type": "brand-scoped",
+  "label": "Bobbin (assembly with case)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-lbh-1790a-s"
+  ],
+  "occurrences": 1,
+  "hasImage": true,
+  "sampleNames": [
+    "Bobbin and Bobbin Case"
+  ]
+}

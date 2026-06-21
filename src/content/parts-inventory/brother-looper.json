@@ -1,0 +1,17 @@
+{
+  "key": "brother-looper",
+  "type": "brand-scoped",
+  "label": "Looper (main)",
+  "brand": "Brother",
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 4,
+  "hasImage": false,
+  "sampleNames": [
+    "Lapper Guide Plate",
+    "Lapper Guide Plate Washer",
+    "Lapper Assy",
+    "Looper M (3-needle)"
+  ]
+}

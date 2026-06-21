@@ -1,0 +1,17 @@
+{
+  "key": "brother-presser-bar",
+  "type": "brand-scoped",
+  "label": "Presser Bar (mechanical assembly)",
+  "brand": "Brother",
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 8,
+  "hasImage": false,
+  "sampleNames": [
+    "Presser Bar (927A)",
+    "Presser Bar (928A)",
+    "Presser Bar Bush",
+    "Presser Bar Guide Bracket"
+  ]
+}

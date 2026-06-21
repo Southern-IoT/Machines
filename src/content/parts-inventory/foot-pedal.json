@@ -1,0 +1,18 @@
+{
+  "key": "foot-pedal",
+  "type": "generic",
+  "label": "Foot Pedal (Foot Controller)",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "juki-mo-6816d",
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Foot Pedal (Foot Controller)",
+    "Foot Pedal",
+    "Foot Pedal (Treadle)"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "key": "juki-thread-takeup",
+  "type": "brand-scoped",
+  "label": "Thread Take-Up Lever",
+  "brand": "JUKI",
+  "machines": [
+    "juki-mo-6816d"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Take-up Spring"
+  ]
+}

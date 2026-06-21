@@ -1,0 +1,15 @@
+{
+  "key": "bedoly-control-box",
+  "type": "brand-scoped",
+  "label": "Control Box (smart / electronic)",
+  "brand": "Bedoly",
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Main Control Box (ECU)",
+    "Microcontroller (MCU / CPU)"
+  ]
+}

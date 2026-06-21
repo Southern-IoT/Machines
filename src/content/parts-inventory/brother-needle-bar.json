@@ -1,0 +1,16 @@
+{
+  "key": "brother-needle-bar",
+  "type": "brand-scoped",
+  "label": "Needle Bar (with clamp)",
+  "brand": "Brother",
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Needle Bar",
+    "Needle Clamp Assy (2-needle)",
+    "Needle Clamp Assy 1/8×2-1 (3-needle)"
+  ]
+}

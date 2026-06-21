@@ -1,0 +1,15 @@
+{
+  "key": "brother-main-shaft",
+  "type": "brand-scoped",
+  "label": "Main Shaft (upper shaft)",
+  "brand": "Brother",
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Upper Shaft Assy",
+    "Upper Shaft"
+  ]
+}

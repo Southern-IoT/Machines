@@ -1,0 +1,14 @@
+{
+  "key": "bearing-6201zz",
+  "type": "generic",
+  "label": "Ball Bearing 6201ZZ",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Ball Bearing 6201ZZ"
+  ]
+}

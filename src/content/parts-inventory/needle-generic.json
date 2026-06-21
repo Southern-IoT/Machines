@@ -1,0 +1,18 @@
+{
+  "key": "needle-generic",
+  "type": "generic",
+  "label": "Needle (generic / unspecified system)",
+  "brand": null,
+  "machines": [
+    "juki-lbh-1790a-s",
+    "kansai-dfb-1404psf",
+    "wulin-dh-155-12",
+    "zoje-zj8000e"
+  ],
+  "occurrences": 4,
+  "hasImage": false,
+  "sampleNames": [
+    "Needle",
+    "Needle (x4)"
+  ]
+}

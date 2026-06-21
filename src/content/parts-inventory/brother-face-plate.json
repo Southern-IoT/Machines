@@ -1,0 +1,15 @@
+{
+  "key": "brother-face-plate",
+  "type": "brand-scoped",
+  "label": "Face Plate (front cover)",
+  "brand": "Brother",
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Face Plate",
+    "Face Plate Packing"
+  ]
+}

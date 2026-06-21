@@ -1,0 +1,14 @@
+{
+  "key": "bearing-6302vv",
+  "type": "generic",
+  "label": "Ball Bearing 6302VV (thrust)",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Ball Bearing, Thrust 6302VV"
+  ]
+}

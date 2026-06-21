@@ -1,0 +1,21 @@
+{
+  "key": "motor-ac-servo",
+  "type": "generic",
+  "label": "AC Servo Motor (Direct-Drive)",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "juki-mf-7723",
+    "juki-mo-6816d",
+    "kansai-dfb-1404psf",
+    "zoje-zj8000e"
+  ],
+  "occurrences": 5,
+  "hasImage": false,
+  "sampleNames": [
+    "Servo Motor",
+    "AC Servo Motor",
+    "AC Servo Motor (Direct-Drive)",
+    "Servo Motor Controller (if servo)"
+  ]
+}

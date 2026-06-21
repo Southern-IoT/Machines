@@ -1,0 +1,19 @@
+{
+  "key": "bearing-generic",
+  "type": "generic",
+  "label": "Ball Bearing (generic / unspecified size)",
+  "brand": null,
+  "machines": [
+    "brother-da-927a",
+    "juki-mo-6816d",
+    "ngai-shing-ns-2410"
+  ],
+  "occurrences": 6,
+  "hasImage": false,
+  "sampleNames": [
+    "Ball Bearing Cover",
+    "Ball Bearing Cover Packing",
+    "Bearing Holder",
+    "Ball Bearing Bush"
+  ]
+}

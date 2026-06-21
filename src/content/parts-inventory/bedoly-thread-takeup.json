@@ -1,0 +1,14 @@
+{
+  "key": "bedoly-thread-takeup",
+  "type": "brand-scoped",
+  "label": "Thread Take-Up Lever",
+  "brand": "Bedoly",
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Take-Up Lever (Thread Take-Up Arm)"
+  ]
+}

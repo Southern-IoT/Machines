@@ -1,0 +1,15 @@
+{
+  "key": "juki-oil-reservoir",
+  "type": "brand-scoped",
+  "label": "Oil Reservoir / Pan",
+  "brand": "JUKI",
+  "machines": [
+    "juki-mo-6816d"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Oil Reservoir",
+    "Needle Thread Cooler (Silicone Oil Reservoir)"
+  ]
+}

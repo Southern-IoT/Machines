@@ -1,0 +1,14 @@
+{
+  "key": "bedoly-oil-reservoir",
+  "type": "brand-scoped",
+  "label": "Oil Reservoir / Pan",
+  "brand": "Bedoly",
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Oil Reservoir (Oil Sump)"
+  ]
+}

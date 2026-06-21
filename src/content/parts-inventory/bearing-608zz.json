@@ -1,0 +1,14 @@
+{
+  "key": "bearing-608zz",
+  "type": "generic",
+  "label": "Ball Bearing 608ZZ",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Ball Bearing, 608ZZ"
+  ]
+}

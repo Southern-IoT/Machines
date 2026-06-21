@@ -1,0 +1,14 @@
+{
+  "key": "zoje-thread-trimmer",
+  "type": "brand-scoped",
+  "label": "Thread Trimmer (auto / knife)",
+  "brand": "ZOJE",
+  "machines": [
+    "zoje-zj8000e"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Trimmer (Group G)"
+  ]
+}

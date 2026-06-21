@@ -1,0 +1,16 @@
+{
+  "key": "solenoid",
+  "type": "generic",
+  "label": "Solenoid (electromagnetic)",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "ngai-shing-ns-2410"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Presser Foot Lift Solenoid (Auto-Lifter)",
+    "Solenoid Valve"
+  ]
+}

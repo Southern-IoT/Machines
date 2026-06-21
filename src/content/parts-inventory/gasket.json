@@ -1,0 +1,19 @@
+{
+  "key": "gasket",
+  "type": "generic",
+  "label": "Gasket / Packing / Oil Seal",
+  "brand": null,
+  "machines": [
+    "brother-da-927a",
+    "juki-mf-7723",
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 5,
+  "hasImage": false,
+  "sampleNames": [
+    "Front Feed Arm Cap Packing",
+    "Felt Support",
+    "Thread Spool Felt",
+    "Gasket H"
+  ]
+}

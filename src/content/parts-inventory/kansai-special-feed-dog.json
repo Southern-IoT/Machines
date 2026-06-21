@@ -1,0 +1,14 @@
+{
+  "key": "kansai-special-feed-dog",
+  "type": "brand-scoped",
+  "label": "Feed Dog (main or differential)",
+  "brand": "Kansai Special",
+  "machines": [
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Feed Dog"
+  ]
+}

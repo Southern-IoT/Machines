@@ -1,0 +1,14 @@
+{
+  "key": "juki-presser-bar",
+  "type": "brand-scoped",
+  "label": "Presser Bar (mechanical assembly)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-lbh-1790a-s"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Presser / Work Clamp"
+  ]
+}

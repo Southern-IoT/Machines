@@ -1,0 +1,20 @@
+{
+  "key": "juki-control-box",
+  "type": "brand-scoped",
+  "label": "Control Box (smart / electronic)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-lbh-1790a-s",
+    "juki-lk-1900bn",
+    "juki-mf-7723",
+    "juki-mo-6816d"
+  ],
+  "occurrences": 6,
+  "hasImage": false,
+  "sampleNames": [
+    "Main Board (MAIN PCB ASSY)",
+    "Power Board (SDC PCB / FLT PCB)",
+    "Interface Board (INT PCB ASSY)",
+    "MAIN PCB"
+  ]
+}

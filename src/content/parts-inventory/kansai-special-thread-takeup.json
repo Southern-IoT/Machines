@@ -1,0 +1,14 @@
+{
+  "key": "kansai-special-thread-takeup",
+  "type": "brand-scoped",
+  "label": "Thread Take-Up Lever",
+  "brand": "Kansai Special",
+  "machines": [
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Take-Up Spring"
+  ]
+}

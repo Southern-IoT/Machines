@@ -1,0 +1,14 @@
+{
+  "key": "dark-horse-thread-takeup",
+  "type": "brand-scoped",
+  "label": "Thread Take-Up Lever",
+  "brand": "Dark Horse",
+  "machines": [
+    "wulin-dh-155-12"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Take-up Mechanism"
+  ]
+}

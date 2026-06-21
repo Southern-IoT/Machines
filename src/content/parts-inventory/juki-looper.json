@@ -1,0 +1,16 @@
+{
+  "key": "juki-looper",
+  "type": "brand-scoped",
+  "label": "Looper (main)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-mo-6816d"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Upper Looper",
+    "Lower Looper",
+    "Looper Holder"
+  ]
+}

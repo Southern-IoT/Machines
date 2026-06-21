@@ -1,0 +1,14 @@
+{
+  "key": "bearing-6200zz",
+  "type": "generic",
+  "label": "Ball Bearing 6200ZZ",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Ball Bearing Radial 6200ZZ"
+  ]
+}

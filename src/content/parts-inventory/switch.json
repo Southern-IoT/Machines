@@ -1,0 +1,14 @@
+{
+  "key": "switch",
+  "type": "generic",
+  "label": "Switch (push / toggle / micro)",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Push Button"
+  ]
+}

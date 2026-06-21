@@ -1,0 +1,18 @@
+{
+  "key": "handwheel",
+  "type": "generic",
+  "label": "Handwheel / Balance Wheel",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "juki-mf-7723",
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Handwheel (Balance Wheel)",
+    "Balance Weight",
+    "Machine Pulley (Hand Wheel)"
+  ]
+}

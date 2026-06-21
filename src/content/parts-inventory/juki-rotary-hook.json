@@ -1,0 +1,16 @@
+{
+  "key": "juki-rotary-hook",
+  "type": "brand-scoped",
+  "label": "Rotary Hook (full-rotary / semi-rotary)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-lbh-1790a-s",
+    "juki-lk-1900bn"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Full-Rotary Hook",
+    "Semi-rotary Hook / Shuttle"
+  ]
+}

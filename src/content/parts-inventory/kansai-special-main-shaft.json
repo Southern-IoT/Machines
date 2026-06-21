@@ -1,0 +1,14 @@
+{
+  "key": "kansai-special-main-shaft",
+  "type": "brand-scoped",
+  "label": "Main Shaft (upper shaft)",
+  "brand": "Kansai Special",
+  "machines": [
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Upper Shaft"
+  ]
+}

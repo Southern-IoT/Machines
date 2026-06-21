@@ -1,0 +1,17 @@
+{
+  "key": "timing-belt",
+  "type": "generic",
+  "label": "Timing Belt (Synchronous Toothed Belt)",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "brother-da-927a",
+    "juki-mf-7723"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Timing Belt (Synchronous Toothed Belt)",
+    "Timing Belt"
+  ]
+}

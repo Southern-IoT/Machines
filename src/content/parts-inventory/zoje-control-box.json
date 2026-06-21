@@ -1,0 +1,14 @@
+{
+  "key": "zoje-control-box",
+  "type": "brand-scoped",
+  "label": "Control Box (smart / electronic)",
+  "brand": "ZOJE",
+  "machines": [
+    "zoje-zj8000e"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Control Panel"
+  ]
+}

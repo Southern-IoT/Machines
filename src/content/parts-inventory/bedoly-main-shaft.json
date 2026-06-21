@@ -1,0 +1,14 @@
+{
+  "key": "bedoly-main-shaft",
+  "type": "brand-scoped",
+  "label": "Main Shaft (upper shaft)",
+  "brand": "Bedoly",
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Upper Main Shaft (Arm Shaft)"
+  ]
+}

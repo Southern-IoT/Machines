@@ -1,0 +1,17 @@
+{
+  "key": "juki-cover",
+  "type": "brand-scoped",
+  "label": "Cover (top / side / belt / face)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-mo-6816d"
+  ],
+  "occurrences": 4,
+  "hasImage": false,
+  "sampleNames": [
+    "Side Cover — Left",
+    "Side Cover — Right",
+    "Top Cover",
+    "Hinge Pin (Front / Top Cover)"
+  ]
+}

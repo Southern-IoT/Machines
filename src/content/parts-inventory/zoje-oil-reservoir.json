@@ -1,0 +1,14 @@
+{
+  "key": "zoje-oil-reservoir",
+  "type": "brand-scoped",
+  "label": "Oil Reservoir / Pan",
+  "brand": "ZOJE",
+  "machines": [
+    "zoje-zj8000e"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Oil Pan, Knee Lift & Presser Foot (Group J)"
+  ]
+}

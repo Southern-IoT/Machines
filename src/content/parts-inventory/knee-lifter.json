@@ -1,0 +1,16 @@
+{
+  "key": "knee-lifter",
+  "type": "generic",
+  "label": "Knee Lifter (knee lever)",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "brother-da-927a"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Knee Lift Lever (Knee Lifter)",
+    "Knee Lifter Lever"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "key": "dark-horse-rotary-hook",
+  "type": "brand-scoped",
+  "label": "Rotary Hook (full-rotary / semi-rotary)",
+  "brand": "Dark Horse",
+  "machines": [
+    "wulin-dh-155-12"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Looper / Hook Assembly"
+  ]
+}

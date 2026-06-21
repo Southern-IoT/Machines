@@ -1,0 +1,14 @@
+{
+  "key": "zoje-bobbin",
+  "type": "brand-scoped",
+  "label": "Bobbin (assembly with case)",
+  "brand": "ZOJE",
+  "machines": [
+    "zoje-zj8000e"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Bobbin and Bobbin Case"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "key": "pin",
+  "type": "generic",
+  "label": "Pin / Hinge Pin (small hardware)",
+  "brand": null,
+  "machines": [
+    "brother-da-927a",
+    "juki-mo-6816d"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Pin",
+    "Tension Release Pin"
+  ]
+}

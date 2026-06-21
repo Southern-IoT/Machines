@@ -1,0 +1,16 @@
+{
+  "key": "juki-feed-dog",
+  "type": "brand-scoped",
+  "label": "Feed Dog (main or differential)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-mf-7723",
+    "juki-mo-6816d"
+  ],
+  "occurrences": 4,
+  "hasImage": false,
+  "sampleNames": [
+    "Main Feed Dog",
+    "Differential Feed Dog"
+  ]
+}

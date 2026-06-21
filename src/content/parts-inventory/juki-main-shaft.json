@@ -1,0 +1,17 @@
+{
+  "key": "juki-main-shaft",
+  "type": "brand-scoped",
+  "label": "Main Shaft (upper shaft)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-ams-210en",
+    "juki-mo-6816d"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Main Shaft Motor",
+    "Main Shaft",
+    "Main Shaft Coupling"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "key": "zoje-rotary-hook",
+  "type": "brand-scoped",
+  "label": "Rotary Hook (full-rotary / semi-rotary)",
+  "brand": "ZOJE",
+  "machines": [
+    "zoje-zj8000e"
+  ],
+  "occurrences": 1,
+  "hasImage": false,
+  "sampleNames": [
+    "Rotary Hook"
+  ]
+}

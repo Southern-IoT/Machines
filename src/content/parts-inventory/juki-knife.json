@@ -1,0 +1,17 @@
+{
+  "key": "juki-knife",
+  "type": "brand-scoped",
+  "label": "Knife (upper / lower / cloth cutting)",
+  "brand": "JUKI",
+  "machines": [
+    "juki-mo-6816d"
+  ],
+  "occurrences": 4,
+  "hasImage": false,
+  "sampleNames": [
+    "Upper Knife",
+    "Lower Knife",
+    "Lower Knife Holder",
+    "Screw — Lower Knife Holder"
+  ]
+}

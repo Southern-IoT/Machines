@@ -1,0 +1,15 @@
+{
+  "key": "kansai-special-oil-reservoir",
+  "type": "brand-scoped",
+  "label": "Oil Reservoir / Pan",
+  "brand": "Kansai Special",
+  "machines": [
+    "kansai-dfb-1404psf"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Oil Reservoir / Oil Pot (A)",
+    "Oil Level Viewer"
+  ]
+}

@@ -10,6 +10,7 @@
     "cms": "npx tinacms dev -c \"astro dev\"",
     "build": "astro build",
     "preview": "astro preview",
+    "scan-parts": "node scripts/scan-parts.mjs",
     "astro": "astro"
   },
   "dependencies": {

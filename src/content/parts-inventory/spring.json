@@ -1,0 +1,16 @@
+{
+  "key": "spring",
+  "type": "generic",
+  "label": "Spring (generic small hardware)",
+  "brand": null,
+  "machines": [
+    "brother-da-927a",
+    "juki-mo-6816d"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Spring",
+    "Knife Pressure Spring"
+  ]
+}

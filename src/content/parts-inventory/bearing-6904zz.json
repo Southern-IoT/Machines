@@ -1,0 +1,15 @@
+{
+  "key": "bearing-6904zz",
+  "type": "generic",
+  "label": "Ball Bearing 6904ZZ",
+  "brand": null,
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 2,
+  "hasImage": false,
+  "sampleNames": [
+    "Ball Bearing 6904ZZNR",
+    "Ball Bearing 6904ZZ"
+  ]
+}

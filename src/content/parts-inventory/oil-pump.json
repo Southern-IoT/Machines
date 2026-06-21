@@ -1,0 +1,16 @@
+{
+  "key": "oil-pump",
+  "type": "generic",
+  "label": "Oil Pump (lubrication)",
+  "brand": null,
+  "machines": [
+    "juki-mo-6816d"
+  ],
+  "occurrences": 3,
+  "hasImage": false,
+  "sampleNames": [
+    "Oil Pump Worm",
+    "Oil Distribution Manifold",
+    "Oil Filter"
+  ]
+}

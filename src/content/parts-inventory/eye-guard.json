@@ -1,0 +1,19 @@
+{
+  "key": "eye-guard",
+  "type": "generic",
+  "label": "Eye Guard (needle guard / finger guard)",
+  "brand": null,
+  "machines": [
+    "brother-da-927a",
+    "juki-mf-7723",
+    "juki-mo-6816d"
+  ],
+  "occurrences": 7,
+  "hasImage": false,
+  "sampleNames": [
+    "Finger Guard",
+    "Needle Guard Bracket",
+    "Needle Guard (2-needle)",
+    "Needle Guard 1/8×2-1 (3-needle)"
+  ]
+}

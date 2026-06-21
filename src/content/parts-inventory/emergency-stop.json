@@ -1,0 +1,21 @@
+{
+  "key": "emergency-stop",
+  "type": "generic",
+  "label": "Emergency Stop Switch / Indicator",
+  "brand": null,
+  "machines": [
+    "bedoly-bdl-b6090-7-2tl",
+    "kansai-dfb-1404psf",
+    "ngai-shing-ns-2410",
+    "oshima-op-303",
+    "zoje-zj8000e"
+  ],
+  "occurrences": 7,
+  "hasImage": false,
+  "sampleNames": [
+    "LED Sewing Lamp",
+    "LED Work Light (if fitted)",
+    "Switches and Indicators",
+    "Emergency Stop Switch"
+  ]
+}

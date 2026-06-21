@@ -1,0 +1,17 @@
+{
+  "key": "brother-thread-takeup",
+  "type": "brand-scoped",
+  "label": "Thread Take-Up Lever",
+  "brand": "Brother",
+  "machines": [
+    "brother-da-927a"
+  ],
+  "occurrences": 18,
+  "hasImage": false,
+  "sampleNames": [
+    "Thread Take-Up Lever Cover",
+    "Thread Take-Up Crank MH Assy (927A)",
+    "Thread Take-Up Crank MH (927A)",
+    "Thread Take-Up Crank H Assy (928A)"
+  ]
+}
