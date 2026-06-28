@@ -203,6 +203,13 @@ export default defineConfig({
             type: "string",
           },
           {
+            name: "youtubeVideoId",
+            label: "YouTube Video ID",
+            type: "string",
+            description:
+              "Paste just the 11-character ID (the part after v= or youtu.be/). Example: QwFGMAbxBxw. Leave blank for no video.",
+          },
+          {
             name: "publishedDate",
             label: "Published Date",
             type: "datetime",

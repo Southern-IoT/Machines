@@ -1,0 +1,52 @@
+---
+interface Props {
+  videoId: string;
+  title?: string;
+}
+const { videoId, title = "YouTube video" } = Astro.props;
+
+// YouTube's public thumbnail CDN. hqdefault.jpg is 480x360, the standard 16:9 ratio.
+const thumb = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+---
+
+<div
+  class="yt-embed notranslate"
+  translate="no"
+  style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:6px; background:#000; border:1px solid #e3e6e6;"
+>
+  <button
+    type="button"
+    class="yt-lazy-btn"
+    aria-label={`Play ${title}`}
+    data-video-id={videoId}
+    data-video-title={title}
+    style={`position:absolute; inset:0; width:100%; height:100%; cursor:pointer; background:url('${thumb}') center/cover no-repeat #000; border:0; padding:0;`}
+  >
+    <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:68px; height:48px; background:rgba(255,0,0,0.9); border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+      <span style="width:0; height:0; border-style:solid; border-width:10px 0 10px 18px; border-color:transparent transparent transparent #fff; margin-left:4px;"></span>
+    </span>
+    <span style="position:absolute; bottom:8px; right:12px; background:rgba(0,0,0,0.7); color:#fff; font-size:10px; padding:2px 6px; border-radius:3px; font-family:'Inter',sans-serif;">YouTube</span>
+  </button>
+</div>
+
+<script>
+  // Lazy-load: replace the thumbnail button with an iframe only when the user clicks play.
+  // Uses youtube-nocookie.com (privacy-enhanced mode — no tracking cookies until play).
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement | null;
+    const btn = target?.closest?.(".yt-lazy-btn") as HTMLButtonElement | null;
+    if (!btn) return;
+    e.preventDefault();
+    const id = btn.dataset.videoId;
+    const title = btn.dataset.videoTitle || "YouTube video";
+    if (!id) return;
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+    iframe.title = title;
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.style.cssText = "position:absolute; top:0; left:0; width:100%; height:100%; border:0;";
+    btn.replaceWith(iframe);
+  });
+</script>

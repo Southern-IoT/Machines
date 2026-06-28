@@ -9,6 +9,7 @@ import PartsTable from "../../components/PartsTable.astro";
 import MaintenanceTable from "../../components/MaintenanceTable.astro";
 import RelatedMachines from "../../components/RelatedMachines.astro";
 import KeySpecsGrid from "../../components/KeySpecsGrid.astro";
+import YouTubeEmbed from "../../components/YouTubeEmbed.astro";
 import { withBase, assetSrc } from "../../lib/base";
 import { loadMachineSummaries } from "../../lib/machines";
 import fs from "node:fs";
@@ -62,6 +63,13 @@ const formattedDate = machine.publishedDate
           <div style="font-size:9px; font-weight:700; color:#666; font-family:'Inter',sans-serif; letter-spacing:0.1em; text-transform:uppercase; padding:0 14px 10px; border-bottom:1px solid #2a2a2a; margin-bottom:6px;">
             CONTENTS
           </div>
+          {machine.youtubeVideoId && (
+            <a href="#video" data-section="video" class="sidebar-link"
+              style="display:flex; align-items:center; gap:7px; font-size:11px; color:#888; font-family:'Inter',sans-serif; padding:6px 14px; text-decoration:none; border-left:2px solid transparent; transition:all 0.15s; line-height:1.3;">
+              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:13px; flex-shrink:0;">play_circle</span>
+              Watch Video
+            </a>
+          )}
           {sections.map(s => (
             <a href={`#${s.id}`} data-section={s.id} class="sidebar-link"
               style="display:flex; align-items:center; gap:7px; font-size:11px; color:#888; font-family:'Inter',sans-serif; padding:6px 14px; text-decoration:none; border-left:2px solid transparent; transition:all 0.15s; line-height:1.3;">
@@ -110,6 +118,12 @@ const formattedDate = machine.publishedDate
             )}
           </div>
         </div>
+
+        {machine.youtubeVideoId && (
+          <SectionCard id="video" title="Watch Video" icon="play_circle">
+            <YouTubeEmbed videoId={machine.youtubeVideoId} title={`${machine.title} — Demo Video`} />
+          </SectionCard>
+        )}
 
         {sections.map(s => (
           <SectionCard id={s.id} title={s.label} icon={s.icon}>
