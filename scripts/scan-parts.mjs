@@ -232,14 +232,52 @@ for (const entry of inventory.values()) {
   }
 }
 
-const withImage = [...inventory.values()].filter((e) => e.hasImage).length;
+// ─── Preserve human-edited fields (image + notes) across regenerations ──
+// Scan-parts regenerates the structural fields (key, type, label, brand,
+// machines, occurrences, hasImage, sampleNames) every run. The `image` and
+// `notes` fields, by contrast, are managed by humans via TinaCMS. If we
+// don't preserve them, every `npm run scan-parts` run would silently wipe
+// uploaded images. Read them into a map BEFORE cleaning the directory.
+const preservedFields = new Map(); // key -> { image?, notes? }
+if (existsSync(INVENTORY_DIR)) {
+  for (const f of readdirSync(INVENTORY_DIR)) {
+    if (!f.endsWith(".json")) continue;
+    try {
+      const raw = readFileSync(join(INVENTORY_DIR, f), "utf-8");
+      const data = JSON.parse(raw);
+      if (data && data.key) {
+        const preserved = {};
+        if (typeof data.image === "string" && data.image.length > 0) preserved.image = data.image;
+        if (typeof data.notes === "string" && data.notes.length > 0) preserved.notes = data.notes;
+        if (Object.keys(preserved).length > 0) preservedFields.set(data.key, preserved);
+      }
+    } catch {
+      // skip malformed files
+    }
+  }
+}
+console.log(`Preserved ${preservedFields.size} image/notes pairs from previous inventory`);
+
+// Count "with image" by reading the actual file state after preservation,
+// not just the pre-scan inventory map. This catches cases where a
+// previously-uploaded image was preserved even though the current scan
+// didn't observe the concept being used.
+const withImageAfter = existsSync(INVENTORY_DIR)
+  ? readdirSync(INVENTORY_DIR).filter((f) => f.endsWith(".json")).filter((f) => {
+      try {
+        const d = JSON.parse(readFileSync(join(INVENTORY_DIR, f), "utf-8"));
+        return typeof d.image === "string" && d.image.length > 0;
+      } catch { return false; }
+    }).length
+  : 0;
 console.log(
   `\nInventory summary:` +
     `\n  Total rows:           ${totalRows}` +
     `\n  Matched to concept:   ${matched} (${((matched / totalRows) * 100).toFixed(1)}%)` +
     `\n  Model-specific orphan: ${orphan}` +
     `\n  Unique concepts:      ${inventory.size}` +
-    `\n  Already have image:   ${withImage}`
+    `\n  Already have image:   ${withImageAfter}` +
+    (preservedFields.size > 0 ? ` (${preservedFields.size} preserved from previous scan)` : "")
 );
 
 // ─── Write inventory files ───────────────────────────────────────────────
@@ -276,6 +314,19 @@ for (const entry of sorted) {
     hasImage: entry.hasImage,
     sampleNames: [...entry.sampleNames],
   };
+  // Re-attach human-edited fields from the previous run, if any.
+  // If the previous entry had an image but this run's scan didn't see it
+  // (e.g. a brand-scoped entry whose only machine was removed), preserve
+  // the image anyway — the entry will simply have no occurrences in any
+  // machine and will eventually be cleaned up on a future scan.
+  const preserved = preservedFields.get(entry.key);
+  if (preserved) {
+    if (preserved.image) file.image = preserved.image;
+    if (preserved.notes) file.notes = preserved.notes;
+    // If a preserved image existed, mark hasImage true even if the scan
+    // didn't see this entry used anywhere (orphan-but-uploaded).
+    if (preserved.image) file.hasImage = true;
+  }
   writeFileSync(join(INVENTORY_DIR, `${entry.key}.json`), JSON.stringify(file, null, 2) + "\n");
 }
 

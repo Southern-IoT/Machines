@@ -11,6 +11,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "scan-parts": "node scripts/scan-parts.mjs",
+    "watch-parts": "node scripts/watch-parts.mjs",
+    "dev:full": "node scripts/dev-full.mjs",
     "astro": "astro"
   },
   "dependencies": {

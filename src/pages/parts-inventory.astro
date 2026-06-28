@@ -15,8 +15,8 @@ import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import { withBase } from "../lib/base";
 import { loadAllMachines } from "../lib/machines";
+import { buildPartsLibraryNewUrl } from "../lib/parts-library";
 
 const INVENTORY_DIR = path.join(process.cwd(), "src/content/parts-inventory");
 
@@ -29,6 +29,7 @@ interface InventoryEntry {
   occurrences: number;
   hasImage: boolean;
   sampleNames: string[];
+  newUrl?: string;
 }
 
 let inventory: InventoryEntry[] = [];
@@ -67,6 +68,17 @@ for (const m of allMachines) {
   machineTitleBySlug[m.slug] = m.title;
 }
 
+// Pre-compute the TinaCMS deep-link for each entry on the server (the helper
+// uses `import.meta.env.BASE_URL` which is only available at build time, so
+// we can't reconstruct it on the client).
+for (const entry of inventory) {
+  entry.newUrl = buildPartsLibraryNewUrl({
+    key: entry.key,
+    brand: entry.brand || undefined,
+    partName: entry.label,
+  });
+}
+
 // Pre-serialize for the client filter script
 const inventoryJson = JSON.stringify(inventory);
 const titleMapJson = JSON.stringify(machineTitleBySlug);
@@ -79,9 +91,6 @@ const navMachines = allMachines.map((m) => ({
   category: m.category || "",
   slug: m.slug,
 }));
-
-const adminBase = withBase("/admin/");
-const tinaNewEntry = `${adminBase}#/~/partsLibrary/new`;
 ---
 
 <BaseLayout title="Parts Inventory — Pending Images">
@@ -185,6 +194,11 @@ const tinaNewEntry = `${adminBase}#/~/partsLibrary/new`;
             <li>For <strong>generic</strong> concepts (needles, bearings, belts), one image serves every machine that uses that part.</li>
             <li>For <strong>brand-scoped</strong> concepts (bobbin, looper), each brand needs its own image (different part numbers / geometry).</li>
           </ol>
+          <p style="margin:12px 0 4px; padding:8px 12px; background:#fffbf2; border-left:3px solid #ff9900; border-radius:0 4px 4px 0; font-size:12px;">
+            <strong>Local dev note:</strong> the <strong>Add image</strong> button links to <code>http://localhost:4001/admin/...</code> — TinaCMS's own dev server.
+            Start it with <code>npm run cms</code> (runs Astro + TinaCMS together). If you only ran <code>npm run dev</code> (Astro only), start a second terminal with <code>npx tinacms dev</code> on port 4001.
+            On the deployed site, the same link points to <code>/Machines/admin/</code>.
+          </p>
           <p style="margin:8px 0 0;">Edit concept taxonomy in <code>src/lib/concepts.ts</code>.</p>
         </div>
       </details>
@@ -195,7 +209,7 @@ const tinaNewEntry = `${adminBase}#/~/partsLibrary/new`;
   <Footer />
 </BaseLayout>
 
-<script define:vars={{ inventoryJson, titleMapJson, totalsJson, tinaNewEntry }}>
+<script define:vars={{ inventoryJson, titleMapJson, totalsJson }}>
   const inventory = JSON.parse(inventoryJson);
   const titleMap = JSON.parse(titleMapJson);
   const totals = JSON.parse(totalsJson);
@@ -227,11 +241,9 @@ const tinaNewEntry = `${adminBase}#/~/partsLibrary/new`;
   }
 
   function buildTinaUrl(entry) {
-    const params = new URLSearchParams();
-    params.set("key", entry.key);
-    if (entry.brand) params.set("brand", entry.brand);
-    params.set("partName", entry.label);
-    return tinaNewEntry + "?" + params.toString();
+    // Pre-computed on the server (see frontmatter) — the URL helper uses
+    // `import.meta.env.BASE_URL` which is only available at build time.
+    return entry.newUrl || "#";
   }
 
   function render() {

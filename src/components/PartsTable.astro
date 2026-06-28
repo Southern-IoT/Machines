@@ -1,6 +1,7 @@
 ---
-import { lookupPart } from "../lib/parts-library";
+import { lookupPart, buildPartsLibraryNewUrl } from "../lib/parts-library";
 import { assetSrc } from "../lib/base";
+import { matchesConcept, conceptLookupKey } from "../lib/concepts";
 
 interface Part {
   partName: string;
@@ -17,6 +18,7 @@ interface Part {
 interface Props {
   parts: Part[];
   brand?: string;
+  category?: string;
   partsMeta?: {
     totalParts?: number;
     catalogSource?: string;
@@ -25,17 +27,34 @@ interface Props {
   };
 }
 
-const { parts, brand, partsMeta } = Astro.props;
+const { parts, brand, category, partsMeta } = Astro.props;
 
 // Look up image + notes for a part from the centralized parts library.
 function partImageUrl(p: Part): string {
-  const entry = lookupPart(brand, p.partId, p.partName);
+  const entry = lookupPart(brand, p.partId, p.partName, category);
   return entry?.image ? assetSrc(entry.image) : "";
 }
 
 function partImageNotes(p: Part): string {
-  const entry = lookupPart(brand, p.partId, p.partName);
+  const entry = lookupPart(brand, p.partId, p.partName, category);
   return entry?.notes || "";
+}
+
+// Build a pre-filled TinaCMS URL for the "Add image" badge.
+// Only emitted when the part row matches a known concept AND has no
+// existing library entry — otherwise it's just visual noise.
+function partAddImageUrl(p: Part): string {
+  if (!brand) return "";
+  const entry = lookupPart(brand, p.partId, p.partName, category);
+  if (entry) return ""; // image already uploaded
+  const concept = matchesConcept(p.partName || "", p.partId || "", category || "", brand);
+  if (!concept) return "";
+  const key = conceptLookupKey(concept, brand);
+  return buildPartsLibraryNewUrl({
+    key,
+    brand: concept.generic ? undefined : brand,
+    partName: p.partName,
+  });
 }
 
 // Preferred grouping: by `category` (catalog group) if any part has one.
@@ -103,7 +122,9 @@ const totalRows = parts.length;
             </tr>
           </thead>
           <tbody>
-            {groupParts.map((part, i) => (
+            {groupParts.map((part, i) => {
+              const addImageUrl = partAddImageUrl(part);
+              return (
               <tr style={i % 2 === 0 ? "background:#fff;" : "background:#fafafa;"}>
                 <td style={tdNameStyle}>
                   <button
@@ -120,6 +141,16 @@ const totalRows = parts.length;
                     data-part-notes={partImageNotes(part)}
                     data-part-source={part.source || ""}
                   >{part.partName}</button>
+                  {addImageUrl && (
+                    <a href={addImageUrl} target="_blank" rel="noopener"
+                      class="part-add-image notranslate" translate="no"
+                      style="display:inline-flex; align-items:center; gap:3px; margin-left:6px; padding:2px 6px; background:#fff7eb; color:#a85b00; border:1px solid #ffd9a3; border-radius:4px; font-size:9px; font-weight:600; font-family:'Inter',sans-serif; text-decoration:none; vertical-align:middle; text-transform:uppercase; letter-spacing:0.04em;"
+                      title="Add image for this part in TinaCMS — one image will serve every machine that uses it"
+                      onmouseover="this.style.background='#ffe5c2'" onmouseout="this.style.background='#fff7eb'">
+                      <span class="material-symbols-outlined notranslate" translate="no" style="font-size:10px;">add_photo_alternate</span>
+                      + image
+                    </a>
+                  )}
                   {part.source && (
                     <a href={part.source} target="_blank" rel="noopener noreferrer"
                       style="display:inline-block; margin-left:6px; color:#ff9900; text-decoration:none; font-size:10px; vertical-align:middle;"
@@ -141,7 +172,8 @@ const totalRows = parts.length;
                   ) : "—"}
                 </td>
               </tr>
-            ))}
+              );
+            })}
           </tbody>
         </table>
       </div>

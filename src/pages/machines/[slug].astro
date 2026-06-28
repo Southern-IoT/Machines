@@ -193,7 +193,7 @@ const formattedDate = machine.publishedDate
             )}
 
             {s.id === "parts-list" && machine.partsList?.length > 0 && (
-              <PartsTable parts={machine.partsList} brand={machine.brand} partsMeta={machine.partsMeta} />
+              <PartsTable parts={machine.partsList} brand={machine.brand} category={machine.category} partsMeta={machine.partsMeta} />
             )}
 
             {s.id === "gauge-parts" && hasGaugeParts && (

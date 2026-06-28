@@ -1,20 +1,8 @@
 {
   "key": "needle-generic",
-  "type": "generic",
-  "label": "Needle (generic / unspecified system)",
-  "brand": null,
-  "machines": [
-    "juki-lbh-1790a-s",
-    "kansai-dfb-1404psf",
-    "wulin-dh-155-12",
-    "zoje-zj8000e"
-  ],
-  "occurrences": 4,
-  "hasImage": true,
-  "sampleNames": [
-    "Needle",
-    "Needle (x4)"
-  ],
+  "brand": "",
+  "partId": "",
+  "partName": "Needle (generic / unspecified system)",
   "image": "/uploads/needle-generic.svg",
   "notes": "TEST PLACEHOLDER. Industrial sewing machine needle — generic concept that covers any 'Needle' row whose system isn't DB×1, DC×27, 135×17, or TV×64. One image serves every brand (JUKI, Kansai Special, Wulin, Zoje). Delete this entry and re-upload with a real photo to replace the placeholder."
 }
