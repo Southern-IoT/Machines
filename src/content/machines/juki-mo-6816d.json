@@ -3,6 +3,7 @@
   "subtitle": "High-Speed 2-Needle, 4-Thread Safety-Stitch / Interlock Machine (MO-6800D Series)",
   "brand": "JUKI",
   "category": "Overlock Machine",
+  "machineImage": "/uploads/MO-6816S-scaled.jpg",
   "publishedDate": "2026-06-16T00:00:00.000Z",
   "purposeAndApplication": {
     "purpose": "The JUKI MO-6816D is a high-speed, 2-needle, 4-thread safety-stitch / interlock machine belonging to the JUKI MO-6800D series. It performs seaming, edge-trimming, and overedging in a single pass, with a 3 mm or 5 mm needle width. It is a direct-drive head (combined with an integrated AC servo motor / control box) used for general apparel seaming on medium to heavy-weight woven and knit fabrics.",
@@ -17,93 +18,272 @@
   },
   "overviewDescription": "The JUKI MO-6816D is the 2-needle / 4-thread safety-stitch variant of the JUKI MO-6800D overlock series. It uses two needles, an upper looper, and a lower looper to form a 4-thread safety stitch while simultaneously edge-trimming the fabric with a fixed lower knife and a moving upper knife. The machine is built around a sealed lower-loop lubrication system (the needle bar and upper looper are oil-free), a 24.5 mm needle bar stroke, lever-type differential feed adjustment with micro-adjust, and a push-button stitch-length selector. The MO-6816D is offered in head-only form for direct-drive mounting on the JUKI PM-6810 / equivalent smart control box with an integrated AC servo motor.",
   "classificationTable": [
-    { "field": "Machine Type", "value": "High-speed 2-needle, 4-thread safety-stitch / interlock machine" },
-    { "field": "Brand", "value": "JUKI" },
-    { "field": "Model", "value": "MO-6816D (MO-6800D series)" },
-    { "field": "Sewing Type (USA)", "value": "516 (Safety stitch, 4-thread)" },
-    { "field": "Needle Width", "value": "3.0 mm or 5.0 mm" },
-    { "field": "Overedge Width", "value": "4.0 mm or 5.0 mm" },
-    { "field": "Main Motor", "value": "Direct-drive (JUKI PM-6810 / equivalent smart control box, integrated AC servo motor — sold separately)" },
-    { "field": "Lubrication", "value": "Automatic (sealed lower-loop); needle bar and upper looper are oil-free" },
-    { "field": "Lubricating Oil", "value": "JUKI MACHINE OIL 18 (ISO VG18 equivalent)" },
-    { "field": "Differential Feed", "value": "Lever type with micro-adjust" },
-    { "field": "Stitch Length Adjustment", "value": "Push-button type" },
-    { "field": "Head Weight", "value": "27 kg" },
-    { "field": "Series Lineup", "value": "MO-6804D (1-needle), MO-6814D (2-needle), MO-6816D (interlock), MO-6843D (3-needle interlock)" }
+    {
+      "field": "Machine Type",
+      "value": "High-speed 2-needle, 4-thread safety-stitch / interlock machine"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "MO-6816D (MO-6800D series)"
+    },
+    {
+      "field": "Sewing Type (USA)",
+      "value": "516 (Safety stitch, 4-thread)"
+    },
+    {
+      "field": "Needle Width",
+      "value": "3.0 mm or 5.0 mm"
+    },
+    {
+      "field": "Overedge Width",
+      "value": "4.0 mm or 5.0 mm"
+    },
+    {
+      "field": "Main Motor",
+      "value": "Direct-drive (JUKI PM-6810 / equivalent smart control box, integrated AC servo motor — sold separately)"
+    },
+    {
+      "field": "Lubrication",
+      "value": "Automatic (sealed lower-loop); needle bar and upper looper are oil-free"
+    },
+    {
+      "field": "Lubricating Oil",
+      "value": "JUKI MACHINE OIL 18 (ISO VG18 equivalent)"
+    },
+    {
+      "field": "Differential Feed",
+      "value": "Lever type with micro-adjust"
+    },
+    {
+      "field": "Stitch Length Adjustment",
+      "value": "Push-button type"
+    },
+    {
+      "field": "Head Weight",
+      "value": "27 kg"
+    },
+    {
+      "field": "Series Lineup",
+      "value": "MO-6804D (1-needle), MO-6814D (2-needle), MO-6816D (interlock), MO-6843D (3-needle interlock)"
+    }
   ],
   "technicalSpecs": [
-    { "parameter": "Max Sewing Speed", "value": "7,000 sti/min" },
-    { "parameter": "Stitch Length", "value": "0.6 – 3.8 mm (max 4.5 mm)" },
-    { "parameter": "Needle Bar Stroke", "value": "24.5 mm" },
-    { "parameter": "Needle Inclination Angle", "value": "20°" },
-    { "parameter": "Needle Bar Bushing", "value": "Lower bushing type" },
-    { "parameter": "Needle System", "value": "DC×27 (excluding some subclasses)" },
-    { "parameter": "Differential Feed Ratio — Gathering", "value": "1:2 (max 1:4)" },
-    { "parameter": "Differential Feed Ratio — Stretching", "value": "1:0.7 (max 1:0.6)" },
-    { "parameter": "Max Presser Foot Lift", "value": "7 mm (excluding some subclasses)" },
-    { "parameter": "Max Presser Foot Pressure", "value": "63.7 N (6.5 kgf)" },
-    { "parameter": "Stitch Length Adjustment", "value": "Push-button type" },
-    { "parameter": "Differential Adjustment", "value": "Lever type with micro-adjust" },
-    { "parameter": "Needle Width (MO-6816D)", "value": "3.0 mm or 5.0 mm" },
-    { "parameter": "Overedge Width (MO-6816D)", "value": "4.0 mm or 5.0 mm" },
-    { "parameter": "Lubrication", "value": "Automatic; needle bar and upper looper are oil-free" },
-    { "parameter": "Lubricating Oil", "value": "JUKI MACHINE OIL 18 (ISO VG18 equivalent)" },
-    { "parameter": "Needle Point Cooler", "value": "Standard" },
-    { "parameter": "Needle Thread Cooler", "value": "Standard" },
-    { "parameter": "Micro-lifter Device", "value": "Option" },
-    { "parameter": "Head Weight", "value": "27 kg" }
+    {
+      "parameter": "Max Sewing Speed",
+      "value": "7,000 sti/min"
+    },
+    {
+      "parameter": "Stitch Length",
+      "value": "0.6 – 3.8 mm (max 4.5 mm)"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "24.5 mm"
+    },
+    {
+      "parameter": "Needle Inclination Angle",
+      "value": "20°"
+    },
+    {
+      "parameter": "Needle Bar Bushing",
+      "value": "Lower bushing type"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "DC×27 (excluding some subclasses)"
+    },
+    {
+      "parameter": "Differential Feed Ratio — Gathering",
+      "value": "1:2 (max 1:4)"
+    },
+    {
+      "parameter": "Differential Feed Ratio — Stretching",
+      "value": "1:0.7 (max 1:0.6)"
+    },
+    {
+      "parameter": "Max Presser Foot Lift",
+      "value": "7 mm (excluding some subclasses)"
+    },
+    {
+      "parameter": "Max Presser Foot Pressure",
+      "value": "63.7 N (6.5 kgf)"
+    },
+    {
+      "parameter": "Stitch Length Adjustment",
+      "value": "Push-button type"
+    },
+    {
+      "parameter": "Differential Adjustment",
+      "value": "Lever type with micro-adjust"
+    },
+    {
+      "parameter": "Needle Width (MO-6816D)",
+      "value": "3.0 mm or 5.0 mm"
+    },
+    {
+      "parameter": "Overedge Width (MO-6816D)",
+      "value": "4.0 mm or 5.0 mm"
+    },
+    {
+      "parameter": "Lubrication",
+      "value": "Automatic; needle bar and upper looper are oil-free"
+    },
+    {
+      "parameter": "Lubricating Oil",
+      "value": "JUKI MACHINE OIL 18 (ISO VG18 equivalent)"
+    },
+    {
+      "parameter": "Needle Point Cooler",
+      "value": "Standard"
+    },
+    {
+      "parameter": "Needle Thread Cooler",
+      "value": "Standard"
+    },
+    {
+      "parameter": "Micro-lifter Device",
+      "value": "Option"
+    },
+    {
+      "parameter": "Head Weight",
+      "value": "27 kg"
+    }
   ],
   "workingPrinciples": [
     {
       "heading": "1. Two-Needle, Four-Thread Safety Stitch Formation",
       "description": "Two needles carry the upper needle threads through the fabric. The lower looper carries the lower looper thread and interlocks with both needle threads below the needle plate. The upper looper carries the upper looper thread and forms a cross-over stitch on top of the fabric. The result is a 516-type safety stitch with 4 threads total, providing a stretchable, durable seam with a finished edge in a single pass.",
-      "componentIds": ["needle-bar-left", "needle-bar-right", "upper-looper", "lower-looper", "needle-clamp", "needle-plate"]
+      "componentIds": [
+        "needle-bar-left",
+        "needle-bar-right",
+        "upper-looper",
+        "lower-looper",
+        "needle-clamp",
+        "needle-plate"
+      ]
     },
     {
       "heading": "2. Upper and Lower Knife Edge-Trimming",
       "description": "A fixed lower knife and a moving upper knife trim the fabric edge to a consistent width just before the needles enter the fabric. The upper knife is driven by a separate knife-drive linkage from the main shaft, allowing precise synchronization with the stitch cycle and adjustable cutting width.",
-      "componentIds": ["upper-knife", "lower-knife", "knife-drive-linkage", "knife-pressure-spring"]
+      "componentIds": [
+        "upper-knife",
+        "lower-knife",
+        "knife-drive-linkage",
+        "knife-pressure-spring"
+      ]
     },
     {
       "heading": "3. Differential Feed Mechanism",
       "description": "The differential feed has a main feed dog (front) and a differential feed dog (rear), driven by independent feed eccentrics. The differential ratio is set with a lever (with micro-adjust), allowing gathering (1:2, max 1:4) for stretch fabrics or stretching (1:0.7, max 1:0.6) for slippery knits. This prevents seam distortion and produces flat, stretchable seams on knit fabrics.",
-      "componentIds": ["main-feed-dog", "differential-feed-dog", "feed-eccentric-main", "feed-eccentric-diff", "differential-lever", "differential-micro-adjust"]
+      "componentIds": [
+        "main-feed-dog",
+        "differential-feed-dog",
+        "feed-eccentric-main",
+        "feed-eccentric-diff",
+        "differential-lever",
+        "differential-micro-adjust"
+      ]
     },
     {
       "heading": "4. Direct-Drive AC Servo Motor",
       "description": "The MO-6816D head is designed for direct mounting on a JUKI PM-6810 (or equivalent) smart control box with an integrated AC servo motor. The motor drives the main shaft directly via a coupling, eliminating the V-belt and clutch of conventional mounting. This provides instant start/stop, precise speed control via the pedal, and low noise / low vibration operation.",
-      "componentIds": ["main-shaft", "main-shaft-coupling", "control-box-PM6810", "ac-servo-motor"]
+      "componentIds": [
+        "main-shaft",
+        "main-shaft-coupling",
+        "control-box-PM6810",
+        "ac-servo-motor"
+      ]
     },
     {
       "heading": "5. Active Thread Tension System",
       "description": "Each of the four threads (two needle threads, upper looper thread, lower looper thread) passes through an individual thread tension assembly with disc tension, thread take-up spring, and tension release pin. The tensions are set independently and adjusted for fabric type and stitch width.",
-      "componentIds": ["tension-assembly-needle-L", "tension-assembly-needle-R", "tension-assembly-upper-looper", "tension-assembly-lower-looper", "thread-take-up-spring", "tension-release-pin"]
+      "componentIds": [
+        "tension-assembly-needle-L",
+        "tension-assembly-needle-R",
+        "tension-assembly-upper-looper",
+        "tension-assembly-lower-looper",
+        "thread-take-up-spring",
+        "tension-release-pin"
+      ]
     },
     {
       "heading": "6. Sealed Lower-Loop Automatic Lubrication",
       "description": "The lower loop (main shaft, feed mechanism, lower looper, hook area) is enclosed and lubricated by an automatic forced-circulation system using a worm pump driven off the main shaft. The upper looper and needle bar mechanism are oil-free, eliminating the risk of oil staining on light-colored fabrics.",
-      "componentIds": ["oil-pump-worm", "oil-reservoir", "oil-distribution-manifold", "oil-sight-glass", "oil-filter"]
+      "componentIds": [
+        "oil-pump-worm",
+        "oil-reservoir",
+        "oil-distribution-manifold",
+        "oil-sight-glass",
+        "oil-filter"
+      ]
     },
     {
       "heading": "7. Push-Button Stitch Length Adjustment",
       "description": "Stitch length is set by a push-button selector on the front of the machine. The selector engages a different feed-eccentric position, changing the feed dog stroke per stitch. This eliminates the need to open the machine and manually swap feed eccentrics for different stitch lengths.",
-      "componentIds": ["stitch-length-button", "stitch-selector-cam", "feed-eccentric-set"]
+      "componentIds": [
+        "stitch-length-button",
+        "stitch-selector-cam",
+        "feed-eccentric-set"
+      ]
     }
   ],
   "sequenceFlow": [
-    { "stepTitle": "Power ON", "stepDescription": "Control box / pedal powered; needle position sensor initialized" },
-    { "stepTitle": "Thread Machine", "stepDescription": "Thread needle-L → needle-R → upper looper → lower looper per threading diagram" },
-    { "stepTitle": "Set Tensions", "stepDescription": "Adjust four individual thread tension assemblies" },
-    { "stepTitle": "Set Differential", "stepDescription": "Lever + micro-adjust set to fabric (gather / neutral / stretch)" },
-    { "stepTitle": "Set Stitch Length", "stepDescription": "Push-button selector set to required length" },
-    { "stepTitle": "Check Oil", "stepDescription": "Verify oil reservoir level; check oil flow at sight glass" },
-    { "stepTitle": "Place Fabric", "stepDescription": "Lay fabric under presser foot, align edge with lower knife" },
-    { "stepTitle": "Press Pedal", "stepDescription": "Presser foot lifts, machine starts at set speed" },
-    { "stepTitle": "Sewing", "stepDescription": "Needles / loopers / knives / feed dogs in synchronized motion" },
-    { "stepTitle": "Stitch Trim", "stepDescription": "Manual scissors or chain cutter separates chain at end of seam" },
-    { "stepTitle": "Release Pedal", "stepDescription": "Needle stops in up position; presser foot lifts" },
-    { "stepTitle": "Inspect Seam", "stepDescription": "Check stitch balance, tension, edge trimming quality" },
-    { "stepTitle": "End of Run", "stepDescription": "Wipe down, re-thread, refill oil, log production" }
+    {
+      "stepTitle": "Power ON",
+      "stepDescription": "Control box / pedal powered; needle position sensor initialized"
+    },
+    {
+      "stepTitle": "Thread Machine",
+      "stepDescription": "Thread needle-L → needle-R → upper looper → lower looper per threading diagram"
+    },
+    {
+      "stepTitle": "Set Tensions",
+      "stepDescription": "Adjust four individual thread tension assemblies"
+    },
+    {
+      "stepTitle": "Set Differential",
+      "stepDescription": "Lever + micro-adjust set to fabric (gather / neutral / stretch)"
+    },
+    {
+      "stepTitle": "Set Stitch Length",
+      "stepDescription": "Push-button selector set to required length"
+    },
+    {
+      "stepTitle": "Check Oil",
+      "stepDescription": "Verify oil reservoir level; check oil flow at sight glass"
+    },
+    {
+      "stepTitle": "Place Fabric",
+      "stepDescription": "Lay fabric under presser foot, align edge with lower knife"
+    },
+    {
+      "stepTitle": "Press Pedal",
+      "stepDescription": "Presser foot lifts, machine starts at set speed"
+    },
+    {
+      "stepTitle": "Sewing",
+      "stepDescription": "Needles / loopers / knives / feed dogs in synchronized motion"
+    },
+    {
+      "stepTitle": "Stitch Trim",
+      "stepDescription": "Manual scissors or chain cutter separates chain at end of seam"
+    },
+    {
+      "stepTitle": "Release Pedal",
+      "stepDescription": "Needle stops in up position; presser foot lifts"
+    },
+    {
+      "stepTitle": "Inspect Seam",
+      "stepDescription": "Check stitch balance, tension, edge trimming quality"
+    },
+    {
+      "stepTitle": "End of Run",
+      "stepDescription": "Wipe down, re-thread, refill oil, log production"
+    }
   ],
   "partsList": [
     {
