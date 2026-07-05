@@ -15,7 +15,7 @@ import path from "node:path";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import { loadAllMachines } from "../lib/machines";
+import { loadAllMachines, getBuildTimestamp, formatLastUpdated } from "../lib/machines";
 import { buildPartsLibraryNewUrl } from "../lib/parts-library";
 
 const INVENTORY_DIR = path.join(process.cwd(), "src/content/parts-inventory");
@@ -68,6 +68,10 @@ for (const m of allMachines) {
   machineTitleBySlug[m.slug] = m.title;
 }
 
+// Surface the build moment as a "Last updated" stamp in the header
+// (mirrors the homepage). Captured at build time — every deploy advances it.
+const lastUpdatedLabel = formatLastUpdated(getBuildTimestamp());
+
 // Pre-compute the TinaCMS deep-link for each entry on the server (the helper
 // uses `import.meta.env.BASE_URL` which is only available at build time, so
 // we can't reconstruct it on the client).
@@ -107,16 +111,24 @@ const navMachines = allMachines.map((m) => ({
             Semantic concepts deduplicated across machines. Click <strong>Add image</strong> to upload a photo — it serves every machine using that part.
           </p>
         </div>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-          <span style="font-size:12px; color:#565959; font-family:'Inter',sans-serif; background:#fff; padding:4px 12px; border-radius:20px; border:1px solid #e3e6e6;">
-            <strong style="color:#0f1111;">{totals.total}</strong> concepts
-          </span>
-          <span style="font-size:12px; color:#a85b00; font-family:'Inter',sans-serif; background:#fff7eb; padding:4px 12px; border-radius:20px; border:1px solid #ffd9a3;">
-            <strong>{totals.pending}</strong> pending
-          </span>
-          <span style="font-size:12px; color:#1a7f37; font-family:'Inter',sans-serif; background:#f0f9f3; padding:4px 12px; border-radius:20px; border:1px solid #b6e5c4;">
-            <strong>{totals.uploaded}</strong> uploaded
-          </span>
+        <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;">
+            <span style="font-size:12px; color:#565959; font-family:'Inter',sans-serif; background:#fff; padding:4px 12px; border-radius:20px; border:1px solid #e3e6e6;">
+              <strong style="color:#0f1111;">{totals.total}</strong> concepts
+            </span>
+            <span style="font-size:12px; color:#a85b00; font-family:'Inter',sans-serif; background:#fff7eb; padding:4px 12px; border-radius:20px; border:1px solid #ffd9a3;">
+              <strong>{totals.pending}</strong> pending
+            </span>
+            <span style="font-size:12px; color:#1a7f37; font-family:'Inter',sans-serif; background:#f0f9f3; padding:4px 12px; border-radius:20px; border:1px solid #b6e5c4;">
+              <strong>{totals.uploaded}</strong> uploaded
+            </span>
+          </div>
+          {lastUpdatedLabel && (
+            <span style="font-size:11px; color:#888; font-family:'Inter',sans-serif; display:inline-flex; align-items:center; gap:4px;">
+              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:12px; color:#888;">schedule</span>
+              Last updated: {lastUpdatedLabel}
+            </span>
+          )}
         </div>
       </div>
 

@@ -64,3 +64,16 @@ _astro_init/
 
 .puku
 
+# Verification scripts and logs from local build checks (never commit)
+verify-build.ps1
+verify-result.txt
+verify-result2.txt
+verify1.txt
+_indexPage.txt
+_invPage.txt
+_libMachines.txt
+build.log
+build1.log
+build2.log
+.diff-src.txt
+

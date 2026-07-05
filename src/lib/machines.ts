@@ -73,6 +73,25 @@ export function loadAllMachines(): MachineWithSlug[] {
   return fullCache;
 }
 
+// Format an ISO date string into a compact "5 Jul 2026, 14:32 UTC" stamp.
+// Returns "" for null/empty input so callers can render conditionally.
+export function formatLastUpdated(iso: string | null | undefined): string {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return "";
+  const date = d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+  const time = d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "UTC" });
+  return `${date}, ${time} UTC`;
+}
+
+// Returns the current moment as an ISO string captured during the build.
+// Because Astro renders this at build time, every push to main regenerates
+// the static HTML and the "Last updated" value advances — it always reflects
+// the moment of the most recent successful deploy.
+export function getBuildTimestamp(): string {
+  return new Date().toISOString();
+}
+
 // Absolute URL for a machine page (or the directory root if slug is empty).
 export function buildMachineUrl(slug: string, site?: URL | string | null): string {
   const origin = site ? String(site).replace(/\/$/, "") : "https://southern-iot.github.io";

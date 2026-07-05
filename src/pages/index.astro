@@ -3,9 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import MachineCard from "../components/MachineCard.astro";
-import { loadAllMachines } from "../lib/machines";
+import { loadAllMachines, getBuildTimestamp, formatLastUpdated } from "../lib/machines";
 
 const machines = loadAllMachines();
+const lastUpdatedLabel = formatLastUpdated(getBuildTimestamp());
 
 function getCardSpecs(machine: typeof machines[number]) {
   if (!machine.technicalSpecs?.length) return [];
@@ -36,12 +37,20 @@ const navMachines = machines.map((m) => ({
           <h1 style="margin:0; font-size:17px; font-weight:700; color:#0f1111; font-family:'Inter',sans-serif;">Machine Inventory</h1>
           <p style="margin:3px 0 0; font-size:12px; color:#565959; font-family:'Inter',sans-serif;">Factory machine database — technical specifications & documentation</p>
         </div>
-        <span
-          id="results-count"
-          style="font-size:12px; color:#565959; font-family:'Inter',sans-serif; background:#fff; padding:4px 12px; border-radius:20px; border:1px solid #e3e6e6;"
-        >
-          {machines.length} Records
-        </span>
+        <div style="display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
+          <span
+            id="results-count"
+            style="font-size:12px; color:#565959; font-family:'Inter',sans-serif; background:#fff; padding:4px 12px; border-radius:20px; border:1px solid #e3e6e6;"
+          >
+            {machines.length} Records
+          </span>
+          {lastUpdatedLabel && (
+            <span style="font-size:11px; color:#888; font-family:'Inter',sans-serif; display:inline-flex; align-items:center; gap:4px;">
+              <span class="material-symbols-outlined notranslate" translate="no" style="font-size:12px; color:#888;">schedule</span>
+              Last updated: {lastUpdatedLabel}
+            </span>
+          )}
+        </div>
       </div>
 
       {machines.length > 0 ? (
