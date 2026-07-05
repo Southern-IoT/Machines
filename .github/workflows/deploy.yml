@@ -44,7 +44,7 @@ jobs:
       - name: Run Astro site build
         run: npm run build
 
-      - name: Debug: show build output
+      - name: "Debug: show build output"
         run: |
           echo "Working dir: $(pwd)"
           echo "BUILD_DIR=$BUILD_DIR"
