@@ -1,0 +1,99 @@
+{
+  "title": "JUKI LH-3528A-7",
+  "subtitle": "Semi-Dry-Head 2-Needle Lockstitch Machine",
+  "brand": "JUKI",
+  "category": "Double Needle Lockstitch",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI LH-3528A-7 is a semi-dry-head 2-needle lockstitch sewing machine used for parallel double-stitch seaming operations such as shirt yokes, waistbands, decorative topstitching, and inseam / outseam work on jeans and trousers.",
+    "applications": [
+      "Double-needle topstitching on shirt yokes, pockets, and plackets",
+      "Decorative parallel stitching on jeans, trousers, and workwear",
+      "Waistband and yoke assembly on woven garments",
+      "Operations requiring switchable needle-feed / bottom-feed feeding"
+    ],
+    "industry": "Garment manufacturing (shirts, jeans, trousers, workwear), uniform manufacturing"
+  },
+  "overviewDescription": "The JUKI LH-3528A-7 is a semi-dry-head 2-needle lockstitch machine. It features switchable needle feed and bottom feed, a direct-drive mechanism, a new thread tension control, and improved oiling. The semi-dry head keeps the needle bar area dry to prevent oil staining on light fabrics, while the hook area is automatically lubricated. The machine is widely used on shirt and trouser production lines for parallel-stitch operations.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Semi-dry-head 2-needle lockstitch machine"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "LH-3528A-7"
+    },
+    {
+      "field": "Needle System",
+      "value": "DP×5"
+    },
+    {
+      "field": "Feed System",
+      "value": "Changeover between needle feed and bottom feed"
+    },
+    {
+      "field": "Drive",
+      "value": "Direct-drive mechanism"
+    },
+    {
+      "field": "Oil Tank Capacity",
+      "value": "220 cm³"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "3,000 sti/min"
+    },
+    {
+      "parameter": "Max. Stitch Length",
+      "value": "5 mm"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "33.4 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift (by hand)",
+      "value": "7 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift (by knee)",
+      "value": "13 mm"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "DP×5"
+    },
+    {
+      "parameter": "Feed System",
+      "value": "Switchable needle feed / bottom feed"
+    },
+    {
+      "parameter": "Oil Tank Capacity",
+      "value": "220 cm³"
+    },
+    {
+      "parameter": "Distance (needle to arm)",
+      "value": "120 × 266 × 87 mm"
+    },
+    {
+      "parameter": "Head Type",
+      "value": "Semi-dry head (needle bar area dry, hook area lubricated)"
+    },
+    {
+      "parameter": "Drive",
+      "value": "Direct-drive"
+    },
+    {
+      "parameter": "Thread Tension",
+      "value": "New improved thread tension control"
+    }
+  ],
+  "finalNotes": "• The 'semi-dry head' design minimizes oil staining on light fabrics — useful for white and pastel shirts where oil contamination is a defect.\n• The switchable needle-feed / bottom-feed mechanism lets the operator switch feeding mode for different fabric types without changing machines.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

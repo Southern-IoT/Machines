@@ -1,0 +1,87 @@
+{
+  "title": "Zoje ZZ3800-PLB",
+  "subtitle": "Feed-Off-The-Arm Chainstitch Machine (ZJ3800 Series)",
+  "brand": "ZOJE",
+  "category": "Chain Stitch Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Zoje ZZ3800-PLB is a feed-off-the-arm 2-needle, 4-thread chainstitch machine used for denim and heavy-fabric seaming. The 'PLB' suffix most likely indicates a lap-seaming / puller-equipped variant of the Zoje ZJ3800 / ZJ3800-BD feed-off-the-arm series.",
+    "applications": [
+      "Feed-off-the-arm chainstitch seaming on jeans and denim garments",
+      "Lap-seaming operations on heavy woven fabrics",
+      "Trouser and jeans waistband / seat seaming",
+      "Production lines benefiting from a puller-feed for even heavy-fabric feeding"
+    ],
+    "industry": "Jeans / denim manufacturing, trouser production, workwear manufacturing"
+  },
+  "overviewDescription": "⚠️ The exact model code 'ZZ3800-PLB' could not be independently confirmed against a published Zoje catalog. The specifications below are for the closely related Zoje ZJ3800 / ZJ3800-BD feed-off-the-arm chainstitch series, which 'PLB' is most likely a lap-seaming / puller variant of. Please verify the exact suffix against the machine's nameplate. The ZJ3800 series is a 2-needle, 4-thread chainstitch machine with a 6.4 mm needle gauge, max speed of 5,000 sti/min, max stitch length of 4 mm, and bottom-feed connecting-rod feeding system. The BD variant includes an energy-saving AC servo motor with built-in control box and automatic needle positioning.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Feed-off-the-arm chainstitch machine (likely PLB = puller / lap-seam variant)"
+    },
+    {
+      "field": "Brand",
+      "value": "ZOJE"
+    },
+    {
+      "field": "Model",
+      "value": "ZZ3800-PLB (ZJ3800 series baseline)"
+    },
+    {
+      "field": "Needle Configuration",
+      "value": "2-needle, 4-thread chainstitch"
+    },
+    {
+      "field": "Needle Gauge",
+      "value": "6.4 mm"
+    },
+    {
+      "field": "Needle System (recommended)",
+      "value": "149×7"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Needle Configuration",
+      "value": "2-needle, 4-thread chainstitch"
+    },
+    {
+      "parameter": "Needle Gauge",
+      "value": "6.4 mm"
+    },
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "5,000 sti/min"
+    },
+    {
+      "parameter": "Max. Stitch Length",
+      "value": "4 mm"
+    },
+    {
+      "parameter": "Foot Lifting",
+      "value": "Up to 10 mm"
+    },
+    {
+      "parameter": "Feed",
+      "value": "Bottom feed, connecting-rod type"
+    },
+    {
+      "parameter": "Lubrication",
+      "value": "Central / auto lubrication"
+    },
+    {
+      "parameter": "Motor (BD variant)",
+      "value": "Energy-saving AC servo motor, built-in control box, automatic needle positioning"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "149×7 (recommended)"
+    },
+    {
+      "parameter": "Related Variants",
+      "value": "Up to 3-needle / 6-thread chainstitch available in wider ZJ38 / ZJ928 family"
+    }
+  ],
+  "finalNotes": "⚠️ A model exactly matching \"ZZ3800-PLB\" could not be independently confirmed. The specifications above are for the closely related Zoje ZJ3800 / ZJ3800-BD feed-off-the-arm chainstitch series, which \"PLB\" is most likely a lap-seaming/puller variant of. Please verify the exact suffix against your machine's nameplate.\n\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

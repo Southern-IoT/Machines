@@ -1,0 +1,95 @@
+{
+  "title": "Hashima HP-900LFS",
+  "subtitle": "Straight Linear Fusing Press",
+  "brand": "Hashima",
+  "category": "Fusing Press Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Hashima HP-900LFS is a continuous-type straight linear fusing press used in garment production to bond interlining to shirt collars, cuffs, plackets, waistbands, and other garment components. It uses a moving belt system to feed assembled garment parts through a heated fusing zone, producing consistent interlining adhesion at industrial throughput.",
+    "applications": [
+      "Fusing interlining onto shirt collars, cuffs, and front plackets",
+      "Fusing waistbands and panel reinforcements on trousers / jeans",
+      "Continuous bonding of large garment components (full front panels)",
+      "Production-line interlining in medium to large garment factories"
+    ],
+    "industry": "Shirt manufacturing, garment production, trouser / jeans production, workwear and uniform manufacturing"
+  },
+  "overviewDescription": "The Hashima HP-900LFS is a continuous-type linear fusing press. It runs on 3-phase 380V power with a 12 kW heater and 295 W motor, and supports fusing widths up to 900 mm. The belt speed reaches a maximum of 10.2 m/min, the maximum pressure is 41 N/cm² (4.02 kg/cm²), and the maximum temperature is 195 °C, with heating times selectable from 6 to 28 seconds. The unit features automatic belt-warping prevention, an electronic thermostat + SSR control (±3 °C accuracy), a standard Strip-Off Device, a big-diameter pressure roller, a puckering-prevention roller, and a seamless belt. Net weight is 450 kg; dimensions are 1,200 × 1,490 × 3,300 mm.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Continuous-type straight linear fusing press"
+    },
+    {
+      "field": "Brand",
+      "value": "Hashima (Japan)"
+    },
+    {
+      "field": "Model",
+      "value": "HP-900LFS"
+    },
+    {
+      "field": "Fusing Width",
+      "value": "900 mm"
+    },
+    {
+      "field": "Voltage",
+      "value": "3-phase 380V"
+    },
+    {
+      "field": "Origin",
+      "value": "Japan"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Voltage",
+      "value": "3-phase 380V"
+    },
+    {
+      "parameter": "Heater Rated Output",
+      "value": "12 kW"
+    },
+    {
+      "parameter": "Motor Rated Output",
+      "value": "295 W"
+    },
+    {
+      "parameter": "Fusing Width",
+      "value": "900 mm"
+    },
+    {
+      "parameter": "Belt Speed (Max)",
+      "value": "10.2 m/min"
+    },
+    {
+      "parameter": "Pressure (Max)",
+      "value": "41 N/cm² (4.02 kg/cm²)"
+    },
+    {
+      "parameter": "Temperature (Max)",
+      "value": "195 °C"
+    },
+    {
+      "parameter": "Heating Time",
+      "value": "6 – 28 seconds"
+    },
+    {
+      "parameter": "Dimensions (L × W × H)",
+      "value": "1,200 × 1,490 × 3,300 mm"
+    },
+    {
+      "parameter": "Weight",
+      "value": "450 kg"
+    },
+    {
+      "parameter": "Thermostat Accuracy",
+      "value": "±3 °C (electronic thermostat + SSR)"
+    },
+    {
+      "parameter": "Standard Features",
+      "value": "Automatic belt-warping prevention, feedback system, Strip-Off Device ('S' in LFS), big-diameter pressure roller, puckering-prevention roller, seamless belt"
+    }
+  ],
+  "finalNotes": "• The 'LFS' suffix indicates the Linear / Fusing / Strip-Off-Standard configuration — a continuous-type industrial fusing press with the strip-off device included as standard.\n• Hashima is one of two dominant fusing-press brands (along with Macon) in industrial garment production worldwide.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

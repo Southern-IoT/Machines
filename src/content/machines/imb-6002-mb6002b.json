@@ -1,0 +1,75 @@
+{
+  "title": "IMB 6002 (MB6002B)",
+  "subtitle": "Automatic Button Feeder Attachment",
+  "brand": "IMB",
+  "category": "Button Feeding Attachment",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The IMB 6002 (model MB6002B) is an automatic cylinder-driven button feeding attachment designed to deliver buttons one-by-one to the workstation of a compatible lockstitch button-sewing machine. It eliminates the manual step of placing each button under the needle, allowing a single operator to run high-volume button-sewing at consistent cycle times.",
+    "applications": [
+      "Automatic button feeding on shirt placket, cuff, and collar button-sewing workstations",
+      "High-volume button attachment lines that previously required manual placement",
+      "Retrofit to existing JUKI 1900-series and Brother 438-series button-sewing heads",
+      "Use with compatible Chinese-brand direct-drive button-sewing heads"
+    ],
+    "industry": "Garment manufacturing (shirts, blouses, trousers, workwear), mass-production apparel assembly lines"
+  },
+  "overviewDescription": "The IMB 6002 (MB6002B) is an automatic cylinder-driven button feeder. Buttons are loaded into a hopper and individually picked up by a rotating cylinder mechanism, which transfers them to the sewing workstation in a consistent orientation. The unit has both manual-feed and auto-feed modes (switchable) and is rated at approximately 99.8% feeding stability. It is marketed as an attachment unit rather than a standalone stitching machine — it must be paired with a compatible button-sewing head.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Automatic cylinder-driven button feeding attachment"
+    },
+    {
+      "field": "Brand",
+      "value": "IMB (China / Bangladesh)"
+    },
+    {
+      "field": "Model",
+      "value": "MB6002B"
+    },
+    {
+      "field": "Feed Mechanism",
+      "value": "Cylinder-driven rotary picker"
+    },
+    {
+      "field": "Feed Modes",
+      "value": "Manual feed / Auto-feed (switchable)"
+    },
+    {
+      "field": "Camera / Logo Recognition",
+      "value": "Not equipped on this model"
+    },
+    {
+      "field": "Feeding Stability",
+      "value": "≈ 99.8%"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Type",
+      "value": "Automatic cylinder-driven button feeding mechanism"
+    },
+    {
+      "parameter": "Feed Modes",
+      "value": "Manual feed / Auto-feed (switchable)"
+    },
+    {
+      "parameter": "Feeding Stability",
+      "value": "≈ 99.8%"
+    },
+    {
+      "parameter": "Camera / Logo Recognition",
+      "value": "Not equipped"
+    },
+    {
+      "parameter": "Compatible Heads",
+      "value": "JUKI 1900 series, Brother 438 series, and other Chinese-brand button-sewing heads"
+    },
+    {
+      "parameter": "Typical Application",
+      "value": "Shirt placket, cuff, collar button attaching"
+    }
+  ],
+  "finalNotes": "• IMB does not publish detailed numeric specifications (max speed, stitch length, button size range) for this attachment unit — it is sold as a feeder rather than a standalone stitching machine. Exact figures should be confirmed with the IMB Bangladesh sales team (sales@imb-bd.com) or via the IMB catalogue at time of quotation.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

@@ -1,0 +1,107 @@
+{
+  "title": "JUKI DDL-8700B-7",
+  "subtitle": "High-Speed 1-Needle Lockstitch Machine with B-7 Control",
+  "brand": "JUKI",
+  "category": "Lockstitch Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI DDL-8700B-7 is a high-speed 1-needle lockstitch sewing machine with the B-7 multi-function control package. It is a general-purpose industrial sewing machine for medium-weight fabrics and is widely deployed on apparel production lines for straight-stitch seaming operations.",
+    "applications": [
+      "General straight-stitch seaming on shirts, blouses, trousers, and light workwear",
+      "Medium-weight woven fabric assembly",
+      "Production lines requiring automatic reverse-feed stitching and bobbin counters",
+      "Apparel operations benefiting from a multi-function operator panel (B-7)"
+    ],
+    "industry": "Garment manufacturing (woven), shirt production, trouser production, light industrial textile assembly"
+  },
+  "overviewDescription": "The JUKI DDL-8700B-7 is a high-speed 1-needle lockstitch machine from the DDL-8700 series, paired with the B-7 control set. It uses a DB×1 needle system, full-rotary hook with automatic lubrication, and a compact servomotor (e.g. M92, 400 W rated / 550 W max output). The B-7 feature set adds a multi-function panel, automatic reverse-feed stitching, a thread clamp option, and a bobbin counter. The machine is lubricated automatically with JUKI Machine Oil 7 (ISO VG7).",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "High-speed 1-needle lockstitch machine (full automatic / B-7 control)"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "DDL-8700B-7"
+    },
+    {
+      "field": "Needle System",
+      "value": "DB×1 (#9–#18 standard; #19–#23 for heavy-weight -H variant)"
+    },
+    {
+      "field": "Hook",
+      "value": "Automatic-lubrication full-rotary hook"
+    },
+    {
+      "field": "Feed Dog",
+      "value": "4-row"
+    },
+    {
+      "field": "Motor",
+      "value": "Compact servomotor (e.g., M92, 400 W rated / 550 W max)"
+    },
+    {
+      "field": "Lubricant",
+      "value": "JUKI Machine Oil 7 (ISO VG7)"
+    },
+    {
+      "field": "Control Set",
+      "value": "B-7 (multi-function panel, automatic reverse-feed, thread clamp option, bobbin counter)"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed (medium-weight)",
+      "value": "5,000 sti/min"
+    },
+    {
+      "parameter": "Max. Sewing Speed (at 5 mm stitch length)",
+      "value": "4,000 sti/min"
+    },
+    {
+      "parameter": "Max. Stitch Length",
+      "value": "5 mm (dial adjustable)"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "30.7 mm (36 mm on some variants)"
+    },
+    {
+      "parameter": "Presser Foot Lift (by hand)",
+      "value": "5.5 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift (by knee)",
+      "value": "13 mm"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "DB×1 (#9–#18 standard; #19–#23 for -H variant)"
+    },
+    {
+      "parameter": "Feed Dog",
+      "value": "4-row"
+    },
+    {
+      "parameter": "Hook",
+      "value": "Automatic-lubrication full-rotary hook"
+    },
+    {
+      "parameter": "Motor",
+      "value": "Compact servomotor (e.g. M92, 400 W rated / 550 W max output)"
+    },
+    {
+      "parameter": "Lubrication",
+      "value": "Automatic (JUKI Machine Oil 7, ISO VG7)"
+    },
+    {
+      "parameter": "B-7 Features",
+      "value": "Multi-function panel, automatic reverse-feed stitching, thread clamp option, bobbin counter"
+    }
+  ],
+  "finalNotes": "• The B-7 control set is the distinguishing feature of this variant — it adds electronic panel functions not present on the base DDL-8700 model.\n• The 'H' suffix in DDL-8700B-7H would indicate a heavy-weight variant (DB×1 #19–#23) for thicker fabrics such as denim and workwear.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

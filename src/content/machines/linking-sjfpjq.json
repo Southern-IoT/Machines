@@ -1,0 +1,75 @@
+{
+  "title": "Linking SJFPJQ",
+  "subtitle": "High-Speed Dial Linking Machine",
+  "brand": "Generic / Chinese OEM",
+  "category": "Linking Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "⚠️ The specific model code 'SJFPJQ' could not be verified against any manufacturer catalog. This appears to be a factory/OEM-specific code for a high-speed dial (rotary) linking machine — a common category of Chinese-manufactured knitwear linking equipment. Typical applications for this machine class are below; please confirm exact specs against the machine's nameplate.",
+    "applications": [
+      "Linking knitted panels (sweater/collar/cuff closing, sock-toe closing)",
+      "Single-line linking on knitwear using a rotating dial and sinkers",
+      "1–4 layer trace linking on knit garments",
+      "Knitwear finishing operations in sweater and sock factories"
+    ],
+    "industry": "Knitwear manufacturing, sweater production, sock manufacturing, knit garment finishing"
+  },
+  "overviewDescription": "⚠️ The specific model code 'SJFPJQ' could not be verified against any manufacturer catalog. This appears to be a factory/OEM-specific code for a high-speed dial (rotary) linking machine — a common category of Chinese-manufactured knitwear linking equipment. Typical specifications for this machine class: linking speed ≈300–1,200 rpm (adjustable, servo-motor controlled on modern units); gauge range commonly 3G–18G (needles per inch, model-dependent); dial diameter commonly 14\" (356 mm) on standard units; small energy-saving servo motor (20–90 W typical); single-line linking, 1–4 layers; self-contained oil reservoir (multi-day natural oiling on many models). Recommendation: confirm gauge, dial diameter, and rated RPM directly from the machine's nameplate, as 'linking' machines are usually customized per knitting gauge at time of order.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "High-speed dial (rotary) linking machine"
+    },
+    {
+      "field": "Brand",
+      "value": "Generic / Chinese OEM"
+    },
+    {
+      "field": "Model",
+      "value": "SJFPJQ (factory / OEM-specific code)"
+    },
+    {
+      "field": "Function",
+      "value": "Linking knitted panels with rotating dial and sinkers"
+    },
+    {
+      "field": "Trace Type",
+      "value": "Single-line linking, 1–4 layers"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Function",
+      "value": "Links knitted panels (sweater/collar/cuff closing, sock-toe closing)"
+    },
+    {
+      "parameter": "Mechanism",
+      "value": "Rotating dial and sinkers"
+    },
+    {
+      "parameter": "Linking Speed (typical)",
+      "value": "≈ 300 – 1,200 rpm (adjustable, servo-motor controlled)"
+    },
+    {
+      "parameter": "Gauge Range (typical)",
+      "value": "3G – 18G (needles per inch, model-dependent)"
+    },
+    {
+      "parameter": "Dial Diameter (typical)",
+      "value": "14\" (356 mm) on standard units"
+    },
+    {
+      "parameter": "Motor (typical)",
+      "value": "Small energy-saving servo motor, 20 – 90 W"
+    },
+    {
+      "parameter": "Trace Type",
+      "value": "Single-line linking, 1 – 4 layers"
+    },
+    {
+      "parameter": "Lubrication (typical)",
+      "value": "Self-contained oil reservoir (multi-day natural oiling)"
+    }
+  ],
+  "finalNotes": "⚠️ The specific model code \"SJFPJQ\" could not be verified against any manufacturer catalog. This appears to be a factory/OEM-specific code for a high-speed dial (rotary) linking machine — a common category of Chinese-manufactured knitwear linking equipment. The specs above are typical figures for this machine class — confirm gauge, dial diameter, and rated RPM directly from the machine's nameplate, as \"linking\" machines are usually customized per knitting gauge at time of order.\n\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

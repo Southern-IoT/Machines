@@ -1,0 +1,75 @@
+{
+  "title": "JUKI LBH-783",
+  "subtitle": "1-Needle Lockstitch Buttonholing Sewing Machine",
+  "brand": "JUKI",
+  "category": "Buttonhole Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI LBH-783 is a 1-needle lockstitch buttonholing sewing machine used to sew precise, uniform buttonholes on garments and textile products. It produces lockstitch buttonholes with a tacking stitch at both ends, suitable for shirts, blouses, trousers, jeans, jackets, and similar apparel.",
+    "applications": [
+      "Lockstitch buttonholes on shirt fronts, cuffs, and collars",
+      "Buttonholes on trousers, jeans, and workwear",
+      "Buttonholes on jackets, blazers, and outerwear",
+      "Heavy-duty buttonhole work requiring reinforced tacks at both ends"
+    ],
+    "industry": "Garment manufacturing, shirt production, trouser / jeans production, uniform and workwear manufacturing, outerwear production"
+  },
+  "overviewDescription": "The JUKI LBH-783 is a 1-needle lockstitch buttonholing machine that produces a complete buttonhole — side stitches, end tacks, and cross bar — in a single automated cycle. Buttonhole length is selectable via a gear-change method covering 6.4–38.1 mm, and the number of stitches per buttonhole can be set from 54 to 345 stitches. A 300 W general-purpose motor (250 W usable at ≤3,100 rpm) drives the head. The machine is lubricated with JUKI New Defrix Oil No. 1.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "1-Needle lockstitch buttonholing sewing machine"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "LBH-783"
+    },
+    {
+      "field": "Main Application",
+      "value": "Lockstitch buttonholes on garments"
+    },
+    {
+      "field": "Lubricant",
+      "value": "JUKI New Defrix Oil No. 1"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "3,600 sti/min"
+    },
+    {
+      "parameter": "Number of Stitches per Buttonhole",
+      "value": "54 – 345 (by gear-change method)"
+    },
+    {
+      "parameter": "Buttonhole Length",
+      "value": "6.4 – 38.1 mm"
+    },
+    {
+      "parameter": "Lift of Work Clamp",
+      "value": "Max. 12 mm"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "DP×5 #11J (134 Nm75)"
+    },
+    {
+      "parameter": "Motor",
+      "value": "300 W general-purpose motor (250 W usable at ≤3,100 rpm)"
+    },
+    {
+      "parameter": "Weight (machine head)",
+      "value": "40 kg"
+    },
+    {
+      "parameter": "Lubrication",
+      "value": "JUKI New Defrix Oil No. 1"
+    }
+  ],
+  "finalNotes": "• The LBH-783 sits in JUKI's lockstitch-buttonhole lineup between the smaller benchtop buttonholers and the higher-end LBH-1790 series. Compared to chainstitch buttonholers (e.g. LH-4 series), the LBH-783 produces a lockstitch side with bar tacks — more durable but slower per buttonhole.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

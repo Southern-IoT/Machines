@@ -1,0 +1,70 @@
+{
+  "title": "Ngai Shing NS-82",
+  "subtitle": "Collar Blocking / Pressing Machine (NS-82P-L-2)",
+  "brand": "Ngai Shing",
+  "category": "Pressing Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Ngai Shing NS-82 (variant NS-82P-L-2) is a collar-blocking and heat-pressing machine used in shirt production to press fused or sewn collars into their final shape after assembly. It uses an electrically heated mould and a single-chip microprocessor with a touch-screen control to maintain consistent temperature and shape.",
+    "applications": [
+      "Heat-pressing shirt collars into final shape after assembly",
+      "Setting fused interlining on shirt collars (post-fusing finishing press)",
+      "Auxiliary operation in shirt-making lines alongside collar trim/turn (NS-76) and placket sewer (NS-6065J)"
+    ],
+    "industry": "Shirt manufacturing, garment production"
+  },
+  "overviewDescription": "The Ngai Shing NS-82 (NS-82P-L-2) is a collar-blocking and pressing machine. It uses an electrically heated mould — with an independent digital thermostat for precise temperature control — and a lower mould that has a selector / adjustment for different collar shapes. The machine is controlled by a single-chip microprocessor with a user-friendly touch-screen interface. It belongs to the same family of shirt-making auxiliary equipment as the NS-76 collar trimmer/turner and the NS-6065J placket sewer.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Collar blocking / heat-pressing machine"
+    },
+    {
+      "field": "Brand",
+      "value": "Ngai Shing"
+    },
+    {
+      "field": "Model",
+      "value": "NS-82 (variant NS-82P-L-2)"
+    },
+    {
+      "field": "Function",
+      "value": "Collar blocking (heat-pressing collar into shape)"
+    },
+    {
+      "field": "Control",
+      "value": "Single-chip microprocessor with touch screen"
+    },
+    {
+      "field": "Heating",
+      "value": "Electric heated, with independent digital thermostat"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Function",
+      "value": "Collar blocking (heat-pressing collar into shape only)"
+    },
+    {
+      "parameter": "Control System",
+      "value": "Single-chip microprocessor with user-friendly touch screen"
+    },
+    {
+      "parameter": "Heating",
+      "value": "Electric heated"
+    },
+    {
+      "parameter": "Temperature Control",
+      "value": "Independent digital thermostat"
+    },
+    {
+      "parameter": "Mould",
+      "value": "Lower mould has selector / adjustment for different collar shapes"
+    },
+    {
+      "parameter": "Equipment Family",
+      "value": "Shirt-making auxiliary equipment (same family as NS-76 collar trim/turn, NS-6065J placket sewer)"
+    }
+  ],
+  "finalNotes": "• The NS-82 is the dedicated collar-blocking step in a shirt-making line — it pairs with the NS-76 (collar trim/turn) and NS-6065J (placket sewer) to form a complete collar / placket production cell.\n• Ngai Shing is a shirt-making auxiliary equipment manufacturer widely used in Asian shirt factories.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

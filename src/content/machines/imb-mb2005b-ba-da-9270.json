@@ -1,0 +1,54 @@
+{
+  "title": "IMB MB2005B-BA-DA-9270",
+  "subtitle": "Feed-Off-The-Arm Machine (IMB Jeans Machine Line)",
+  "brand": "IMB",
+  "category": "Denim Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The IMB MB2005B-BA-DA-9270 is a feed-off-the-arm machine in IMB's jeans-machine line, used for denim and heavy-fabric seaming. The composite code (BA / DA suffixes) is most likely a factory / spec-configuration code denoting gauge or automation options rather than a distinct catalog model.",
+    "applications": [
+      "Feed-off-the-arm chainstitch seaming on jeans and denim garments",
+      "Production lines on denim / jeans / workwear requiring a robust FOTA head",
+      "Possible lap-seaming or puller-feed variant (BA / DA suffix dependent)"
+    ],
+    "industry": "Jeans / denim manufacturing, workwear production, trouser production"
+  },
+  "overviewDescription": "⚠️ A listing for the exact composite code 'MB2005B-BA-DA-9270' was not found on IMB's public site. IMB's published lineup lists closely related feed-off-the-arm models as MB2004G / MB2004H; 'MB2005B-BA-DA-9270' is most likely a factory/spec-configuration code (BA/DA suffixes typically denote gauge or automation options) rather than a distinct catalog model. IMB does not publish detailed numeric specs (sewing speed, stitch length) for this line publicly — best confirmed via IMB Bangladesh (sales@imb-bd.com) or the IMB catalogue.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Feed-off-the-arm machine (IMB jeans machine line)"
+    },
+    {
+      "field": "Brand",
+      "value": "IMB (China / Bangladesh)"
+    },
+    {
+      "field": "Model",
+      "value": "MB2005B-BA-DA-9270 (factory / spec-configuration code)"
+    },
+    {
+      "field": "Category",
+      "value": "Feed-off-the-arm (jeans / denim machines)"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Category",
+      "value": "Feed-off-the-arm (jeans / denim machines)"
+    },
+    {
+      "parameter": "Configured Suffix — BA",
+      "value": "Likely gauge / spec option"
+    },
+    {
+      "parameter": "Configured Suffix — DA",
+      "value": "Likely automation option"
+    },
+    {
+      "parameter": "Public Numeric Specs",
+      "value": "Not published — confirm with IMB Bangladesh or catalogue"
+    }
+  ],
+  "finalNotes": "⚠️ IMB's published lineup lists closely related feed-off-the-arm models as MB2004G / MB2004H; a listing for the exact composite code \"MB2005B-BA-DA-9270\" was not found on IMB's public site. This is likely a factory/spec-configuration code (BA/DA suffixes typically denote gauge or automation options) for a Feed-Off-The-Arm denim machine rather than a distinct catalog model.\n\nIMB does not publish detailed numeric specs (sewing speed, stitch length) for this line publicly — best confirmed via IMB Bangladesh (sales@imb-bd.com) or the IMB catalogue.\n\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

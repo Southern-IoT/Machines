@@ -1,0 +1,75 @@
+{
+  "title": "Noki A9-F4",
+  "subtitle": "Direct-Drive Single-Needle Lockstitch Machine",
+  "brand": "Noki",
+  "category": "Lockstitch Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "⚠️ A definitive public spec sheet for 'Noki A9-F4' could not be located. The 'F4' suffix commonly denotes a direct-drive single-needle lockstitch machine — a naming/format used widely across Chinese-market brands (Jack, Typical, Sera, etc.) for direct-drive lockstitch heads. The specs below are typical figures for this machine class and should be confirmed against your machine's nameplate/manual.",
+    "applications": [
+      "General straight-stitch seaming on light to medium-weight woven fabrics",
+      "Direct-drive lockstitch operations on shirts, trousers, and light workwear",
+      "Production lines benefiting from a built-in direct-drive servo (no belt)",
+      "Workshops needing compact lockstitch heads without external motor mounts"
+    ],
+    "industry": "Garment manufacturing (light to medium-weight), shirt production, trouser production, general apparel assembly"
+  },
+  "overviewDescription": "⚠️ A definitive public spec sheet for 'Noki A9-F4' could not be located. 'F4' commonly denotes a direct-drive single-needle lockstitch machine — this naming/format is used widely across Chinese-market brands such as Jack, Typical, Sera, etc., for direct-drive lockstitch heads. Typical specs for this class of machine: stitch type lockstitch (single needle, straight stitch), max sewing speed ≈4,000–5,000 sti/min (adjustable via direct-drive motor control), max stitch length ≈5 mm, needle bar stroke ≈31–31.8 mm, presser foot lift ≈5 mm (hand) / 13–15 mm (knee), needle DB×1 #9–#18, motor built-in direct-drive servo (no belt). Recommendation: check the machine's nameplate/manual for exact 'Noki' brand figures — this brand was not directly documented in available manufacturer sources.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Direct-drive single-needle lockstitch machine"
+    },
+    {
+      "field": "Brand",
+      "value": "Noki (Chinese-market brand)"
+    },
+    {
+      "field": "Model",
+      "value": "A9-F4"
+    },
+    {
+      "field": "Drive",
+      "value": "Built-in direct-drive servo (no belt)"
+    },
+    {
+      "field": "Stitch Type",
+      "value": "Lockstitch, single needle, straight stitch"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Stitch Type",
+      "value": "Lockstitch (single needle, straight stitch)"
+    },
+    {
+      "parameter": "Max. Sewing Speed (typical)",
+      "value": "≈ 4,000 – 5,000 sti/min (adjustable via direct-drive motor control)"
+    },
+    {
+      "parameter": "Max. Stitch Length (typical)",
+      "value": "≈ 5 mm"
+    },
+    {
+      "parameter": "Needle Bar Stroke (typical)",
+      "value": "≈ 31 – 31.8 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift — by hand (typical)",
+      "value": "≈ 5 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift — by knee (typical)",
+      "value": "≈ 13 – 15 mm"
+    },
+    {
+      "parameter": "Needle (typical)",
+      "value": "DB×1 #9 – #18"
+    },
+    {
+      "parameter": "Motor",
+      "value": "Built-in direct-drive servo (no belt)"
+    }
+  ],
+  "finalNotes": "⚠️ A definitive public spec sheet for \"Noki A9-F4\" could not be located. The specs above are typical figures for the Chinese-market direct-drive single-needle lockstitch class (Jack, Typical, Sera, etc.). If \"Noki\" is the brand on your machine's nameplate, please confirm the exact figures from the nameplate/manual — this brand was not directly documented in available manufacturer sources.\n\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

@@ -1,0 +1,103 @@
+{
+  "title": "Hashima HP-450MS",
+  "subtitle": "Compact Fusing Press",
+  "brand": "Hashima",
+  "category": "Fusing Press Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Hashima HP-450MS is a compact continuous-type fusing press designed for small-to-medium fusing operations on shirt collars, cuffs, plackets, and similar garment components. With a 450 mm fusing belt width and 220–230V single-phase power, it fits in smaller workshops and sample rooms where a 3-phase industrial press is impractical.",
+    "applications": [
+      "Fusing interlining onto shirt collars, cuffs, and plackets in small workshops",
+      "Sample-room fusing and small-batch production",
+      "Trouser / jeans panel reinforcement (small components)",
+      "Any operation requiring single-phase 220–230V power instead of 3-phase 380V"
+    ],
+    "industry": "Small-batch shirt production, sample rooms, garment workshops, trouser and jeans production"
+  },
+  "overviewDescription": "The Hashima HP-450MS is a compact fusing press from the Hashima HP series. It runs on single-phase 220–230V power with a 4 kW heater and ~33 W motor. The fusing belt width is 450 mm, max temperature 195 °C, max pressure 1.5 kg/cm², and max belt speed 8.7 m/min, with heating times from 5 to 20 seconds. Features include automatic belt-warping prevention (direct limit-switch type, upper & lower), rubber non-slip driving rollers, a one-side-open front body that fits any fabric size, and a standard rotary strip-off device (MS model).",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Compact continuous-type fusing press"
+    },
+    {
+      "field": "Brand",
+      "value": "Hashima (Japan)"
+    },
+    {
+      "field": "Model",
+      "value": "HP-450MS"
+    },
+    {
+      "field": "Fusing Belt Width",
+      "value": "450 mm"
+    },
+    {
+      "field": "Voltage",
+      "value": "220 – 230V (single phase)"
+    },
+    {
+      "field": "Origin",
+      "value": "Japan"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Voltage",
+      "value": "220 – 230V (single phase)"
+    },
+    {
+      "parameter": "Heater Rated Output",
+      "value": "4 kW"
+    },
+    {
+      "parameter": "Motor Rated Output",
+      "value": "≈ 33 W"
+    },
+    {
+      "parameter": "Fusing Belt Width",
+      "value": "450 mm"
+    },
+    {
+      "parameter": "Max. Temperature",
+      "value": "195 °C"
+    },
+    {
+      "parameter": "Max. Pressure",
+      "value": "1.5 kg/cm²"
+    },
+    {
+      "parameter": "Max. Belt Speed",
+      "value": "8.7 m/min"
+    },
+    {
+      "parameter": "Heating Time",
+      "value": "5 – 20 seconds"
+    },
+    {
+      "parameter": "Dimensions (approx.)",
+      "value": "1,660 × 880 × 490 mm"
+    },
+    {
+      "parameter": "Weight (approx.)",
+      "value": "152 kg"
+    },
+    {
+      "parameter": "Belt-Warping Prevention",
+      "value": "Automatic (direct limit-switch type, upper & lower)"
+    },
+    {
+      "parameter": "Driving Rollers",
+      "value": "Rubber (non-slip)"
+    },
+    {
+      "parameter": "Front Body",
+      "value": "One-side-open (fits any fabric size)"
+    },
+    {
+      "parameter": "Strip-Off Device",
+      "value": "Rotary strip-off device — standard (MS model)"
+    }
+  ],
+  "finalNotes": "• The HP-450MS is the compact / single-phase counterpart to the larger HP-900LFS — ideal when 3-phase 380V power is unavailable.\n• The MS suffix = Mechanical / Manual Strip-off (rotary type, standard) — different from the LFS variant which is the larger 900 mm linear fusing press.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

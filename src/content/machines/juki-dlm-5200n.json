@@ -1,0 +1,71 @@
+{
+  "title": "JUKI DLM-5200N",
+  "subtitle": "1-Needle Lockstitch Machine with Vertical Edge Trimmer",
+  "brand": "JUKI",
+  "category": "Lockstitch with Edge Cutter",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI DLM-5200N is a 1-needle lockstitch machine equipped with a vertical edge trimmer (sharp cloth-cutting knife). It cuts the fabric edge and sews the seam in a single pass, maintaining a constant seam allowance from the fabric edge — ideal for shirt side seams, panel seams, and similar operations where the edge must be trimmed cleanly before stitching.",
+    "applications": [
+      "Single-pass edge-trim and lockstitch seam on shirt side panels and fronts",
+      "Operations requiring consistent seam allowance from the fabric edge",
+      "Sharp cloth-edge cutting and stitching on light to medium-weight woven fabrics",
+      "Production lines where trimming and stitching are combined into one operation"
+    ],
+    "industry": "Shirt manufacturing, garment production (woven), light industrial textile assembly"
+  },
+  "overviewDescription": "The JUKI DLM-5200N is a 1-needle lockstitch machine with a built-in vertical edge trimmer. The cloth-cutting knife trims the fabric edge just before the needle descends, ensuring a clean edge and a consistent seam allowance without a separate trimming pass. The machine uses bottom feed and runs at up to 4,500 sti/min with a maximum stitch length of 5 mm (forward and reverse feed). Presser foot lift is 4 mm by hand and 10 mm by knee.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "1-needle lockstitch machine with vertical edge trimmer"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "DLM-5200N"
+    },
+    {
+      "field": "Edge Trimming",
+      "value": "Vertical cloth-cutting knife (built-in)"
+    },
+    {
+      "field": "Feed System",
+      "value": "Bottom feed"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "4,500 sti/min"
+    },
+    {
+      "parameter": "Max. Stitch Length",
+      "value": "5 mm (normal / reverse feed)"
+    },
+    {
+      "parameter": "Max. Presser Foot Lift (by hand)",
+      "value": "4 mm"
+    },
+    {
+      "parameter": "Max. Presser Foot Lift (by knee)",
+      "value": "10 mm"
+    },
+    {
+      "parameter": "Edge Trimmer",
+      "value": "Vertical sharp cloth-cutting knife"
+    },
+    {
+      "parameter": "Feed System",
+      "value": "Bottom feed"
+    },
+    {
+      "parameter": "Application",
+      "value": "Single-pass edge-trim + lockstitch seam"
+    }
+  ],
+  "finalNotes": "• The defining feature is the integrated vertical edge cutter — it eliminates a separate trimming pass and guarantees a constant seam allowance.\n• Compared with the standard DDL-8700 series, the DLM-5200N trades some max speed (4,500 vs 5,000 sti/min) for the edge-trim function.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

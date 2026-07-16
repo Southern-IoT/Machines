@@ -1,0 +1,107 @@
+{
+  "title": "JUKI MO-6816S",
+  "subtitle": "5-Thread Overlock / Safety Stitch Machine (MO-6800S Series)",
+  "brand": "JUKI",
+  "category": "Overlock Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI MO-6816S is a 5-thread overlock / safety stitch machine belonging to the JUKI MO-6800S series. It combines a 2-needle overedge with an additional safety-stitch thread, producing a wide, strong, stretchable seam with a finished edge in a single pass — typically used for seaming medium to heavy-weight woven and knit fabrics.",
+    "applications": [
+      "Seaming and overedging medium to heavy-weight woven fabrics in a single pass",
+      "Seaming knit fabrics (T-shirts, polo shirts, sportswear, underwear)",
+      "Wide safety-stitch seams on jeans, workwear, and uniform assembly",
+      "Operations requiring a 5-thread combination stitch (overedge + lockstitch)"
+    ],
+    "industry": "Garment manufacturing (woven and knit), jeans production, workwear and uniform manufacturing, sportswear production"
+  },
+  "overviewDescription": "The JUKI MO-6816S is a 5-thread overlock / safety stitch machine from the MO-6800S series. It uses two needles, an upper looper, a lower looper, and an additional chain-stitch thread to form a 5-thread safety / overedge combination in one pass. The machine runs at up to 7,000 sti/min with differential feed (1:2 max 1:4 gathering; 1:0.7 max 1:0.6 stretching) and a 24.5 mm needle bar stroke. The 60H sub-type uses a 27.0 mm needle bar stroke. The head is lubricated automatically with JUKI Machine Oil 18 (ISO VG18).",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "5-Thread overlock / safety stitch machine"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "MO-6816S (MO-6800S series)"
+    },
+    {
+      "field": "Series Lineup",
+      "value": "MO-6800S series (5-thread overlock / safety stitch variants)"
+    },
+    {
+      "field": "Needle System",
+      "value": "DC×27"
+    },
+    {
+      "field": "Overedge Width",
+      "value": "2.0 / 3.0 / 4.0 mm"
+    },
+    {
+      "field": "Needle Gauge",
+      "value": "2.0 mm"
+    },
+    {
+      "field": "Lubricant",
+      "value": "JUKI Machine Oil 18 (ISO VG18)"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "7,000 sti/min"
+    },
+    {
+      "parameter": "Stitch Length",
+      "value": "0.6 – 3.8 (4.5) mm"
+    },
+    {
+      "parameter": "Needle Gauge",
+      "value": "2.0 mm"
+    },
+    {
+      "parameter": "Overedge Width",
+      "value": "2.0 / 3.0 / 4.0 mm"
+    },
+    {
+      "parameter": "Differential Feed Ratio — Gathering",
+      "value": "1:2 (max 1:4)"
+    },
+    {
+      "parameter": "Differential Feed Ratio — Stretching",
+      "value": "1:0.7 (max 1:0.6)"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "24.5 mm (60H type: 27.0 mm)"
+    },
+    {
+      "parameter": "Needle Inclination",
+      "value": "20°"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "DC×27"
+    },
+    {
+      "parameter": "Max. Lift of Presser Foot",
+      "value": "7 mm"
+    },
+    {
+      "parameter": "Max. Presser Foot Pressure",
+      "value": "63.7 N (6.5 kgf)"
+    },
+    {
+      "parameter": "Weight of Machine Head",
+      "value": "28 kg"
+    },
+    {
+      "parameter": "Lubrication",
+      "value": "Automatic (JUKI Machine Oil 18, ISO VG18)"
+    }
+  ],
+  "finalNotes": "• The MO-6816S is the 5-thread variant in the MO-6800S series; its sister model JUKI MO-6816D (a 2-needle / 4-thread safety-stitch / interlock head) is already catalogued separately on this site.\n• The 60H sub-type variant uses a longer needle bar stroke (27.0 mm vs 24.5 mm) for heavier fabrics.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+}

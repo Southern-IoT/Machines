@@ -1,0 +1,95 @@
+{
+  "title": "JUKI LK-1903B-SS301",
+  "subtitle": "Computer-Controlled High-Speed Lockstitch Button Sewing Machine",
+  "brand": "JUKI",
+  "category": "Button Sewing Machine",
+  "publishedDate": "2026-07-16T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The JUKI LK-1903B-SS301 is a computer-controlled, high-speed lockstitch button-sewing machine. It automatically positions and sews buttons onto garments using a digital X-Y feed mechanism, eliminating manual button placement and producing consistent, secure stitches at high production rates.",
+    "applications": [
+      "Attaching flat buttons on shirt fronts, cuffs, and collars",
+      "Sewing buttons on jeans, trousers, and workwear",
+      "High-volume button attachment in industrial garment production",
+      "Pattern shirts, blouses, and uniforms requiring consistent button placement"
+    ],
+    "industry": "Garment manufacturing (shirts, trousers, jeans, uniforms), workwear production, mass-production apparel assembly lines"
+  },
+  "overviewDescription": "The JUKI LK-1903B-SS301 is a computer-controlled lockstitch button sewer belonging to the JUKI LK-1900B button-sewing series. The SS301 suffix indicates it accepts buttons sized φ8–φ20 mm (the SS302 variant accepts φ10–φ20 mm). It uses a digital X-Y feed to position each button automatically under the needle, then sews a programmed stitch pattern (typically a cross / T / parallel stitch) and auto-trims the threads. The machine is widely deployed on shirt and trouser production lines because of its high speed and consistent stitch quality.",
+  "classificationTable": [
+    {
+      "field": "Machine Type",
+      "value": "Computer-controlled, high-speed lockstitch button sewing machine"
+    },
+    {
+      "field": "Brand",
+      "value": "JUKI"
+    },
+    {
+      "field": "Model",
+      "value": "LK-1903B-SS301"
+    },
+    {
+      "field": "Series",
+      "value": "LK-1900B button sewing series"
+    },
+    {
+      "field": "Variant",
+      "value": "SS301 (button size φ8–φ20 mm); SS302 (φ10–φ20 mm)"
+    },
+    {
+      "field": "Main Application",
+      "value": "Industrial button attachment on shirts, trousers, jeans, and workwear"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "2,700 sti/min (normal speed 2,500 sti/min)"
+    },
+    {
+      "parameter": "Stitch Length",
+      "value": "0.1 – 10 mm (0.1 mm step)"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "45.7 mm"
+    },
+    {
+      "parameter": "Lift of Work Clamp Foot",
+      "value": "Max. 13 mm"
+    },
+    {
+      "parameter": "Number of Standard Patterns",
+      "value": "50"
+    },
+    {
+      "parameter": "Needle System",
+      "value": "DP×17 (#14)"
+    },
+    {
+      "parameter": "Hook",
+      "value": "Standard shuttle hook"
+    },
+    {
+      "parameter": "Button Size — SS301",
+      "value": "φ8 – φ20 mm"
+    },
+    {
+      "parameter": "Button Size — SS302",
+      "value": "φ10 – φ20 mm"
+    },
+    {
+      "parameter": "Power Consumption",
+      "value": "250 VA"
+    },
+    {
+      "parameter": "Weight — Machine Head (incl. motor)",
+      "value": "42 kg"
+    },
+    {
+      "parameter": "Weight — Control Box",
+      "value": "5.1 kg"
+    }
+  ],
+  "finalNotes": "• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon.\n• The LK-1903B is the computer-controlled successor to the LK-1900B series — pattern data and stitch parameters are stored digitally rather than set via mechanical cams.\n• SS301 vs SS302 differ only in the button-size range covered by the work clamp; mechanical / electronic components are otherwise identical."
+}
