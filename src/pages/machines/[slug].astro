@@ -34,6 +34,15 @@ const homeHref = withBase("/");
 const machineImageSrc = assetSrc(machine.machineImage);
 const hasGaugeParts = Array.isArray(machine.gaugePartsCrossReference) && machine.gaugePartsCrossReference.length > 0;
 
+// "More Information Coming Soon" banner: shown when at least one of the
+// major post-technical-data content sections is missing. This signals to
+// visitors that the page is a work-in-progress rather than fully complete.
+const isIncomplete =
+  !(machine.workingPrinciples?.length) ||
+  !(machine.sequenceFlow?.length) ||
+  !(machine.partsList?.length) ||
+  !(machine.maintenance?.length);
+
 const sections = [
   { id: "purpose",          label: "Purpose & Application",       icon: "target",         show: !!machine.purposeAndApplication },
   { id: "overview",         label: "Machine Overview",            icon: "info",           show: true },
@@ -180,7 +189,36 @@ const formattedDate = machine.publishedDate
             )}
 
             {s.id === "technical-data" && machine.technicalSpecs?.length > 0 && (
-              <SpecTable specs={machine.technicalSpecs} />
+              <>
+                <SpecTable specs={machine.technicalSpecs} />
+                {isIncomplete && (
+                  <div
+                    id="more-info-coming-soon"
+                    style="margin-top:10px; padding:12px 16px;
+                           background:#fffbf2; border:1px solid #ffe2a8;
+                           border-left:3px solid #ff9900; border-radius:0 4px 4px 0;
+                           display:flex; align-items:center; gap:10px;
+                           font-family:'Inter',sans-serif;"
+                  >
+                    <span class="material-symbols-outlined notranslate" translate="no"
+                          style="font-size:18px; color:#ff9900; flex-shrink:0;">
+                      hourglass_top
+                    </span>
+                    <div>
+                      <div style="font-size:12px; font-weight:700; color:#0f1111;
+                                  text-transform:uppercase; letter-spacing:0.06em;
+                                  margin-bottom:2px;">
+                        More Information Coming Soon
+                      </div>
+                      <div style="font-size:11px; color:#565959; line-height:1.5;">
+                        Working principles, sequence flow, parts list, maintenance, and
+                        resources for this machine are still being compiled. Please
+                        check back later for the full documentation.
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </>
             )}
 
             {s.id === "working-principle" && machine.workingPrinciples?.length > 0 && (
