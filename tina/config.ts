@@ -8,13 +8,12 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "public",
-    // basePath matches astro.config.mjs `base`. PROD = "/Machines/" (GitHub Pages);
-    // DEV = "" (empty) so the TinaCMS dev server at localhost:4001 serves the admin
-    // bundle at /admin/ directly without trying to load assets from a prefix that
-    // doesn't exist on its own port. Set TINA_BASE_PATH="Machines" to force the
-    // production path during dev (rare; only needed if you proxy 4001 behind a
-    // path-based router).
-    basePath: process.env.TINA_BASE_PATH ?? (process.env.NODE_ENV === "production" ? "Machines" : ""),
+    // basePath matches astro.config.mjs `base`. Default "Machines" = "/Machines/"
+    // for production (GitHub Pages). Override with TINA_BASE_PATH=""/(empty) for
+    // local dev so the TinaCMS dev server at localhost:4001 serves the admin
+    // bundle at /admin/ directly without the prefix that doesn't exist on its own
+    // port.
+    basePath: process.env.TINA_BASE_PATH ?? "Machines",
   },
 
   media: {

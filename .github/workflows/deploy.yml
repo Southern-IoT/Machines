@@ -38,6 +38,7 @@ jobs:
       - name: Run TinaCMS build
         run: npx tinacms build --skip-cloud-checks
         env:
+          TINA_BASE_PATH: Machines
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
 
