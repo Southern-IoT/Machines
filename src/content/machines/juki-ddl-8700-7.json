@@ -1,0 +1,122 @@
+{
+  "title": "Juki DDL-8700-7",
+  "subtitle": "1-Needle Lockstitch Machine with Automatic Thread Trimmer (B-7 Control Family)",
+  "brand": "JUKI",
+  "category": "Lockstitch Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-22T00:00:00.000Z",
+  "youtubeVideoId": "",
+  "purposeAndApplication": {
+    "purpose": "The Juki DDL-8700-7 is the standard 1-needle lockstitch machine in the DDL-8700 family, equipped with automatic thread trimmer and the new compact servomotor (M92). Designed for medium-weight woven fabrics in general apparel production.",
+    "applications": [
+      "General straight-stitch seaming on shirts, blouses, trousers, light workwear",
+      "Medium-weight woven fabric assembly",
+      "Operations requiring automatic reverse-feed stitching and bobbin counter",
+      "Production lines with energy-saving mode and program-support features"
+    ],
+    "industry": "Garment manufacturing (woven), shirt production, trouser production, light industrial textile assembly"
+  },
+  "overviewDescription": "Made by Juki (Japan). The DDL-8700-7 ships with the SC-920C control box and M92 compact servomotor (450 W) as the standard set. It inherits the desirable features of the previous Juki lockstitches — high-speed stitching, ease of operation, reliability — and adds energy-saving mode, output control function, operation measuring function (six modes), and bobbin counter. Sub-variants: DDL-8700A-7 (light-weight), DDL-8700H-7 (heavy-weight). Note: this is the standard `-7` trimmer version; for the integrated direct-drive variant see Juki DDL-8700B-7.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "1-Needle, Lockstitch Machine with Automatic Thread Trimmer"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "JUKI, Japan"
+    },
+    {
+      "field": "Model Series",
+      "value": "DDL-8700 (sub-variants: DDL-8700-7 trimmer, DDL-8700A-7 light-weight, DDL-8700H-7 heavy-weight, DDL-8700B-7 direct-drive integrated)"
+    },
+    {
+      "field": "Stitch Type",
+      "value": "Lockstitch (single needle, straight stitch)"
+    },
+    {
+      "field": "Bed / Frame Type",
+      "value": "Flat bed"
+    },
+    {
+      "field": "Needle Configuration",
+      "value": "Single needle"
+    },
+    {
+      "field": "Drive / Lubrication",
+      "value": "Direct-drive compact servomotor (M92, 450 W); automatic-lubrication, JUKI Machine Oil 7"
+    },
+    {
+      "field": "Control Box",
+      "value": "SC-920C (with energy-saving mode, output control, operation measuring, bobbin counter)"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed (medium-weight)",
+      "value": "5,000 sti/min"
+    },
+    {
+      "parameter": "Max. Sewing Speed at 4 mm stitch length",
+      "value": "4,000 sti/min"
+    },
+    {
+      "parameter": "Max. Stitch Length",
+      "value": "5 mm"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "30.7 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift (by hand)",
+      "value": "5.5 mm"
+    },
+    {
+      "parameter": "Presser Foot Lift (by knee)",
+      "value": "13 mm"
+    },
+    {
+      "parameter": "Needle Type",
+      "value": "DB×1 (#14); #9–#18 standard, #19–#23 on -H-7 variant"
+    },
+    {
+      "parameter": "Feed Dog",
+      "value": "4-row"
+    },
+    {
+      "parameter": "Hook",
+      "value": "Automatic-lubricating full-rotary hook"
+    },
+    {
+      "parameter": "Lubrication",
+      "value": "Automatic (JUKI Machine Oil 7, ISO VG7)"
+    },
+    {
+      "parameter": "Power Requirement",
+      "value": "Single-phase 100–240 V, 3-phase 200–240 V"
+    },
+    {
+      "parameter": "Power Consumption",
+      "value": "320 VA"
+    },
+    {
+      "parameter": "Machine Head Weight",
+      "value": "30 kg"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "JUKI DDL-8700-7/SC-920C/M92 catalog PDF (Tier-1)",
+      "description": "Official JUKI catalog PDF with full specifications",
+      "url": "https://www.juki.co.jp/industrial_e/admin/pdata/filedata/302/ddl87007_sc920c_m92.pdf"
+    },
+    {
+      "resourceName": "JUKI DDL-8700-7 product page (Tier-1)",
+      "description": "Official JUKI product description page",
+      "url": "https://www.juki.co.jp/industrial_e/products_e/apparel_e/1needle_lock_e/detail.php?cd=DDL-8700_E"
+    }
+  ],
+  "finalNotes": "Phase 1 basic research complete with Tier-1 JUKI catalog PDF extraction. Detailed Research remains unfilled — this is a partial-data state; the page will display the 'More Information Coming Soon' banner until Detailed Research adds working principles, sequence flow, parts list, maintenance, and additional resources."
+}

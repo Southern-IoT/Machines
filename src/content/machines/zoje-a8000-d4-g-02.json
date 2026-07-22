@@ -1,0 +1,108 @@
+{
+  "title": "Zoje A8000-D4-G/02",
+  "subtitle": "Single-Needle Lockstitch Machine with Direct-Drive Servo and Large-Hook (7 mm stitch)",
+  "brand": "ZOJE",
+  "category": "Lockstitch Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-22T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Zoje A8000 series is a single-needle lockstitch machine with a built-in direct-drive AC servo motor. The -D4-G/02 suffix indicates the D4 control set with the large-hook G variant — capable of stitch lengths up to 7 mm and using a 26 mm large hook for heavy thread work and long stitch applications. Designed for medium and heavy materials.",
+    "applications": [
+      "General straight-stitch seaming on medium and heavy materials",
+      "Heavy thread and leather assembly (with large hook variant)",
+      "Production lines requiring automatic thread trimmer, reverse feeding, programmable bartacks, foot lifter, needle positioning"
+    ],
+    "industry": "Garment manufacturing (medium and heavy materials), upholstery, leather goods"
+  },
+  "overviewDescription": "Made by Zoje (Zhejiang, China). The A8000 family replaces the older ZJ8000 series with a direct-drive motor design. Variants: A8000-D4 (standard, 5 mm stitch, regular hook), A8000-D4-HG (heavy, 7 mm stitch, large 26 mm hook), A8000-D4-TP-02 (full-automatic trimmer set). The `-D4-G/02` suffix here is a Zoje ordering code combining the D4 control, G large-hook, and 02 sub-variant.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Single-Needle Lockstitch Machine (Direct-Drive, Large Hook)"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "ZOJE (Zhejiang Zoje Sewing Technology Co., Ltd., China)"
+    },
+    {
+      "field": "Model Series",
+      "value": "A8000 (variants: A8000-D4 standard, A8000-D4-HG heavy/large-hook, A8000-D4-TP-02 full-auto)"
+    },
+    {
+      "field": "Stitch Type",
+      "value": "Lockstitch (single needle)"
+    },
+    {
+      "field": "Bed / Frame Type",
+      "value": "Flat bed"
+    },
+    {
+      "field": "Needle Configuration",
+      "value": "Single needle"
+    },
+    {
+      "field": "Drive / Lubrication",
+      "value": "Direct-drive AC servo motor"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "5,000 s.p.m. (SPM)"
+    },
+    {
+      "parameter": "Max. Stitch Length",
+      "value": "5 mm standard, 7 mm with large-hook G variant"
+    },
+    {
+      "parameter": "Needle Type",
+      "value": "DB×1 (standard); DP×17 for heavy variants"
+    },
+    {
+      "parameter": "Hook",
+      "value": "26 mm large hook (G variant)"
+    },
+    {
+      "parameter": "Presser Foot Lift",
+      "value": "up to 13 mm (knee)"
+    },
+    {
+      "parameter": "Auto Thread Trimmer",
+      "value": "yes (-TP-02 set)"
+    },
+    {
+      "parameter": "Auto Lubrication",
+      "value": "yes"
+    },
+    {
+      "parameter": "Needle Position (Up/Down)",
+      "value": "yes"
+    },
+    {
+      "parameter": "Reverse Feed",
+      "value": "yes (programmed initial/final bartack)"
+    },
+    {
+      "parameter": "LED Light",
+      "value": "yes"
+    },
+    {
+      "parameter": "Foot Lifter",
+      "value": "automatic, up to 13 mm"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Zoje Europe — A8000-D4-HG-TP-02 SET (Tier-1)",
+      "description": "Tier-1 European distributor page for the large-hook variant",
+      "url": "http://www.zoje-europe.com/zoje-a8000-d4-hg-tp-02-z-set-single-needle-lockstitch-machine-for-sewing-medium-and-heavy-materials-with-large-hook-and-stitch-length-up-to-7-mm-complete-sewing-machine/item/1077437"
+    },
+    {
+      "resourceName": "Imimg mirror — Zoje A8000-D4-HG catalog PDF (Tier-1 mirror)",
+      "description": "Distributor-hosted mirror of Zoje's official spec sheet PDF",
+      "url": "https://5.imimg.com/data5/SELLER/Doc/2025/2/492414360/GB/HO/MC/144360109/zoje-a8000-d4-hg-large-hook-single-needle-lock-stitch-sewing-machine.pdf"
+    }
+  ],
+  "finalNotes": "Phase 1 basic research complete with Tier-1 Zoje Europe + Tier-1 mirror + 2 Tier-2 dealers. Detailed Research remains unfilled — partial-data state; the page will display the 'More Information Coming Soon' banner until Detailed Research adds working principles, sequence flow, parts list, maintenance, and additional resources."
+}

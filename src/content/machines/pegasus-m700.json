@@ -1,0 +1,101 @@
+{
+  "title": "Pegasus M700",
+  "subtitle": "4-Thread Overlock Sewing Machine with HR (Heat-Removing) Needle Cooler",
+  "brand": "Pegasus",
+  "category": "Overlock Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-22T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Pegasus M700 is a 4-thread overlock / overedging sewing machine. Featured: HR device (Heat-Removing / needle cooler) unique to Pegasus machines in this class — prevents heat generation at the needle point, allowing thread to move smoothly and producing uniform stitches. Designed for thick-thread applications in garment production.",
+    "applications": [
+      "4-thread overedging on medium-to-thick woven fabrics",
+      "Garment edge-finishing operations",
+      "Production lines needing consistent stitch quality on thick thread"
+    ],
+    "industry": "Garment manufacturing, jeans and outerwear finishing"
+  },
+  "overviewDescription": "Made by Pegasus (Japan; with extensive China manufacturing/distribution). The M700 series is the 4-thread overlock in the broader Pegasus lineup. The HR device is the distinguishing feature — Pegasus claims it's exclusive to their machines in this class. Indian distributor markets list the M700 with 220 V motor power and 2 needles / 4 threads.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "4-Thread Overlock Sewing Machine"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Pegasus (Japan / Taizhou, China)"
+    },
+    {
+      "field": "Model Series",
+      "value": "M700 (M732, M752 in same family)"
+    },
+    {
+      "field": "Stitch Type",
+      "value": "4-thread overlock (ISO 504)"
+    },
+    {
+      "field": "Bed / Frame Type",
+      "value": "Flat bed overedger"
+    },
+    {
+      "field": "Needle Configuration",
+      "value": "2 needles / 4 threads (standard 4-thread overlock layout)"
+    },
+    {
+      "field": "Drive / Lubrication",
+      "value": "Clutch or servo motor (model-dependent); HR (Heat-Removing) needle cooler"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "5,000 sti/min"
+    },
+    {
+      "parameter": "Max. Stitch Length",
+      "value": "4 mm"
+    },
+    {
+      "parameter": "Needle Bar Stroke",
+      "value": "36.5 mm"
+    },
+    {
+      "parameter": "Number of Needles",
+      "value": "2 (4-thread)"
+    },
+    {
+      "parameter": "Number of Threads",
+      "value": "4"
+    },
+    {
+      "parameter": "Stitches Per Inch",
+      "value": "3"
+    },
+    {
+      "parameter": "HR Device (Needle Cooler)",
+      "value": "standard, Pegasus-exclusive in this class"
+    },
+    {
+      "parameter": "Power",
+      "value": "220 W"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Aajjo India distributor — Pegasus M700 product page (Tier-2)",
+      "description": "Indian distributor with full specifications",
+      "url": "https://www.aajjo.com/product/pegasus-m700-overlock-sewing-machine-in-new-delhi-jai-shri-shyam-sales"
+    },
+    {
+      "resourceName": "BazarGPT India distributor (Tier-2)",
+      "description": "Distributor product page confirming 5,000 SPM and HR device",
+      "url": "https://bazargpt.com/product/pegasus-m700-overlock-machine-733566"
+    },
+    {
+      "resourceName": "TomSewing China distributor (Tier-2)",
+      "description": "China distributor confirming HR device and M700 series",
+      "url": "https://tomsewing.com/product-detail/overedging-sewing-machine-pegasus-m700"
+    }
+  ],
+  "finalNotes": "Phase 1 basic research complete with PARTIAL PASS verdict. Note: the original tracker listed 'M700 or FS700' — research was done on M700 only since FS700 was not surfaced. The Pegasus FS700 remains unresearched pending a separate pass if the actual machine on the factory floor is an FS700. Detailed Research remains unfilled — partial-data state; the page will display the 'More Information Coming Soon' banner until Detailed Research adds working principles, sequence flow, parts list, maintenance, and additional resources."
+}

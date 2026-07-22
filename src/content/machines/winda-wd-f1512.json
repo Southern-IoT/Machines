@@ -1,0 +1,68 @@
+{
+  "title": "Winda WD-F1512",
+  "subtitle": "Knit Fabric Inspection and Relax Machine (Pre-Sewing Preparation)",
+  "brand": "Winda",
+  "category": "Inspection Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-22T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Winda WD-F1512 is a knit fabric inspection and relaxation machine used BEFORE sewing to relieve knitting/finishing tension and align fabric edges for downstream cutting and sewing. Combines fabric inspection, measurement, loosening (folding), and edge alignment in a single pass.",
+    "applications": [
+      "Knit fabric relaxation before cutting",
+      "Edge alignment on tubular knit",
+      "Fabric measurement and inspection",
+      "Spandex / general knit pre-sewing conditioning"
+    ],
+    "industry": "Garment CAD/CAM workflow, knit garment production, sportswear"
+  },
+  "overviewDescription": "The Winda WD-F1512 is part of Winda Technology Limited's (Shenzhen, China) 'Fabric Relax & Inspection Series' under their 'Machines For Sewing Process' product line. Performs fabric inspection, measurement, loosening (folding), and edge alignment. Output format: fold-to-fold or roll-to-fold. Suitable for knit, woven, and spandex fabrics.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Knit Fabric Inspection and Relax Machine"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Winda Technology Limited, Shenzhen, China"
+    },
+    {
+      "field": "Category",
+      "value": "Pre-sewing fabric preparation"
+    },
+    {
+      "field": "Series",
+      "value": "WD-F1512 (knit fabric relax + inspection)"
+    },
+    {
+      "field": "Output Format",
+      "value": "Fold-to-fold or Roll-to-fold"
+    },
+    {
+      "field": "Suitable Materials",
+      "value": "Knit fabric, woven, spandex (general fabric)"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Power",
+      "value": "1.6–1.85 kW"
+    },
+    {
+      "parameter": "Fold Cloth Width",
+      "value": "58–55 cm"
+    },
+    {
+      "parameter": "Functions",
+      "value": "Fabric inspection, measurement, loosening (folding), edge alignment"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Winda Technology — Knit Fabric Inspection and Relax Machine product page",
+      "description": "Tier-1 manufacturer product page with technical specs",
+      "url": "http://www.winda-tech.com/ProductDetail/4883056.html"
+    }
+  ],
+  "finalNotes": "This is a pre-sewing preparation machine, not a sewing machine. Categorized under TinaCMS 'Inspection Machine'. Phase 1 Basic Research verified against the manufacturer page; Detailed Research not applicable (no parts/sequence/maintenance content for an inspection machine)."
+}
