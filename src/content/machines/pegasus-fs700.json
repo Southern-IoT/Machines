@@ -1,0 +1,104 @@
+{
+  "title": "Pegasus FS700P",
+  "subtitle": "4-Needle Feed-Off-Arm Interlock Stitch Machine for Flat Seaming (FS700 series)",
+  "brand": "Pegasus",
+  "category": "Chain Stitch Machine",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-22T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Pegasus FS700P is a 4-needle, feed-off-arm, cylinder-bed interlock stitch machine built for flat seaming. The Pegasus FS700P series covers a range of subclasses tailored for T-shirts, sports tights, swimsuits, briefs, and other flat-seam operations. Comes with right and left independent differential feed adjustment, oil-barrier type construction, and optional single or double edge trimming.",
+    "applications": [
+      "T-shirt shoulder and side seaming (flat seaming, single or double edge trimming)",
+      "Sports tights flat seaming",
+      "Swimsuit flat seaming",
+      "Underwear and briefs joining",
+      "Any operation requiring flat, low-bulk seams on knit fabrics"
+    ],
+    "industry": "Knit garment manufacturing, T-shirt production, sportswear, underwear, swimwear, intimate apparel"
+  },
+  "overviewDescription": "Made by Pegasus Sewing Machine Mfg. Co., Ltd. (Japan; with extensive China manufacturing/distribution). The FS700 series is Pegasus's flat-stitch lineup, sitting alongside the M700 overlock series. The official Pegasus catalog distinguishes several subclasses within the FS700P series (FS701P, FS703P, etc.) tailored to specific applications. All share the 4-needle feed-off-arm interlock architecture with cylinder bed and independent differential-feed adjustment.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "4-Needle Feed-Off-Arm Interlock Stitch Machine for Flat Seaming"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Pegasus Sewing Machine Mfg. Co., Ltd. (Japan)"
+    },
+    {
+      "field": "Model Series",
+      "value": "FS700P (subclasses: FS701P, FS703P, FS700P-A-G2 for T-shirts; FS703P-A-G2B for sports tights; FS703P-A-G2C for swimsuits)"
+    },
+    {
+      "field": "Stitch Type",
+      "value": "Flat-seam interlock (4-needle)"
+    },
+    {
+      "field": "Bed / Frame Type",
+      "value": "Cylinder bed, feed-off-arm"
+    },
+    {
+      "field": "Needle Configuration",
+      "value": "4-needle"
+    },
+    {
+      "field": "Drive / Lubrication",
+      "value": "Independent differential feed adjustment (right and left), oil-barrier type"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Max. Sewing Speed",
+      "value": "3,800 sti/min"
+    },
+    {
+      "parameter": "Number of Needles",
+      "value": "4"
+    },
+    {
+      "parameter": "Stitch Type",
+      "value": "Flat-seam interlock (multi-needle)"
+    },
+    {
+      "parameter": "Bed Type",
+      "value": "Cylinder, feed-off-arm"
+    },
+    {
+      "parameter": "Edge Trimming",
+      "value": "Single edge trimming or double edge trimming (varies by subclass)"
+    },
+    {
+      "parameter": "Differential Feed",
+      "value": "Right and left independent adjustment"
+    },
+    {
+      "parameter": "Lubrication",
+      "value": "Oil-barrier type"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "PEGASUS CO., LTD. — LaRgo/FS700P series lineup (Tier-1)",
+      "description": "Tier-1 Pegasus manufacturer page listing FS700P series with subclass assignments (T-shirt, sports tights, swimsuits, briefs)",
+      "url": "https://www.pegasus.co.jp/en/machine/series/s217a"
+    },
+    {
+      "resourceName": "Pegasus America — FS700P series product page (Tier-1)",
+      "description": "Pegasus America product page with 4,200 sti/min max speed and subclass details",
+      "url": "https://pegasusofamerica.com/product/fs700p-series"
+    },
+    {
+      "resourceName": "Pegasus Europa — FS700 instruction manual PDF (Tier-1)",
+      "description": "Official FS700 series instruction manual PDF — daily routine maintenance and safety precautions",
+      "url": "https://www.pegasus-europa.de/INSTRUCTIONS/FS700_9B2007E.pdf"
+    },
+    {
+      "resourceName": "Aajjo India distributor (Tier-2)",
+      "description": "Distributor product page listing Pegasus FS-700 series with max sewing speed 5,000 sti/min and stitch length over 4 mm",
+      "url": "https://www.aajjo.com/product/pegasus-fs-700-series-stitching-machine-in-gautam-budh-nagar-mangnum-resources-private-limited"
+    }
+  ],
+  "finalNotes": "• Phase 1 PASS — Pegasus Tier-1 manufacturer pages confirmed the FS700P series as the real full-model number behind the bare 'FS700' identifier. The PFS700P-A subclasses (T-shirt / sports / swimsuits / briefs) cover a range of flat-seaming applications. Pegasus Europa instruction manual PDF available for daily-routine maintenance and safety.\n• Pegasus America spec lists 4,200 sti/min; Pegasus Japan lists 3,800 sti/min. The higher Aajjo value (5,000 sti/min) likely reflects Indian-market Chinese-OEM spec. Headline resolved to 3,800 sti/min (Tier-1 manufacturer).\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+}

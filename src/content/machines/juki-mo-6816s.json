@@ -103,5 +103,22 @@
       "value": "Automatic (JUKI Machine Oil 18, ISO VG18)"
     }
   ],
-  "finalNotes": "• The MO-6816S is the 5-thread variant in the MO-6800S series; its sister model JUKI MO-6816D (a 2-needle / 4-thread safety-stitch / interlock head) is already catalogued separately on this site.\n• The 60H sub-type variant uses a longer needle bar stroke (27.0 mm vs 24.5 mm) for heavier fabrics.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+  "resources": [
+    {
+      "resourceName": "JUKI MO-6800S/DD Series Instruction Manual (Tier-1)",
+      "description": "Tier-1 Juki instruction manual PDF covering the MO-6816S and MO-6816D sub-models",
+      "url": "https://www.juki.co.jp/industrial_j/download_j/manual_j/mo6800s_d/mo6800dd10/menu/pdf/instruction_eg.pdf"
+    },
+    {
+      "resourceName": "JUKI MO-6800D/DD10/DD22/DD23 catalog PDF (Tier-1)",
+      "description": "Tier-1 Juki catalog PDF with full MO-6800D/DD specifications",
+      "url": "https://www.juki.co.jp/industrial_e/admin/pdata/filedata/365/mo6800sd_dd10dd22dd23.pdf"
+    },
+    {
+      "resourceName": "GoldStarTool — JUKI MO-6816S product page (Tier-2)",
+      "description": "Authorized dealer product page with verified 7,000 sti/min, MO-6816S spec",
+      "url": "https://www.goldstartool.com/juki-mo-6816s-5-thread-high-speed-overlock-safety-stitch-industrial-serger-with-table-and-servo-motor.htm"
+    }
+  ],
+  "finalNotes": "• The MO-6816S is the 5-thread variant in the MO-6800S series; its sister model JUKI MO-6816D (a 2-needle / 4-thread safety-stitch / interlock head) is already catalogued separately on this site.\n• The 60H sub-type variant uses a longer needle bar stroke (27.0 mm vs 24.5 mm) for heavier fabrics.\n• Phase 1 PASS — Tier-1 Juki catalog PDF + instruction manual confirms 7,000 sti/min, 0.6–3.8 mm stitch length, DC×27 needle, 24.5 mm needle bar stroke, 20° inclination.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
 }

@@ -71,5 +71,27 @@
       "value": "Shirt placket, cuff, collar button attaching"
     }
   ],
-  "finalNotes": "• IMB does not publish detailed numeric specifications (max speed, stitch length, button size range) for this attachment unit — it is sold as a feeder rather than a standalone stitching machine. Exact figures should be confirmed with the IMB Bangladesh sales team (sales@imb-bd.com) or via the IMB catalogue at time of quotation.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
+  "resources": [
+    {
+      "resourceName": "IMB Bangladesh — Button Feeder MB6002B product page (Tier-1 mfr)",
+      "description": "Manufacturer's own product page with functional description",
+      "url": "http://www.imb-bd.com/shirt/button-feeder-mb6002b.html"
+    },
+    {
+      "resourceName": "IMB MB6002B Instruction Manual (Tier-1 mfr PDF, Silmaq mirror)",
+      "description": "Manufacturer's instruction manual — sensor settings, error codes, mechanical setup",
+      "url": "https://www.silmaq.com.br/wp-content/uploads/2024/05/IS-6002-20191115.pdf"
+    },
+    {
+      "resourceName": "IMB MB6002C Brochure (Newfuture Tech India mirror)",
+      "description": "Distributor mirror of IMB MB6002C brochure — front placket button attach capacity 1200–1400 buttons/hour",
+      "url": "https://newfuturetech.in/storage/2021/03/IMB-Button-Feeder-1.pdf"
+    },
+    {
+      "resourceName": "Vertex Automations — IMB Automatic Button Feeder (Tier-2)",
+      "description": "Distributor product page",
+      "url": "https://vertexautomations.com/imb-automatic-button-feeder-machine"
+    }
+  ],
+  "finalNotes": "• IMB does not publish detailed numeric specifications (max speed, stitch length, button size range) for this attachment unit — it is sold as a feeder rather than a standalone stitching machine.\n• Phase 1 PARTIAL PASS — IMB Bangladesh manufacturer page + instruction manual confirms functional spec (cylinder-driven, manual/auto feed mode, placket/cuff/collar application, no camera). Tier-1 instruction manual covers sensor setup and error codes. Quantitative headline specs (capacity 1200–1400 buttons/hr per IMB MB6002C brochure) not located for the exact MB6002B.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
 }

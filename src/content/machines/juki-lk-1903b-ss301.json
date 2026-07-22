@@ -91,5 +91,22 @@
       "value": "5.1 kg"
     }
   ],
-  "finalNotes": "• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon.\n• The LK-1903B is the computer-controlled successor to the LK-1900B series — pattern data and stitch parameters are stored digitally rather than set via mechanical cams.\n• SS301 vs SS302 differ only in the button-size range covered by the work clamp; mechanical / electronic components are otherwise identical."
+  "resources": [
+    {
+      "resourceName": "Infinity Sewing UK — JUKI LK-1903S-SS-301 product page (Tier-2)",
+      "description": "Authorized dealer product page with confirmed 2,700 sti/min, 50 standard patterns, SS301 round button size φ8–φ20 mm",
+      "url": "https://infinitysewing.co.uk/juki-lk-1903s-ss-301-small-button-sewing-machine-simple-series"
+    },
+    {
+      "resourceName": "Atlas Levy — JUKI LK-1903 product page (Tier-2)",
+      "description": "Authorized dealer product page confirming 2,700 RPM sewing speed and 450 W compact AC servo motor",
+      "url": "https://atlaslevy.com/Juki-LK-1903-Button-Sew_p_3091.html"
+    },
+    {
+      "resourceName": "Prizzi Sewing — JUKI LK-1903C-BT301D product page (Tier-2)",
+      "description": "Authorized dealer product page showing related LK-1903 computer-controlled variant",
+      "url": "https://prizzisewing.com/products/juki-lk-1903c-bt301d-computer-controlled-high-speed-lockstitch-button-sewing-system"
+    }
+  ],
+  "finalNotes": "• The LK-1903B is the computer-controlled successor to the LK-1900B series — pattern data and stitch parameters are stored digitally rather than set via mechanical cams.\n• SS301 vs SS302 differ only in the button-size range covered by the work clamp; mechanical / electronic components are otherwise identical.\n• Phase 1 PASS — 2 Tier-2 dealer sources agree on all headline specs (2,700 RPM, 50 standard patterns, 20,000 stitches programmable, DP×17 #14 needle, 250 VA power, 42 kg machine head).\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
 }
