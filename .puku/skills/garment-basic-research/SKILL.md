@@ -72,6 +72,35 @@ This step is the whole reason Phase 2 is a separate phase. Skipping it and going
 
 This phase must be visibly distinct in your process — think of it as literally handing off a document to another expert and having them redline it, not you re-reading your own work with the same mindset.
 
+### OCR confidence gate (when sources are OCR-extracted)
+
+When a field's only supporting source comes from `resilient-doc-fetch` / `mcp-pdf` OCR, the
+document-level OCR confidence is not sufficient by itself — averaging masks exactly the failure
+mode Step 5 exists to catch. Apply this gate:
+
+1. **Locate the page containing the headline number.** Identify which page of the OCR'd PDF
+   carries the specific figure being verified.
+2. **Re-OCR that page alone** via `textextraction__ocr_pdf` with a single-page range. Use the
+   per-page confidence score, not the document-level average.
+3. **Apply the threshold rules to that page-level score:**
+   - Page ≥ 80%: number may proceed to independent-source cross-check; still OCR-extracted,
+     identify as such.
+   - Page 60–79%: number must be cross-checked against an independent second source before it
+     can be marked verified. If no independent source confirms it, mark
+     `unverifiable (OCR page < 80%)`.
+   - Page < 60%: treat as low-trust. Cross-check against a second source before relying on it
+     at all; if it cannot be confirmed, trigger the Loop-Back Protocol rather than grading
+     around the uncertainty.
+4. **Only fall back to the document-level OCR score** if the relevant page cannot be isolated
+   (e.g. a spec table spans multiple pages). Record why page isolation was impossible.
+
+The Inspector must visibly state this behavior when it occurs, using a note such as:
+`OCR confidence: document 73%; headline max speed on page 12 re-OCR'd individually: 68%;
+independent cross-check against <source> required before verification.`
+
+If OCR returns `success: true` but reports zero successful pages, treat it as an OCR failure — do
+not use the empty output and do not mark the field verified.
+
 ---
 
 ## LOOP-BACK PROTOCOL — Automatic return to Phase 1
