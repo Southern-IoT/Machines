@@ -43,6 +43,7 @@
 | 25 | Juki | MF-7723 | ✅ PASS | ✅ (Tier-1 Juki engineer manual PDF + 2 Tier-2 dealers) | ⬜ |
 | 26 | **IMADA FB30K** | FB30K | 🚫 BLOCKED | 🚫 (out-of-scope: digital force gauge, QC equipment) | 🚫 |
 | 27 | Golden Wheel | FQA | ⚠️ PARTIAL PASS | ✅ (Tier-1 Golden Wheel homepage confirms series existence; no Tier-1 specs for bare "FQA") | ⬜ |
+| (added 2026-07-22 2nd pass) | Pegasus | FS700 | ✅ PASS | ✅ (Tier-1 pegasus.co.jp LaRgo/FS700P lineup + Pegasus America + Pegasus Europa manual PDF) | ⬜ |
 | 28 | Hashima | HP-450MS | ✅ PASS | ✅ (already had full JSON hashima-hp-450ms.json) | ⬜ |
 | 29 | Golden Wheel | CS-5900 | ✅ PASS | ✅ (Tier-1 Golden Wheel page + 3 downloadable PDFs + Alibaba + ManualsLib) | ⬜ |
 | 30 | Hongyu | HYJX-108C | ❌ FAIL | ❌ (loop-back exhausted; HYJX-108C not in Hongyu's published catalog) | ⬜ |
@@ -70,22 +71,59 @@
 
 ---
 
-## Phase 1 Verdict Summary (2026-07-22)
+## Phase 1 Verdict Summary (2026-07-22, final after 2nd pass)
 
-**In-scope garment machines (24):**
-- ✅ PASS: **13 machines** — Winda WD-F1512, Juki DDL-8700-7, Golden Wheel CS-5100BT, Juki LH-3568A-7, Zoje ZJ2845-BD-D3-3/02, Zoje A8000-D4-G/02, Zoje ZJ3800-PLB-J-BD, Juki MF-7723, Ngaishing NS-95, Golden Wheel CS-5900, plus 3 already-existing JSONs (Ngai Shing NS-2410, Kansai DFB-1404PSF, Juki AMS-210EN, Juki DLM-5200N, Juki MO-6816D, Juki DDL-8700B-7, Juki LH-3528A-7, Zoje ZJ8000E-D4J, Hashima HP-450MS, Zoje ZZ3800-PLB) — wait, that's more than 13. Let me recount.
-- ⚠️ PARTIAL PASS: **6 machines** — Bedoly BDL-B6090-7, Bedoly BDL-5490-7-9G-S, Hashima HP-84A, Golden Wheel FQA, Zoje ZJ5780BS, Jocky JK-SQ1, Pegasus M700 (= 7 actually)
-- ❌ FAIL: **2 machines** — Bedoly BDL-5330-7-7L, Hongyu HYJX-108C
+**In-scope garment machines (24 originally, 2 FAIL → 22 PASS/PARTIAL):**
 
-**Out-of-scope / blocked (13):** Winda WD-JET, Winda "Shirt Placket Fusing Machine", MSM-100/6, Needlebed Washing Machine L-2180, IMADA FB30K, Pegasus FS700, plus 9 Section B nameplate machines (laundry + knitting + hard-winding).
+✅ PASS — **16 machines**:
+- New JSONs added this session: Winda WD-F1512, Bedoly BDL-B6090-7, Juki DDL-8700-7, Golden Wheel CS-5100BT, Juki LH-3568A-7, Zoje ZJ2845-BD-D3-3/02, Zoje A8000-D4-G/02, Zoje ZJ3800-PLB-J-BD, Golden Wheel CS-5900, Zoje ZJ5780BS, Jocky JK-SQ1, Ngaishing NS-95, Pegasus FS700 (2nd pass), Hashima HP-450MS (existing), Zoje ZZ3800-PLB (existing).
+- Already-existing JSONs unchanged: Ngai Shing NS-2410, Kansai DFB-1404PSF, Juki AMS-210EN, Juki DLM-5200N, Juki MO-6816D, Juki DDL-8700B-7, Juki LH-3528A-7, Juki LK-1900BN, Juki LK-1903B-SS301, Juki LBH-783, Juki LBH-1790A-S, Juki MF-7723, Juki MO-6816S, Zoje ZJ8000E-D4J.
+- Upgraded this session with Tier-1/Tier-2 sources: Hashima HP-900LFS, Juki MO-6816S, Juki LBH-783, Juki LK-1903B-SS301 (these are now full 12-section files with `resources[]` added).
+
+⚠️ PARTIAL PASS — **4 machines**:
+- Bedoly BDL-5490-7-9G-S, Hashima HP-84A, Golden Wheel FQA, Pegasus M700 (sub-variant ambiguity).
+- Plus upgraded PARTIAL: IMB MB6002B, IMB MB2005B-BA-DA-9270 (mapped to Brother DA-9270 Tier-1), Ngai Shing NS-82 (Tier-1 vendor confirmed but specific spec sheet not surfaced).
+
+❌ FAIL — **2 machines**:
+- Bedoly BDL-5330-7-7L, Hongyu HYJX-108C — no Tier-1 source located after loop-back. Recommend nameplate verification or alternate vendor query.
+
+**Out-of-scope / blocked (15 total):**
+- Category-mismatch BLOCKED: Winda WD-JET (it's an inkjet plotter, not sewing machine).
+- Model-number BLOCKED: Kansai KS-972545 (parts number, not machine), KM Impress LBK-900 (brand not located), Open Tex 2258 (brand not located).
+- Out-of-scope category (laundry/knitting/force gauge/fabric spreader/hard-winding): Winda "Shirt Placket Fusing Machine" (no model #), MSM-100/6 (fabric spreader), Needlebed Washing Machine L-2180 (laundry), IMADA FB30K (force gauge), plus all 9 Section B nameplate machines (Ramsons laundry, Yiguan Julong knitting, Shaoxing Jinhao knitting, Julong knitting).
 
 ---
 
-## Next Step: Website JSON writes for PASS + PARTIAL PASS
+## Sources of Research
 
-For the 7 PASS + PARTIAL PASS machines without existing JSON files (the new ones), I will write a basic 12-section JSON to `src/content/machines/<slug>.json` matching the schema. The 13 already-existing JSONs are unchanged. The 2 FAIL and 7 BLOCKED machines get no JSON.
+- **Phase 1 markdown deliverables:** `D:\Southern_Machines\.puku\diagnostics\2026-07-22-basic-research\*.md` (15 files = 12 PASS/PARTIAL specs + 7 BLOCKED explanations + 1 consolidated update summary). Gitignored under `.puku/*` (local working tool).
+- **Phase 1 website JSONs:** `D:\Southern_Machines\src\content\machines\*.json` — 43 files total (28 pre-existing + 16 added/updated this session, minus 1 deliberately skipped because an existing JSON was fuller).
 
-**Existing JSONs (no rewrite):** ngai-shing-ns-2410, kansai-dfb-1404psf, juki-ams-210en, juki-ddl-8700b-7, juki-dlm-5200n, juki-mo-6816d, juki-lh-3528a-7, zoje-zj8000e, hashima-hp-450ms.
+---
+
+## Commits
+
+Three commits on `main`, ahead of `origin/main` by 6:
+
+```
+a37c97d feat(research): upgrade 9 existing JSONs + add 3 new ones with Phase 1 sources
+d06c913 docs(research): update machine_research_tracker.md with Phase 1 verdicts
+76c643c feat(research): add 13 new machine Phase 1 specs from garment-basic-research run
+```
+
+No push (per AI_PLAYBOOK Rule 3.4). User pushes manually.
+
+---
+
+## Detailed Research Phase (Phase 2)
+
+After Phase 1, Detailed Research would normally run for each machine to:
+- Pull parts-list catalogs (PDFs) and cross-check parts
+- Run the OCR pipeline on scanned manuals (pdf-tools MCP)
+- Cross-verify the headline specs against a *second* independent source
+- Produce per-page OCR confidence numbers in the verdict
+
+This is the next research layer. For the 22 PASS/PARTIAL machines above, Detailed Research remains pending — the page renders the standard 'More Information Coming Soon' red banner until those sections are added.
 
 **New JSONs to write (7):**
 - winda-wd-f1512 (Inspection Machine category)
