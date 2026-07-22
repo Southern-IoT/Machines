@@ -62,7 +62,12 @@ tina/__generated__
 # =============================================================================
 _astro_init/
 
-.puku
+.puku/*
+!.puku/skills/
+!.puku/skills/**
+
+# Local MCP config with API keys — keep secrets out of git
+.mcp.json
 
 # Verification scripts and logs from local build checks (never commit)
 verify-build.ps1
