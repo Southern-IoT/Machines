@@ -71,17 +71,5 @@
       "value": "Self-contained oil reservoir (multi-day natural oiling)"
     }
   ],
-  "resources": [
-    {
-      "resourceName": "Made-in-China — High Speed Dial Linking Machine (Tier-2 class reference)",
-      "description": "Tier-2 reference for the Chinese-market dial-linking machine class (closest functional match to SJFPJQ)",
-      "url": "https://m.made-in-china.com/amp/product/High-Speed-Dial-Linking-Machine-1919278185.html"
-    },
-    {
-      "resourceName": "Made-in-China — High Speed Dial Sweater Sewing Linking Machine (Tier-2)",
-      "description": "Tier-2 reference — alternative sweater-linking machine family with 60W power, 0–1200 rpm speed",
-      "url": "https://m.made-in-china.com/amp/product/High-Speed-Dial-Sweater-Sewing-Linking-Machine-2115456865.html"
-    }
-  ],
-  "finalNotes": "⚠️ The specific model code \"SJFPJQ\" could not be verified against any manufacturer catalog. This appears to be a factory/OEM-specific code for a high-speed dial (rotary) linking machine — a common category of Chinese-manufactured knitwear linking equipment.\n\n• Phase 1 FAIL — no Tier-1 or Tier-2 source located for the exact 'SJFPJQ' identifier in this session. The specs published are class-typical (300–1200 rpm, 14\" dial, 3–18G gauge range, 1–4 layer trace, 20–90 W servo motor) per Tier-2 references for the dial-linking machine class, not specific to SJFPJQ. Recommend nameplate verification and direct query to the original vendor.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+  "finalNotes": "⚠️ The specific model code \"SJFPJQ\" could not be verified against any manufacturer catalog. This appears to be a factory/OEM-specific code for a high-speed dial (rotary) linking machine — a common category of Chinese-manufactured knitwear linking equipment. The specs above are typical figures for this machine class — confirm gauge, dial diameter, and rated RPM directly from the machine's nameplate, as \"linking\" machines are usually customized per knitting gauge at time of order.\n\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
 }

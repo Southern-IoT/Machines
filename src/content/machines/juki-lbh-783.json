@@ -71,22 +71,5 @@
       "value": "JUKI New Defrix Oil No. 1"
     }
   ],
-  "resources": [
-    {
-      "resourceName": "SewingGold — JUKI LBH-783 product page (Tier-2)",
-      "description": "Authorized dealer product page with full LBH-783 specs (3,600 RPM, 6.4–38.1 mm buttonhole, 12 mm work clamp lift, DP×5 #11J needle)",
-      "url": "https://sewinggold.com/product/juki-lbh-783"
-    },
-    {
-      "resourceName": "GoldStarTool — JUKI LBH-783 product page (Tier-2)",
-      "description": "Authorized dealer product page",
-      "url": "https://www.goldstartool.com/juki-lbh-783-1-needle-lockstitch-buttonholing-industrial-sewing-machine-with-table-and-servo-motor.htm"
-    },
-    {
-      "resourceName": "AllBrands — JUKI LBH-783U product page (Tier-2)",
-      "description": "Authorized dealer product page for the LBH-783U variant (same family, US specs)",
-      "url": "https://www.allbrands.com/products/2507"
-    }
-  ],
-  "finalNotes": "• The LBH-783 sits in JUKI's lockstitch-buttonhole lineup between the smaller benchtop buttonholers and the higher-end LBH-1790 series. Compared to chainstitch buttonholers (e.g. LH-4 series), the LBH-783 produces a lockstitch side with bar tacks — more durable but slower per buttonhole.\n• Phase 1 PASS — 3 Tier-2 dealer sources agree on all headline specs (3,600 RPM, 12 mm work clamp lift, 6.4–38.1 mm buttonhole length, 54–345 stitches per buttonhole, DP×5 #11J needle).\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+  "finalNotes": "• The LBH-783 sits in JUKI's lockstitch-buttonhole lineup between the smaller benchtop buttonholers and the higher-end LBH-1790 series. Compared to chainstitch buttonholers (e.g. LH-4 series), the LBH-783 produces a lockstitch side with bar tacks — more durable but slower per buttonhole.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
 }

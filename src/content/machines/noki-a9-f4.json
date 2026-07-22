@@ -71,12 +71,5 @@
       "value": "Built-in direct-drive servo (no belt)"
     }
   ],
-  "resources": [
-    {
-      "resourceName": "Made-in-China — High Speed Dial Linking Machine (Tier-2 class reference)",
-      "description": "Tier-2 reference for the Chinese-market direct-drive lockstitch class — closest functional match for Noki A9-F4 specs",
-      "url": "https://m.made-in-china.com/amp/product/High-Speed-Dial-Linking-Machine-1919278185.html"
-    }
-  ],
-  "finalNotes": "⚠️ A definitive public spec sheet for \"Noki A9-F4\" could not be located in this Phase 1 research session. The specs above are typical figures for the Chinese-market direct-drive single-needle lockstitch class (Jack, Typical, Sera, etc.). If \"Noki\" is the brand on your machine's nameplate, please confirm the exact figures from the nameplate/manual.\n\n• Phase 1 FAIL — no Tier-1 or Tier-2 source located for the exact 'Noki A9-F4' model in Tavily or web search. Recommend nameplate verification or a Chinese-market catalog lookup. The specs published are class-typical only, not specific to Noki.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+  "finalNotes": "⚠️ A definitive public spec sheet for \"Noki A9-F4\" could not be located. The specs above are typical figures for the Chinese-market direct-drive single-needle lockstitch class (Jack, Typical, Sera, etc.). If \"Noki\" is the brand on your machine's nameplate, please confirm the exact figures from the nameplate/manual — this brand was not directly documented in available manufacturer sources.\n\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
 }

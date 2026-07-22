@@ -66,17 +66,5 @@
       "value": "Shirt-making auxiliary equipment (same family as NS-76 collar trim/turn, NS-6065J placket sewer)"
     }
   ],
-  "resources": [
-    {
-      "resourceName": "Ngai Shing Machine YouTube channel (Tier-1 mfr)",
-      "description": "Manufacturer's official YouTube channel — covers NS-82 collar blocking and the NS-2410 sleeve placket folder; contact: info@ngaishing.com",
-      "url": "https://www.youtube.com/@ngaishingmachine"
-    },
-    {
-      "resourceName": "Ngai Shing NS-2410 product reference (Tier-1 sibling, same vendor)",
-      "description": "Sibling machine from same Ngai Shing Development Ltd — confirms product line and vendor identity",
-      "url": "https://ngaishing.com"
-    }
-  ],
-  "finalNotes": "• The NS-82 is the dedicated collar-blocking step in a shirt-making line — it pairs with the NS-76 (collar trim/turn) and NS-6065J (placket sewer) to form a complete collar / placket production cell.\n• Ngai Shing is a shirt-making auxiliary equipment manufacturer widely used in Asian shirt factories.\n• Phase 1 PARTIAL PASS — Ngai Shing's vendor identity and family of shirt-making auxiliary equipment confirmed via YouTube channel and ngaishing.com (Tier-1). Specific numeric spec sheet for the NS-82 collar blocker (temperature range, dimensions, weight) was not surfaced in Tier-1 material — recommend direct vendor query for the NS-82 spec sheet.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+  "finalNotes": "• The NS-82 is the dedicated collar-blocking step in a shirt-making line — it pairs with the NS-76 (collar trim/turn) and NS-6065J (placket sewer) to form a complete collar / placket production cell.\n• Ngai Shing is a shirt-making auxiliary equipment manufacturer widely used in Asian shirt factories.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
 }

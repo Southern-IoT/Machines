@@ -91,22 +91,5 @@
       "value": "Automatic belt-warping prevention, feedback system, Strip-Off Device ('S' in LFS), big-diameter pressure roller, puckering-prevention roller, seamless belt"
     }
   ],
-  "resources": [
-    {
-      "resourceName": "Hashima HP-600LF/LFS · HP-900LF/LFS product page (Tier-1)",
-      "description": "Official Hashima product page for the 600/900 LF and LFS linear fusing presses",
-      "url": "https://www.hashima.co.jp/en/products/straight-linear-fusing-press-hp-600lfhp-600lfs"
-    },
-    {
-      "resourceName": "Premier MKT Bangladesh distributor (Tier-2)",
-      "description": "HP-900LFS distributor page with full Korean-spec-equivalent specs (12 kW heater, 295 W motor, 900 mm width, 450 kg)",
-      "url": "https://premiermktbd.com/product/straight-linear-fusing-press-hashima-brand-model-hp-900lfs"
-    },
-    {
-      "resourceName": "Hashima HP-900LFS parts and instruction manual (Scribd mirror)",
-      "description": "Distributor-hosted mirror of HP-900 LFS parts + instruction manual",
-      "url": "https://www.scribd.com/document/746353875/Hashima-HP-450M-MS-Parts-and-Instruction-Manual-1-240524-095701"
-    }
-  ],
-  "finalNotes": "• The 'LFS' suffix indicates the Linear / Fusing / Strip-Off-Standard configuration — a continuous-type industrial fusing press with the strip-off device included as standard.\n• Hashima is one of two dominant fusing-press brands (along with Macon) in industrial garment production worldwide.\n• Phase 1 verification: Tier-1 Hashima HP-600LF/HP-900LF product page confirms 12 kW heater, 295 W motor, 900 mm width, 10.2 m/min belt speed, 41 N/cm² max pressure for the HP-900LF/LFS family. Tier-2 distributor pages independently confirm 3P380V, 450 kg weight, 3300×1490×1200 mm dimensions.\n• Phase 1 complete with PASS verdict. Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the standard 'More Information Coming Soon' banner until those sections are added."
+  "finalNotes": "• The 'LFS' suffix indicates the Linear / Fusing / Strip-Off-Standard configuration — a continuous-type industrial fusing press with the strip-off device included as standard.\n• Hashima is one of two dominant fusing-press brands (along with Macon) in industrial garment production worldwide.\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
 }

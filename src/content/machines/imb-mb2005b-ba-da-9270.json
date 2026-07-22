@@ -50,22 +50,5 @@
       "value": "Not published — confirm with IMB Bangladesh or catalogue"
     }
   ],
-  "resources": [
-    {
-      "resourceName": "Brother DA-9270 product page (Tier-1, equivalent feed-off-arm model)",
-      "description": "Brother DA-9270 — the most likely Tier-1 match for a feed-off-arm '9270' config (IMB sells clones/variants of this Japanese standard)",
-      "url": "https://industrialsewingmachine.global.brother/en-ap/all-products/da-9270"
-    },
-    {
-      "resourceName": "Brother DA-9270 Instruction Manual (Tier-1)",
-      "description": "Brother DA-9270 official instruction manual PDF",
-      "url": "https://www.maquinasuniao.com.br/wp-content/themes/maquinas-uniao/catalogos/loop-11/Brother%20DA-9270%20Instruction%20Manual.PDF"
-    },
-    {
-      "resourceName": "Brother DA-9270 Parts Book (Tier-1, Scribd mirror)",
-      "description": "Distributor-hosted mirror of the Brother DA-9270 parts book",
-      "url": "https://www.scribd.com/doc/273443163/Partsbook-Brother-DA-9270"
-    }
-  ],
-  "finalNotes": "⚠️ IMB's published lineup lists closely related feed-off-arm models as MB2004G / MB2004H; a listing for the exact composite code \"MB2005B-BA-DA-9270\" was not found on IMB's public site. This is most likely a factory/spec-configuration code (BA/DA suffixes typically denote gauge or automation options) for a Feed-Off-The-Arm denim machine, with the '9270' suffix likely pointing to a Brother DA-9270-class machine.\n\nIMB does not publish detailed numeric specs (sewing speed, stitch length) for this line publicly — best confirmed via IMB Bangladesh (sales@imb-bd.com) or the IMB catalogue.\n\n• Phase 1 PARTIAL PASS — Tier-1 Brother DA-9270 confirmed as the closest published Tier-1 model with matching '9270' suffix in a feed-off-arm chainstitch class. IMB-specific MB2005B-BA-DA-9270 specs not located in public material.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+  "finalNotes": "⚠️ IMB's published lineup lists closely related feed-off-the-arm models as MB2004G / MB2004H; a listing for the exact composite code \"MB2005B-BA-DA-9270\" was not found on IMB's public site. This is likely a factory/spec-configuration code (BA/DA suffixes typically denote gauge or automation options) for a Feed-Off-The-Arm denim machine rather than a distinct catalog model.\n\nIMB does not publish detailed numeric specs (sewing speed, stitch length) for this line publicly — best confirmed via IMB Bangladesh (sales@imb-bd.com) or the IMB catalogue.\n\n• Other information (working principles, sequence flow, parts list, maintenance, resources) will be coming soon."
 }
