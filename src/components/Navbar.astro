@@ -185,11 +185,11 @@ const homeHref = withBase("/");
   // Keyboard shortcut: "/" focuses the visible search input (when not typing elsewhere)
   document.addEventListener("keydown", e => {
     if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
-    const target = e.target as HTMLElement | null;
+    const target = e.target;
     if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable)) return;
     e.preventDefault();
-    const visible = desktopInput?.offsetParent ? desktopInput : mobileInput;
-    (visible as HTMLInputElement | undefined)?.focus();
+    const visible = desktopInput && desktopInput.offsetParent ? desktopInput : mobileInput;
+    if (visible) visible.focus();
   });
 
   function applyFilters() {

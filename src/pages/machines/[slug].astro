@@ -341,8 +341,8 @@ const formattedDate = machine.publishedDate
 </BaseLayout>
 
 <script>
-  const links = document.querySelectorAll<HTMLAnchorElement>(".sidebar-link");
-  const sectionEls = Array.from(document.querySelectorAll("section[id]")) as HTMLElement[];
+  const links = document.querySelectorAll(".sidebar-link");
+  const sectionEls = Array.from(document.querySelectorAll("section[id]"));
 
   function setActive(id: string) {
     links.forEach(link => {
