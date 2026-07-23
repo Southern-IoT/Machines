@@ -1,0 +1,101 @@
+{
+  "title": "Ramsons RHW 200",
+  "subtitle": "Horizontal Washing Machine (Side-Loading Stainless Steel)",
+  "brand": "Ramsons",
+  "category": "Other",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-23T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The RHW 200 is a 200 kg-capacity horizontal (side-loading) washing machine from Ramsons' RHW range (15/30/50/75/100/150/200), available with manual, logic, or microprocessor control. Wet-processing (washing) of linen and garments with a raised door design (above drum center) for improved liquor holding/loading ratio and a calibrated water-level indicator.",
+    "applications": [
+      "Institutional / commercial laundry",
+      "Garment wet-processing at higher (200 kg) batch capacity"
+    ],
+    "industry": "Garment / apparel finishing, commercial laundry"
+  },
+  "overviewDescription": "Made by Ramsons Garment Finishing Equipment Pvt. Ltd. (Bengaluru, Karnataka, India). Horizontal side-loading drum with inner basket, outer drum, end plates, safety guards, and control panel in stainless steel. Reduction pulley or gearbox-and-pulley system with hot-forged end flange shafts. Heating by steam, electric, or direct gas.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Horizontal Washing Machine"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Ramsons Garment Finishing Equipment Pvt. Ltd. (India)"
+    },
+    {
+      "field": "Model Series",
+      "value": "RHW — sibling capacities 15 / 30 / 50 / 75 / 100 / 150 / 200"
+    },
+    {
+      "field": "Bed / Frame Type",
+      "value": "Horizontal side-loading drum; inner basket, outer drum, end plates, safety guards, and control panel in stainless steel"
+    },
+    {
+      "field": "Drive Type",
+      "value": "Reduction pulley or gearbox-and-pulley system; hot-forged end flange shafts"
+    },
+    {
+      "field": "Heating",
+      "value": "Steam, electric, or direct gas"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Load Capacity",
+      "value": "200 kg"
+    },
+    {
+      "parameter": "Basket Volume",
+      "value": "2,777 ltrs (nameplate; dealer-listed 'mm' was a unit typo)"
+    },
+    {
+      "parameter": "Basket Depth",
+      "value": "1,240 mm"
+    },
+    {
+      "parameter": "Basket Diameter",
+      "value": "2,300 mm"
+    },
+    {
+      "parameter": "Door Opening",
+      "value": "610 × 575 mm, 2 nos"
+    },
+    {
+      "parameter": "Steam Inlet",
+      "value": "1 inch, 2 nos"
+    },
+    {
+      "parameter": "Heater",
+      "value": "71 kW"
+    },
+    {
+      "parameter": "Machine Dimensions (W×D×H)",
+      "value": "3460 × 1880 × 1750 mm"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Ramsons India official product page — RHW 200 (Tier-1)",
+      "description": "Manufacturer product page",
+      "url": "https://ramsons.addnetit.com/products/commercial-laundry/horizontal-washing-machines/rhw-200.php"
+    },
+    {
+      "resourceName": "Machine spec plate (Tier-1, supplied by user)",
+      "description": "User-supplied nameplate for the specific unit — basket volume, basket depth/diameter, door opening, steam inlet, heater rating, machine dimensions",
+      "url": "n/a — nameplate photo in user archive"
+    },
+    {
+      "resourceName": "IndiaMART — Ramsons RHW 200 Horizontal Washing Machine listing (Tier-2)",
+      "description": "Dealer / manufacturer-posted listing with full numeric spec table",
+      "url": "https://www.indiamart.com/proddetail/ramsons-rhw-200-horizontal-washing-machine-22119756055.html"
+    },
+    {
+      "resourceName": "IndiaMART — Ramsons Garment Finishing Equipments Bengaluru (Tier-2)",
+      "description": "Independent reseller listing confirming the RHW 200 as a distinct catalog SKU",
+      "url": "https://www.indiamart.com/ramsonsgarmebengaluru/aboutus.html"
+    }
+  ],
+  "finalNotes": "• Phase 1 PASS — The nameplate and the dealer listing independently cross-confirmed basket volume (resolving the earlier flagged unit-labeling error — the dealer-listed 'mm' was a typo for litres) and full machine dimensions. Capacity, basket depth, basket diameter, door opening, steam inlet, and heater rating all agree between the two sources.\n• This was the only machine of the five Ramsons entries to reach a clean PASS verdict; the other four remain PARTIAL PASS due to source conflicts or single-source fields.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+}

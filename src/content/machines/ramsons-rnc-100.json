@@ -1,0 +1,96 @@
+{
+  "title": "Ramsons RNC 100",
+  "subtitle": "Hydro Extractor (Coaxial-Drive Centrifugal Water Extractor)",
+  "brand": "Ramsons",
+  "category": "Other",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-23T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The RNC 100 is part of Ramsons' hydro-extractor range (alongside the RDD and RNC 50/200 lines), used to centrifugally spin excess water out of washed garments/linen before drying. Centrifugal water extraction from garments/linen after washing, ahead of tumble drying.",
+    "applications": [
+      "Post-wash dewatering in commercial laundry / garment finishing lines"
+    ],
+    "industry": "Garment / apparel finishing, commercial laundry"
+  },
+  "overviewDescription": "Made by Ramsons Garment Finishing Equipment Pvt. Ltd. (Bengaluru, Karnataka, India). The RNC 100 is a 100 kg-capacity coaxial-drive hydro extractor with SG-grade single-frame casting and SS inner basket + outer drum. The inner basket mounts directly on the drive motor (no belt).",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Hydro Extractor"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Ramsons Garment Finishing Equipment Pvt. Ltd. (India)"
+    },
+    {
+      "field": "Model Series",
+      "value": "RNC (Coaxial Series) — sibling capacities RNC 50 / RNC 100 / RNC 200"
+    },
+    {
+      "field": "Frame Type",
+      "value": "SG-grade single-frame casting; SS inner basket and outer drum"
+    },
+    {
+      "field": "Drive Type",
+      "value": "Coaxial — inner basket directly mounted on the drive motor (no belt)"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Load Capacity",
+      "value": "100 kg"
+    },
+    {
+      "parameter": "Basket Volume",
+      "value": "352 ltrs (nameplate)"
+    },
+    {
+      "parameter": "Drive Motor",
+      "value": "7.5 kW (nameplate)"
+    },
+    {
+      "parameter": "Electric Supply",
+      "value": "415 V, 3-Phase, 50 Hz (nameplate)"
+    },
+    {
+      "parameter": "Machine Dimensions (W×D×H)",
+      "value": "2100 × 1800 × 1200 mm (nameplate)"
+    },
+    {
+      "parameter": "Machine Weight",
+      "value": "1,668 kg (nameplate)"
+    },
+    {
+      "parameter": "Manufacturing Year (this unit)",
+      "value": "2023"
+    },
+    {
+      "parameter": "Serial Number (this unit)",
+      "value": "RNC 100 23 02"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Machine spec plate (Tier-1, supplied by user)",
+      "description": "User-supplied nameplate for the specific unit on the factory floor — capacity, basket volume, drive motor, electric supply, dimensions, weight, manufacturing year, serial number",
+      "url": "n/a — nameplate photo in user archive"
+    },
+    {
+      "resourceName": "Ramsons India — Hydro Extractor listing (Tier-2)",
+      "description": "Manufacturer / dealer listing confirming the RNC series includes 50 / 100 / 200 kg capacity hydro extractors",
+      "url": "https://www.indiamart.com/ramsons-garment-finishingequipments/ramsons-hydro-extractor-machine.html"
+    },
+    {
+      "resourceName": "Ramsons Garment Finishing Equipment Pvt. Ltd. — Bengaluru catalog page (Tier-2)",
+      "description": "Independent reseller listing naming the RNC 100 as a 100 kg hydro extractor",
+      "url": "https://www.indiamart.com/ramsonsgarmebengaluru/ramsons-hydro-extractors.html"
+    },
+    {
+      "resourceName": "IFB Industries Kolkata — Hydro Extractor (Tier-3)",
+      "description": "Third-party reseller listing also listing an 'RNC 100' hydro extractor (capacity 100 kg only, no further specs)",
+      "url": "https://m.indiamart.com/ifbindustrieskolkata/hydro-extractor.html"
+    }
+  ],
+  "finalNotes": "• Phase 1 PARTIAL PASS — The nameplate substantially closes the gap this dossier originally flagged (basket volume, motor, dimensions, and weight), but all those figures now rest on a single (Tier-1, but singular) source — the nameplate.\n• Extraction speed (RPM/G-force) remains unverifiable — not on the nameplate as supplied and not found on the web either.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+}

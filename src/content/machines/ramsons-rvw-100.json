@@ -1,0 +1,108 @@
+{
+  "title": "Ramsons RVW 100",
+  "subtitle": "Vertical Washing Machine (Commercial Laundry range)",
+  "brand": "Ramsons",
+  "category": "Other",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-23T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The Ramsons RVW 100 is a top-loading vertical washing machine used to wash linen and garments with water as the medium. Ramsons sells two distinct '100' vertical washer lines — the plain 'RVW 100' (Commercial Laundry range) and the 'RVW (V) 100' Vertostar (microprocessor/inverter-drive wet-process range). This entry covers the plain RVW 100, confirmed as its own listing on the manufacturer's official site (RVW 20/35/50/75/100/200), separate from the Vertostar RVW (V) series.",
+    "applications": [
+      "Institutional / commercial laundry (linen)",
+      "Garment wet-processing (washing, light dyeing)"
+    ],
+    "industry": "Garment / apparel finishing, commercial laundry"
+  },
+  "overviewDescription": "Made by Ramsons Garment Finishing Equipment Pvt. Ltd. (Bengaluru, Karnataka, India). The RVW 100 is a 100 kg-capacity vertical washing machine with outer drum and inner basket in AISI 304-grade stainless steel, reduction pulley–belt drive (cast-iron pulleys, imported belts), and basket on self-aligning ball bearings. Used to wet-process linen and garments (washing, and — via chemical dosing box and steam/electric/gas heating — dyeing/stone-washing style treatments).",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Vertical Washing Machine"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Ramsons Garment Finishing Equipment Pvt. Ltd. (India)"
+    },
+    {
+      "field": "Model Series",
+      "value": "RVW (Commercial Laundry) — sibling capacities 20 / 35 / 50 / 75 / 100 / 200; distinct from RVW (V) Vertostar series"
+    },
+    {
+      "field": "Bed / Frame Type",
+      "value": "Vertical top-loading drum; outer drum and inner basket in AISI 304-grade stainless steel"
+    },
+    {
+      "field": "Drive / Lubrication Type",
+      "value": "Reduction pulley–belt drive (cast-iron pulleys, imported belts); basket on self-aligning ball bearings"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Load Capacity",
+      "value": "100 kg"
+    },
+    {
+      "parameter": "Drive Motor",
+      "value": "7.5 HP (nameplate)"
+    },
+    {
+      "parameter": "Motor Speed",
+      "value": "960 RPM (nameplate)"
+    },
+    {
+      "parameter": "Basket Volume",
+      "value": "993 ltrs (dealer listing)"
+    },
+    {
+      "parameter": "Basket Depth",
+      "value": "850 mm"
+    },
+    {
+      "parameter": "Basket Diameter",
+      "value": "1220 mm"
+    },
+    {
+      "parameter": "Door Opening",
+      "value": "675 mm"
+    },
+    {
+      "parameter": "Steam Inlet",
+      "value": "1 inch"
+    },
+    {
+      "parameter": "Steam Pressure",
+      "value": "5–7 Bar (nameplate) — conflicts with dealer's 4–6 Bar; not resolved, both reported"
+    },
+    {
+      "parameter": "Water Inlet",
+      "value": "2 inches"
+    },
+    {
+      "parameter": "Serial Number (this unit)",
+      "value": "RVW 100 02 12 05"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Ramsons India official product page — RVW 100 (Tier-1)",
+      "description": "Tier-1 manufacturer product page for the plain (non-Vertostar) RVW 100",
+      "url": "https://ramsons.addnetit.com/products/commercial-laundry/vertical-washing-machines/rvw-100.php"
+    },
+    {
+      "resourceName": "Ramsons India product index — RVW / RVW (V) family (Tier-1)",
+      "description": "Manufacturer index confirming RVW 100 is a distinct model line, separate from the RVW (V) Vertostar series",
+      "url": "https://www.ramsonsindia.com/child/"
+    },
+    {
+      "resourceName": "Machine spec plate (Tier-1, supplied by user)",
+      "description": "User-supplied nameplate for the specific unit on the factory floor, giving capacity, drive motor/RPM, steam pressure, and serial number"
+    },
+    {
+      "resourceName": "IndiaMART listing — Ramsons RVW 100 (Tier-2, posted by manufacturer)",
+      "description": "Dealer / manufacturer-posted listing with basket volume, depth, diameter, door opening, water inlet figures",
+      "url": "https://www.indiamart.com/proddetail/ramsons-rvw-100-vertical-washing-machine-22119101891.html"
+    }
+  ],
+  "finalNotes": "• Phase 1 PARTIAL PASS — Capacity and motor/RPM data now nameplate-confirmed (the nameplate supplies fields the web did not), but steam pressure conflicts with the dealer listing (nameplate 5–7 Bar vs dealer 4–6 Bar) and basket/dimensional specs still rest on a single dealer source.\n• The conflict on steam pressure may reflect a running product change between when the dealer listing was published and this 2023-built unit, rather than an error on either side — reported as-is rather than resolved one way.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+}

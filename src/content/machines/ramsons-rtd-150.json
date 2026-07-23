@@ -1,0 +1,128 @@
+{
+  "title": "Ramsons RTD 150",
+  "subtitle": "Tumble Drier (Steam/Electric/Gas-Heated, Garment & Leather)",
+  "brand": "Ramsons",
+  "category": "Other",
+  "machineImage": "",
+  "reportDownloadUrl": "",
+  "publishedDate": "2026-07-23T00:00:00.000Z",
+  "purposeAndApplication": {
+    "purpose": "The RTD 150 is a 150 kg-capacity tumble drier from Ramsons' RTD range (15/30/60/75/120/150/200), using heat exchange with a rotating stainless-steel paddle basket to dry garments, linen, or leather. Heat-exchange tumble drying of washed garments, linen, or (per the listing's product text) leather, with a programmable logic controller (auto reverse, digital temperature control, timer with pause/cool-down).",
+    "applications": [
+      "Post-wash garment / linen drying",
+      "Leather drying (per source product description)"
+    ],
+    "industry": "Garment / apparel finishing, commercial laundry, leather processing"
+  },
+  "overviewDescription": "Made by Ramsons Garment Finishing Equipment Pvt. Ltd. (Bengaluru, Karnataka, India). Double-insulated (mineral wool) stainless steel drum with CNC-made SS paddles, reduction pulley system with closed-grain cast-iron pulleys and V-belts, self-aligning bearings, programmable logic controller. Heating by steam, electricity, gas, or thermal fluid.",
+  "classificationTable": [
+    {
+      "field": "Machine Name",
+      "value": "Tumble Drier"
+    },
+    {
+      "field": "Brand / Manufacturer",
+      "value": "Ramsons Garment Finishing Equipment Pvt. Ltd. (India)"
+    },
+    {
+      "field": "Model Series",
+      "value": "RTD — sibling capacities 15 / 30 / 60 / 75 / 120 / 150 / 200"
+    },
+    {
+      "field": "Basket Type",
+      "value": "Double-insulated (mineral wool) stainless steel drum with CNC-made SS paddles"
+    },
+    {
+      "field": "Drive Type",
+      "value": "Reduction pulley system, closed-grain cast-iron pulleys, V-belts, self-aligning bearings"
+    },
+    {
+      "field": "Heating",
+      "value": "Steam, electricity, gas, or thermal fluid"
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "parameter": "Load Capacity",
+      "value": "150 kg"
+    },
+    {
+      "parameter": "Blower Motor",
+      "value": "1.5 kW × 2 nos (nameplate) — matches dealer's 2 × 2 HP"
+    },
+    {
+      "parameter": "Drive Motor",
+      "value": "3.72 kW (nameplate) — matches dealer's 5 HP"
+    },
+    {
+      "parameter": "Basket Volume",
+      "value": "2,980 ltrs (nameplate) — conflicts with dealer's 2,372 ltrs, both reported"
+    },
+    {
+      "parameter": "Basket Depth",
+      "value": "1,070 mm (dealer listing)"
+    },
+    {
+      "parameter": "Basket Diameter",
+      "value": "1,680 mm (dealer listing)"
+    },
+    {
+      "parameter": "Door Opening",
+      "value": "990 mm (dealer listing)"
+    },
+    {
+      "parameter": "Steam Inlet",
+      "value": "1.5 inch (dealer listing)"
+    },
+    {
+      "parameter": "Steam Outlet",
+      "value": "1 inch (dealer listing)"
+    },
+    {
+      "parameter": "Air Pressure",
+      "value": "6–8 Bar (nameplate)"
+    },
+    {
+      "parameter": "Air Outlet",
+      "value": "250 × 250 mm, 2 nos (dealer listing)"
+    },
+    {
+      "parameter": "Electric Supply",
+      "value": "415 V, 3-Phase, 50 Hz (nameplate)"
+    },
+    {
+      "parameter": "Machine Dimensions (W×D×H)",
+      "value": "2280 × 2295 × 2580 mm (nameplate) — conflicts with dealer's 2150 × 2065 × 2570 mm"
+    },
+    {
+      "parameter": "Machine Weight",
+      "value": "1,792 kg (nameplate) — conflicts with dealer's 1,400 kg"
+    },
+    {
+      "parameter": "Manufacturing Year (this unit)",
+      "value": "2023"
+    },
+    {
+      "parameter": "Serial Number (this unit)",
+      "value": "RTD 150 23 06"
+    }
+  ],
+  "resources": [
+    {
+      "resourceName": "Machine spec plate (Tier-1, supplied by user)",
+      "description": "User-supplied nameplate — capacity, motor ratings, air pressure, electric supply, dimensions, weight, manufacturing year, serial number",
+      "url": "n/a — nameplate photo in user archive"
+    },
+    {
+      "resourceName": "IndiaMART — Ramsons RTD 150 150 Kgs Tumble Drier listing (Tier-2, posted by manufacturer)",
+      "description": "Dealer / manufacturer-posted listing with basket depth/diameter, door opening, steam inlet/outlet, air outlet",
+      "url": "https://www.indiamart.com/proddetail/ramsons-rtd-150-150-kgs-tumble-drier-21099733388.html"
+    },
+    {
+      "resourceName": "IndiaMART category — Ramsons Tumble Driers Machine (Tier-2)",
+      "description": "Independent category page confirming the RTD 150 as a distinct SKU",
+      "url": "https://www.indiamart.com/ramsons-garment-finishingequipments/ramsons-tumble-driers-machine.html"
+    }
+  ],
+  "finalNotes": "• Phase 1 PARTIAL PASS — Headline capacity and motor ratings are now cross-confirmed between the nameplate and the dealer listing (HP/kW figures agree once unit-converted).\n• Conflicts remain unresolved on basket volume (2,980 vs 2,372 ltrs), machine dimensions (2280×2295×2580 vs 2150×2065×2570 mm), and machine weight (1,792 vs 1,400 kg). These are reported as-is rather than silently resolved, since a genuine running product change between the listing's vintage and this 2023-built unit is just as plausible as either source being wrong.\n• Detailed Research (working principles, sequence flow, parts list, maintenance, additional resources) remains pending — the page renders the 'More Information Coming Soon' banner until those sections are added."
+}
